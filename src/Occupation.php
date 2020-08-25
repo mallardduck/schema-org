@@ -11,7 +11,6 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  *
  * @see http://schema.org/Occupation
  *
- * @method static skills($skills) The value should be instance of pending types DefinedTerm|DefinedTerm[]|string|string[]
  */
 class Occupation extends BaseType implements OccupationContract, IntangibleContract, ThingContract
 {
@@ -77,20 +76,6 @@ class Occupation extends BaseType implements OccupationContract, IntangibleContr
     public function disambiguatingDescription($disambiguatingDescription)
     {
         return $this->setProperty('disambiguatingDescription', $disambiguatingDescription);
-    }
-
-    /**
-     * Educational background needed for the position or Occupation.
-     *
-     * @param string|string[] $educationRequirements
-     *
-     * @return static
-     *
-     * @see http://schema.org/educationRequirements
-     */
-    public function educationRequirements($educationRequirements)
-    {
-        return $this->setProperty('educationRequirements', $educationRequirements);
     }
 
     /**
@@ -206,28 +191,6 @@ class Occupation extends BaseType implements OccupationContract, IntangibleContr
     }
 
     /**
-     * A category describing the job, preferably using a term from a taxonomy
-     * such as [BLS O*NET-SOC](http://www.onetcenter.org/taxonomy.html),
-     * [ISCO-08](https://www.ilo.org/public/english/bureau/stat/isco/isco08/) or
-     * similar, with the property repeated for each applicable value. Ideally
-     * the taxonomy should be identified, and both the textual label and formal
-     * code for the category should be provided.
-     * 
-     * Note: for historical reasons, any textual label and formal code provided
-     * as a literal may be assumed to be from O*NET-SOC.
-     *
-     * @param string|string[] $occupationalCategory
-     *
-     * @return static
-     *
-     * @see http://schema.org/occupationalCategory
-     */
-    public function occupationalCategory($occupationalCategory)
-    {
-        return $this->setProperty('occupationalCategory', $occupationalCategory);
-    }
-
-    /**
      * Indicates a potential Action, which describes an idealized action in
      * which this thing would play an 'object' role.
      *
@@ -240,20 +203,6 @@ class Occupation extends BaseType implements OccupationContract, IntangibleContr
     public function potentialAction($potentialAction)
     {
         return $this->setProperty('potentialAction', $potentialAction);
-    }
-
-    /**
-     * Specific qualifications required for this role or Occupation.
-     *
-     * @param string|string[] $qualifications
-     *
-     * @return static
-     *
-     * @see http://schema.org/qualifications
-     */
-    public function qualifications($qualifications)
-    {
-        return $this->setProperty('qualifications', $qualifications);
     }
 
     /**
@@ -284,6 +233,22 @@ class Occupation extends BaseType implements OccupationContract, IntangibleContr
     public function sameAs($sameAs)
     {
         return $this->setProperty('sameAs', $sameAs);
+    }
+
+    /**
+     * A statement of knowledge, skill, ability, task or any other assertion
+     * expressing a competency that is desired or required to fulfill this role
+     * or to work in this occupation.
+     *
+     * @param string|string[] $skills
+     *
+     * @return static
+     *
+     * @see http://schema.org/skills
+     */
+    public function skills($skills)
+    {
+        return $this->setProperty('skills', $skills);
     }
 
     /**

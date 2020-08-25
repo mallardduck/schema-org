@@ -86,8 +86,6 @@ interface ScreeningEventContract
 
     public function subjectOf($subjectOf);
 
-    public function subtitleLanguage($subtitleLanguage);
-
     public function superEvent($superEvent);
 
     public function translator($translator);

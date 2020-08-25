@@ -36,6 +36,26 @@ interface ApartmentComplexContract
 
     public function geo($geo);
 
+    public function geoContains($geoContains);
+
+    public function geoCoveredBy($geoCoveredBy);
+
+    public function geoCovers($geoCovers);
+
+    public function geoCrosses($geoCrosses);
+
+    public function geoDisjoint($geoDisjoint);
+
+    public function geoEquals($geoEquals);
+
+    public function geoIntersects($geoIntersects);
+
+    public function geoOverlaps($geoOverlaps);
+
+    public function geoTouches($geoTouches);
+
+    public function geoWithin($geoWithin);
+
     public function globalLocationNumber($globalLocationNumber);
 
     public function hasMap($hasMap);
@@ -65,6 +85,8 @@ interface ApartmentComplexContract
     public function name($name);
 
     public function openingHoursSpecification($openingHoursSpecification);
+
+    public function petsAllowed($petsAllowed);
 
     public function photo($photo);
 

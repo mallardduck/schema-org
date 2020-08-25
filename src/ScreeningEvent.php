@@ -640,21 +640,6 @@ class ScreeningEvent extends BaseType implements ScreeningEventContract, EventCo
     }
 
     /**
-     * Languages in which subtitles/captions are available, in [IETF BCP 47
-     * standard format](http://tools.ietf.org/html/bcp47).
-     *
-     * @param \Spatie\SchemaOrg\Contracts\LanguageContract|\Spatie\SchemaOrg\Contracts\LanguageContract[]|string|string[] $subtitleLanguage
-     *
-     * @return static
-     *
-     * @see http://schema.org/subtitleLanguage
-     */
-    public function subtitleLanguage($subtitleLanguage)
-    {
-        return $this->setProperty('subtitleLanguage', $subtitleLanguage);
-    }
-
-    /**
      * An event that this event is a part of. For example, a collection of
      * individual music performances might each have a music festival as their
      * superEvent.

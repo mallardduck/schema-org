@@ -12,6 +12,8 @@ interface SportsOrganizationContract
 
     public function alternateName($alternateName);
 
+    public function alumni($alumni);
+
     public function areaServed($areaServed);
 
     public function award($award);
@@ -66,6 +68,8 @@ interface SportsOrganizationContract
 
     public function image($image);
 
+    public function interactionStatistic($interactionStatistic);
+
     public function isicV4($isicV4);
 
     public function legalName($legalName);
@@ -92,8 +96,6 @@ interface SportsOrganizationContract
 
     public function numberOfEmployees($numberOfEmployees);
 
-    public function offeredBy($offeredBy);
-
     public function owns($owns);
 
     public function parentOrganization($parentOrganization);
@@ -115,8 +117,6 @@ interface SportsOrganizationContract
     public function slogan($slogan);
 
     public function sponsor($sponsor);
-
-    public function sport($sport);
 
     public function subOrganization($subOrganization);
 

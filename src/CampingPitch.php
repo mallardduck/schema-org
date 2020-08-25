@@ -11,7 +11,6 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * A [[CampingPitch]] is an individual place for overnight stay in the outdoors,
  * typically being part of a larger camping site, or [[Campground]].
  * 
- * 
  * In British English a campsite, or campground, is an area, usually divided
  * into a number of pitches, where people can camp overnight using tents or
  * camper vans or caravans; this British English use of the word is synonymous
@@ -19,12 +18,11 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * campsite generally means an area where an individual, family, group, or
  * military unit can pitch a tent or park a camper; a campground may contain
  * many campsites.
- * (Source: Wikipedia see
- * [https://en.wikipedia.org/wiki/Campsite](https://en.wikipedia.org/wiki/Campsite)).
+ * (Source: Wikipedia see <a
+ * href="https://en.wikipedia.org/wiki/Campsite">https://en.wikipedia.org/wiki/Campsite</a>).
  * 
- * 
- * See also the dedicated [document on the use of schema.org for marking up
- * hotels and other forms of accommodations](/docs/hotels.html).
+ * See also the dedicated <a href="/docs/hotels.html">document on the use of
+ * schema.org for marking up hotels and other forms of accommodations</a>.
  *
  * @see http://schema.org/CampingPitch
  *
@@ -297,6 +295,178 @@ class CampingPitch extends BaseType implements CampingPitchContract, Accommodati
     public function geo($geo)
     {
         return $this->setProperty('geo', $geo);
+    }
+
+    /**
+     * Represents a relationship between two geometries (or the places they
+     * represent), relating a containing geometry to a contained geometry. "a
+     * contains b iff no points of b lie in the exterior of a, and at least one
+     * point of the interior of b lies in the interior of a". As defined in
+     * [DE-9IM](https://en.wikipedia.org/wiki/DE-9IM).
+     *
+     * @param \Spatie\SchemaOrg\Contracts\PlaceContract|\Spatie\SchemaOrg\Contracts\PlaceContract[] $geoContains
+     *
+     * @return static
+     *
+     * @see http://schema.org/geoContains
+     */
+    public function geoContains($geoContains)
+    {
+        return $this->setProperty('geoContains', $geoContains);
+    }
+
+    /**
+     * Represents a relationship between two geometries (or the places they
+     * represent), relating a geometry to another that covers it. As defined in
+     * [DE-9IM](https://en.wikipedia.org/wiki/DE-9IM).
+     *
+     * @param \Spatie\SchemaOrg\Contracts\PlaceContract|\Spatie\SchemaOrg\Contracts\PlaceContract[] $geoCoveredBy
+     *
+     * @return static
+     *
+     * @see http://schema.org/geoCoveredBy
+     */
+    public function geoCoveredBy($geoCoveredBy)
+    {
+        return $this->setProperty('geoCoveredBy', $geoCoveredBy);
+    }
+
+    /**
+     * Represents a relationship between two geometries (or the places they
+     * represent), relating a covering geometry to a covered geometry. "Every
+     * point of b is a point of (the interior or boundary of) a". As defined in
+     * [DE-9IM](https://en.wikipedia.org/wiki/DE-9IM).
+     *
+     * @param \Spatie\SchemaOrg\Contracts\PlaceContract|\Spatie\SchemaOrg\Contracts\PlaceContract[] $geoCovers
+     *
+     * @return static
+     *
+     * @see http://schema.org/geoCovers
+     */
+    public function geoCovers($geoCovers)
+    {
+        return $this->setProperty('geoCovers', $geoCovers);
+    }
+
+    /**
+     * Represents a relationship between two geometries (or the places they
+     * represent), relating a geometry to another that crosses it: "a crosses b:
+     * they have some but not all interior points in common, and the dimension
+     * of the intersection is less than that of at least one of them". As
+     * defined in [DE-9IM](https://en.wikipedia.org/wiki/DE-9IM).
+     *
+     * @param \Spatie\SchemaOrg\Contracts\PlaceContract|\Spatie\SchemaOrg\Contracts\PlaceContract[] $geoCrosses
+     *
+     * @return static
+     *
+     * @see http://schema.org/geoCrosses
+     */
+    public function geoCrosses($geoCrosses)
+    {
+        return $this->setProperty('geoCrosses', $geoCrosses);
+    }
+
+    /**
+     * Represents spatial relations in which two geometries (or the places they
+     * represent) are topologically disjoint: they have no point in common. They
+     * form a set of disconnected geometries." (a symmetric relationship, as
+     * defined in [DE-9IM](https://en.wikipedia.org/wiki/DE-9IM))
+     *
+     * @param \Spatie\SchemaOrg\Contracts\PlaceContract|\Spatie\SchemaOrg\Contracts\PlaceContract[] $geoDisjoint
+     *
+     * @return static
+     *
+     * @see http://schema.org/geoDisjoint
+     */
+    public function geoDisjoint($geoDisjoint)
+    {
+        return $this->setProperty('geoDisjoint', $geoDisjoint);
+    }
+
+    /**
+     * Represents spatial relations in which two geometries (or the places they
+     * represent) are topologically equal, as defined in
+     * [DE-9IM](https://en.wikipedia.org/wiki/DE-9IM). "Two geometries are
+     * topologically equal if their interiors intersect and no part of the
+     * interior or boundary of one geometry intersects the exterior of the
+     * other" (a symmetric relationship)
+     *
+     * @param \Spatie\SchemaOrg\Contracts\PlaceContract|\Spatie\SchemaOrg\Contracts\PlaceContract[] $geoEquals
+     *
+     * @return static
+     *
+     * @see http://schema.org/geoEquals
+     */
+    public function geoEquals($geoEquals)
+    {
+        return $this->setProperty('geoEquals', $geoEquals);
+    }
+
+    /**
+     * Represents spatial relations in which two geometries (or the places they
+     * represent) have at least one point in common. As defined in
+     * [DE-9IM](https://en.wikipedia.org/wiki/DE-9IM).
+     *
+     * @param \Spatie\SchemaOrg\Contracts\PlaceContract|\Spatie\SchemaOrg\Contracts\PlaceContract[] $geoIntersects
+     *
+     * @return static
+     *
+     * @see http://schema.org/geoIntersects
+     */
+    public function geoIntersects($geoIntersects)
+    {
+        return $this->setProperty('geoIntersects', $geoIntersects);
+    }
+
+    /**
+     * Represents a relationship between two geometries (or the places they
+     * represent), relating a geometry to another that geospatially overlaps it,
+     * i.e. they have some but not all points in common. As defined in
+     * [DE-9IM](https://en.wikipedia.org/wiki/DE-9IM).
+     *
+     * @param \Spatie\SchemaOrg\Contracts\PlaceContract|\Spatie\SchemaOrg\Contracts\PlaceContract[] $geoOverlaps
+     *
+     * @return static
+     *
+     * @see http://schema.org/geoOverlaps
+     */
+    public function geoOverlaps($geoOverlaps)
+    {
+        return $this->setProperty('geoOverlaps', $geoOverlaps);
+    }
+
+    /**
+     * Represents spatial relations in which two geometries (or the places they
+     * represent) touch: they have at least one boundary point in common, but no
+     * interior points." (a symmetric relationship, as defined in
+     * [DE-9IM](https://en.wikipedia.org/wiki/DE-9IM) )
+     *
+     * @param \Spatie\SchemaOrg\Contracts\PlaceContract|\Spatie\SchemaOrg\Contracts\PlaceContract[] $geoTouches
+     *
+     * @return static
+     *
+     * @see http://schema.org/geoTouches
+     */
+    public function geoTouches($geoTouches)
+    {
+        return $this->setProperty('geoTouches', $geoTouches);
+    }
+
+    /**
+     * Represents a relationship between two geometries (or the places they
+     * represent), relating a geometry to one that contains it, i.e. it is
+     * inside (i.e. within) its interior. As defined in
+     * [DE-9IM](https://en.wikipedia.org/wiki/DE-9IM).
+     *
+     * @param \Spatie\SchemaOrg\Contracts\PlaceContract|\Spatie\SchemaOrg\Contracts\PlaceContract[] $geoWithin
+     *
+     * @return static
+     *
+     * @see http://schema.org/geoWithin
+     */
+    public function geoWithin($geoWithin)
+    {
+        return $this->setProperty('geoWithin', $geoWithin);
     }
 
     /**

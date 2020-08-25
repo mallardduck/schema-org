@@ -64,8 +64,6 @@ interface AggregateOfferContract
 
     public function includesObject($includesObject);
 
-    public function ineligibleRegion($ineligibleRegion);
-
     public function inventoryLevel($inventoryLevel);
 
     public function itemCondition($itemCondition);
@@ -81,6 +79,8 @@ interface AggregateOfferContract
     public function name($name);
 
     public function offerCount($offerCount);
+
+    public function offeredBy($offeredBy);
 
     public function offers($offers);
 

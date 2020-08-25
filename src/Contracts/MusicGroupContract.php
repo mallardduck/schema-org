@@ -16,6 +16,8 @@ interface MusicGroupContract
 
     public function alternateName($alternateName);
 
+    public function alumni($alumni);
+
     public function areaServed($areaServed);
 
     public function award($award);
@@ -72,6 +74,8 @@ interface MusicGroupContract
 
     public function image($image);
 
+    public function interactionStatistic($interactionStatistic);
+
     public function isicV4($isicV4);
 
     public function legalName($legalName);
@@ -99,8 +103,6 @@ interface MusicGroupContract
     public function name($name);
 
     public function numberOfEmployees($numberOfEmployees);
-
-    public function offeredBy($offeredBy);
 
     public function owns($owns);
 

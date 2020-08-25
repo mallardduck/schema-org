@@ -102,6 +102,20 @@ class TireShop extends BaseType implements TireShopContract, LocalBusinessContra
     }
 
     /**
+     * Alumni of an organization.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\PersonContract|\Spatie\SchemaOrg\Contracts\PersonContract[] $alumni
+     *
+     * @return static
+     *
+     * @see http://schema.org/alumni
+     */
+    public function alumni($alumni)
+    {
+        return $this->setProperty('alumni', $alumni);
+    }
+
+    /**
      * An amenity feature (e.g. a characteristic or service) of the
      * Accommodation. This generic property does not make a statement about
      * whether the feature is included in an offer for the main accommodation or
@@ -551,6 +565,178 @@ class TireShop extends BaseType implements TireShopContract, LocalBusinessContra
     }
 
     /**
+     * Represents a relationship between two geometries (or the places they
+     * represent), relating a containing geometry to a contained geometry. "a
+     * contains b iff no points of b lie in the exterior of a, and at least one
+     * point of the interior of b lies in the interior of a". As defined in
+     * [DE-9IM](https://en.wikipedia.org/wiki/DE-9IM).
+     *
+     * @param \Spatie\SchemaOrg\Contracts\PlaceContract|\Spatie\SchemaOrg\Contracts\PlaceContract[] $geoContains
+     *
+     * @return static
+     *
+     * @see http://schema.org/geoContains
+     */
+    public function geoContains($geoContains)
+    {
+        return $this->setProperty('geoContains', $geoContains);
+    }
+
+    /**
+     * Represents a relationship between two geometries (or the places they
+     * represent), relating a geometry to another that covers it. As defined in
+     * [DE-9IM](https://en.wikipedia.org/wiki/DE-9IM).
+     *
+     * @param \Spatie\SchemaOrg\Contracts\PlaceContract|\Spatie\SchemaOrg\Contracts\PlaceContract[] $geoCoveredBy
+     *
+     * @return static
+     *
+     * @see http://schema.org/geoCoveredBy
+     */
+    public function geoCoveredBy($geoCoveredBy)
+    {
+        return $this->setProperty('geoCoveredBy', $geoCoveredBy);
+    }
+
+    /**
+     * Represents a relationship between two geometries (or the places they
+     * represent), relating a covering geometry to a covered geometry. "Every
+     * point of b is a point of (the interior or boundary of) a". As defined in
+     * [DE-9IM](https://en.wikipedia.org/wiki/DE-9IM).
+     *
+     * @param \Spatie\SchemaOrg\Contracts\PlaceContract|\Spatie\SchemaOrg\Contracts\PlaceContract[] $geoCovers
+     *
+     * @return static
+     *
+     * @see http://schema.org/geoCovers
+     */
+    public function geoCovers($geoCovers)
+    {
+        return $this->setProperty('geoCovers', $geoCovers);
+    }
+
+    /**
+     * Represents a relationship between two geometries (or the places they
+     * represent), relating a geometry to another that crosses it: "a crosses b:
+     * they have some but not all interior points in common, and the dimension
+     * of the intersection is less than that of at least one of them". As
+     * defined in [DE-9IM](https://en.wikipedia.org/wiki/DE-9IM).
+     *
+     * @param \Spatie\SchemaOrg\Contracts\PlaceContract|\Spatie\SchemaOrg\Contracts\PlaceContract[] $geoCrosses
+     *
+     * @return static
+     *
+     * @see http://schema.org/geoCrosses
+     */
+    public function geoCrosses($geoCrosses)
+    {
+        return $this->setProperty('geoCrosses', $geoCrosses);
+    }
+
+    /**
+     * Represents spatial relations in which two geometries (or the places they
+     * represent) are topologically disjoint: they have no point in common. They
+     * form a set of disconnected geometries." (a symmetric relationship, as
+     * defined in [DE-9IM](https://en.wikipedia.org/wiki/DE-9IM))
+     *
+     * @param \Spatie\SchemaOrg\Contracts\PlaceContract|\Spatie\SchemaOrg\Contracts\PlaceContract[] $geoDisjoint
+     *
+     * @return static
+     *
+     * @see http://schema.org/geoDisjoint
+     */
+    public function geoDisjoint($geoDisjoint)
+    {
+        return $this->setProperty('geoDisjoint', $geoDisjoint);
+    }
+
+    /**
+     * Represents spatial relations in which two geometries (or the places they
+     * represent) are topologically equal, as defined in
+     * [DE-9IM](https://en.wikipedia.org/wiki/DE-9IM). "Two geometries are
+     * topologically equal if their interiors intersect and no part of the
+     * interior or boundary of one geometry intersects the exterior of the
+     * other" (a symmetric relationship)
+     *
+     * @param \Spatie\SchemaOrg\Contracts\PlaceContract|\Spatie\SchemaOrg\Contracts\PlaceContract[] $geoEquals
+     *
+     * @return static
+     *
+     * @see http://schema.org/geoEquals
+     */
+    public function geoEquals($geoEquals)
+    {
+        return $this->setProperty('geoEquals', $geoEquals);
+    }
+
+    /**
+     * Represents spatial relations in which two geometries (or the places they
+     * represent) have at least one point in common. As defined in
+     * [DE-9IM](https://en.wikipedia.org/wiki/DE-9IM).
+     *
+     * @param \Spatie\SchemaOrg\Contracts\PlaceContract|\Spatie\SchemaOrg\Contracts\PlaceContract[] $geoIntersects
+     *
+     * @return static
+     *
+     * @see http://schema.org/geoIntersects
+     */
+    public function geoIntersects($geoIntersects)
+    {
+        return $this->setProperty('geoIntersects', $geoIntersects);
+    }
+
+    /**
+     * Represents a relationship between two geometries (or the places they
+     * represent), relating a geometry to another that geospatially overlaps it,
+     * i.e. they have some but not all points in common. As defined in
+     * [DE-9IM](https://en.wikipedia.org/wiki/DE-9IM).
+     *
+     * @param \Spatie\SchemaOrg\Contracts\PlaceContract|\Spatie\SchemaOrg\Contracts\PlaceContract[] $geoOverlaps
+     *
+     * @return static
+     *
+     * @see http://schema.org/geoOverlaps
+     */
+    public function geoOverlaps($geoOverlaps)
+    {
+        return $this->setProperty('geoOverlaps', $geoOverlaps);
+    }
+
+    /**
+     * Represents spatial relations in which two geometries (or the places they
+     * represent) touch: they have at least one boundary point in common, but no
+     * interior points." (a symmetric relationship, as defined in
+     * [DE-9IM](https://en.wikipedia.org/wiki/DE-9IM) )
+     *
+     * @param \Spatie\SchemaOrg\Contracts\PlaceContract|\Spatie\SchemaOrg\Contracts\PlaceContract[] $geoTouches
+     *
+     * @return static
+     *
+     * @see http://schema.org/geoTouches
+     */
+    public function geoTouches($geoTouches)
+    {
+        return $this->setProperty('geoTouches', $geoTouches);
+    }
+
+    /**
+     * Represents a relationship between two geometries (or the places they
+     * represent), relating a geometry to one that contains it, i.e. it is
+     * inside (i.e. within) its interior. As defined in
+     * [DE-9IM](https://en.wikipedia.org/wiki/DE-9IM).
+     *
+     * @param \Spatie\SchemaOrg\Contracts\PlaceContract|\Spatie\SchemaOrg\Contracts\PlaceContract[] $geoWithin
+     *
+     * @return static
+     *
+     * @see http://schema.org/geoWithin
+     */
+    public function geoWithin($geoWithin)
+    {
+        return $this->setProperty('geoWithin', $geoWithin);
+    }
+
+    /**
      * The [Global Location Number](http://www.gs1.org/gln) (GLN, sometimes also
      * referred to as International Location Number or ILN) of the respective
      * organization, person, or place. The GLN is a 13-digit number used to
@@ -641,6 +827,22 @@ class TireShop extends BaseType implements TireShopContract, LocalBusinessContra
     public function image($image)
     {
         return $this->setProperty('image', $image);
+    }
+
+    /**
+     * The number of interactions for the CreativeWork using the WebSite or
+     * SoftwareApplication. The most specific child type of InteractionCounter
+     * should be used.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\InteractionCounterContract|\Spatie\SchemaOrg\Contracts\InteractionCounterContract[] $interactionStatistic
+     *
+     * @return static
+     *
+     * @see http://schema.org/interactionStatistic
+     */
+    public function interactionStatistic($interactionStatistic)
+    {
+        return $this->setProperty('interactionStatistic', $interactionStatistic);
     }
 
     /**
@@ -921,20 +1123,6 @@ class TireShop extends BaseType implements TireShopContract, LocalBusinessContra
     }
 
     /**
-     * A pointer to the organization or person making the offer.
-     *
-     * @param \Spatie\SchemaOrg\Contracts\OrganizationContract|\Spatie\SchemaOrg\Contracts\OrganizationContract[]|\Spatie\SchemaOrg\Contracts\PersonContract|\Spatie\SchemaOrg\Contracts\PersonContract[] $offeredBy
-     *
-     * @return static
-     *
-     * @see http://schema.org/offeredBy
-     */
-    public function offeredBy($offeredBy)
-    {
-        return $this->setProperty('offeredBy', $offeredBy);
-    }
-
-    /**
      * The general opening hours for a business. Opening hours can be specified
      * as a weekly time range, starting with days, then times per day. Multiple
      * days can be listed with commas ',' separating each day. Day or time
@@ -944,13 +1132,13 @@ class TireShop extends BaseType implements TireShopContract, LocalBusinessContra
      * ```Mo```, ```Tu```, ```We```, ```Th```, ```Fr```, ```Sa```, ```Su```.
      * * Times are specified using 24:00 time. For example, 3pm is specified as
      * ```15:00```. 
-     * * Here is an example: <code>&lt;time itemprop="openingHours"
+     * * Here is an example: ```&lt;time itemprop="openingHours"
      * datetime=&quot;Tu,Th 16:00-20:00&quot;&gt;Tuesdays and Thursdays
-     * 4-8pm&lt;/time&gt;</code>.
+     * 4-8pm&lt;/time&gt;```.
      * * If a business is open 7 days a week, then it can be specified as
-     * <code>&lt;time itemprop=&quot;openingHours&quot;
+     * ```&lt;time itemprop=&quot;openingHours&quot;
      * datetime=&quot;Mo-Su&quot;&gt;Monday through Sunday, all
-     * day&lt;/time&gt;</code>.
+     * day&lt;/time&gt;```.
      *
      * @param string|string[] $openingHours
      *

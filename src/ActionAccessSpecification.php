@@ -48,9 +48,10 @@ class ActionAccessSpecification extends BaseType implements ActionAccessSpecific
     }
 
     /**
-     * 
+     * The end of the availability of the product or service included in the
+     * offer.
      *
-     * @param  $availabilityEnds
+     * @param \DateTimeInterface|\DateTimeInterface[] $availabilityEnds
      *
      * @return static
      *
@@ -62,9 +63,10 @@ class ActionAccessSpecification extends BaseType implements ActionAccessSpecific
     }
 
     /**
-     * 
+     * The beginning of the availability of the product or service included in
+     * the offer.
      *
-     * @param  $availabilityStarts
+     * @param \DateTimeInterface|\DateTimeInterface[] $availabilityStarts
      *
      * @return static
      *
@@ -76,9 +78,10 @@ class ActionAccessSpecification extends BaseType implements ActionAccessSpecific
     }
 
     /**
-     * 
+     * A category for the item. Greater signs or slashes can be used to
+     * informally indicate a category hierarchy.
      *
-     * @param  $category
+     * @param \Spatie\SchemaOrg\Contracts\ThingContract|\Spatie\SchemaOrg\Contracts\ThingContract[]|string|string[] $category
      *
      * @return static
      *
@@ -121,9 +124,13 @@ class ActionAccessSpecification extends BaseType implements ActionAccessSpecific
     }
 
     /**
+     * The ISO 3166-1 (ISO 3166-1 alpha-2) or ISO 3166-2 code, the place, or the
+     * GeoShape for the geo-political region(s) for which the offer or delivery
+     * charge specification is valid.
      * 
+     * See also [[ineligibleRegion]].
      *
-     * @param  $eligibleRegion
+     * @param \Spatie\SchemaOrg\Contracts\GeoShapeContract|\Spatie\SchemaOrg\Contracts\GeoShapeContract[]|\Spatie\SchemaOrg\Contracts\PlaceContract|\Spatie\SchemaOrg\Contracts\PlaceContract[]|string|string[] $eligibleRegion
      *
      * @return static
      *
@@ -135,9 +142,11 @@ class ActionAccessSpecification extends BaseType implements ActionAccessSpecific
     }
 
     /**
-     * 
+     * An Offer which must be accepted before the user can perform the Action.
+     * For example, the user may need to buy a movie before being able to watch
+     * it.
      *
-     * @param  $expectsAcceptanceOf
+     * @param \Spatie\SchemaOrg\Contracts\OfferContract|\Spatie\SchemaOrg\Contracts\OfferContract[] $expectsAcceptanceOf
      *
      * @return static
      *
@@ -227,9 +236,11 @@ class ActionAccessSpecification extends BaseType implements ActionAccessSpecific
     }
 
     /**
-     * 
+     * Indicates if use of the media require a subscription  (either paid or
+     * free). Allowed values are ```true``` or ```false``` (note that an earlier
+     * version had 'yes', 'no').
      *
-     * @param \Spatie\SchemaOrg\Contracts\MediaSubscriptionContract|\Spatie\SchemaOrg\Contracts\MediaSubscriptionContract[] $requiresSubscription
+     * @param \Spatie\SchemaOrg\Contracts\MediaSubscriptionContract|\Spatie\SchemaOrg\Contracts\MediaSubscriptionContract[]|bool|bool[] $requiresSubscription
      *
      * @return static
      *

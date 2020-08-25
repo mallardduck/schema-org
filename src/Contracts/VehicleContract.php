@@ -136,8 +136,6 @@ interface VehicleContract
 
     public function vehicleSeatingCapacity($vehicleSeatingCapacity);
 
-    public function vehicleSpecialUsage($vehicleSpecialUsage);
-
     public function vehicleTransmission($vehicleTransmission);
 
     public function weight($weight);

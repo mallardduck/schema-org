@@ -14,6 +14,8 @@ interface HostelContract
 
     public function alternateName($alternateName);
 
+    public function alumni($alumni);
+
     public function amenityFeature($amenityFeature);
 
     public function areaServed($areaServed);
@@ -82,6 +84,26 @@ interface HostelContract
 
     public function geo($geo);
 
+    public function geoContains($geoContains);
+
+    public function geoCoveredBy($geoCoveredBy);
+
+    public function geoCovers($geoCovers);
+
+    public function geoCrosses($geoCrosses);
+
+    public function geoDisjoint($geoDisjoint);
+
+    public function geoEquals($geoEquals);
+
+    public function geoIntersects($geoIntersects);
+
+    public function geoOverlaps($geoOverlaps);
+
+    public function geoTouches($geoTouches);
+
+    public function geoWithin($geoWithin);
+
     public function globalLocationNumber($globalLocationNumber);
 
     public function hasMap($hasMap);
@@ -93,6 +115,8 @@ interface HostelContract
     public function identifier($identifier);
 
     public function image($image);
+
+    public function interactionStatistic($interactionStatistic);
 
     public function isAccessibleForFree($isAccessibleForFree);
 
@@ -133,8 +157,6 @@ interface HostelContract
     public function numberOfEmployees($numberOfEmployees);
 
     public function numberOfRooms($numberOfRooms);
-
-    public function offeredBy($offeredBy);
 
     public function openingHours($openingHours);
 

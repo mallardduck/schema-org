@@ -28,6 +28,8 @@ interface LoanOrCreditContract
 
     public function category($category);
 
+    public function currency($currency);
+
     public function description($description);
 
     public function disambiguatingDescription($disambiguatingDescription);

@@ -50,6 +50,8 @@ interface BroadcastServiceContract
 
     public function image($image);
 
+    public function inLanguage($inLanguage);
+
     public function isRelatedTo($isRelatedTo);
 
     public function isSimilarTo($isSimilarTo);

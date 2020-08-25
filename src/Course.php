@@ -257,7 +257,7 @@ class Course extends BaseType implements CourseContract, CreativeWorkContract, T
     /**
      * An embedded audio object.
      *
-     * @param \Spatie\SchemaOrg\Contracts\AudioObjectContract|\Spatie\SchemaOrg\Contracts\AudioObjectContract[]|\Spatie\SchemaOrg\Contracts\ClipContract|\Spatie\SchemaOrg\Contracts\ClipContract[] $audio
+     * @param \Spatie\SchemaOrg\Contracts\AudioObjectContract|\Spatie\SchemaOrg\Contracts\AudioObjectContract[]|\Spatie\SchemaOrg\Contracts\ClipContract|\Spatie\SchemaOrg\Contracts\ClipContract[]|\Spatie\SchemaOrg\Contracts\MusicRecordingContract|\Spatie\SchemaOrg\Contracts\MusicRecordingContract[] $audio
      *
      * @return static
      *
@@ -605,6 +605,22 @@ class Course extends BaseType implements CourseContract, CreativeWorkContract, T
     public function educationalAlignment($educationalAlignment)
     {
         return $this->setProperty('educationalAlignment', $educationalAlignment);
+    }
+
+    /**
+     * A description of the qualification, award, certificate, diploma or other
+     * educational credential awarded as a consequence of successful completion
+     * of this course or program.
+     *
+     * @param string|string[] $educationalCredentialAwarded
+     *
+     * @return static
+     *
+     * @see http://schema.org/educationalCredentialAwarded
+     */
+    public function educationalCredentialAwarded($educationalCredentialAwarded)
+    {
+        return $this->setProperty('educationalCredentialAwarded', $educationalCredentialAwarded);
     }
 
     /**

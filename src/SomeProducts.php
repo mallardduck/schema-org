@@ -567,8 +567,8 @@ class SomeProducts extends BaseType implements SomeProductsContract, ProductCont
     }
 
     /**
-     * The product identifier, such as ISBN. For example: ``` meta
-     * itemprop="productID" content="isbn:123-456-789" ```.
+     * The product identifier, such as ISBN. For example: ```meta
+     * itemprop="productID" content="isbn:123-456-789"```.
      *
      * @param string|string[] $productID
      *

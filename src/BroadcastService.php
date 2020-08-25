@@ -364,6 +364,23 @@ class BroadcastService extends BaseType implements BroadcastServiceContract, Int
     }
 
     /**
+     * The language of the content or performance or used in an action. Please
+     * use one of the language codes from the [IETF BCP 47
+     * standard](http://tools.ietf.org/html/bcp47). See also
+     * [[availableLanguage]].
+     *
+     * @param \Spatie\SchemaOrg\Contracts\LanguageContract|\Spatie\SchemaOrg\Contracts\LanguageContract[]|string|string[] $inLanguage
+     *
+     * @return static
+     *
+     * @see http://schema.org/inLanguage
+     */
+    public function inLanguage($inLanguage)
+    {
+        return $this->setProperty('inLanguage', $inLanguage);
+    }
+
+    /**
      * A pointer to another, somehow related product (or multiple products).
      *
      * @param \Spatie\SchemaOrg\Contracts\ProductContract|\Spatie\SchemaOrg\Contracts\ProductContract[]|\Spatie\SchemaOrg\Contracts\ServiceContract|\Spatie\SchemaOrg\Contracts\ServiceContract[] $isRelatedTo

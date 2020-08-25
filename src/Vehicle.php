@@ -781,8 +781,8 @@ class Vehicle extends BaseType implements VehicleContract, ProductContract, Thin
     }
 
     /**
-     * The product identifier, such as ISBN. For example: ``` meta
-     * itemprop="productID" content="isbn:123-456-789" ```.
+     * The product identifier, such as ISBN. For example: ```meta
+     * itemprop="productID" content="isbn:123-456-789"```.
      *
      * @param string|string[] $productID
      *
@@ -1058,23 +1058,6 @@ class Vehicle extends BaseType implements VehicleContract, ProductContract, Thin
     public function vehicleSeatingCapacity($vehicleSeatingCapacity)
     {
         return $this->setProperty('vehicleSeatingCapacity', $vehicleSeatingCapacity);
-    }
-
-    /**
-     * Indicates whether the vehicle has been used for special purposes, like
-     * commercial rental, driving school, or as a taxi. The legislation in many
-     * countries requires this information to be revealed when offering a car
-     * for sale.
-     *
-     * @param string|string[] $vehicleSpecialUsage
-     *
-     * @return static
-     *
-     * @see http://schema.org/vehicleSpecialUsage
-     */
-    public function vehicleSpecialUsage($vehicleSpecialUsage)
-    {
-        return $this->setProperty('vehicleSpecialUsage', $vehicleSpecialUsage);
     }
 
     /**

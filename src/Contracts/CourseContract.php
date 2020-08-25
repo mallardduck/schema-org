@@ -82,6 +82,8 @@ interface CourseContract
 
     public function educationalAlignment($educationalAlignment);
 
+    public function educationalCredentialAwarded($educationalCredentialAwarded);
+
     public function educationalUse($educationalUse);
 
     public function encoding($encoding);
