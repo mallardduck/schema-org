@@ -20,12 +20,12 @@ class ParseProperty extends Task
 
         $property->resource = $this->getResource();
 
-        $this->getWrappedDefinitionProperty('http://schema.org/domainIncludes')
+        $this->getWrappedDefinitionProperty('https://schema.org/domainIncludes')
             ->each(function (array $domain) use ($property) {
                 $property->addType($this->getResourceName($domain));
             });
 
-        $this->getWrappedDefinitionProperty('http://schema.org/rangeIncludes')
+        $this->getWrappedDefinitionProperty('https://schema.org/rangeIncludes')
             ->filter(function ($value) {
                 return ! in_array($this->getResourceName($value), ['GeospatialGeometry', 'EducationalOccupationalCredential', 'DefinedTerm', 'VirtualLocation', 'PhysicalActivityCategory', 'GovernmentBenefitsType'], true);
             })

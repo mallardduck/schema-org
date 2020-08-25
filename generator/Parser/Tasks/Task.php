@@ -43,18 +43,18 @@ abstract class Task
 
     protected function getResourceName(?array $schemaResource = null)
     {
-        return substr($this->getResource($schemaResource), 18);
+        return substr($this->getResource($schemaResource), 19);
     }
 
     protected function isPartOfPending(): bool
     {
-        $isPartOf = $this->getWrappedDefinitionProperty('http://schema.org/isPartOf');
+        $isPartOf = $this->getWrappedDefinitionProperty('https://schema.org/isPartOf');
         if ($isPartOf->isEmpty()) {
             return false;
         }
 
         $filtered = $isPartOf->filter(static function ($schema) {
-            return array_key_exists('@id', $schema) && $schema['@id'] === 'http://pending.schema.org';
+            return array_key_exists('@id', $schema) && $schema['@id'] === 'https://pending.schema.org';
         });
         if ($filtered->isEmpty()) {
             return false;
