@@ -12,10 +12,7 @@ class ParseType extends Task
 
         $type->name = $this->getDefinitionProperty('rdfs:label');
 
-        if (
-            in_array($type->name, ['', 'DataType', 'Float', 'Integer', 'URL', 'Class']) ||
-            $this->isPartOfPending()
-        ) {
+        if (in_array($type->name, ['', 'DataType', 'Float', 'Integer', 'URL', 'Class'])) {
             return null;
         }
 
@@ -41,6 +38,10 @@ class ParseType extends Task
                 ->map(function ($value) {
                     return $this->getResource($value);
                 })->toArray();
+        }
+
+        if ('Intangible' === $this->getDefinitionProperty('rdfs:label')) {
+            var_dump($type);die;
         }
 
         return $type;

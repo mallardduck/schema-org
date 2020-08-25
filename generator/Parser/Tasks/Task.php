@@ -45,21 +45,4 @@ abstract class Task
     {
         return substr($this->getResource($schemaResource), 19);
     }
-
-    protected function isPartOfPending(): bool
-    {
-        $isPartOf = $this->getWrappedDefinitionProperty('https://schema.org/isPartOf');
-        if ($isPartOf->isEmpty()) {
-            return false;
-        }
-
-        $filtered = $isPartOf->filter(static function ($schema) {
-            return array_key_exists('@id', $schema) && $schema['@id'] === 'https://pending.schema.org';
-        });
-        if ($filtered->isEmpty()) {
-            return false;
-        }
-
-        return true;
-    }
 }
