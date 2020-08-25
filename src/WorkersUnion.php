@@ -11,11 +11,31 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * is an organization that promotes the interests of its worker members by
  * collectively bargaining with management, organizing, and political lobbying.
  *
- * @see http://schema.org/WorkersUnion
+ * @see https://schema.org/WorkersUnion
  *
+ *
+ * External Sources:
+ * @see https://github.com/schemaorg/schemaorg/issues/243
  */
 class WorkersUnion extends BaseType implements WorkersUnionContract, OrganizationContract, ThingContract
 {
+    /**
+     * For a [[NewsMediaOrganization]] or other news-related [[Organization]], a
+     * statement about public engagement activities (for news media, the
+     * newsroom’s), including involving the public - digitally or otherwise --
+     * in coverage decisions, reporting and activities after publication.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\CreativeWorkContract|\Spatie\SchemaOrg\Contracts\CreativeWorkContract[]|string|string[] $actionableFeedbackPolicy
+     *
+     * @return static
+     *
+     * @see https://schema.org/actionableFeedbackPolicy
+     */
+    public function actionableFeedbackPolicy($actionableFeedbackPolicy)
+    {
+        return $this->setProperty('actionableFeedbackPolicy', $actionableFeedbackPolicy);
+    }
+
     /**
      * An additional type for the item, typically used for adding more specific
      * types from external vocabularies in microdata syntax. This is a
@@ -28,7 +48,7 @@ class WorkersUnion extends BaseType implements WorkersUnionContract, Organizatio
      *
      * @return static
      *
-     * @see http://schema.org/additionalType
+     * @see https://schema.org/additionalType
      */
     public function additionalType($additionalType)
     {
@@ -42,7 +62,7 @@ class WorkersUnion extends BaseType implements WorkersUnionContract, Organizatio
      *
      * @return static
      *
-     * @see http://schema.org/address
+     * @see https://schema.org/address
      */
     public function address($address)
     {
@@ -57,7 +77,7 @@ class WorkersUnion extends BaseType implements WorkersUnionContract, Organizatio
      *
      * @return static
      *
-     * @see http://schema.org/aggregateRating
+     * @see https://schema.org/aggregateRating
      */
     public function aggregateRating($aggregateRating)
     {
@@ -71,7 +91,7 @@ class WorkersUnion extends BaseType implements WorkersUnionContract, Organizatio
      *
      * @return static
      *
-     * @see http://schema.org/alternateName
+     * @see https://schema.org/alternateName
      */
     public function alternateName($alternateName)
     {
@@ -85,7 +105,7 @@ class WorkersUnion extends BaseType implements WorkersUnionContract, Organizatio
      *
      * @return static
      *
-     * @see http://schema.org/alumni
+     * @see https://schema.org/alumni
      */
     public function alumni($alumni)
     {
@@ -99,7 +119,7 @@ class WorkersUnion extends BaseType implements WorkersUnionContract, Organizatio
      *
      * @return static
      *
-     * @see http://schema.org/areaServed
+     * @see https://schema.org/areaServed
      */
     public function areaServed($areaServed)
     {
@@ -113,7 +133,7 @@ class WorkersUnion extends BaseType implements WorkersUnionContract, Organizatio
      *
      * @return static
      *
-     * @see http://schema.org/award
+     * @see https://schema.org/award
      */
     public function award($award)
     {
@@ -127,7 +147,7 @@ class WorkersUnion extends BaseType implements WorkersUnionContract, Organizatio
      *
      * @return static
      *
-     * @see http://schema.org/awards
+     * @see https://schema.org/awards
      */
     public function awards($awards)
     {
@@ -142,7 +162,7 @@ class WorkersUnion extends BaseType implements WorkersUnionContract, Organizatio
      *
      * @return static
      *
-     * @see http://schema.org/brand
+     * @see https://schema.org/brand
      */
     public function brand($brand)
     {
@@ -156,7 +176,7 @@ class WorkersUnion extends BaseType implements WorkersUnionContract, Organizatio
      *
      * @return static
      *
-     * @see http://schema.org/contactPoint
+     * @see https://schema.org/contactPoint
      */
     public function contactPoint($contactPoint)
     {
@@ -170,11 +190,27 @@ class WorkersUnion extends BaseType implements WorkersUnionContract, Organizatio
      *
      * @return static
      *
-     * @see http://schema.org/contactPoints
+     * @see https://schema.org/contactPoints
      */
     public function contactPoints($contactPoints)
     {
         return $this->setProperty('contactPoints', $contactPoints);
+    }
+
+    /**
+     * For an [[Organization]] (e.g. [[NewsMediaOrganization]]), a statement
+     * describing (in news media, the newsroom’s) disclosure and correction
+     * policy for errors.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\CreativeWorkContract|\Spatie\SchemaOrg\Contracts\CreativeWorkContract[]|string|string[] $correctionsPolicy
+     *
+     * @return static
+     *
+     * @see https://schema.org/correctionsPolicy
+     */
+    public function correctionsPolicy($correctionsPolicy)
+    {
+        return $this->setProperty('correctionsPolicy', $correctionsPolicy);
     }
 
     /**
@@ -187,7 +223,7 @@ class WorkersUnion extends BaseType implements WorkersUnionContract, Organizatio
      *
      * @return static
      *
-     * @see http://schema.org/department
+     * @see https://schema.org/department
      */
     public function department($department)
     {
@@ -201,7 +237,7 @@ class WorkersUnion extends BaseType implements WorkersUnionContract, Organizatio
      *
      * @return static
      *
-     * @see http://schema.org/description
+     * @see https://schema.org/description
      */
     public function description($description)
     {
@@ -218,7 +254,7 @@ class WorkersUnion extends BaseType implements WorkersUnionContract, Organizatio
      *
      * @return static
      *
-     * @see http://schema.org/disambiguatingDescription
+     * @see https://schema.org/disambiguatingDescription
      */
     public function disambiguatingDescription($disambiguatingDescription)
     {
@@ -232,11 +268,45 @@ class WorkersUnion extends BaseType implements WorkersUnionContract, Organizatio
      *
      * @return static
      *
-     * @see http://schema.org/dissolutionDate
+     * @see https://schema.org/dissolutionDate
      */
     public function dissolutionDate($dissolutionDate)
     {
         return $this->setProperty('dissolutionDate', $dissolutionDate);
+    }
+
+    /**
+     * Statement on diversity policy by an [[Organization]] e.g. a
+     * [[NewsMediaOrganization]]. For a [[NewsMediaOrganization]], a statement
+     * describing the newsroom’s diversity policy on both staffing and
+     * sources, typically providing staffing data.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\CreativeWorkContract|\Spatie\SchemaOrg\Contracts\CreativeWorkContract[]|string|string[] $diversityPolicy
+     *
+     * @return static
+     *
+     * @see https://schema.org/diversityPolicy
+     */
+    public function diversityPolicy($diversityPolicy)
+    {
+        return $this->setProperty('diversityPolicy', $diversityPolicy);
+    }
+
+    /**
+     * For an [[Organization]] (often but not necessarily a
+     * [[NewsMediaOrganization]]), a report on staffing diversity issues. In a
+     * news context this might be for example ASNE or RTDNA (US) reports, or
+     * self-reported.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\ArticleContract|\Spatie\SchemaOrg\Contracts\ArticleContract[]|string|string[] $diversityStaffingReport
+     *
+     * @return static
+     *
+     * @see https://schema.org/diversityStaffingReport
+     */
+    public function diversityStaffingReport($diversityStaffingReport)
+    {
+        return $this->setProperty('diversityStaffingReport', $diversityStaffingReport);
     }
 
     /**
@@ -247,7 +317,7 @@ class WorkersUnion extends BaseType implements WorkersUnionContract, Organizatio
      *
      * @return static
      *
-     * @see http://schema.org/duns
+     * @see https://schema.org/duns
      */
     public function duns($duns)
     {
@@ -261,7 +331,7 @@ class WorkersUnion extends BaseType implements WorkersUnionContract, Organizatio
      *
      * @return static
      *
-     * @see http://schema.org/email
+     * @see https://schema.org/email
      */
     public function email($email)
     {
@@ -275,7 +345,7 @@ class WorkersUnion extends BaseType implements WorkersUnionContract, Organizatio
      *
      * @return static
      *
-     * @see http://schema.org/employee
+     * @see https://schema.org/employee
      */
     public function employee($employee)
     {
@@ -289,11 +359,30 @@ class WorkersUnion extends BaseType implements WorkersUnionContract, Organizatio
      *
      * @return static
      *
-     * @see http://schema.org/employees
+     * @see https://schema.org/employees
      */
     public function employees($employees)
     {
         return $this->setProperty('employees', $employees);
+    }
+
+    /**
+     * Statement about ethics policy, e.g. of a [[NewsMediaOrganization]]
+     * regarding journalistic and publishing practices, or of a [[Restaurant]],
+     * a page describing food source policies. In the case of a
+     * [[NewsMediaOrganization]], an ethicsPolicy is typically a statement
+     * describing the personal, organizational, and corporate standards of
+     * behavior expected by the organization.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\CreativeWorkContract|\Spatie\SchemaOrg\Contracts\CreativeWorkContract[]|string|string[] $ethicsPolicy
+     *
+     * @return static
+     *
+     * @see https://schema.org/ethicsPolicy
+     */
+    public function ethicsPolicy($ethicsPolicy)
+    {
+        return $this->setProperty('ethicsPolicy', $ethicsPolicy);
     }
 
     /**
@@ -304,7 +393,7 @@ class WorkersUnion extends BaseType implements WorkersUnionContract, Organizatio
      *
      * @return static
      *
-     * @see http://schema.org/event
+     * @see https://schema.org/event
      */
     public function event($event)
     {
@@ -318,7 +407,7 @@ class WorkersUnion extends BaseType implements WorkersUnionContract, Organizatio
      *
      * @return static
      *
-     * @see http://schema.org/events
+     * @see https://schema.org/events
      */
     public function events($events)
     {
@@ -332,7 +421,7 @@ class WorkersUnion extends BaseType implements WorkersUnionContract, Organizatio
      *
      * @return static
      *
-     * @see http://schema.org/faxNumber
+     * @see https://schema.org/faxNumber
      */
     public function faxNumber($faxNumber)
     {
@@ -346,7 +435,7 @@ class WorkersUnion extends BaseType implements WorkersUnionContract, Organizatio
      *
      * @return static
      *
-     * @see http://schema.org/founder
+     * @see https://schema.org/founder
      */
     public function founder($founder)
     {
@@ -360,7 +449,7 @@ class WorkersUnion extends BaseType implements WorkersUnionContract, Organizatio
      *
      * @return static
      *
-     * @see http://schema.org/founders
+     * @see https://schema.org/founders
      */
     public function founders($founders)
     {
@@ -374,7 +463,7 @@ class WorkersUnion extends BaseType implements WorkersUnionContract, Organizatio
      *
      * @return static
      *
-     * @see http://schema.org/foundingDate
+     * @see https://schema.org/foundingDate
      */
     public function foundingDate($foundingDate)
     {
@@ -388,7 +477,7 @@ class WorkersUnion extends BaseType implements WorkersUnionContract, Organizatio
      *
      * @return static
      *
-     * @see http://schema.org/foundingLocation
+     * @see https://schema.org/foundingLocation
      */
     public function foundingLocation($foundingLocation)
     {
@@ -403,7 +492,7 @@ class WorkersUnion extends BaseType implements WorkersUnionContract, Organizatio
      *
      * @return static
      *
-     * @see http://schema.org/funder
+     * @see https://schema.org/funder
      */
     public function funder($funder)
     {
@@ -420,11 +509,39 @@ class WorkersUnion extends BaseType implements WorkersUnionContract, Organizatio
      *
      * @return static
      *
-     * @see http://schema.org/globalLocationNumber
+     * @see https://schema.org/globalLocationNumber
      */
     public function globalLocationNumber($globalLocationNumber)
     {
         return $this->setProperty('globalLocationNumber', $globalLocationNumber);
+    }
+
+    /**
+     * A credential awarded to the Person or Organization.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\EducationalOccupationalCredentialContract|\Spatie\SchemaOrg\Contracts\EducationalOccupationalCredentialContract[] $hasCredential
+     *
+     * @return static
+     *
+     * @see https://schema.org/hasCredential
+     */
+    public function hasCredential($hasCredential)
+    {
+        return $this->setProperty('hasCredential', $hasCredential);
+    }
+
+    /**
+     * Indicates a MerchantReturnPolicy that may be applicable.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\MerchantReturnPolicyContract|\Spatie\SchemaOrg\Contracts\MerchantReturnPolicyContract[] $hasMerchantReturnPolicy
+     *
+     * @return static
+     *
+     * @see https://schema.org/hasMerchantReturnPolicy
+     */
+    public function hasMerchantReturnPolicy($hasMerchantReturnPolicy)
+    {
+        return $this->setProperty('hasMerchantReturnPolicy', $hasMerchantReturnPolicy);
     }
 
     /**
@@ -435,7 +552,7 @@ class WorkersUnion extends BaseType implements WorkersUnionContract, Organizatio
      *
      * @return static
      *
-     * @see http://schema.org/hasOfferCatalog
+     * @see https://schema.org/hasOfferCatalog
      */
     public function hasOfferCatalog($hasOfferCatalog)
     {
@@ -449,7 +566,7 @@ class WorkersUnion extends BaseType implements WorkersUnionContract, Organizatio
      *
      * @return static
      *
-     * @see http://schema.org/hasPOS
+     * @see https://schema.org/hasPOS
      */
     public function hasPOS($hasPOS)
     {
@@ -467,7 +584,7 @@ class WorkersUnion extends BaseType implements WorkersUnionContract, Organizatio
      *
      * @return static
      *
-     * @see http://schema.org/identifier
+     * @see https://schema.org/identifier
      */
     public function identifier($identifier)
     {
@@ -482,7 +599,7 @@ class WorkersUnion extends BaseType implements WorkersUnionContract, Organizatio
      *
      * @return static
      *
-     * @see http://schema.org/image
+     * @see https://schema.org/image
      */
     public function image($image)
     {
@@ -498,7 +615,7 @@ class WorkersUnion extends BaseType implements WorkersUnionContract, Organizatio
      *
      * @return static
      *
-     * @see http://schema.org/interactionStatistic
+     * @see https://schema.org/interactionStatistic
      */
     public function interactionStatistic($interactionStatistic)
     {
@@ -514,11 +631,45 @@ class WorkersUnion extends BaseType implements WorkersUnionContract, Organizatio
      *
      * @return static
      *
-     * @see http://schema.org/isicV4
+     * @see https://schema.org/isicV4
      */
     public function isicV4($isicV4)
     {
         return $this->setProperty('isicV4', $isicV4);
+    }
+
+    /**
+     * Of a [[Person]], and less typically of an [[Organization]], to indicate a
+     * topic that is known about - suggesting possible expertise but not
+     * implying it. We do not distinguish skill levels here, or relate this to
+     * educational content, events, objectives or [[JobPosting]] descriptions.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\ThingContract|\Spatie\SchemaOrg\Contracts\ThingContract[]|string|string[] $knowsAbout
+     *
+     * @return static
+     *
+     * @see https://schema.org/knowsAbout
+     */
+    public function knowsAbout($knowsAbout)
+    {
+        return $this->setProperty('knowsAbout', $knowsAbout);
+    }
+
+    /**
+     * Of a [[Person]], and less typically of an [[Organization]], to indicate a
+     * known language. We do not distinguish skill levels or
+     * reading/writing/speaking/signing here. Use language codes from the [IETF
+     * BCP 47 standard](http://tools.ietf.org/html/bcp47).
+     *
+     * @param \Spatie\SchemaOrg\Contracts\LanguageContract|\Spatie\SchemaOrg\Contracts\LanguageContract[]|string|string[] $knowsLanguage
+     *
+     * @return static
+     *
+     * @see https://schema.org/knowsLanguage
+     */
+    public function knowsLanguage($knowsLanguage)
+    {
+        return $this->setProperty('knowsLanguage', $knowsLanguage);
     }
 
     /**
@@ -528,7 +679,7 @@ class WorkersUnion extends BaseType implements WorkersUnionContract, Organizatio
      *
      * @return static
      *
-     * @see http://schema.org/legalName
+     * @see https://schema.org/legalName
      */
     public function legalName($legalName)
     {
@@ -543,7 +694,7 @@ class WorkersUnion extends BaseType implements WorkersUnionContract, Organizatio
      *
      * @return static
      *
-     * @see http://schema.org/leiCode
+     * @see https://schema.org/leiCode
      */
     public function leiCode($leiCode)
     {
@@ -554,11 +705,11 @@ class WorkersUnion extends BaseType implements WorkersUnionContract, Organizatio
      * The location of for example where the event is happening, an organization
      * is located, or where an action takes place.
      *
-     * @param \Spatie\SchemaOrg\Contracts\PlaceContract|\Spatie\SchemaOrg\Contracts\PlaceContract[]|\Spatie\SchemaOrg\Contracts\PostalAddressContract|\Spatie\SchemaOrg\Contracts\PostalAddressContract[]|string|string[] $location
+     * @param \Spatie\SchemaOrg\Contracts\PlaceContract|\Spatie\SchemaOrg\Contracts\PlaceContract[]|\Spatie\SchemaOrg\Contracts\PostalAddressContract|\Spatie\SchemaOrg\Contracts\PostalAddressContract[]|\Spatie\SchemaOrg\Contracts\VirtualLocationContract|\Spatie\SchemaOrg\Contracts\VirtualLocationContract[]|string|string[] $location
      *
      * @return static
      *
-     * @see http://schema.org/location
+     * @see https://schema.org/location
      */
     public function location($location)
     {
@@ -572,7 +723,7 @@ class WorkersUnion extends BaseType implements WorkersUnionContract, Organizatio
      *
      * @return static
      *
-     * @see http://schema.org/logo
+     * @see https://schema.org/logo
      */
     public function logo($logo)
     {
@@ -588,7 +739,7 @@ class WorkersUnion extends BaseType implements WorkersUnionContract, Organizatio
      *
      * @return static
      *
-     * @see http://schema.org/mainEntityOfPage
+     * @see https://schema.org/mainEntityOfPage
      */
     public function mainEntityOfPage($mainEntityOfPage)
     {
@@ -602,7 +753,7 @@ class WorkersUnion extends BaseType implements WorkersUnionContract, Organizatio
      *
      * @return static
      *
-     * @see http://schema.org/makesOffer
+     * @see https://schema.org/makesOffer
      */
     public function makesOffer($makesOffer)
     {
@@ -617,7 +768,7 @@ class WorkersUnion extends BaseType implements WorkersUnionContract, Organizatio
      *
      * @return static
      *
-     * @see http://schema.org/member
+     * @see https://schema.org/member
      */
     public function member($member)
     {
@@ -632,7 +783,7 @@ class WorkersUnion extends BaseType implements WorkersUnionContract, Organizatio
      *
      * @return static
      *
-     * @see http://schema.org/memberOf
+     * @see https://schema.org/memberOf
      */
     public function memberOf($memberOf)
     {
@@ -646,7 +797,7 @@ class WorkersUnion extends BaseType implements WorkersUnionContract, Organizatio
      *
      * @return static
      *
-     * @see http://schema.org/members
+     * @see https://schema.org/members
      */
     public function members($members)
     {
@@ -661,7 +812,7 @@ class WorkersUnion extends BaseType implements WorkersUnionContract, Organizatio
      *
      * @return static
      *
-     * @see http://schema.org/naics
+     * @see https://schema.org/naics
      */
     public function naics($naics)
     {
@@ -675,11 +826,26 @@ class WorkersUnion extends BaseType implements WorkersUnionContract, Organizatio
      *
      * @return static
      *
-     * @see http://schema.org/name
+     * @see https://schema.org/name
      */
     public function name($name)
     {
         return $this->setProperty('name', $name);
+    }
+
+    /**
+     * nonprofit Status indicates the legal status of a non-profit organization
+     * in its primary place of business.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\NonprofitTypeContract|\Spatie\SchemaOrg\Contracts\NonprofitTypeContract[] $nonprofitStatus
+     *
+     * @return static
+     *
+     * @see https://schema.org/nonprofitStatus
+     */
+    public function nonprofitStatus($nonprofitStatus)
+    {
+        return $this->setProperty('nonprofitStatus', $nonprofitStatus);
     }
 
     /**
@@ -689,11 +855,30 @@ class WorkersUnion extends BaseType implements WorkersUnionContract, Organizatio
      *
      * @return static
      *
-     * @see http://schema.org/numberOfEmployees
+     * @see https://schema.org/numberOfEmployees
      */
     public function numberOfEmployees($numberOfEmployees)
     {
         return $this->setProperty('numberOfEmployees', $numberOfEmployees);
+    }
+
+    /**
+     * For an [[Organization]] (often but not necessarily a
+     * [[NewsMediaOrganization]]), a description of organizational ownership
+     * structure; funding and grants. In a news/media setting, this is with
+     * particular reference to editorial independence.   Note that the
+     * [[funder]] is also available and can be used to make basic funder
+     * information machine-readable.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\AboutPageContract|\Spatie\SchemaOrg\Contracts\AboutPageContract[]|\Spatie\SchemaOrg\Contracts\CreativeWorkContract|\Spatie\SchemaOrg\Contracts\CreativeWorkContract[]|string|string[] $ownershipFundingInfo
+     *
+     * @return static
+     *
+     * @see https://schema.org/ownershipFundingInfo
+     */
+    public function ownershipFundingInfo($ownershipFundingInfo)
+    {
+        return $this->setProperty('ownershipFundingInfo', $ownershipFundingInfo);
     }
 
     /**
@@ -703,7 +888,7 @@ class WorkersUnion extends BaseType implements WorkersUnionContract, Organizatio
      *
      * @return static
      *
-     * @see http://schema.org/owns
+     * @see https://schema.org/owns
      */
     public function owns($owns)
     {
@@ -718,7 +903,7 @@ class WorkersUnion extends BaseType implements WorkersUnionContract, Organizatio
      *
      * @return static
      *
-     * @see http://schema.org/parentOrganization
+     * @see https://schema.org/parentOrganization
      */
     public function parentOrganization($parentOrganization)
     {
@@ -733,7 +918,7 @@ class WorkersUnion extends BaseType implements WorkersUnionContract, Organizatio
      *
      * @return static
      *
-     * @see http://schema.org/potentialAction
+     * @see https://schema.org/potentialAction
      */
     public function potentialAction($potentialAction)
     {
@@ -757,7 +942,7 @@ class WorkersUnion extends BaseType implements WorkersUnionContract, Organizatio
      *
      * @return static
      *
-     * @see http://schema.org/publishingPrinciples
+     * @see https://schema.org/publishingPrinciples
      */
     public function publishingPrinciples($publishingPrinciples)
     {
@@ -771,7 +956,7 @@ class WorkersUnion extends BaseType implements WorkersUnionContract, Organizatio
      *
      * @return static
      *
-     * @see http://schema.org/review
+     * @see https://schema.org/review
      */
     public function review($review)
     {
@@ -785,7 +970,7 @@ class WorkersUnion extends BaseType implements WorkersUnionContract, Organizatio
      *
      * @return static
      *
-     * @see http://schema.org/reviews
+     * @see https://schema.org/reviews
      */
     public function reviews($reviews)
     {
@@ -801,7 +986,7 @@ class WorkersUnion extends BaseType implements WorkersUnionContract, Organizatio
      *
      * @return static
      *
-     * @see http://schema.org/sameAs
+     * @see https://schema.org/sameAs
      */
     public function sameAs($sameAs)
     {
@@ -816,7 +1001,7 @@ class WorkersUnion extends BaseType implements WorkersUnionContract, Organizatio
      *
      * @return static
      *
-     * @see http://schema.org/seeks
+     * @see https://schema.org/seeks
      */
     public function seeks($seeks)
     {
@@ -830,7 +1015,7 @@ class WorkersUnion extends BaseType implements WorkersUnionContract, Organizatio
      *
      * @return static
      *
-     * @see http://schema.org/serviceArea
+     * @see https://schema.org/serviceArea
      */
     public function serviceArea($serviceArea)
     {
@@ -844,7 +1029,7 @@ class WorkersUnion extends BaseType implements WorkersUnionContract, Organizatio
      *
      * @return static
      *
-     * @see http://schema.org/slogan
+     * @see https://schema.org/slogan
      */
     public function slogan($slogan)
     {
@@ -860,7 +1045,7 @@ class WorkersUnion extends BaseType implements WorkersUnionContract, Organizatio
      *
      * @return static
      *
-     * @see http://schema.org/sponsor
+     * @see https://schema.org/sponsor
      */
     public function sponsor($sponsor)
     {
@@ -876,7 +1061,7 @@ class WorkersUnion extends BaseType implements WorkersUnionContract, Organizatio
      *
      * @return static
      *
-     * @see http://schema.org/subOrganization
+     * @see https://schema.org/subOrganization
      */
     public function subOrganization($subOrganization)
     {
@@ -890,7 +1075,7 @@ class WorkersUnion extends BaseType implements WorkersUnionContract, Organizatio
      *
      * @return static
      *
-     * @see http://schema.org/subjectOf
+     * @see https://schema.org/subjectOf
      */
     public function subjectOf($subjectOf)
     {
@@ -905,7 +1090,7 @@ class WorkersUnion extends BaseType implements WorkersUnionContract, Organizatio
      *
      * @return static
      *
-     * @see http://schema.org/taxID
+     * @see https://schema.org/taxID
      */
     public function taxID($taxID)
     {
@@ -919,11 +1104,27 @@ class WorkersUnion extends BaseType implements WorkersUnionContract, Organizatio
      *
      * @return static
      *
-     * @see http://schema.org/telephone
+     * @see https://schema.org/telephone
      */
     public function telephone($telephone)
     {
         return $this->setProperty('telephone', $telephone);
+    }
+
+    /**
+     * For an [[Organization]] (typically a [[NewsMediaOrganization]]), a
+     * statement about policy on use of unnamed sources and the decision process
+     * required.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\CreativeWorkContract|\Spatie\SchemaOrg\Contracts\CreativeWorkContract[]|string|string[] $unnamedSourcesPolicy
+     *
+     * @return static
+     *
+     * @see https://schema.org/unnamedSourcesPolicy
+     */
+    public function unnamedSourcesPolicy($unnamedSourcesPolicy)
+    {
+        return $this->setProperty('unnamedSourcesPolicy', $unnamedSourcesPolicy);
     }
 
     /**
@@ -933,7 +1134,7 @@ class WorkersUnion extends BaseType implements WorkersUnionContract, Organizatio
      *
      * @return static
      *
-     * @see http://schema.org/url
+     * @see https://schema.org/url
      */
     public function url($url)
     {
@@ -947,7 +1148,7 @@ class WorkersUnion extends BaseType implements WorkersUnionContract, Organizatio
      *
      * @return static
      *
-     * @see http://schema.org/vatID
+     * @see https://schema.org/vatID
      */
     public function vatID($vatID)
     {

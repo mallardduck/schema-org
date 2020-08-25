@@ -3,18 +3,60 @@
 namespace Spatie\SchemaOrg;
 
 use \Spatie\SchemaOrg\Contracts\PharmacyContract;
+use \Spatie\SchemaOrg\Contracts\LocalBusinessContract;
+use \Spatie\SchemaOrg\Contracts\MedicalBusinessContract;
 use \Spatie\SchemaOrg\Contracts\MedicalOrganizationContract;
 use \Spatie\SchemaOrg\Contracts\OrganizationContract;
+use \Spatie\SchemaOrg\Contracts\PlaceContract;
 use \Spatie\SchemaOrg\Contracts\ThingContract;
 
 /**
  * A pharmacy or drugstore.
  *
- * @see http://schema.org/Pharmacy
+ * @see https://schema.org/Pharmacy
  *
  */
-class Pharmacy extends BaseType implements PharmacyContract, MedicalOrganizationContract, OrganizationContract, ThingContract
+class Pharmacy extends BaseType implements PharmacyContract, LocalBusinessContract, MedicalBusinessContract, MedicalOrganizationContract, OrganizationContract, PlaceContract, ThingContract
 {
+    /**
+     * For a [[NewsMediaOrganization]] or other news-related [[Organization]], a
+     * statement about public engagement activities (for news media, the
+     * newsroom’s), including involving the public - digitally or otherwise --
+     * in coverage decisions, reporting and activities after publication.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\CreativeWorkContract|\Spatie\SchemaOrg\Contracts\CreativeWorkContract[]|string|string[] $actionableFeedbackPolicy
+     *
+     * @return static
+     *
+     * @see https://schema.org/actionableFeedbackPolicy
+     */
+    public function actionableFeedbackPolicy($actionableFeedbackPolicy)
+    {
+        return $this->setProperty('actionableFeedbackPolicy', $actionableFeedbackPolicy);
+    }
+
+    /**
+     * A property-value pair representing an additional characteristics of the
+     * entitity, e.g. a product feature or another characteristic for which
+     * there is no matching property in schema.org.
+     * 
+     * Note: Publishers should be aware that applications designed to use
+     * specific schema.org properties (e.g. https://schema.org/width,
+     * https://schema.org/color, https://schema.org/gtin13, ...) will typically
+     * expect such data to be provided using those properties, rather than using
+     * the generic property/value mechanism.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\PropertyValueContract|\Spatie\SchemaOrg\Contracts\PropertyValueContract[] $additionalProperty
+     *
+     * @return static
+     *
+     * @see https://schema.org/additionalProperty
+     */
+    public function additionalProperty($additionalProperty)
+    {
+        return $this->setProperty('additionalProperty', $additionalProperty);
+    }
+
     /**
      * An additional type for the item, typically used for adding more specific
      * types from external vocabularies in microdata syntax. This is a
@@ -27,7 +69,7 @@ class Pharmacy extends BaseType implements PharmacyContract, MedicalOrganization
      *
      * @return static
      *
-     * @see http://schema.org/additionalType
+     * @see https://schema.org/additionalType
      */
     public function additionalType($additionalType)
     {
@@ -41,7 +83,7 @@ class Pharmacy extends BaseType implements PharmacyContract, MedicalOrganization
      *
      * @return static
      *
-     * @see http://schema.org/address
+     * @see https://schema.org/address
      */
     public function address($address)
     {
@@ -56,7 +98,7 @@ class Pharmacy extends BaseType implements PharmacyContract, MedicalOrganization
      *
      * @return static
      *
-     * @see http://schema.org/aggregateRating
+     * @see https://schema.org/aggregateRating
      */
     public function aggregateRating($aggregateRating)
     {
@@ -70,7 +112,7 @@ class Pharmacy extends BaseType implements PharmacyContract, MedicalOrganization
      *
      * @return static
      *
-     * @see http://schema.org/alternateName
+     * @see https://schema.org/alternateName
      */
     public function alternateName($alternateName)
     {
@@ -84,11 +126,28 @@ class Pharmacy extends BaseType implements PharmacyContract, MedicalOrganization
      *
      * @return static
      *
-     * @see http://schema.org/alumni
+     * @see https://schema.org/alumni
      */
     public function alumni($alumni)
     {
         return $this->setProperty('alumni', $alumni);
+    }
+
+    /**
+     * An amenity feature (e.g. a characteristic or service) of the
+     * Accommodation. This generic property does not make a statement about
+     * whether the feature is included in an offer for the main accommodation or
+     * available at extra costs.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\LocationFeatureSpecificationContract|\Spatie\SchemaOrg\Contracts\LocationFeatureSpecificationContract[] $amenityFeature
+     *
+     * @return static
+     *
+     * @see https://schema.org/amenityFeature
+     */
+    public function amenityFeature($amenityFeature)
+    {
+        return $this->setProperty('amenityFeature', $amenityFeature);
     }
 
     /**
@@ -98,7 +157,7 @@ class Pharmacy extends BaseType implements PharmacyContract, MedicalOrganization
      *
      * @return static
      *
-     * @see http://schema.org/areaServed
+     * @see https://schema.org/areaServed
      */
     public function areaServed($areaServed)
     {
@@ -112,7 +171,7 @@ class Pharmacy extends BaseType implements PharmacyContract, MedicalOrganization
      *
      * @return static
      *
-     * @see http://schema.org/award
+     * @see https://schema.org/award
      */
     public function award($award)
     {
@@ -126,11 +185,46 @@ class Pharmacy extends BaseType implements PharmacyContract, MedicalOrganization
      *
      * @return static
      *
-     * @see http://schema.org/awards
+     * @see https://schema.org/awards
      */
     public function awards($awards)
     {
         return $this->setProperty('awards', $awards);
+    }
+
+    /**
+     * A short textual code (also called "store code") that uniquely identifies
+     * a place of business. The code is typically assigned by the
+     * parentOrganization and used in structured URLs.
+     * 
+     * For example, in the URL
+     * http://www.starbucks.co.uk/store-locator/etc/detail/3047 the code "3047"
+     * is a branchCode for a particular branch.
+     *
+     * @param string|string[] $branchCode
+     *
+     * @return static
+     *
+     * @see https://schema.org/branchCode
+     */
+    public function branchCode($branchCode)
+    {
+        return $this->setProperty('branchCode', $branchCode);
+    }
+
+    /**
+     * The larger organization that this local business is a branch of, if any.
+     * Not to be confused with (anatomical)[[branch]].
+     *
+     * @param \Spatie\SchemaOrg\Contracts\OrganizationContract|\Spatie\SchemaOrg\Contracts\OrganizationContract[] $branchOf
+     *
+     * @return static
+     *
+     * @see https://schema.org/branchOf
+     */
+    public function branchOf($branchOf)
+    {
+        return $this->setProperty('branchOf', $branchOf);
     }
 
     /**
@@ -141,7 +235,7 @@ class Pharmacy extends BaseType implements PharmacyContract, MedicalOrganization
      *
      * @return static
      *
-     * @see http://schema.org/brand
+     * @see https://schema.org/brand
      */
     public function brand($brand)
     {
@@ -155,7 +249,7 @@ class Pharmacy extends BaseType implements PharmacyContract, MedicalOrganization
      *
      * @return static
      *
-     * @see http://schema.org/contactPoint
+     * @see https://schema.org/contactPoint
      */
     public function contactPoint($contactPoint)
     {
@@ -169,11 +263,92 @@ class Pharmacy extends BaseType implements PharmacyContract, MedicalOrganization
      *
      * @return static
      *
-     * @see http://schema.org/contactPoints
+     * @see https://schema.org/contactPoints
      */
     public function contactPoints($contactPoints)
     {
         return $this->setProperty('contactPoints', $contactPoints);
+    }
+
+    /**
+     * The basic containment relation between a place and one that contains it.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\PlaceContract|\Spatie\SchemaOrg\Contracts\PlaceContract[] $containedIn
+     *
+     * @return static
+     *
+     * @see https://schema.org/containedIn
+     */
+    public function containedIn($containedIn)
+    {
+        return $this->setProperty('containedIn', $containedIn);
+    }
+
+    /**
+     * The basic containment relation between a place and one that contains it.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\PlaceContract|\Spatie\SchemaOrg\Contracts\PlaceContract[] $containedInPlace
+     *
+     * @return static
+     *
+     * @see https://schema.org/containedInPlace
+     */
+    public function containedInPlace($containedInPlace)
+    {
+        return $this->setProperty('containedInPlace', $containedInPlace);
+    }
+
+    /**
+     * The basic containment relation between a place and another that it
+     * contains.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\PlaceContract|\Spatie\SchemaOrg\Contracts\PlaceContract[] $containsPlace
+     *
+     * @return static
+     *
+     * @see https://schema.org/containsPlace
+     */
+    public function containsPlace($containsPlace)
+    {
+        return $this->setProperty('containsPlace', $containsPlace);
+    }
+
+    /**
+     * For an [[Organization]] (e.g. [[NewsMediaOrganization]]), a statement
+     * describing (in news media, the newsroom’s) disclosure and correction
+     * policy for errors.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\CreativeWorkContract|\Spatie\SchemaOrg\Contracts\CreativeWorkContract[]|string|string[] $correctionsPolicy
+     *
+     * @return static
+     *
+     * @see https://schema.org/correctionsPolicy
+     */
+    public function correctionsPolicy($correctionsPolicy)
+    {
+        return $this->setProperty('correctionsPolicy', $correctionsPolicy);
+    }
+
+    /**
+     * The currency accepted.
+     * 
+     * Use standard formats: [ISO 4217 currency
+     * format](http://en.wikipedia.org/wiki/ISO_4217) e.g. "USD"; [Ticker
+     * symbol](https://en.wikipedia.org/wiki/List_of_cryptocurrencies) for
+     * cryptocurrencies e.g. "BTC"; well known names for [Local Exchange
+     * Tradings
+     * Systems](https://en.wikipedia.org/wiki/Local_exchange_trading_system)
+     * (LETS) and other currency types e.g. "Ithaca HOUR".
+     *
+     * @param string|string[] $currenciesAccepted
+     *
+     * @return static
+     *
+     * @see https://schema.org/currenciesAccepted
+     */
+    public function currenciesAccepted($currenciesAccepted)
+    {
+        return $this->setProperty('currenciesAccepted', $currenciesAccepted);
     }
 
     /**
@@ -186,7 +361,7 @@ class Pharmacy extends BaseType implements PharmacyContract, MedicalOrganization
      *
      * @return static
      *
-     * @see http://schema.org/department
+     * @see https://schema.org/department
      */
     public function department($department)
     {
@@ -200,7 +375,7 @@ class Pharmacy extends BaseType implements PharmacyContract, MedicalOrganization
      *
      * @return static
      *
-     * @see http://schema.org/description
+     * @see https://schema.org/description
      */
     public function description($description)
     {
@@ -217,7 +392,7 @@ class Pharmacy extends BaseType implements PharmacyContract, MedicalOrganization
      *
      * @return static
      *
-     * @see http://schema.org/disambiguatingDescription
+     * @see https://schema.org/disambiguatingDescription
      */
     public function disambiguatingDescription($disambiguatingDescription)
     {
@@ -231,11 +406,45 @@ class Pharmacy extends BaseType implements PharmacyContract, MedicalOrganization
      *
      * @return static
      *
-     * @see http://schema.org/dissolutionDate
+     * @see https://schema.org/dissolutionDate
      */
     public function dissolutionDate($dissolutionDate)
     {
         return $this->setProperty('dissolutionDate', $dissolutionDate);
+    }
+
+    /**
+     * Statement on diversity policy by an [[Organization]] e.g. a
+     * [[NewsMediaOrganization]]. For a [[NewsMediaOrganization]], a statement
+     * describing the newsroom’s diversity policy on both staffing and
+     * sources, typically providing staffing data.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\CreativeWorkContract|\Spatie\SchemaOrg\Contracts\CreativeWorkContract[]|string|string[] $diversityPolicy
+     *
+     * @return static
+     *
+     * @see https://schema.org/diversityPolicy
+     */
+    public function diversityPolicy($diversityPolicy)
+    {
+        return $this->setProperty('diversityPolicy', $diversityPolicy);
+    }
+
+    /**
+     * For an [[Organization]] (often but not necessarily a
+     * [[NewsMediaOrganization]]), a report on staffing diversity issues. In a
+     * news context this might be for example ASNE or RTDNA (US) reports, or
+     * self-reported.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\ArticleContract|\Spatie\SchemaOrg\Contracts\ArticleContract[]|string|string[] $diversityStaffingReport
+     *
+     * @return static
+     *
+     * @see https://schema.org/diversityStaffingReport
+     */
+    public function diversityStaffingReport($diversityStaffingReport)
+    {
+        return $this->setProperty('diversityStaffingReport', $diversityStaffingReport);
     }
 
     /**
@@ -246,7 +455,7 @@ class Pharmacy extends BaseType implements PharmacyContract, MedicalOrganization
      *
      * @return static
      *
-     * @see http://schema.org/duns
+     * @see https://schema.org/duns
      */
     public function duns($duns)
     {
@@ -260,7 +469,7 @@ class Pharmacy extends BaseType implements PharmacyContract, MedicalOrganization
      *
      * @return static
      *
-     * @see http://schema.org/email
+     * @see https://schema.org/email
      */
     public function email($email)
     {
@@ -274,7 +483,7 @@ class Pharmacy extends BaseType implements PharmacyContract, MedicalOrganization
      *
      * @return static
      *
-     * @see http://schema.org/employee
+     * @see https://schema.org/employee
      */
     public function employee($employee)
     {
@@ -288,11 +497,30 @@ class Pharmacy extends BaseType implements PharmacyContract, MedicalOrganization
      *
      * @return static
      *
-     * @see http://schema.org/employees
+     * @see https://schema.org/employees
      */
     public function employees($employees)
     {
         return $this->setProperty('employees', $employees);
+    }
+
+    /**
+     * Statement about ethics policy, e.g. of a [[NewsMediaOrganization]]
+     * regarding journalistic and publishing practices, or of a [[Restaurant]],
+     * a page describing food source policies. In the case of a
+     * [[NewsMediaOrganization]], an ethicsPolicy is typically a statement
+     * describing the personal, organizational, and corporate standards of
+     * behavior expected by the organization.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\CreativeWorkContract|\Spatie\SchemaOrg\Contracts\CreativeWorkContract[]|string|string[] $ethicsPolicy
+     *
+     * @return static
+     *
+     * @see https://schema.org/ethicsPolicy
+     */
+    public function ethicsPolicy($ethicsPolicy)
+    {
+        return $this->setProperty('ethicsPolicy', $ethicsPolicy);
     }
 
     /**
@@ -303,7 +531,7 @@ class Pharmacy extends BaseType implements PharmacyContract, MedicalOrganization
      *
      * @return static
      *
-     * @see http://schema.org/event
+     * @see https://schema.org/event
      */
     public function event($event)
     {
@@ -317,7 +545,7 @@ class Pharmacy extends BaseType implements PharmacyContract, MedicalOrganization
      *
      * @return static
      *
-     * @see http://schema.org/events
+     * @see https://schema.org/events
      */
     public function events($events)
     {
@@ -331,7 +559,7 @@ class Pharmacy extends BaseType implements PharmacyContract, MedicalOrganization
      *
      * @return static
      *
-     * @see http://schema.org/faxNumber
+     * @see https://schema.org/faxNumber
      */
     public function faxNumber($faxNumber)
     {
@@ -345,7 +573,7 @@ class Pharmacy extends BaseType implements PharmacyContract, MedicalOrganization
      *
      * @return static
      *
-     * @see http://schema.org/founder
+     * @see https://schema.org/founder
      */
     public function founder($founder)
     {
@@ -359,7 +587,7 @@ class Pharmacy extends BaseType implements PharmacyContract, MedicalOrganization
      *
      * @return static
      *
-     * @see http://schema.org/founders
+     * @see https://schema.org/founders
      */
     public function founders($founders)
     {
@@ -373,7 +601,7 @@ class Pharmacy extends BaseType implements PharmacyContract, MedicalOrganization
      *
      * @return static
      *
-     * @see http://schema.org/foundingDate
+     * @see https://schema.org/foundingDate
      */
     public function foundingDate($foundingDate)
     {
@@ -387,7 +615,7 @@ class Pharmacy extends BaseType implements PharmacyContract, MedicalOrganization
      *
      * @return static
      *
-     * @see http://schema.org/foundingLocation
+     * @see https://schema.org/foundingLocation
      */
     public function foundingLocation($foundingLocation)
     {
@@ -402,11 +630,197 @@ class Pharmacy extends BaseType implements PharmacyContract, MedicalOrganization
      *
      * @return static
      *
-     * @see http://schema.org/funder
+     * @see https://schema.org/funder
      */
     public function funder($funder)
     {
         return $this->setProperty('funder', $funder);
+    }
+
+    /**
+     * The geo coordinates of the place.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\GeoCoordinatesContract|\Spatie\SchemaOrg\Contracts\GeoCoordinatesContract[]|\Spatie\SchemaOrg\Contracts\GeoShapeContract|\Spatie\SchemaOrg\Contracts\GeoShapeContract[] $geo
+     *
+     * @return static
+     *
+     * @see https://schema.org/geo
+     */
+    public function geo($geo)
+    {
+        return $this->setProperty('geo', $geo);
+    }
+
+    /**
+     * Represents a relationship between two geometries (or the places they
+     * represent), relating a containing geometry to a contained geometry. "a
+     * contains b iff no points of b lie in the exterior of a, and at least one
+     * point of the interior of b lies in the interior of a". As defined in
+     * [DE-9IM](https://en.wikipedia.org/wiki/DE-9IM).
+     *
+     * @param \Spatie\SchemaOrg\Contracts\GeospatialGeometryContract|\Spatie\SchemaOrg\Contracts\GeospatialGeometryContract[]|\Spatie\SchemaOrg\Contracts\PlaceContract|\Spatie\SchemaOrg\Contracts\PlaceContract[] $geoContains
+     *
+     * @return static
+     *
+     * @see https://schema.org/geoContains
+     */
+    public function geoContains($geoContains)
+    {
+        return $this->setProperty('geoContains', $geoContains);
+    }
+
+    /**
+     * Represents a relationship between two geometries (or the places they
+     * represent), relating a geometry to another that covers it. As defined in
+     * [DE-9IM](https://en.wikipedia.org/wiki/DE-9IM).
+     *
+     * @param \Spatie\SchemaOrg\Contracts\GeospatialGeometryContract|\Spatie\SchemaOrg\Contracts\GeospatialGeometryContract[]|\Spatie\SchemaOrg\Contracts\PlaceContract|\Spatie\SchemaOrg\Contracts\PlaceContract[] $geoCoveredBy
+     *
+     * @return static
+     *
+     * @see https://schema.org/geoCoveredBy
+     */
+    public function geoCoveredBy($geoCoveredBy)
+    {
+        return $this->setProperty('geoCoveredBy', $geoCoveredBy);
+    }
+
+    /**
+     * Represents a relationship between two geometries (or the places they
+     * represent), relating a covering geometry to a covered geometry. "Every
+     * point of b is a point of (the interior or boundary of) a". As defined in
+     * [DE-9IM](https://en.wikipedia.org/wiki/DE-9IM).
+     *
+     * @param \Spatie\SchemaOrg\Contracts\GeospatialGeometryContract|\Spatie\SchemaOrg\Contracts\GeospatialGeometryContract[]|\Spatie\SchemaOrg\Contracts\PlaceContract|\Spatie\SchemaOrg\Contracts\PlaceContract[] $geoCovers
+     *
+     * @return static
+     *
+     * @see https://schema.org/geoCovers
+     */
+    public function geoCovers($geoCovers)
+    {
+        return $this->setProperty('geoCovers', $geoCovers);
+    }
+
+    /**
+     * Represents a relationship between two geometries (or the places they
+     * represent), relating a geometry to another that crosses it: "a crosses b:
+     * they have some but not all interior points in common, and the dimension
+     * of the intersection is less than that of at least one of them". As
+     * defined in [DE-9IM](https://en.wikipedia.org/wiki/DE-9IM).
+     *
+     * @param \Spatie\SchemaOrg\Contracts\GeospatialGeometryContract|\Spatie\SchemaOrg\Contracts\GeospatialGeometryContract[]|\Spatie\SchemaOrg\Contracts\PlaceContract|\Spatie\SchemaOrg\Contracts\PlaceContract[] $geoCrosses
+     *
+     * @return static
+     *
+     * @see https://schema.org/geoCrosses
+     */
+    public function geoCrosses($geoCrosses)
+    {
+        return $this->setProperty('geoCrosses', $geoCrosses);
+    }
+
+    /**
+     * Represents spatial relations in which two geometries (or the places they
+     * represent) are topologically disjoint: they have no point in common. They
+     * form a set of disconnected geometries." (a symmetric relationship, as
+     * defined in [DE-9IM](https://en.wikipedia.org/wiki/DE-9IM))
+     *
+     * @param \Spatie\SchemaOrg\Contracts\GeospatialGeometryContract|\Spatie\SchemaOrg\Contracts\GeospatialGeometryContract[]|\Spatie\SchemaOrg\Contracts\PlaceContract|\Spatie\SchemaOrg\Contracts\PlaceContract[] $geoDisjoint
+     *
+     * @return static
+     *
+     * @see https://schema.org/geoDisjoint
+     */
+    public function geoDisjoint($geoDisjoint)
+    {
+        return $this->setProperty('geoDisjoint', $geoDisjoint);
+    }
+
+    /**
+     * Represents spatial relations in which two geometries (or the places they
+     * represent) are topologically equal, as defined in
+     * [DE-9IM](https://en.wikipedia.org/wiki/DE-9IM). "Two geometries are
+     * topologically equal if their interiors intersect and no part of the
+     * interior or boundary of one geometry intersects the exterior of the
+     * other" (a symmetric relationship)
+     *
+     * @param \Spatie\SchemaOrg\Contracts\GeospatialGeometryContract|\Spatie\SchemaOrg\Contracts\GeospatialGeometryContract[]|\Spatie\SchemaOrg\Contracts\PlaceContract|\Spatie\SchemaOrg\Contracts\PlaceContract[] $geoEquals
+     *
+     * @return static
+     *
+     * @see https://schema.org/geoEquals
+     */
+    public function geoEquals($geoEquals)
+    {
+        return $this->setProperty('geoEquals', $geoEquals);
+    }
+
+    /**
+     * Represents spatial relations in which two geometries (or the places they
+     * represent) have at least one point in common. As defined in
+     * [DE-9IM](https://en.wikipedia.org/wiki/DE-9IM).
+     *
+     * @param \Spatie\SchemaOrg\Contracts\GeospatialGeometryContract|\Spatie\SchemaOrg\Contracts\GeospatialGeometryContract[]|\Spatie\SchemaOrg\Contracts\PlaceContract|\Spatie\SchemaOrg\Contracts\PlaceContract[] $geoIntersects
+     *
+     * @return static
+     *
+     * @see https://schema.org/geoIntersects
+     */
+    public function geoIntersects($geoIntersects)
+    {
+        return $this->setProperty('geoIntersects', $geoIntersects);
+    }
+
+    /**
+     * Represents a relationship between two geometries (or the places they
+     * represent), relating a geometry to another that geospatially overlaps it,
+     * i.e. they have some but not all points in common. As defined in
+     * [DE-9IM](https://en.wikipedia.org/wiki/DE-9IM).
+     *
+     * @param \Spatie\SchemaOrg\Contracts\GeospatialGeometryContract|\Spatie\SchemaOrg\Contracts\GeospatialGeometryContract[]|\Spatie\SchemaOrg\Contracts\PlaceContract|\Spatie\SchemaOrg\Contracts\PlaceContract[] $geoOverlaps
+     *
+     * @return static
+     *
+     * @see https://schema.org/geoOverlaps
+     */
+    public function geoOverlaps($geoOverlaps)
+    {
+        return $this->setProperty('geoOverlaps', $geoOverlaps);
+    }
+
+    /**
+     * Represents spatial relations in which two geometries (or the places they
+     * represent) touch: they have at least one boundary point in common, but no
+     * interior points." (a symmetric relationship, as defined in
+     * [DE-9IM](https://en.wikipedia.org/wiki/DE-9IM) )
+     *
+     * @param \Spatie\SchemaOrg\Contracts\GeospatialGeometryContract|\Spatie\SchemaOrg\Contracts\GeospatialGeometryContract[]|\Spatie\SchemaOrg\Contracts\PlaceContract|\Spatie\SchemaOrg\Contracts\PlaceContract[] $geoTouches
+     *
+     * @return static
+     *
+     * @see https://schema.org/geoTouches
+     */
+    public function geoTouches($geoTouches)
+    {
+        return $this->setProperty('geoTouches', $geoTouches);
+    }
+
+    /**
+     * Represents a relationship between two geometries (or the places they
+     * represent), relating a geometry to one that contains it, i.e. it is
+     * inside (i.e. within) its interior. As defined in
+     * [DE-9IM](https://en.wikipedia.org/wiki/DE-9IM).
+     *
+     * @param \Spatie\SchemaOrg\Contracts\GeospatialGeometryContract|\Spatie\SchemaOrg\Contracts\GeospatialGeometryContract[]|\Spatie\SchemaOrg\Contracts\PlaceContract|\Spatie\SchemaOrg\Contracts\PlaceContract[] $geoWithin
+     *
+     * @return static
+     *
+     * @see https://schema.org/geoWithin
+     */
+    public function geoWithin($geoWithin)
+    {
+        return $this->setProperty('geoWithin', $geoWithin);
     }
 
     /**
@@ -419,11 +833,71 @@ class Pharmacy extends BaseType implements PharmacyContract, MedicalOrganization
      *
      * @return static
      *
-     * @see http://schema.org/globalLocationNumber
+     * @see https://schema.org/globalLocationNumber
      */
     public function globalLocationNumber($globalLocationNumber)
     {
         return $this->setProperty('globalLocationNumber', $globalLocationNumber);
+    }
+
+    /**
+     * A credential awarded to the Person or Organization.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\EducationalOccupationalCredentialContract|\Spatie\SchemaOrg\Contracts\EducationalOccupationalCredentialContract[] $hasCredential
+     *
+     * @return static
+     *
+     * @see https://schema.org/hasCredential
+     */
+    public function hasCredential($hasCredential)
+    {
+        return $this->setProperty('hasCredential', $hasCredential);
+    }
+
+    /**
+     * Indicates whether some facility (e.g. [[FoodEstablishment]],
+     * [[CovidTestingFacility]]) offers a service that can be used by driving
+     * through in a car. In the case of [[CovidTestingFacility]] such facilities
+     * could potentially help with social distancing from other
+     * potentially-infected users.
+     *
+     * @param bool|bool[] $hasDriveThroughService
+     *
+     * @return static
+     *
+     * @see https://schema.org/hasDriveThroughService
+     */
+    public function hasDriveThroughService($hasDriveThroughService)
+    {
+        return $this->setProperty('hasDriveThroughService', $hasDriveThroughService);
+    }
+
+    /**
+     * A URL to a map of the place.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\MapContract|\Spatie\SchemaOrg\Contracts\MapContract[]|string|string[] $hasMap
+     *
+     * @return static
+     *
+     * @see https://schema.org/hasMap
+     */
+    public function hasMap($hasMap)
+    {
+        return $this->setProperty('hasMap', $hasMap);
+    }
+
+    /**
+     * Indicates a MerchantReturnPolicy that may be applicable.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\MerchantReturnPolicyContract|\Spatie\SchemaOrg\Contracts\MerchantReturnPolicyContract[] $hasMerchantReturnPolicy
+     *
+     * @return static
+     *
+     * @see https://schema.org/hasMerchantReturnPolicy
+     */
+    public function hasMerchantReturnPolicy($hasMerchantReturnPolicy)
+    {
+        return $this->setProperty('hasMerchantReturnPolicy', $hasMerchantReturnPolicy);
     }
 
     /**
@@ -434,7 +908,7 @@ class Pharmacy extends BaseType implements PharmacyContract, MedicalOrganization
      *
      * @return static
      *
-     * @see http://schema.org/hasOfferCatalog
+     * @see https://schema.org/hasOfferCatalog
      */
     public function hasOfferCatalog($hasOfferCatalog)
     {
@@ -448,11 +922,26 @@ class Pharmacy extends BaseType implements PharmacyContract, MedicalOrganization
      *
      * @return static
      *
-     * @see http://schema.org/hasPOS
+     * @see https://schema.org/hasPOS
      */
     public function hasPOS($hasPOS)
     {
         return $this->setProperty('hasPOS', $hasPOS);
+    }
+
+    /**
+     * Name or unique ID of network. (Networks are often reused across different
+     * insurance plans).
+     *
+     * @param string|string[] $healthPlanNetworkId
+     *
+     * @return static
+     *
+     * @see https://schema.org/healthPlanNetworkId
+     */
+    public function healthPlanNetworkId($healthPlanNetworkId)
+    {
+        return $this->setProperty('healthPlanNetworkId', $healthPlanNetworkId);
     }
 
     /**
@@ -466,7 +955,7 @@ class Pharmacy extends BaseType implements PharmacyContract, MedicalOrganization
      *
      * @return static
      *
-     * @see http://schema.org/identifier
+     * @see https://schema.org/identifier
      */
     public function identifier($identifier)
     {
@@ -481,7 +970,7 @@ class Pharmacy extends BaseType implements PharmacyContract, MedicalOrganization
      *
      * @return static
      *
-     * @see http://schema.org/image
+     * @see https://schema.org/image
      */
     public function image($image)
     {
@@ -497,11 +986,39 @@ class Pharmacy extends BaseType implements PharmacyContract, MedicalOrganization
      *
      * @return static
      *
-     * @see http://schema.org/interactionStatistic
+     * @see https://schema.org/interactionStatistic
      */
     public function interactionStatistic($interactionStatistic)
     {
         return $this->setProperty('interactionStatistic', $interactionStatistic);
+    }
+
+    /**
+     * Whether the provider is accepting new patients.
+     *
+     * @param bool|bool[] $isAcceptingNewPatients
+     *
+     * @return static
+     *
+     * @see https://schema.org/isAcceptingNewPatients
+     */
+    public function isAcceptingNewPatients($isAcceptingNewPatients)
+    {
+        return $this->setProperty('isAcceptingNewPatients', $isAcceptingNewPatients);
+    }
+
+    /**
+     * A flag to signal that the item, event, or place is accessible for free.
+     *
+     * @param bool|bool[] $isAccessibleForFree
+     *
+     * @return static
+     *
+     * @see https://schema.org/isAccessibleForFree
+     */
+    public function isAccessibleForFree($isAccessibleForFree)
+    {
+        return $this->setProperty('isAccessibleForFree', $isAccessibleForFree);
     }
 
     /**
@@ -513,11 +1030,60 @@ class Pharmacy extends BaseType implements PharmacyContract, MedicalOrganization
      *
      * @return static
      *
-     * @see http://schema.org/isicV4
+     * @see https://schema.org/isicV4
      */
     public function isicV4($isicV4)
     {
         return $this->setProperty('isicV4', $isicV4);
+    }
+
+    /**
+     * Of a [[Person]], and less typically of an [[Organization]], to indicate a
+     * topic that is known about - suggesting possible expertise but not
+     * implying it. We do not distinguish skill levels here, or relate this to
+     * educational content, events, objectives or [[JobPosting]] descriptions.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\ThingContract|\Spatie\SchemaOrg\Contracts\ThingContract[]|string|string[] $knowsAbout
+     *
+     * @return static
+     *
+     * @see https://schema.org/knowsAbout
+     */
+    public function knowsAbout($knowsAbout)
+    {
+        return $this->setProperty('knowsAbout', $knowsAbout);
+    }
+
+    /**
+     * Of a [[Person]], and less typically of an [[Organization]], to indicate a
+     * known language. We do not distinguish skill levels or
+     * reading/writing/speaking/signing here. Use language codes from the [IETF
+     * BCP 47 standard](http://tools.ietf.org/html/bcp47).
+     *
+     * @param \Spatie\SchemaOrg\Contracts\LanguageContract|\Spatie\SchemaOrg\Contracts\LanguageContract[]|string|string[] $knowsLanguage
+     *
+     * @return static
+     *
+     * @see https://schema.org/knowsLanguage
+     */
+    public function knowsLanguage($knowsLanguage)
+    {
+        return $this->setProperty('knowsLanguage', $knowsLanguage);
+    }
+
+    /**
+     * The latitude of a location. For example ```37.42242``` ([WGS
+     * 84](https://en.wikipedia.org/wiki/World_Geodetic_System)).
+     *
+     * @param float|float[]|int|int[]|string|string[] $latitude
+     *
+     * @return static
+     *
+     * @see https://schema.org/latitude
+     */
+    public function latitude($latitude)
+    {
+        return $this->setProperty('latitude', $latitude);
     }
 
     /**
@@ -527,7 +1093,7 @@ class Pharmacy extends BaseType implements PharmacyContract, MedicalOrganization
      *
      * @return static
      *
-     * @see http://schema.org/legalName
+     * @see https://schema.org/legalName
      */
     public function legalName($legalName)
     {
@@ -542,7 +1108,7 @@ class Pharmacy extends BaseType implements PharmacyContract, MedicalOrganization
      *
      * @return static
      *
-     * @see http://schema.org/leiCode
+     * @see https://schema.org/leiCode
      */
     public function leiCode($leiCode)
     {
@@ -553,11 +1119,11 @@ class Pharmacy extends BaseType implements PharmacyContract, MedicalOrganization
      * The location of for example where the event is happening, an organization
      * is located, or where an action takes place.
      *
-     * @param \Spatie\SchemaOrg\Contracts\PlaceContract|\Spatie\SchemaOrg\Contracts\PlaceContract[]|\Spatie\SchemaOrg\Contracts\PostalAddressContract|\Spatie\SchemaOrg\Contracts\PostalAddressContract[]|string|string[] $location
+     * @param \Spatie\SchemaOrg\Contracts\PlaceContract|\Spatie\SchemaOrg\Contracts\PlaceContract[]|\Spatie\SchemaOrg\Contracts\PostalAddressContract|\Spatie\SchemaOrg\Contracts\PostalAddressContract[]|\Spatie\SchemaOrg\Contracts\VirtualLocationContract|\Spatie\SchemaOrg\Contracts\VirtualLocationContract[]|string|string[] $location
      *
      * @return static
      *
-     * @see http://schema.org/location
+     * @see https://schema.org/location
      */
     public function location($location)
     {
@@ -571,11 +1137,26 @@ class Pharmacy extends BaseType implements PharmacyContract, MedicalOrganization
      *
      * @return static
      *
-     * @see http://schema.org/logo
+     * @see https://schema.org/logo
      */
     public function logo($logo)
     {
         return $this->setProperty('logo', $logo);
+    }
+
+    /**
+     * The longitude of a location. For example ```-122.08585``` ([WGS
+     * 84](https://en.wikipedia.org/wiki/World_Geodetic_System)).
+     *
+     * @param float|float[]|int|int[]|string|string[] $longitude
+     *
+     * @return static
+     *
+     * @see https://schema.org/longitude
+     */
+    public function longitude($longitude)
+    {
+        return $this->setProperty('longitude', $longitude);
     }
 
     /**
@@ -587,7 +1168,7 @@ class Pharmacy extends BaseType implements PharmacyContract, MedicalOrganization
      *
      * @return static
      *
-     * @see http://schema.org/mainEntityOfPage
+     * @see https://schema.org/mainEntityOfPage
      */
     public function mainEntityOfPage($mainEntityOfPage)
     {
@@ -601,11 +1182,67 @@ class Pharmacy extends BaseType implements PharmacyContract, MedicalOrganization
      *
      * @return static
      *
-     * @see http://schema.org/makesOffer
+     * @see https://schema.org/makesOffer
      */
     public function makesOffer($makesOffer)
     {
         return $this->setProperty('makesOffer', $makesOffer);
+    }
+
+    /**
+     * A URL to a map of the place.
+     *
+     * @param string|string[] $map
+     *
+     * @return static
+     *
+     * @see https://schema.org/map
+     */
+    public function map($map)
+    {
+        return $this->setProperty('map', $map);
+    }
+
+    /**
+     * A URL to a map of the place.
+     *
+     * @param string|string[] $maps
+     *
+     * @return static
+     *
+     * @see https://schema.org/maps
+     */
+    public function maps($maps)
+    {
+        return $this->setProperty('maps', $maps);
+    }
+
+    /**
+     * The total number of individuals that may attend an event or venue.
+     *
+     * @param int|int[] $maximumAttendeeCapacity
+     *
+     * @return static
+     *
+     * @see https://schema.org/maximumAttendeeCapacity
+     */
+    public function maximumAttendeeCapacity($maximumAttendeeCapacity)
+    {
+        return $this->setProperty('maximumAttendeeCapacity', $maximumAttendeeCapacity);
+    }
+
+    /**
+     * A medical specialty of the provider.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\MedicalSpecialtyContract|\Spatie\SchemaOrg\Contracts\MedicalSpecialtyContract[] $medicalSpecialty
+     *
+     * @return static
+     *
+     * @see https://schema.org/medicalSpecialty
+     */
+    public function medicalSpecialty($medicalSpecialty)
+    {
+        return $this->setProperty('medicalSpecialty', $medicalSpecialty);
     }
 
     /**
@@ -616,7 +1253,7 @@ class Pharmacy extends BaseType implements PharmacyContract, MedicalOrganization
      *
      * @return static
      *
-     * @see http://schema.org/member
+     * @see https://schema.org/member
      */
     public function member($member)
     {
@@ -631,7 +1268,7 @@ class Pharmacy extends BaseType implements PharmacyContract, MedicalOrganization
      *
      * @return static
      *
-     * @see http://schema.org/memberOf
+     * @see https://schema.org/memberOf
      */
     public function memberOf($memberOf)
     {
@@ -645,7 +1282,7 @@ class Pharmacy extends BaseType implements PharmacyContract, MedicalOrganization
      *
      * @return static
      *
-     * @see http://schema.org/members
+     * @see https://schema.org/members
      */
     public function members($members)
     {
@@ -660,7 +1297,7 @@ class Pharmacy extends BaseType implements PharmacyContract, MedicalOrganization
      *
      * @return static
      *
-     * @see http://schema.org/naics
+     * @see https://schema.org/naics
      */
     public function naics($naics)
     {
@@ -674,11 +1311,26 @@ class Pharmacy extends BaseType implements PharmacyContract, MedicalOrganization
      *
      * @return static
      *
-     * @see http://schema.org/name
+     * @see https://schema.org/name
      */
     public function name($name)
     {
         return $this->setProperty('name', $name);
+    }
+
+    /**
+     * nonprofit Status indicates the legal status of a non-profit organization
+     * in its primary place of business.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\NonprofitTypeContract|\Spatie\SchemaOrg\Contracts\NonprofitTypeContract[] $nonprofitStatus
+     *
+     * @return static
+     *
+     * @see https://schema.org/nonprofitStatus
+     */
+    public function nonprofitStatus($nonprofitStatus)
+    {
+        return $this->setProperty('nonprofitStatus', $nonprofitStatus);
     }
 
     /**
@@ -688,11 +1340,73 @@ class Pharmacy extends BaseType implements PharmacyContract, MedicalOrganization
      *
      * @return static
      *
-     * @see http://schema.org/numberOfEmployees
+     * @see https://schema.org/numberOfEmployees
      */
     public function numberOfEmployees($numberOfEmployees)
     {
         return $this->setProperty('numberOfEmployees', $numberOfEmployees);
+    }
+
+    /**
+     * The general opening hours for a business. Opening hours can be specified
+     * as a weekly time range, starting with days, then times per day. Multiple
+     * days can be listed with commas ',' separating each day. Day or time
+     * ranges are specified using a hyphen '-'.
+     * 
+     * * Days are specified using the following two-letter combinations:
+     * ```Mo```, ```Tu```, ```We```, ```Th```, ```Fr```, ```Sa```, ```Su```.
+     * * Times are specified using 24:00 time. For example, 3pm is specified as
+     * ```15:00```. 
+     * * Here is an example: ```&lt;time itemprop="openingHours"
+     * datetime=&quot;Tu,Th 16:00-20:00&quot;&gt;Tuesdays and Thursdays
+     * 4-8pm&lt;/time&gt;```.
+     * * If a business is open 7 days a week, then it can be specified as
+     * ```&lt;time itemprop=&quot;openingHours&quot;
+     * datetime=&quot;Mo-Su&quot;&gt;Monday through Sunday, all
+     * day&lt;/time&gt;```.
+     *
+     * @param string|string[] $openingHours
+     *
+     * @return static
+     *
+     * @see https://schema.org/openingHours
+     */
+    public function openingHours($openingHours)
+    {
+        return $this->setProperty('openingHours', $openingHours);
+    }
+
+    /**
+     * The opening hours of a certain place.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\OpeningHoursSpecificationContract|\Spatie\SchemaOrg\Contracts\OpeningHoursSpecificationContract[] $openingHoursSpecification
+     *
+     * @return static
+     *
+     * @see https://schema.org/openingHoursSpecification
+     */
+    public function openingHoursSpecification($openingHoursSpecification)
+    {
+        return $this->setProperty('openingHoursSpecification', $openingHoursSpecification);
+    }
+
+    /**
+     * For an [[Organization]] (often but not necessarily a
+     * [[NewsMediaOrganization]]), a description of organizational ownership
+     * structure; funding and grants. In a news/media setting, this is with
+     * particular reference to editorial independence.   Note that the
+     * [[funder]] is also available and can be used to make basic funder
+     * information machine-readable.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\AboutPageContract|\Spatie\SchemaOrg\Contracts\AboutPageContract[]|\Spatie\SchemaOrg\Contracts\CreativeWorkContract|\Spatie\SchemaOrg\Contracts\CreativeWorkContract[]|string|string[] $ownershipFundingInfo
+     *
+     * @return static
+     *
+     * @see https://schema.org/ownershipFundingInfo
+     */
+    public function ownershipFundingInfo($ownershipFundingInfo)
+    {
+        return $this->setProperty('ownershipFundingInfo', $ownershipFundingInfo);
     }
 
     /**
@@ -702,7 +1416,7 @@ class Pharmacy extends BaseType implements PharmacyContract, MedicalOrganization
      *
      * @return static
      *
-     * @see http://schema.org/owns
+     * @see https://schema.org/owns
      */
     public function owns($owns)
     {
@@ -717,11 +1431,53 @@ class Pharmacy extends BaseType implements PharmacyContract, MedicalOrganization
      *
      * @return static
      *
-     * @see http://schema.org/parentOrganization
+     * @see https://schema.org/parentOrganization
      */
     public function parentOrganization($parentOrganization)
     {
         return $this->setProperty('parentOrganization', $parentOrganization);
+    }
+
+    /**
+     * Cash, Credit Card, Cryptocurrency, Local Exchange Tradings System, etc.
+     *
+     * @param string|string[] $paymentAccepted
+     *
+     * @return static
+     *
+     * @see https://schema.org/paymentAccepted
+     */
+    public function paymentAccepted($paymentAccepted)
+    {
+        return $this->setProperty('paymentAccepted', $paymentAccepted);
+    }
+
+    /**
+     * A photograph of this place.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\ImageObjectContract|\Spatie\SchemaOrg\Contracts\ImageObjectContract[]|\Spatie\SchemaOrg\Contracts\PhotographContract|\Spatie\SchemaOrg\Contracts\PhotographContract[] $photo
+     *
+     * @return static
+     *
+     * @see https://schema.org/photo
+     */
+    public function photo($photo)
+    {
+        return $this->setProperty('photo', $photo);
+    }
+
+    /**
+     * Photographs of this place.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\ImageObjectContract|\Spatie\SchemaOrg\Contracts\ImageObjectContract[]|\Spatie\SchemaOrg\Contracts\PhotographContract|\Spatie\SchemaOrg\Contracts\PhotographContract[] $photos
+     *
+     * @return static
+     *
+     * @see https://schema.org/photos
+     */
+    public function photos($photos)
+    {
+        return $this->setProperty('photos', $photos);
     }
 
     /**
@@ -732,11 +1488,40 @@ class Pharmacy extends BaseType implements PharmacyContract, MedicalOrganization
      *
      * @return static
      *
-     * @see http://schema.org/potentialAction
+     * @see https://schema.org/potentialAction
      */
     public function potentialAction($potentialAction)
     {
         return $this->setProperty('potentialAction', $potentialAction);
+    }
+
+    /**
+     * The price range of the business, for example ```$$$```.
+     *
+     * @param string|string[] $priceRange
+     *
+     * @return static
+     *
+     * @see https://schema.org/priceRange
+     */
+    public function priceRange($priceRange)
+    {
+        return $this->setProperty('priceRange', $priceRange);
+    }
+
+    /**
+     * A flag to signal that the [[Place]] is open to public visitors.  If this
+     * property is omitted there is no assumed default boolean value
+     *
+     * @param bool|bool[] $publicAccess
+     *
+     * @return static
+     *
+     * @see https://schema.org/publicAccess
+     */
+    public function publicAccess($publicAccess)
+    {
+        return $this->setProperty('publicAccess', $publicAccess);
     }
 
     /**
@@ -756,7 +1541,7 @@ class Pharmacy extends BaseType implements PharmacyContract, MedicalOrganization
      *
      * @return static
      *
-     * @see http://schema.org/publishingPrinciples
+     * @see https://schema.org/publishingPrinciples
      */
     public function publishingPrinciples($publishingPrinciples)
     {
@@ -770,7 +1555,7 @@ class Pharmacy extends BaseType implements PharmacyContract, MedicalOrganization
      *
      * @return static
      *
-     * @see http://schema.org/review
+     * @see https://schema.org/review
      */
     public function review($review)
     {
@@ -784,7 +1569,7 @@ class Pharmacy extends BaseType implements PharmacyContract, MedicalOrganization
      *
      * @return static
      *
-     * @see http://schema.org/reviews
+     * @see https://schema.org/reviews
      */
     public function reviews($reviews)
     {
@@ -800,7 +1585,7 @@ class Pharmacy extends BaseType implements PharmacyContract, MedicalOrganization
      *
      * @return static
      *
-     * @see http://schema.org/sameAs
+     * @see https://schema.org/sameAs
      */
     public function sameAs($sameAs)
     {
@@ -815,7 +1600,7 @@ class Pharmacy extends BaseType implements PharmacyContract, MedicalOrganization
      *
      * @return static
      *
-     * @see http://schema.org/seeks
+     * @see https://schema.org/seeks
      */
     public function seeks($seeks)
     {
@@ -829,7 +1614,7 @@ class Pharmacy extends BaseType implements PharmacyContract, MedicalOrganization
      *
      * @return static
      *
-     * @see http://schema.org/serviceArea
+     * @see https://schema.org/serviceArea
      */
     public function serviceArea($serviceArea)
     {
@@ -843,11 +1628,43 @@ class Pharmacy extends BaseType implements PharmacyContract, MedicalOrganization
      *
      * @return static
      *
-     * @see http://schema.org/slogan
+     * @see https://schema.org/slogan
      */
     public function slogan($slogan)
     {
         return $this->setProperty('slogan', $slogan);
+    }
+
+    /**
+     * Indicates whether it is allowed to smoke in the place, e.g. in the
+     * restaurant, hotel or hotel room.
+     *
+     * @param bool|bool[] $smokingAllowed
+     *
+     * @return static
+     *
+     * @see https://schema.org/smokingAllowed
+     */
+    public function smokingAllowed($smokingAllowed)
+    {
+        return $this->setProperty('smokingAllowed', $smokingAllowed);
+    }
+
+    /**
+     * The special opening hours of a certain place.
+     * 
+     * Use this to explicitly override general opening hours brought in scope by
+     * [[openingHoursSpecification]] or [[openingHours]].
+     *
+     * @param \Spatie\SchemaOrg\Contracts\OpeningHoursSpecificationContract|\Spatie\SchemaOrg\Contracts\OpeningHoursSpecificationContract[] $specialOpeningHoursSpecification
+     *
+     * @return static
+     *
+     * @see https://schema.org/specialOpeningHoursSpecification
+     */
+    public function specialOpeningHoursSpecification($specialOpeningHoursSpecification)
+    {
+        return $this->setProperty('specialOpeningHoursSpecification', $specialOpeningHoursSpecification);
     }
 
     /**
@@ -859,7 +1676,7 @@ class Pharmacy extends BaseType implements PharmacyContract, MedicalOrganization
      *
      * @return static
      *
-     * @see http://schema.org/sponsor
+     * @see https://schema.org/sponsor
      */
     public function sponsor($sponsor)
     {
@@ -875,7 +1692,7 @@ class Pharmacy extends BaseType implements PharmacyContract, MedicalOrganization
      *
      * @return static
      *
-     * @see http://schema.org/subOrganization
+     * @see https://schema.org/subOrganization
      */
     public function subOrganization($subOrganization)
     {
@@ -889,7 +1706,7 @@ class Pharmacy extends BaseType implements PharmacyContract, MedicalOrganization
      *
      * @return static
      *
-     * @see http://schema.org/subjectOf
+     * @see https://schema.org/subjectOf
      */
     public function subjectOf($subjectOf)
     {
@@ -904,7 +1721,7 @@ class Pharmacy extends BaseType implements PharmacyContract, MedicalOrganization
      *
      * @return static
      *
-     * @see http://schema.org/taxID
+     * @see https://schema.org/taxID
      */
     public function taxID($taxID)
     {
@@ -918,11 +1735,43 @@ class Pharmacy extends BaseType implements PharmacyContract, MedicalOrganization
      *
      * @return static
      *
-     * @see http://schema.org/telephone
+     * @see https://schema.org/telephone
      */
     public function telephone($telephone)
     {
         return $this->setProperty('telephone', $telephone);
+    }
+
+    /**
+     * A page providing information on how to book a tour of some [[Place]],
+     * such as an [[Accommodation]] or [[ApartmentComplex]] in a real estate
+     * setting, as well as other kinds of tours as appropriate.
+     *
+     * @param string|string[] $tourBookingPage
+     *
+     * @return static
+     *
+     * @see https://schema.org/tourBookingPage
+     */
+    public function tourBookingPage($tourBookingPage)
+    {
+        return $this->setProperty('tourBookingPage', $tourBookingPage);
+    }
+
+    /**
+     * For an [[Organization]] (typically a [[NewsMediaOrganization]]), a
+     * statement about policy on use of unnamed sources and the decision process
+     * required.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\CreativeWorkContract|\Spatie\SchemaOrg\Contracts\CreativeWorkContract[]|string|string[] $unnamedSourcesPolicy
+     *
+     * @return static
+     *
+     * @see https://schema.org/unnamedSourcesPolicy
+     */
+    public function unnamedSourcesPolicy($unnamedSourcesPolicy)
+    {
+        return $this->setProperty('unnamedSourcesPolicy', $unnamedSourcesPolicy);
     }
 
     /**
@@ -932,7 +1781,7 @@ class Pharmacy extends BaseType implements PharmacyContract, MedicalOrganization
      *
      * @return static
      *
-     * @see http://schema.org/url
+     * @see https://schema.org/url
      */
     public function url($url)
     {
@@ -946,7 +1795,7 @@ class Pharmacy extends BaseType implements PharmacyContract, MedicalOrganization
      *
      * @return static
      *
-     * @see http://schema.org/vatID
+     * @see https://schema.org/vatID
      */
     public function vatID($vatID)
     {

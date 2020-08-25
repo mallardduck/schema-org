@@ -12,6 +12,8 @@ interface OccupationContract
 
     public function disambiguatingDescription($disambiguatingDescription);
 
+    public function educationRequirements($educationRequirements);
+
     public function estimatedSalary($estimatedSalary);
 
     public function experienceRequirements($experienceRequirements);
@@ -26,7 +28,11 @@ interface OccupationContract
 
     public function occupationLocation($occupationLocation);
 
+    public function occupationalCategory($occupationalCategory);
+
     public function potentialAction($potentialAction);
+
+    public function qualifications($qualifications);
 
     public function responsibilities($responsibilities);
 

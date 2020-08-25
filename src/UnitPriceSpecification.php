@@ -11,8 +11,11 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
 /**
  * The price asked for a given offer by the respective organization or person.
  *
- * @see http://schema.org/UnitPriceSpecification
+ * @see https://schema.org/UnitPriceSpecification
  *
+ *
+ * External Sources:
+ * @see http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsClass
  */
 class UnitPriceSpecification extends BaseType implements UnitPriceSpecificationContract, IntangibleContract, PriceSpecificationContract, StructuredValueContract, ThingContract
 {
@@ -28,7 +31,7 @@ class UnitPriceSpecification extends BaseType implements UnitPriceSpecificationC
      *
      * @return static
      *
-     * @see http://schema.org/additionalType
+     * @see https://schema.org/additionalType
      */
     public function additionalType($additionalType)
     {
@@ -42,7 +45,7 @@ class UnitPriceSpecification extends BaseType implements UnitPriceSpecificationC
      *
      * @return static
      *
-     * @see http://schema.org/alternateName
+     * @see https://schema.org/alternateName
      */
     public function alternateName($alternateName)
     {
@@ -58,7 +61,7 @@ class UnitPriceSpecification extends BaseType implements UnitPriceSpecificationC
      *
      * @return static
      *
-     * @see http://schema.org/billingIncrement
+     * @see https://schema.org/billingIncrement
      */
     public function billingIncrement($billingIncrement)
     {
@@ -72,7 +75,7 @@ class UnitPriceSpecification extends BaseType implements UnitPriceSpecificationC
      *
      * @return static
      *
-     * @see http://schema.org/description
+     * @see https://schema.org/description
      */
     public function description($description)
     {
@@ -89,7 +92,7 @@ class UnitPriceSpecification extends BaseType implements UnitPriceSpecificationC
      *
      * @return static
      *
-     * @see http://schema.org/disambiguatingDescription
+     * @see https://schema.org/disambiguatingDescription
      */
     public function disambiguatingDescription($disambiguatingDescription)
     {
@@ -105,7 +108,7 @@ class UnitPriceSpecification extends BaseType implements UnitPriceSpecificationC
      *
      * @return static
      *
-     * @see http://schema.org/eligibleQuantity
+     * @see https://schema.org/eligibleQuantity
      */
     public function eligibleQuantity($eligibleQuantity)
     {
@@ -122,7 +125,7 @@ class UnitPriceSpecification extends BaseType implements UnitPriceSpecificationC
      *
      * @return static
      *
-     * @see http://schema.org/eligibleTransactionVolume
+     * @see https://schema.org/eligibleTransactionVolume
      */
     public function eligibleTransactionVolume($eligibleTransactionVolume)
     {
@@ -140,7 +143,7 @@ class UnitPriceSpecification extends BaseType implements UnitPriceSpecificationC
      *
      * @return static
      *
-     * @see http://schema.org/identifier
+     * @see https://schema.org/identifier
      */
     public function identifier($identifier)
     {
@@ -155,7 +158,7 @@ class UnitPriceSpecification extends BaseType implements UnitPriceSpecificationC
      *
      * @return static
      *
-     * @see http://schema.org/image
+     * @see https://schema.org/image
      */
     public function image($image)
     {
@@ -171,7 +174,7 @@ class UnitPriceSpecification extends BaseType implements UnitPriceSpecificationC
      *
      * @return static
      *
-     * @see http://schema.org/mainEntityOfPage
+     * @see https://schema.org/mainEntityOfPage
      */
     public function mainEntityOfPage($mainEntityOfPage)
     {
@@ -185,7 +188,7 @@ class UnitPriceSpecification extends BaseType implements UnitPriceSpecificationC
      *
      * @return static
      *
-     * @see http://schema.org/maxPrice
+     * @see https://schema.org/maxPrice
      */
     public function maxPrice($maxPrice)
     {
@@ -199,7 +202,7 @@ class UnitPriceSpecification extends BaseType implements UnitPriceSpecificationC
      *
      * @return static
      *
-     * @see http://schema.org/minPrice
+     * @see https://schema.org/minPrice
      */
     public function minPrice($minPrice)
     {
@@ -213,7 +216,7 @@ class UnitPriceSpecification extends BaseType implements UnitPriceSpecificationC
      *
      * @return static
      *
-     * @see http://schema.org/name
+     * @see https://schema.org/name
      */
     public function name($name)
     {
@@ -228,7 +231,7 @@ class UnitPriceSpecification extends BaseType implements UnitPriceSpecificationC
      *
      * @return static
      *
-     * @see http://schema.org/potentialAction
+     * @see https://schema.org/potentialAction
      */
     public function potentialAction($potentialAction)
     {
@@ -265,7 +268,7 @@ class UnitPriceSpecification extends BaseType implements UnitPriceSpecificationC
      *
      * @return static
      *
-     * @see http://schema.org/price
+     * @see https://schema.org/price
      */
     public function price($price)
     {
@@ -288,7 +291,7 @@ class UnitPriceSpecification extends BaseType implements UnitPriceSpecificationC
      *
      * @return static
      *
-     * @see http://schema.org/priceCurrency
+     * @see https://schema.org/priceCurrency
      */
     public function priceCurrency($priceCurrency)
     {
@@ -304,7 +307,7 @@ class UnitPriceSpecification extends BaseType implements UnitPriceSpecificationC
      *
      * @return static
      *
-     * @see http://schema.org/priceType
+     * @see https://schema.org/priceType
      */
     public function priceType($priceType)
     {
@@ -321,7 +324,7 @@ class UnitPriceSpecification extends BaseType implements UnitPriceSpecificationC
      *
      * @return static
      *
-     * @see http://schema.org/referenceQuantity
+     * @see https://schema.org/referenceQuantity
      */
     public function referenceQuantity($referenceQuantity)
     {
@@ -337,7 +340,7 @@ class UnitPriceSpecification extends BaseType implements UnitPriceSpecificationC
      *
      * @return static
      *
-     * @see http://schema.org/sameAs
+     * @see https://schema.org/sameAs
      */
     public function sameAs($sameAs)
     {
@@ -351,7 +354,7 @@ class UnitPriceSpecification extends BaseType implements UnitPriceSpecificationC
      *
      * @return static
      *
-     * @see http://schema.org/subjectOf
+     * @see https://schema.org/subjectOf
      */
     public function subjectOf($subjectOf)
     {
@@ -367,7 +370,7 @@ class UnitPriceSpecification extends BaseType implements UnitPriceSpecificationC
      *
      * @return static
      *
-     * @see http://schema.org/unitCode
+     * @see https://schema.org/unitCode
      */
     public function unitCode($unitCode)
     {
@@ -383,7 +386,7 @@ class UnitPriceSpecification extends BaseType implements UnitPriceSpecificationC
      *
      * @return static
      *
-     * @see http://schema.org/unitText
+     * @see https://schema.org/unitText
      */
     public function unitText($unitText)
     {
@@ -397,7 +400,7 @@ class UnitPriceSpecification extends BaseType implements UnitPriceSpecificationC
      *
      * @return static
      *
-     * @see http://schema.org/url
+     * @see https://schema.org/url
      */
     public function url($url)
     {
@@ -411,7 +414,7 @@ class UnitPriceSpecification extends BaseType implements UnitPriceSpecificationC
      *
      * @return static
      *
-     * @see http://schema.org/validFrom
+     * @see https://schema.org/validFrom
      */
     public function validFrom($validFrom)
     {
@@ -426,7 +429,7 @@ class UnitPriceSpecification extends BaseType implements UnitPriceSpecificationC
      *
      * @return static
      *
-     * @see http://schema.org/validThrough
+     * @see https://schema.org/validThrough
      */
     public function validThrough($validThrough)
     {
@@ -441,7 +444,7 @@ class UnitPriceSpecification extends BaseType implements UnitPriceSpecificationC
      *
      * @return static
      *
-     * @see http://schema.org/valueAddedTaxIncluded
+     * @see https://schema.org/valueAddedTaxIncluded
      */
     public function valueAddedTaxIncluded($valueAddedTaxIncluded)
     {

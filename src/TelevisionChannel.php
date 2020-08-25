@@ -11,7 +11,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * A unique instance of a television BroadcastService on a
  * CableOrSatelliteService lineup.
  *
- * @see http://schema.org/TelevisionChannel
+ * @see https://schema.org/TelevisionChannel
  *
  */
 class TelevisionChannel extends BaseType implements TelevisionChannelContract, BroadcastChannelContract, IntangibleContract, ThingContract
@@ -28,7 +28,7 @@ class TelevisionChannel extends BaseType implements TelevisionChannelContract, B
      *
      * @return static
      *
-     * @see http://schema.org/additionalType
+     * @see https://schema.org/additionalType
      */
     public function additionalType($additionalType)
     {
@@ -42,7 +42,7 @@ class TelevisionChannel extends BaseType implements TelevisionChannelContract, B
      *
      * @return static
      *
-     * @see http://schema.org/alternateName
+     * @see https://schema.org/alternateName
      */
     public function alternateName($alternateName)
     {
@@ -57,7 +57,7 @@ class TelevisionChannel extends BaseType implements TelevisionChannelContract, B
      *
      * @return static
      *
-     * @see http://schema.org/broadcastChannelId
+     * @see https://schema.org/broadcastChannelId
      */
     public function broadcastChannelId($broadcastChannelId)
     {
@@ -73,7 +73,7 @@ class TelevisionChannel extends BaseType implements TelevisionChannelContract, B
      *
      * @return static
      *
-     * @see http://schema.org/broadcastFrequency
+     * @see https://schema.org/broadcastFrequency
      */
     public function broadcastFrequency($broadcastFrequency)
     {
@@ -88,7 +88,7 @@ class TelevisionChannel extends BaseType implements TelevisionChannelContract, B
      *
      * @return static
      *
-     * @see http://schema.org/broadcastServiceTier
+     * @see https://schema.org/broadcastServiceTier
      */
     public function broadcastServiceTier($broadcastServiceTier)
     {
@@ -102,7 +102,7 @@ class TelevisionChannel extends BaseType implements TelevisionChannelContract, B
      *
      * @return static
      *
-     * @see http://schema.org/description
+     * @see https://schema.org/description
      */
     public function description($description)
     {
@@ -119,7 +119,7 @@ class TelevisionChannel extends BaseType implements TelevisionChannelContract, B
      *
      * @return static
      *
-     * @see http://schema.org/disambiguatingDescription
+     * @see https://schema.org/disambiguatingDescription
      */
     public function disambiguatingDescription($disambiguatingDescription)
     {
@@ -133,7 +133,7 @@ class TelevisionChannel extends BaseType implements TelevisionChannelContract, B
      *
      * @return static
      *
-     * @see http://schema.org/genre
+     * @see https://schema.org/genre
      */
     public function genre($genre)
     {
@@ -151,7 +151,7 @@ class TelevisionChannel extends BaseType implements TelevisionChannelContract, B
      *
      * @return static
      *
-     * @see http://schema.org/identifier
+     * @see https://schema.org/identifier
      */
     public function identifier($identifier)
     {
@@ -166,7 +166,7 @@ class TelevisionChannel extends BaseType implements TelevisionChannelContract, B
      *
      * @return static
      *
-     * @see http://schema.org/image
+     * @see https://schema.org/image
      */
     public function image($image)
     {
@@ -180,7 +180,7 @@ class TelevisionChannel extends BaseType implements TelevisionChannelContract, B
      *
      * @return static
      *
-     * @see http://schema.org/inBroadcastLineup
+     * @see https://schema.org/inBroadcastLineup
      */
     public function inBroadcastLineup($inBroadcastLineup)
     {
@@ -196,7 +196,7 @@ class TelevisionChannel extends BaseType implements TelevisionChannelContract, B
      *
      * @return static
      *
-     * @see http://schema.org/mainEntityOfPage
+     * @see https://schema.org/mainEntityOfPage
      */
     public function mainEntityOfPage($mainEntityOfPage)
     {
@@ -210,7 +210,7 @@ class TelevisionChannel extends BaseType implements TelevisionChannelContract, B
      *
      * @return static
      *
-     * @see http://schema.org/name
+     * @see https://schema.org/name
      */
     public function name($name)
     {
@@ -225,7 +225,7 @@ class TelevisionChannel extends BaseType implements TelevisionChannelContract, B
      *
      * @return static
      *
-     * @see http://schema.org/potentialAction
+     * @see https://schema.org/potentialAction
      */
     public function potentialAction($potentialAction)
     {
@@ -239,7 +239,7 @@ class TelevisionChannel extends BaseType implements TelevisionChannelContract, B
      *
      * @return static
      *
-     * @see http://schema.org/providesBroadcastService
+     * @see https://schema.org/providesBroadcastService
      */
     public function providesBroadcastService($providesBroadcastService)
     {
@@ -255,7 +255,7 @@ class TelevisionChannel extends BaseType implements TelevisionChannelContract, B
      *
      * @return static
      *
-     * @see http://schema.org/sameAs
+     * @see https://schema.org/sameAs
      */
     public function sameAs($sameAs)
     {
@@ -269,7 +269,7 @@ class TelevisionChannel extends BaseType implements TelevisionChannelContract, B
      *
      * @return static
      *
-     * @see http://schema.org/subjectOf
+     * @see https://schema.org/subjectOf
      */
     public function subjectOf($subjectOf)
     {
@@ -283,7 +283,7 @@ class TelevisionChannel extends BaseType implements TelevisionChannelContract, B
      *
      * @return static
      *
-     * @see http://schema.org/url
+     * @see https://schema.org/url
      */
     public function url($url)
     {

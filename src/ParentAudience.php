@@ -12,7 +12,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * A set of characteristics describing parents, who can be interested in viewing
  * some content.
  *
- * @see http://schema.org/ParentAudience
+ * @see https://schema.org/ParentAudience
  *
  */
 class ParentAudience extends BaseType implements ParentAudienceContract, AudienceContract, IntangibleContract, PeopleAudienceContract, ThingContract
@@ -29,7 +29,7 @@ class ParentAudience extends BaseType implements ParentAudienceContract, Audienc
      *
      * @return static
      *
-     * @see http://schema.org/additionalType
+     * @see https://schema.org/additionalType
      */
     public function additionalType($additionalType)
     {
@@ -43,7 +43,7 @@ class ParentAudience extends BaseType implements ParentAudienceContract, Audienc
      *
      * @return static
      *
-     * @see http://schema.org/alternateName
+     * @see https://schema.org/alternateName
      */
     public function alternateName($alternateName)
     {
@@ -58,7 +58,7 @@ class ParentAudience extends BaseType implements ParentAudienceContract, Audienc
      *
      * @return static
      *
-     * @see http://schema.org/audienceType
+     * @see https://schema.org/audienceType
      */
     public function audienceType($audienceType)
     {
@@ -72,7 +72,7 @@ class ParentAudience extends BaseType implements ParentAudienceContract, Audienc
      *
      * @return static
      *
-     * @see http://schema.org/childMaxAge
+     * @see https://schema.org/childMaxAge
      */
     public function childMaxAge($childMaxAge)
     {
@@ -86,7 +86,7 @@ class ParentAudience extends BaseType implements ParentAudienceContract, Audienc
      *
      * @return static
      *
-     * @see http://schema.org/childMinAge
+     * @see https://schema.org/childMinAge
      */
     public function childMinAge($childMinAge)
     {
@@ -100,7 +100,7 @@ class ParentAudience extends BaseType implements ParentAudienceContract, Audienc
      *
      * @return static
      *
-     * @see http://schema.org/description
+     * @see https://schema.org/description
      */
     public function description($description)
     {
@@ -117,7 +117,7 @@ class ParentAudience extends BaseType implements ParentAudienceContract, Audienc
      *
      * @return static
      *
-     * @see http://schema.org/disambiguatingDescription
+     * @see https://schema.org/disambiguatingDescription
      */
     public function disambiguatingDescription($disambiguatingDescription)
     {
@@ -131,11 +131,26 @@ class ParentAudience extends BaseType implements ParentAudienceContract, Audienc
      *
      * @return static
      *
-     * @see http://schema.org/geographicArea
+     * @see https://schema.org/geographicArea
      */
     public function geographicArea($geographicArea)
     {
         return $this->setProperty('geographicArea', $geographicArea);
+    }
+
+    /**
+     * Specifying the health condition(s) of a patient, medical study, or other
+     * target audience.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\MedicalConditionContract|\Spatie\SchemaOrg\Contracts\MedicalConditionContract[] $healthCondition
+     *
+     * @return static
+     *
+     * @see https://schema.org/healthCondition
+     */
+    public function healthCondition($healthCondition)
+    {
+        return $this->setProperty('healthCondition', $healthCondition);
     }
 
     /**
@@ -149,7 +164,7 @@ class ParentAudience extends BaseType implements ParentAudienceContract, Audienc
      *
      * @return static
      *
-     * @see http://schema.org/identifier
+     * @see https://schema.org/identifier
      */
     public function identifier($identifier)
     {
@@ -164,7 +179,7 @@ class ParentAudience extends BaseType implements ParentAudienceContract, Audienc
      *
      * @return static
      *
-     * @see http://schema.org/image
+     * @see https://schema.org/image
      */
     public function image($image)
     {
@@ -180,7 +195,7 @@ class ParentAudience extends BaseType implements ParentAudienceContract, Audienc
      *
      * @return static
      *
-     * @see http://schema.org/mainEntityOfPage
+     * @see https://schema.org/mainEntityOfPage
      */
     public function mainEntityOfPage($mainEntityOfPage)
     {
@@ -194,7 +209,7 @@ class ParentAudience extends BaseType implements ParentAudienceContract, Audienc
      *
      * @return static
      *
-     * @see http://schema.org/name
+     * @see https://schema.org/name
      */
     public function name($name)
     {
@@ -209,7 +224,7 @@ class ParentAudience extends BaseType implements ParentAudienceContract, Audienc
      *
      * @return static
      *
-     * @see http://schema.org/potentialAction
+     * @see https://schema.org/potentialAction
      */
     public function potentialAction($potentialAction)
     {
@@ -223,7 +238,7 @@ class ParentAudience extends BaseType implements ParentAudienceContract, Audienc
      *
      * @return static
      *
-     * @see http://schema.org/requiredGender
+     * @see https://schema.org/requiredGender
      */
     public function requiredGender($requiredGender)
     {
@@ -237,7 +252,7 @@ class ParentAudience extends BaseType implements ParentAudienceContract, Audienc
      *
      * @return static
      *
-     * @see http://schema.org/requiredMaxAge
+     * @see https://schema.org/requiredMaxAge
      */
     public function requiredMaxAge($requiredMaxAge)
     {
@@ -251,7 +266,7 @@ class ParentAudience extends BaseType implements ParentAudienceContract, Audienc
      *
      * @return static
      *
-     * @see http://schema.org/requiredMinAge
+     * @see https://schema.org/requiredMinAge
      */
     public function requiredMinAge($requiredMinAge)
     {
@@ -267,7 +282,7 @@ class ParentAudience extends BaseType implements ParentAudienceContract, Audienc
      *
      * @return static
      *
-     * @see http://schema.org/sameAs
+     * @see https://schema.org/sameAs
      */
     public function sameAs($sameAs)
     {
@@ -281,7 +296,7 @@ class ParentAudience extends BaseType implements ParentAudienceContract, Audienc
      *
      * @return static
      *
-     * @see http://schema.org/subjectOf
+     * @see https://schema.org/subjectOf
      */
     public function subjectOf($subjectOf)
     {
@@ -295,7 +310,7 @@ class ParentAudience extends BaseType implements ParentAudienceContract, Audienc
      *
      * @return static
      *
-     * @see http://schema.org/suggestedGender
+     * @see https://schema.org/suggestedGender
      */
     public function suggestedGender($suggestedGender)
     {
@@ -309,7 +324,7 @@ class ParentAudience extends BaseType implements ParentAudienceContract, Audienc
      *
      * @return static
      *
-     * @see http://schema.org/suggestedMaxAge
+     * @see https://schema.org/suggestedMaxAge
      */
     public function suggestedMaxAge($suggestedMaxAge)
     {
@@ -323,7 +338,7 @@ class ParentAudience extends BaseType implements ParentAudienceContract, Audienc
      *
      * @return static
      *
-     * @see http://schema.org/suggestedMinAge
+     * @see https://schema.org/suggestedMinAge
      */
     public function suggestedMinAge($suggestedMinAge)
     {
@@ -337,7 +352,7 @@ class ParentAudience extends BaseType implements ParentAudienceContract, Audienc
      *
      * @return static
      *
-     * @see http://schema.org/url
+     * @see https://schema.org/url
      */
     public function url($url)
     {

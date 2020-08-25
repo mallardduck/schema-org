@@ -10,38 +10,54 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
 /**
  * The kind of release which this album is: single, EP or album.
  *
- * @see http://schema.org/MusicAlbumReleaseType
+ * @see https://schema.org/MusicAlbumReleaseType
  *
+ * @method static supersededBy($supersededBy) The value should be instance of pending types Class|Class[]|Enumeration|Enumeration[]|Property|Property[]
+ *
+ * External Sources:
+ * @see http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#MBZ
  */
 class MusicAlbumReleaseType extends BaseType implements MusicAlbumReleaseTypeContract, EnumerationContract, IntangibleContract, ThingContract
 {
     /**
      * AlbumRelease.
      *
-     * @see http://schema.org/AlbumRelease
+     * @see https://schema.org/AlbumRelease
+     *
+     * External Sources:
+     * @see http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#MBZ
      */
-     const AlbumRelease = 'http://schema.org/AlbumRelease';
+     const AlbumRelease = 'https://schema.org/AlbumRelease';
 
     /**
      * BroadcastRelease.
      *
-     * @see http://schema.org/BroadcastRelease
+     * @see https://schema.org/BroadcastRelease
+     *
+     * External Sources:
+     * @see http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#MBZ
      */
-     const BroadcastRelease = 'http://schema.org/BroadcastRelease';
+     const BroadcastRelease = 'https://schema.org/BroadcastRelease';
 
     /**
      * EPRelease.
      *
-     * @see http://schema.org/EPRelease
+     * @see https://schema.org/EPRelease
+     *
+     * External Sources:
+     * @see http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#MBZ
      */
-     const EPRelease = 'http://schema.org/EPRelease';
+     const EPRelease = 'https://schema.org/EPRelease';
 
     /**
      * SingleRelease.
      *
-     * @see http://schema.org/SingleRelease
+     * @see https://schema.org/SingleRelease
+     *
+     * External Sources:
+     * @see http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#MBZ
      */
-     const SingleRelease = 'http://schema.org/SingleRelease';
+     const SingleRelease = 'https://schema.org/SingleRelease';
 
     /**
      * An additional type for the item, typically used for adding more specific
@@ -55,7 +71,7 @@ class MusicAlbumReleaseType extends BaseType implements MusicAlbumReleaseTypeCon
      *
      * @return static
      *
-     * @see http://schema.org/additionalType
+     * @see https://schema.org/additionalType
      */
     public function additionalType($additionalType)
     {
@@ -69,7 +85,7 @@ class MusicAlbumReleaseType extends BaseType implements MusicAlbumReleaseTypeCon
      *
      * @return static
      *
-     * @see http://schema.org/alternateName
+     * @see https://schema.org/alternateName
      */
     public function alternateName($alternateName)
     {
@@ -83,7 +99,7 @@ class MusicAlbumReleaseType extends BaseType implements MusicAlbumReleaseTypeCon
      *
      * @return static
      *
-     * @see http://schema.org/description
+     * @see https://schema.org/description
      */
     public function description($description)
     {
@@ -100,7 +116,7 @@ class MusicAlbumReleaseType extends BaseType implements MusicAlbumReleaseTypeCon
      *
      * @return static
      *
-     * @see http://schema.org/disambiguatingDescription
+     * @see https://schema.org/disambiguatingDescription
      */
     public function disambiguatingDescription($disambiguatingDescription)
     {
@@ -118,7 +134,7 @@ class MusicAlbumReleaseType extends BaseType implements MusicAlbumReleaseTypeCon
      *
      * @return static
      *
-     * @see http://schema.org/identifier
+     * @see https://schema.org/identifier
      */
     public function identifier($identifier)
     {
@@ -133,7 +149,7 @@ class MusicAlbumReleaseType extends BaseType implements MusicAlbumReleaseTypeCon
      *
      * @return static
      *
-     * @see http://schema.org/image
+     * @see https://schema.org/image
      */
     public function image($image)
     {
@@ -149,7 +165,7 @@ class MusicAlbumReleaseType extends BaseType implements MusicAlbumReleaseTypeCon
      *
      * @return static
      *
-     * @see http://schema.org/mainEntityOfPage
+     * @see https://schema.org/mainEntityOfPage
      */
     public function mainEntityOfPage($mainEntityOfPage)
     {
@@ -163,7 +179,7 @@ class MusicAlbumReleaseType extends BaseType implements MusicAlbumReleaseTypeCon
      *
      * @return static
      *
-     * @see http://schema.org/name
+     * @see https://schema.org/name
      */
     public function name($name)
     {
@@ -178,7 +194,7 @@ class MusicAlbumReleaseType extends BaseType implements MusicAlbumReleaseTypeCon
      *
      * @return static
      *
-     * @see http://schema.org/potentialAction
+     * @see https://schema.org/potentialAction
      */
     public function potentialAction($potentialAction)
     {
@@ -194,7 +210,7 @@ class MusicAlbumReleaseType extends BaseType implements MusicAlbumReleaseTypeCon
      *
      * @return static
      *
-     * @see http://schema.org/sameAs
+     * @see https://schema.org/sameAs
      */
     public function sameAs($sameAs)
     {
@@ -208,7 +224,7 @@ class MusicAlbumReleaseType extends BaseType implements MusicAlbumReleaseTypeCon
      *
      * @return static
      *
-     * @see http://schema.org/subjectOf
+     * @see https://schema.org/subjectOf
      */
     public function subjectOf($subjectOf)
     {
@@ -222,7 +238,7 @@ class MusicAlbumReleaseType extends BaseType implements MusicAlbumReleaseTypeCon
      *
      * @return static
      *
-     * @see http://schema.org/url
+     * @see https://schema.org/url
      */
     public function url($url)
     {

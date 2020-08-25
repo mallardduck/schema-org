@@ -10,7 +10,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
 /**
  * A theater or other performing art center.
  *
- * @see http://schema.org/PerformingArtsTheater
+ * @see https://schema.org/PerformingArtsTheater
  *
  */
 class PerformingArtsTheater extends BaseType implements PerformingArtsTheaterContract, CivicStructureContract, PlaceContract, ThingContract
@@ -21,8 +21,8 @@ class PerformingArtsTheater extends BaseType implements PerformingArtsTheaterCon
      * there is no matching property in schema.org.
      * 
      * Note: Publishers should be aware that applications designed to use
-     * specific schema.org properties (e.g. http://schema.org/width,
-     * http://schema.org/color, http://schema.org/gtin13, ...) will typically
+     * specific schema.org properties (e.g. https://schema.org/width,
+     * https://schema.org/color, https://schema.org/gtin13, ...) will typically
      * expect such data to be provided using those properties, rather than using
      * the generic property/value mechanism.
      *
@@ -30,7 +30,7 @@ class PerformingArtsTheater extends BaseType implements PerformingArtsTheaterCon
      *
      * @return static
      *
-     * @see http://schema.org/additionalProperty
+     * @see https://schema.org/additionalProperty
      */
     public function additionalProperty($additionalProperty)
     {
@@ -49,7 +49,7 @@ class PerformingArtsTheater extends BaseType implements PerformingArtsTheaterCon
      *
      * @return static
      *
-     * @see http://schema.org/additionalType
+     * @see https://schema.org/additionalType
      */
     public function additionalType($additionalType)
     {
@@ -63,7 +63,7 @@ class PerformingArtsTheater extends BaseType implements PerformingArtsTheaterCon
      *
      * @return static
      *
-     * @see http://schema.org/address
+     * @see https://schema.org/address
      */
     public function address($address)
     {
@@ -78,7 +78,7 @@ class PerformingArtsTheater extends BaseType implements PerformingArtsTheaterCon
      *
      * @return static
      *
-     * @see http://schema.org/aggregateRating
+     * @see https://schema.org/aggregateRating
      */
     public function aggregateRating($aggregateRating)
     {
@@ -92,7 +92,7 @@ class PerformingArtsTheater extends BaseType implements PerformingArtsTheaterCon
      *
      * @return static
      *
-     * @see http://schema.org/alternateName
+     * @see https://schema.org/alternateName
      */
     public function alternateName($alternateName)
     {
@@ -109,7 +109,7 @@ class PerformingArtsTheater extends BaseType implements PerformingArtsTheaterCon
      *
      * @return static
      *
-     * @see http://schema.org/amenityFeature
+     * @see https://schema.org/amenityFeature
      */
     public function amenityFeature($amenityFeature)
     {
@@ -129,7 +129,7 @@ class PerformingArtsTheater extends BaseType implements PerformingArtsTheaterCon
      *
      * @return static
      *
-     * @see http://schema.org/branchCode
+     * @see https://schema.org/branchCode
      */
     public function branchCode($branchCode)
     {
@@ -143,7 +143,7 @@ class PerformingArtsTheater extends BaseType implements PerformingArtsTheaterCon
      *
      * @return static
      *
-     * @see http://schema.org/containedIn
+     * @see https://schema.org/containedIn
      */
     public function containedIn($containedIn)
     {
@@ -157,7 +157,7 @@ class PerformingArtsTheater extends BaseType implements PerformingArtsTheaterCon
      *
      * @return static
      *
-     * @see http://schema.org/containedInPlace
+     * @see https://schema.org/containedInPlace
      */
     public function containedInPlace($containedInPlace)
     {
@@ -172,7 +172,7 @@ class PerformingArtsTheater extends BaseType implements PerformingArtsTheaterCon
      *
      * @return static
      *
-     * @see http://schema.org/containsPlace
+     * @see https://schema.org/containsPlace
      */
     public function containsPlace($containsPlace)
     {
@@ -186,7 +186,7 @@ class PerformingArtsTheater extends BaseType implements PerformingArtsTheaterCon
      *
      * @return static
      *
-     * @see http://schema.org/description
+     * @see https://schema.org/description
      */
     public function description($description)
     {
@@ -203,7 +203,7 @@ class PerformingArtsTheater extends BaseType implements PerformingArtsTheaterCon
      *
      * @return static
      *
-     * @see http://schema.org/disambiguatingDescription
+     * @see https://schema.org/disambiguatingDescription
      */
     public function disambiguatingDescription($disambiguatingDescription)
     {
@@ -218,7 +218,7 @@ class PerformingArtsTheater extends BaseType implements PerformingArtsTheaterCon
      *
      * @return static
      *
-     * @see http://schema.org/event
+     * @see https://schema.org/event
      */
     public function event($event)
     {
@@ -232,7 +232,7 @@ class PerformingArtsTheater extends BaseType implements PerformingArtsTheaterCon
      *
      * @return static
      *
-     * @see http://schema.org/events
+     * @see https://schema.org/events
      */
     public function events($events)
     {
@@ -246,7 +246,7 @@ class PerformingArtsTheater extends BaseType implements PerformingArtsTheaterCon
      *
      * @return static
      *
-     * @see http://schema.org/faxNumber
+     * @see https://schema.org/faxNumber
      */
     public function faxNumber($faxNumber)
     {
@@ -260,7 +260,7 @@ class PerformingArtsTheater extends BaseType implements PerformingArtsTheaterCon
      *
      * @return static
      *
-     * @see http://schema.org/geo
+     * @see https://schema.org/geo
      */
     public function geo($geo)
     {
@@ -274,11 +274,11 @@ class PerformingArtsTheater extends BaseType implements PerformingArtsTheaterCon
      * point of the interior of b lies in the interior of a". As defined in
      * [DE-9IM](https://en.wikipedia.org/wiki/DE-9IM).
      *
-     * @param \Spatie\SchemaOrg\Contracts\PlaceContract|\Spatie\SchemaOrg\Contracts\PlaceContract[] $geoContains
+     * @param \Spatie\SchemaOrg\Contracts\GeospatialGeometryContract|\Spatie\SchemaOrg\Contracts\GeospatialGeometryContract[]|\Spatie\SchemaOrg\Contracts\PlaceContract|\Spatie\SchemaOrg\Contracts\PlaceContract[] $geoContains
      *
      * @return static
      *
-     * @see http://schema.org/geoContains
+     * @see https://schema.org/geoContains
      */
     public function geoContains($geoContains)
     {
@@ -290,11 +290,11 @@ class PerformingArtsTheater extends BaseType implements PerformingArtsTheaterCon
      * represent), relating a geometry to another that covers it. As defined in
      * [DE-9IM](https://en.wikipedia.org/wiki/DE-9IM).
      *
-     * @param \Spatie\SchemaOrg\Contracts\PlaceContract|\Spatie\SchemaOrg\Contracts\PlaceContract[] $geoCoveredBy
+     * @param \Spatie\SchemaOrg\Contracts\GeospatialGeometryContract|\Spatie\SchemaOrg\Contracts\GeospatialGeometryContract[]|\Spatie\SchemaOrg\Contracts\PlaceContract|\Spatie\SchemaOrg\Contracts\PlaceContract[] $geoCoveredBy
      *
      * @return static
      *
-     * @see http://schema.org/geoCoveredBy
+     * @see https://schema.org/geoCoveredBy
      */
     public function geoCoveredBy($geoCoveredBy)
     {
@@ -307,11 +307,11 @@ class PerformingArtsTheater extends BaseType implements PerformingArtsTheaterCon
      * point of b is a point of (the interior or boundary of) a". As defined in
      * [DE-9IM](https://en.wikipedia.org/wiki/DE-9IM).
      *
-     * @param \Spatie\SchemaOrg\Contracts\PlaceContract|\Spatie\SchemaOrg\Contracts\PlaceContract[] $geoCovers
+     * @param \Spatie\SchemaOrg\Contracts\GeospatialGeometryContract|\Spatie\SchemaOrg\Contracts\GeospatialGeometryContract[]|\Spatie\SchemaOrg\Contracts\PlaceContract|\Spatie\SchemaOrg\Contracts\PlaceContract[] $geoCovers
      *
      * @return static
      *
-     * @see http://schema.org/geoCovers
+     * @see https://schema.org/geoCovers
      */
     public function geoCovers($geoCovers)
     {
@@ -325,11 +325,11 @@ class PerformingArtsTheater extends BaseType implements PerformingArtsTheaterCon
      * of the intersection is less than that of at least one of them". As
      * defined in [DE-9IM](https://en.wikipedia.org/wiki/DE-9IM).
      *
-     * @param \Spatie\SchemaOrg\Contracts\PlaceContract|\Spatie\SchemaOrg\Contracts\PlaceContract[] $geoCrosses
+     * @param \Spatie\SchemaOrg\Contracts\GeospatialGeometryContract|\Spatie\SchemaOrg\Contracts\GeospatialGeometryContract[]|\Spatie\SchemaOrg\Contracts\PlaceContract|\Spatie\SchemaOrg\Contracts\PlaceContract[] $geoCrosses
      *
      * @return static
      *
-     * @see http://schema.org/geoCrosses
+     * @see https://schema.org/geoCrosses
      */
     public function geoCrosses($geoCrosses)
     {
@@ -342,11 +342,11 @@ class PerformingArtsTheater extends BaseType implements PerformingArtsTheaterCon
      * form a set of disconnected geometries." (a symmetric relationship, as
      * defined in [DE-9IM](https://en.wikipedia.org/wiki/DE-9IM))
      *
-     * @param \Spatie\SchemaOrg\Contracts\PlaceContract|\Spatie\SchemaOrg\Contracts\PlaceContract[] $geoDisjoint
+     * @param \Spatie\SchemaOrg\Contracts\GeospatialGeometryContract|\Spatie\SchemaOrg\Contracts\GeospatialGeometryContract[]|\Spatie\SchemaOrg\Contracts\PlaceContract|\Spatie\SchemaOrg\Contracts\PlaceContract[] $geoDisjoint
      *
      * @return static
      *
-     * @see http://schema.org/geoDisjoint
+     * @see https://schema.org/geoDisjoint
      */
     public function geoDisjoint($geoDisjoint)
     {
@@ -361,11 +361,11 @@ class PerformingArtsTheater extends BaseType implements PerformingArtsTheaterCon
      * interior or boundary of one geometry intersects the exterior of the
      * other" (a symmetric relationship)
      *
-     * @param \Spatie\SchemaOrg\Contracts\PlaceContract|\Spatie\SchemaOrg\Contracts\PlaceContract[] $geoEquals
+     * @param \Spatie\SchemaOrg\Contracts\GeospatialGeometryContract|\Spatie\SchemaOrg\Contracts\GeospatialGeometryContract[]|\Spatie\SchemaOrg\Contracts\PlaceContract|\Spatie\SchemaOrg\Contracts\PlaceContract[] $geoEquals
      *
      * @return static
      *
-     * @see http://schema.org/geoEquals
+     * @see https://schema.org/geoEquals
      */
     public function geoEquals($geoEquals)
     {
@@ -377,11 +377,11 @@ class PerformingArtsTheater extends BaseType implements PerformingArtsTheaterCon
      * represent) have at least one point in common. As defined in
      * [DE-9IM](https://en.wikipedia.org/wiki/DE-9IM).
      *
-     * @param \Spatie\SchemaOrg\Contracts\PlaceContract|\Spatie\SchemaOrg\Contracts\PlaceContract[] $geoIntersects
+     * @param \Spatie\SchemaOrg\Contracts\GeospatialGeometryContract|\Spatie\SchemaOrg\Contracts\GeospatialGeometryContract[]|\Spatie\SchemaOrg\Contracts\PlaceContract|\Spatie\SchemaOrg\Contracts\PlaceContract[] $geoIntersects
      *
      * @return static
      *
-     * @see http://schema.org/geoIntersects
+     * @see https://schema.org/geoIntersects
      */
     public function geoIntersects($geoIntersects)
     {
@@ -394,11 +394,11 @@ class PerformingArtsTheater extends BaseType implements PerformingArtsTheaterCon
      * i.e. they have some but not all points in common. As defined in
      * [DE-9IM](https://en.wikipedia.org/wiki/DE-9IM).
      *
-     * @param \Spatie\SchemaOrg\Contracts\PlaceContract|\Spatie\SchemaOrg\Contracts\PlaceContract[] $geoOverlaps
+     * @param \Spatie\SchemaOrg\Contracts\GeospatialGeometryContract|\Spatie\SchemaOrg\Contracts\GeospatialGeometryContract[]|\Spatie\SchemaOrg\Contracts\PlaceContract|\Spatie\SchemaOrg\Contracts\PlaceContract[] $geoOverlaps
      *
      * @return static
      *
-     * @see http://schema.org/geoOverlaps
+     * @see https://schema.org/geoOverlaps
      */
     public function geoOverlaps($geoOverlaps)
     {
@@ -411,11 +411,11 @@ class PerformingArtsTheater extends BaseType implements PerformingArtsTheaterCon
      * interior points." (a symmetric relationship, as defined in
      * [DE-9IM](https://en.wikipedia.org/wiki/DE-9IM) )
      *
-     * @param \Spatie\SchemaOrg\Contracts\PlaceContract|\Spatie\SchemaOrg\Contracts\PlaceContract[] $geoTouches
+     * @param \Spatie\SchemaOrg\Contracts\GeospatialGeometryContract|\Spatie\SchemaOrg\Contracts\GeospatialGeometryContract[]|\Spatie\SchemaOrg\Contracts\PlaceContract|\Spatie\SchemaOrg\Contracts\PlaceContract[] $geoTouches
      *
      * @return static
      *
-     * @see http://schema.org/geoTouches
+     * @see https://schema.org/geoTouches
      */
     public function geoTouches($geoTouches)
     {
@@ -428,11 +428,11 @@ class PerformingArtsTheater extends BaseType implements PerformingArtsTheaterCon
      * inside (i.e. within) its interior. As defined in
      * [DE-9IM](https://en.wikipedia.org/wiki/DE-9IM).
      *
-     * @param \Spatie\SchemaOrg\Contracts\PlaceContract|\Spatie\SchemaOrg\Contracts\PlaceContract[] $geoWithin
+     * @param \Spatie\SchemaOrg\Contracts\GeospatialGeometryContract|\Spatie\SchemaOrg\Contracts\GeospatialGeometryContract[]|\Spatie\SchemaOrg\Contracts\PlaceContract|\Spatie\SchemaOrg\Contracts\PlaceContract[] $geoWithin
      *
      * @return static
      *
-     * @see http://schema.org/geoWithin
+     * @see https://schema.org/geoWithin
      */
     public function geoWithin($geoWithin)
     {
@@ -449,11 +449,29 @@ class PerformingArtsTheater extends BaseType implements PerformingArtsTheaterCon
      *
      * @return static
      *
-     * @see http://schema.org/globalLocationNumber
+     * @see https://schema.org/globalLocationNumber
      */
     public function globalLocationNumber($globalLocationNumber)
     {
         return $this->setProperty('globalLocationNumber', $globalLocationNumber);
+    }
+
+    /**
+     * Indicates whether some facility (e.g. [[FoodEstablishment]],
+     * [[CovidTestingFacility]]) offers a service that can be used by driving
+     * through in a car. In the case of [[CovidTestingFacility]] such facilities
+     * could potentially help with social distancing from other
+     * potentially-infected users.
+     *
+     * @param bool|bool[] $hasDriveThroughService
+     *
+     * @return static
+     *
+     * @see https://schema.org/hasDriveThroughService
+     */
+    public function hasDriveThroughService($hasDriveThroughService)
+    {
+        return $this->setProperty('hasDriveThroughService', $hasDriveThroughService);
     }
 
     /**
@@ -463,7 +481,7 @@ class PerformingArtsTheater extends BaseType implements PerformingArtsTheaterCon
      *
      * @return static
      *
-     * @see http://schema.org/hasMap
+     * @see https://schema.org/hasMap
      */
     public function hasMap($hasMap)
     {
@@ -481,7 +499,7 @@ class PerformingArtsTheater extends BaseType implements PerformingArtsTheaterCon
      *
      * @return static
      *
-     * @see http://schema.org/identifier
+     * @see https://schema.org/identifier
      */
     public function identifier($identifier)
     {
@@ -496,7 +514,7 @@ class PerformingArtsTheater extends BaseType implements PerformingArtsTheaterCon
      *
      * @return static
      *
-     * @see http://schema.org/image
+     * @see https://schema.org/image
      */
     public function image($image)
     {
@@ -510,7 +528,7 @@ class PerformingArtsTheater extends BaseType implements PerformingArtsTheaterCon
      *
      * @return static
      *
-     * @see http://schema.org/isAccessibleForFree
+     * @see https://schema.org/isAccessibleForFree
      */
     public function isAccessibleForFree($isAccessibleForFree)
     {
@@ -526,7 +544,7 @@ class PerformingArtsTheater extends BaseType implements PerformingArtsTheaterCon
      *
      * @return static
      *
-     * @see http://schema.org/isicV4
+     * @see https://schema.org/isicV4
      */
     public function isicV4($isicV4)
     {
@@ -541,7 +559,7 @@ class PerformingArtsTheater extends BaseType implements PerformingArtsTheaterCon
      *
      * @return static
      *
-     * @see http://schema.org/latitude
+     * @see https://schema.org/latitude
      */
     public function latitude($latitude)
     {
@@ -555,7 +573,7 @@ class PerformingArtsTheater extends BaseType implements PerformingArtsTheaterCon
      *
      * @return static
      *
-     * @see http://schema.org/logo
+     * @see https://schema.org/logo
      */
     public function logo($logo)
     {
@@ -570,7 +588,7 @@ class PerformingArtsTheater extends BaseType implements PerformingArtsTheaterCon
      *
      * @return static
      *
-     * @see http://schema.org/longitude
+     * @see https://schema.org/longitude
      */
     public function longitude($longitude)
     {
@@ -586,7 +604,7 @@ class PerformingArtsTheater extends BaseType implements PerformingArtsTheaterCon
      *
      * @return static
      *
-     * @see http://schema.org/mainEntityOfPage
+     * @see https://schema.org/mainEntityOfPage
      */
     public function mainEntityOfPage($mainEntityOfPage)
     {
@@ -600,7 +618,7 @@ class PerformingArtsTheater extends BaseType implements PerformingArtsTheaterCon
      *
      * @return static
      *
-     * @see http://schema.org/map
+     * @see https://schema.org/map
      */
     public function map($map)
     {
@@ -614,7 +632,7 @@ class PerformingArtsTheater extends BaseType implements PerformingArtsTheaterCon
      *
      * @return static
      *
-     * @see http://schema.org/maps
+     * @see https://schema.org/maps
      */
     public function maps($maps)
     {
@@ -628,7 +646,7 @@ class PerformingArtsTheater extends BaseType implements PerformingArtsTheaterCon
      *
      * @return static
      *
-     * @see http://schema.org/maximumAttendeeCapacity
+     * @see https://schema.org/maximumAttendeeCapacity
      */
     public function maximumAttendeeCapacity($maximumAttendeeCapacity)
     {
@@ -642,7 +660,7 @@ class PerformingArtsTheater extends BaseType implements PerformingArtsTheaterCon
      *
      * @return static
      *
-     * @see http://schema.org/name
+     * @see https://schema.org/name
      */
     public function name($name)
     {
@@ -671,7 +689,7 @@ class PerformingArtsTheater extends BaseType implements PerformingArtsTheaterCon
      *
      * @return static
      *
-     * @see http://schema.org/openingHours
+     * @see https://schema.org/openingHours
      */
     public function openingHours($openingHours)
     {
@@ -685,7 +703,7 @@ class PerformingArtsTheater extends BaseType implements PerformingArtsTheaterCon
      *
      * @return static
      *
-     * @see http://schema.org/openingHoursSpecification
+     * @see https://schema.org/openingHoursSpecification
      */
     public function openingHoursSpecification($openingHoursSpecification)
     {
@@ -699,7 +717,7 @@ class PerformingArtsTheater extends BaseType implements PerformingArtsTheaterCon
      *
      * @return static
      *
-     * @see http://schema.org/photo
+     * @see https://schema.org/photo
      */
     public function photo($photo)
     {
@@ -713,7 +731,7 @@ class PerformingArtsTheater extends BaseType implements PerformingArtsTheaterCon
      *
      * @return static
      *
-     * @see http://schema.org/photos
+     * @see https://schema.org/photos
      */
     public function photos($photos)
     {
@@ -728,7 +746,7 @@ class PerformingArtsTheater extends BaseType implements PerformingArtsTheaterCon
      *
      * @return static
      *
-     * @see http://schema.org/potentialAction
+     * @see https://schema.org/potentialAction
      */
     public function potentialAction($potentialAction)
     {
@@ -743,7 +761,7 @@ class PerformingArtsTheater extends BaseType implements PerformingArtsTheaterCon
      *
      * @return static
      *
-     * @see http://schema.org/publicAccess
+     * @see https://schema.org/publicAccess
      */
     public function publicAccess($publicAccess)
     {
@@ -757,7 +775,7 @@ class PerformingArtsTheater extends BaseType implements PerformingArtsTheaterCon
      *
      * @return static
      *
-     * @see http://schema.org/review
+     * @see https://schema.org/review
      */
     public function review($review)
     {
@@ -771,7 +789,7 @@ class PerformingArtsTheater extends BaseType implements PerformingArtsTheaterCon
      *
      * @return static
      *
-     * @see http://schema.org/reviews
+     * @see https://schema.org/reviews
      */
     public function reviews($reviews)
     {
@@ -787,7 +805,7 @@ class PerformingArtsTheater extends BaseType implements PerformingArtsTheaterCon
      *
      * @return static
      *
-     * @see http://schema.org/sameAs
+     * @see https://schema.org/sameAs
      */
     public function sameAs($sameAs)
     {
@@ -801,7 +819,7 @@ class PerformingArtsTheater extends BaseType implements PerformingArtsTheaterCon
      *
      * @return static
      *
-     * @see http://schema.org/slogan
+     * @see https://schema.org/slogan
      */
     public function slogan($slogan)
     {
@@ -816,7 +834,7 @@ class PerformingArtsTheater extends BaseType implements PerformingArtsTheaterCon
      *
      * @return static
      *
-     * @see http://schema.org/smokingAllowed
+     * @see https://schema.org/smokingAllowed
      */
     public function smokingAllowed($smokingAllowed)
     {
@@ -833,7 +851,7 @@ class PerformingArtsTheater extends BaseType implements PerformingArtsTheaterCon
      *
      * @return static
      *
-     * @see http://schema.org/specialOpeningHoursSpecification
+     * @see https://schema.org/specialOpeningHoursSpecification
      */
     public function specialOpeningHoursSpecification($specialOpeningHoursSpecification)
     {
@@ -847,7 +865,7 @@ class PerformingArtsTheater extends BaseType implements PerformingArtsTheaterCon
      *
      * @return static
      *
-     * @see http://schema.org/subjectOf
+     * @see https://schema.org/subjectOf
      */
     public function subjectOf($subjectOf)
     {
@@ -861,11 +879,27 @@ class PerformingArtsTheater extends BaseType implements PerformingArtsTheaterCon
      *
      * @return static
      *
-     * @see http://schema.org/telephone
+     * @see https://schema.org/telephone
      */
     public function telephone($telephone)
     {
         return $this->setProperty('telephone', $telephone);
+    }
+
+    /**
+     * A page providing information on how to book a tour of some [[Place]],
+     * such as an [[Accommodation]] or [[ApartmentComplex]] in a real estate
+     * setting, as well as other kinds of tours as appropriate.
+     *
+     * @param string|string[] $tourBookingPage
+     *
+     * @return static
+     *
+     * @see https://schema.org/tourBookingPage
+     */
+    public function tourBookingPage($tourBookingPage)
+    {
+        return $this->setProperty('tourBookingPage', $tourBookingPage);
     }
 
     /**
@@ -875,7 +909,7 @@ class PerformingArtsTheater extends BaseType implements PerformingArtsTheaterCon
      *
      * @return static
      *
-     * @see http://schema.org/url
+     * @see https://schema.org/url
      */
     public function url($url)
     {

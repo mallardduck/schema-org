@@ -10,19 +10,42 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * A vehicle is a device that is designed or used to transport people or cargo
  * over land, water, air, or through space.
  *
- * @see http://schema.org/Vehicle
+ * @see https://schema.org/Vehicle
  *
  */
 class Vehicle extends BaseType implements VehicleContract, ProductContract, ThingContract
 {
+    /**
+     * The time needed to accelerate the vehicle from a given start velocity to
+     * a given target velocity.
+     * 
+     * Typical unit code(s): SEC for seconds
+     * 
+     * * Note: There are unfortunately no standard unit codes for seconds/0..100
+     * km/h or seconds/0..60 mph. Simply use "SEC" for seconds and indicate the
+     * velocities in the [[name]] of the [[QuantitativeValue]], or use
+     * [[valueReference]] with a [[QuantitativeValue]] of 0..60 mph or 0..100
+     * km/h to specify the reference speeds.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\QuantitativeValueContract|\Spatie\SchemaOrg\Contracts\QuantitativeValueContract[] $accelerationTime
+     *
+     * @return static
+     *
+     * @see https://schema.org/accelerationTime
+     */
+    public function accelerationTime($accelerationTime)
+    {
+        return $this->setProperty('accelerationTime', $accelerationTime);
+    }
+
     /**
      * A property-value pair representing an additional characteristics of the
      * entitity, e.g. a product feature or another characteristic for which
      * there is no matching property in schema.org.
      * 
      * Note: Publishers should be aware that applications designed to use
-     * specific schema.org properties (e.g. http://schema.org/width,
-     * http://schema.org/color, http://schema.org/gtin13, ...) will typically
+     * specific schema.org properties (e.g. https://schema.org/width,
+     * https://schema.org/color, https://schema.org/gtin13, ...) will typically
      * expect such data to be provided using those properties, rather than using
      * the generic property/value mechanism.
      *
@@ -30,7 +53,7 @@ class Vehicle extends BaseType implements VehicleContract, ProductContract, Thin
      *
      * @return static
      *
-     * @see http://schema.org/additionalProperty
+     * @see https://schema.org/additionalProperty
      */
     public function additionalProperty($additionalProperty)
     {
@@ -49,7 +72,7 @@ class Vehicle extends BaseType implements VehicleContract, ProductContract, Thin
      *
      * @return static
      *
-     * @see http://schema.org/additionalType
+     * @see https://schema.org/additionalType
      */
     public function additionalType($additionalType)
     {
@@ -64,7 +87,7 @@ class Vehicle extends BaseType implements VehicleContract, ProductContract, Thin
      *
      * @return static
      *
-     * @see http://schema.org/aggregateRating
+     * @see https://schema.org/aggregateRating
      */
     public function aggregateRating($aggregateRating)
     {
@@ -78,7 +101,7 @@ class Vehicle extends BaseType implements VehicleContract, ProductContract, Thin
      *
      * @return static
      *
-     * @see http://schema.org/alternateName
+     * @see https://schema.org/alternateName
      */
     public function alternateName($alternateName)
     {
@@ -92,7 +115,7 @@ class Vehicle extends BaseType implements VehicleContract, ProductContract, Thin
      *
      * @return static
      *
-     * @see http://schema.org/audience
+     * @see https://schema.org/audience
      */
     public function audience($audience)
     {
@@ -106,7 +129,7 @@ class Vehicle extends BaseType implements VehicleContract, ProductContract, Thin
      *
      * @return static
      *
-     * @see http://schema.org/award
+     * @see https://schema.org/award
      */
     public function award($award)
     {
@@ -120,11 +143,26 @@ class Vehicle extends BaseType implements VehicleContract, ProductContract, Thin
      *
      * @return static
      *
-     * @see http://schema.org/awards
+     * @see https://schema.org/awards
      */
     public function awards($awards)
     {
         return $this->setProperty('awards', $awards);
+    }
+
+    /**
+     * Indicates the design and body style of the vehicle (e.g. station wagon,
+     * hatchback, etc.).
+     *
+     * @param \Spatie\SchemaOrg\Contracts\QualitativeValueContract|\Spatie\SchemaOrg\Contracts\QualitativeValueContract[]|string|string[] $bodyType
+     *
+     * @return static
+     *
+     * @see https://schema.org/bodyType
+     */
+    public function bodyType($bodyType)
+    {
+        return $this->setProperty('bodyType', $bodyType);
     }
 
     /**
@@ -135,11 +173,27 @@ class Vehicle extends BaseType implements VehicleContract, ProductContract, Thin
      *
      * @return static
      *
-     * @see http://schema.org/brand
+     * @see https://schema.org/brand
      */
     public function brand($brand)
     {
         return $this->setProperty('brand', $brand);
+    }
+
+    /**
+     * A [callsign](https://en.wikipedia.org/wiki/Call_sign), as used in
+     * broadcasting and radio communications to identify people, radio and TV
+     * stations, or vehicles.
+     *
+     * @param string|string[] $callSign
+     *
+     * @return static
+     *
+     * @see https://schema.org/callSign
+     */
+    public function callSign($callSign)
+    {
+        return $this->setProperty('callSign', $callSign);
     }
 
     /**
@@ -154,7 +208,7 @@ class Vehicle extends BaseType implements VehicleContract, ProductContract, Thin
      *
      * @return static
      *
-     * @see http://schema.org/cargoVolume
+     * @see https://schema.org/cargoVolume
      */
     public function cargoVolume($cargoVolume)
     {
@@ -165,11 +219,11 @@ class Vehicle extends BaseType implements VehicleContract, ProductContract, Thin
      * A category for the item. Greater signs or slashes can be used to
      * informally indicate a category hierarchy.
      *
-     * @param \Spatie\SchemaOrg\Contracts\ThingContract|\Spatie\SchemaOrg\Contracts\ThingContract[]|string|string[] $category
+     * @param \Spatie\SchemaOrg\Contracts\PhysicalActivityCategoryContract|\Spatie\SchemaOrg\Contracts\PhysicalActivityCategoryContract[]|\Spatie\SchemaOrg\Contracts\ThingContract|\Spatie\SchemaOrg\Contracts\ThingContract[]|string|string[] $category
      *
      * @return static
      *
-     * @see http://schema.org/category
+     * @see https://schema.org/category
      */
     public function category($category)
     {
@@ -183,7 +237,7 @@ class Vehicle extends BaseType implements VehicleContract, ProductContract, Thin
      *
      * @return static
      *
-     * @see http://schema.org/color
+     * @see https://schema.org/color
      */
     public function color($color)
     {
@@ -198,7 +252,7 @@ class Vehicle extends BaseType implements VehicleContract, ProductContract, Thin
      *
      * @return static
      *
-     * @see http://schema.org/dateVehicleFirstRegistered
+     * @see https://schema.org/dateVehicleFirstRegistered
      */
     public function dateVehicleFirstRegistered($dateVehicleFirstRegistered)
     {
@@ -212,7 +266,7 @@ class Vehicle extends BaseType implements VehicleContract, ProductContract, Thin
      *
      * @return static
      *
-     * @see http://schema.org/depth
+     * @see https://schema.org/depth
      */
     public function depth($depth)
     {
@@ -226,7 +280,7 @@ class Vehicle extends BaseType implements VehicleContract, ProductContract, Thin
      *
      * @return static
      *
-     * @see http://schema.org/description
+     * @see https://schema.org/description
      */
     public function description($description)
     {
@@ -243,7 +297,7 @@ class Vehicle extends BaseType implements VehicleContract, ProductContract, Thin
      *
      * @return static
      *
-     * @see http://schema.org/disambiguatingDescription
+     * @see https://schema.org/disambiguatingDescription
      */
     public function disambiguatingDescription($disambiguatingDescription)
     {
@@ -258,11 +312,46 @@ class Vehicle extends BaseType implements VehicleContract, ProductContract, Thin
      *
      * @return static
      *
-     * @see http://schema.org/driveWheelConfiguration
+     * @see https://schema.org/driveWheelConfiguration
      */
     public function driveWheelConfiguration($driveWheelConfiguration)
     {
         return $this->setProperty('driveWheelConfiguration', $driveWheelConfiguration);
+    }
+
+    /**
+     * The CO2 emissions in g/km. When used in combination with a
+     * QuantitativeValue, put "g/km" into the unitText property of that value,
+     * since there is no UN/CEFACT Common Code for "g/km".
+     *
+     * @param float|float[]|int|int[] $emissionsCO2
+     *
+     * @return static
+     *
+     * @see https://schema.org/emissionsCO2
+     */
+    public function emissionsCO2($emissionsCO2)
+    {
+        return $this->setProperty('emissionsCO2', $emissionsCO2);
+    }
+
+    /**
+     * The capacity of the fuel tank or in the case of electric cars, the
+     * battery. If there are multiple components for storage, this should
+     * indicate the total of all storage of the same type.
+     * 
+     * Typical unit code(s): LTR for liters, GLL of US gallons, GLI for UK /
+     * imperial gallons, AMH for ampere-hours (for electrical vehicles).
+     *
+     * @param \Spatie\SchemaOrg\Contracts\QuantitativeValueContract|\Spatie\SchemaOrg\Contracts\QuantitativeValueContract[] $fuelCapacity
+     *
+     * @return static
+     *
+     * @see https://schema.org/fuelCapacity
+     */
+    public function fuelCapacity($fuelCapacity)
+    {
+        return $this->setProperty('fuelCapacity', $fuelCapacity);
     }
 
     /**
@@ -284,7 +373,7 @@ class Vehicle extends BaseType implements VehicleContract, ProductContract, Thin
      *
      * @return static
      *
-     * @see http://schema.org/fuelConsumption
+     * @see https://schema.org/fuelConsumption
      */
     public function fuelConsumption($fuelConsumption)
     {
@@ -310,7 +399,7 @@ class Vehicle extends BaseType implements VehicleContract, ProductContract, Thin
      *
      * @return static
      *
-     * @see http://schema.org/fuelEfficiency
+     * @see https://schema.org/fuelEfficiency
      */
     public function fuelEfficiency($fuelEfficiency)
     {
@@ -326,11 +415,45 @@ class Vehicle extends BaseType implements VehicleContract, ProductContract, Thin
      *
      * @return static
      *
-     * @see http://schema.org/fuelType
+     * @see https://schema.org/fuelType
      */
     public function fuelType($fuelType)
     {
         return $this->setProperty('fuelType', $fuelType);
+    }
+
+    /**
+     * A Global Trade Item Number
+     * ([GTIN](https://www.gs1.org/standards/id-keys/gtin)). GTINs identify
+     * trade items, including products and services, using numeric
+     * identification codes. The [[gtin]] property generalizes the earlier <a
+     * class="localLink" href="https://schema.org/gtin8">gtin8</a>, <a
+     * class="localLink" href="https://schema.org/gtin12">gtin12</a>, <a
+     * class="localLink" href="https://schema.org/gtin13">gtin13</a>, and <a
+     * class="localLink" href="https://schema.org/gtin14">gtin14</a> properties.
+     * The GS1 [digital link
+     * specifications](https://www.gs1.org/standards/Digital-Link/) express
+     * GTINs as URLs. A correct [[gtin]] value should be a valid GTIN, which
+     * means that it should be an all-numeric string of either 8, 12, 13 or 14
+     * digits, or a "GS1 Digital Link" URL based on such a string. The numeric
+     * component should also have a [valid GS1 check
+     * digit](https://www.gs1.org/services/check-digit-calculator) and meet the
+     * other rules for valid GTINs. See also <a
+     * href="http://www.gs1.org/barcodes/technical/idkeys/gtin">GS1's GTIN
+     * Summary</a> and
+     * [Wikipedia](https://en.wikipedia.org/wiki/Global_Trade_Item_Number) for
+     * more details. Left-padding of the gtin values is not required or
+     * encouraged.
+     *
+     * @param string|string[] $gtin
+     *
+     * @return static
+     *
+     * @see https://schema.org/gtin
+     */
+    public function gtin($gtin)
+    {
+        return $this->setProperty('gtin', $gtin);
     }
 
     /**
@@ -345,7 +468,7 @@ class Vehicle extends BaseType implements VehicleContract, ProductContract, Thin
      *
      * @return static
      *
-     * @see http://schema.org/gtin12
+     * @see https://schema.org/gtin12
      */
     public function gtin12($gtin12)
     {
@@ -364,7 +487,7 @@ class Vehicle extends BaseType implements VehicleContract, ProductContract, Thin
      *
      * @return static
      *
-     * @see http://schema.org/gtin13
+     * @see https://schema.org/gtin13
      */
     public function gtin13($gtin13)
     {
@@ -381,7 +504,7 @@ class Vehicle extends BaseType implements VehicleContract, ProductContract, Thin
      *
      * @return static
      *
-     * @see http://schema.org/gtin14
+     * @see https://schema.org/gtin14
      */
     public function gtin14($gtin14)
     {
@@ -399,11 +522,25 @@ class Vehicle extends BaseType implements VehicleContract, ProductContract, Thin
      *
      * @return static
      *
-     * @see http://schema.org/gtin8
+     * @see https://schema.org/gtin8
      */
     public function gtin8($gtin8)
     {
         return $this->setProperty('gtin8', $gtin8);
+    }
+
+    /**
+     * Indicates a MerchantReturnPolicy that may be applicable.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\MerchantReturnPolicyContract|\Spatie\SchemaOrg\Contracts\MerchantReturnPolicyContract[] $hasMerchantReturnPolicy
+     *
+     * @return static
+     *
+     * @see https://schema.org/hasMerchantReturnPolicy
+     */
+    public function hasMerchantReturnPolicy($hasMerchantReturnPolicy)
+    {
+        return $this->setProperty('hasMerchantReturnPolicy', $hasMerchantReturnPolicy);
     }
 
     /**
@@ -413,7 +550,7 @@ class Vehicle extends BaseType implements VehicleContract, ProductContract, Thin
      *
      * @return static
      *
-     * @see http://schema.org/height
+     * @see https://schema.org/height
      */
     public function height($height)
     {
@@ -431,7 +568,7 @@ class Vehicle extends BaseType implements VehicleContract, ProductContract, Thin
      *
      * @return static
      *
-     * @see http://schema.org/identifier
+     * @see https://schema.org/identifier
      */
     public function identifier($identifier)
     {
@@ -446,11 +583,26 @@ class Vehicle extends BaseType implements VehicleContract, ProductContract, Thin
      *
      * @return static
      *
-     * @see http://schema.org/image
+     * @see https://schema.org/image
      */
     public function image($image)
     {
         return $this->setProperty('image', $image);
+    }
+
+    /**
+     * Indicates the [[productGroupID]] for a [[ProductGroup]] that this product
+     * [[isVariantOf]].
+     *
+     * @param string|string[] $inProductGroupWithID
+     *
+     * @return static
+     *
+     * @see https://schema.org/inProductGroupWithID
+     */
+    public function inProductGroupWithID($inProductGroupWithID)
+    {
+        return $this->setProperty('inProductGroupWithID', $inProductGroupWithID);
     }
 
     /**
@@ -461,7 +613,7 @@ class Vehicle extends BaseType implements VehicleContract, ProductContract, Thin
      *
      * @return static
      *
-     * @see http://schema.org/isAccessoryOrSparePartFor
+     * @see https://schema.org/isAccessoryOrSparePartFor
      */
     public function isAccessoryOrSparePartFor($isAccessoryOrSparePartFor)
     {
@@ -476,7 +628,7 @@ class Vehicle extends BaseType implements VehicleContract, ProductContract, Thin
      *
      * @return static
      *
-     * @see http://schema.org/isConsumableFor
+     * @see https://schema.org/isConsumableFor
      */
     public function isConsumableFor($isConsumableFor)
     {
@@ -490,7 +642,7 @@ class Vehicle extends BaseType implements VehicleContract, ProductContract, Thin
      *
      * @return static
      *
-     * @see http://schema.org/isRelatedTo
+     * @see https://schema.org/isRelatedTo
      */
     public function isRelatedTo($isRelatedTo)
     {
@@ -505,11 +657,35 @@ class Vehicle extends BaseType implements VehicleContract, ProductContract, Thin
      *
      * @return static
      *
-     * @see http://schema.org/isSimilarTo
+     * @see https://schema.org/isSimilarTo
      */
     public function isSimilarTo($isSimilarTo)
     {
         return $this->setProperty('isSimilarTo', $isSimilarTo);
+    }
+
+    /**
+     * Indicates the kind of product that this is a variant of. In the case of
+     * [[ProductModel]], this is a pointer (from a ProductModel) to a base
+     * product from which this product is a variant. It is safe to infer that
+     * the variant inherits all product features from the base model, unless
+     * defined locally. This is not transitive. In the case of a
+     * [[ProductGroup]], the group description also serves as a template,
+     * representing a set of Products that vary on explicitly defined, specific
+     * dimensions only (so it defines both a set of variants, as well as which
+     * values distinguish amongst those variants). When used with
+     * [[ProductGroup]], this property can apply to any [[Product]] included in
+     * the group.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\ProductGroupContract|\Spatie\SchemaOrg\Contracts\ProductGroupContract[]|\Spatie\SchemaOrg\Contracts\ProductModelContract|\Spatie\SchemaOrg\Contracts\ProductModelContract[] $isVariantOf
+     *
+     * @return static
+     *
+     * @see https://schema.org/isVariantOf
+     */
+    public function isVariantOf($isVariantOf)
+    {
+        return $this->setProperty('isVariantOf', $isVariantOf);
     }
 
     /**
@@ -521,7 +697,7 @@ class Vehicle extends BaseType implements VehicleContract, ProductContract, Thin
      *
      * @return static
      *
-     * @see http://schema.org/itemCondition
+     * @see https://schema.org/itemCondition
      */
     public function itemCondition($itemCondition)
     {
@@ -535,7 +711,7 @@ class Vehicle extends BaseType implements VehicleContract, ProductContract, Thin
      *
      * @return static
      *
-     * @see http://schema.org/knownVehicleDamages
+     * @see https://schema.org/knownVehicleDamages
      */
     public function knownVehicleDamages($knownVehicleDamages)
     {
@@ -549,7 +725,7 @@ class Vehicle extends BaseType implements VehicleContract, ProductContract, Thin
      *
      * @return static
      *
-     * @see http://schema.org/logo
+     * @see https://schema.org/logo
      */
     public function logo($logo)
     {
@@ -565,7 +741,7 @@ class Vehicle extends BaseType implements VehicleContract, ProductContract, Thin
      *
      * @return static
      *
-     * @see http://schema.org/mainEntityOfPage
+     * @see https://schema.org/mainEntityOfPage
      */
     public function mainEntityOfPage($mainEntityOfPage)
     {
@@ -579,7 +755,7 @@ class Vehicle extends BaseType implements VehicleContract, ProductContract, Thin
      *
      * @return static
      *
-     * @see http://schema.org/manufacturer
+     * @see https://schema.org/manufacturer
      */
     public function manufacturer($manufacturer)
     {
@@ -594,11 +770,25 @@ class Vehicle extends BaseType implements VehicleContract, ProductContract, Thin
      *
      * @return static
      *
-     * @see http://schema.org/material
+     * @see https://schema.org/material
      */
     public function material($material)
     {
         return $this->setProperty('material', $material);
+    }
+
+    /**
+     * Indicates that the vehicle meets the respective emission standard.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\QualitativeValueContract|\Spatie\SchemaOrg\Contracts\QualitativeValueContract[]|string|string[] $meetsEmissionStandard
+     *
+     * @return static
+     *
+     * @see https://schema.org/meetsEmissionStandard
+     */
+    public function meetsEmissionStandard($meetsEmissionStandard)
+    {
+        return $this->setProperty('meetsEmissionStandard', $meetsEmissionStandard);
     }
 
     /**
@@ -611,7 +801,7 @@ class Vehicle extends BaseType implements VehicleContract, ProductContract, Thin
      *
      * @return static
      *
-     * @see http://schema.org/mileageFromOdometer
+     * @see https://schema.org/mileageFromOdometer
      */
     public function mileageFromOdometer($mileageFromOdometer)
     {
@@ -629,11 +819,26 @@ class Vehicle extends BaseType implements VehicleContract, ProductContract, Thin
      *
      * @return static
      *
-     * @see http://schema.org/model
+     * @see https://schema.org/model
      */
     public function model($model)
     {
         return $this->setProperty('model', $model);
+    }
+
+    /**
+     * The release date of a vehicle model (often used to differentiate versions
+     * of the same make and model).
+     *
+     * @param \DateTimeInterface|\DateTimeInterface[] $modelDate
+     *
+     * @return static
+     *
+     * @see https://schema.org/modelDate
+     */
+    public function modelDate($modelDate)
+    {
+        return $this->setProperty('modelDate', $modelDate);
     }
 
     /**
@@ -644,7 +849,7 @@ class Vehicle extends BaseType implements VehicleContract, ProductContract, Thin
      *
      * @return static
      *
-     * @see http://schema.org/mpn
+     * @see https://schema.org/mpn
      */
     public function mpn($mpn)
     {
@@ -658,11 +863,27 @@ class Vehicle extends BaseType implements VehicleContract, ProductContract, Thin
      *
      * @return static
      *
-     * @see http://schema.org/name
+     * @see https://schema.org/name
      */
     public function name($name)
     {
         return $this->setProperty('name', $name);
+    }
+
+    /**
+     * Indicates the [NATO stock
+     * number](https://en.wikipedia.org/wiki/NATO_Stock_Number) (nsn) of a
+     * [[Product]].
+     *
+     * @param string|string[] $nsn
+     *
+     * @return static
+     *
+     * @see https://schema.org/nsn
+     */
+    public function nsn($nsn)
+    {
+        return $this->setProperty('nsn', $nsn);
     }
 
     /**
@@ -672,7 +893,7 @@ class Vehicle extends BaseType implements VehicleContract, ProductContract, Thin
      *
      * @return static
      *
-     * @see http://schema.org/numberOfAirbags
+     * @see https://schema.org/numberOfAirbags
      */
     public function numberOfAirbags($numberOfAirbags)
     {
@@ -688,7 +909,7 @@ class Vehicle extends BaseType implements VehicleContract, ProductContract, Thin
      *
      * @return static
      *
-     * @see http://schema.org/numberOfAxles
+     * @see https://schema.org/numberOfAxles
      */
     public function numberOfAxles($numberOfAxles)
     {
@@ -704,7 +925,7 @@ class Vehicle extends BaseType implements VehicleContract, ProductContract, Thin
      *
      * @return static
      *
-     * @see http://schema.org/numberOfDoors
+     * @see https://schema.org/numberOfDoors
      */
     public function numberOfDoors($numberOfDoors)
     {
@@ -721,7 +942,7 @@ class Vehicle extends BaseType implements VehicleContract, ProductContract, Thin
      *
      * @return static
      *
-     * @see http://schema.org/numberOfForwardGears
+     * @see https://schema.org/numberOfForwardGears
      */
     public function numberOfForwardGears($numberOfForwardGears)
     {
@@ -737,7 +958,7 @@ class Vehicle extends BaseType implements VehicleContract, ProductContract, Thin
      *
      * @return static
      *
-     * @see http://schema.org/numberOfPreviousOwners
+     * @see https://schema.org/numberOfPreviousOwners
      */
     public function numberOfPreviousOwners($numberOfPreviousOwners)
     {
@@ -758,11 +979,53 @@ class Vehicle extends BaseType implements VehicleContract, ProductContract, Thin
      *
      * @return static
      *
-     * @see http://schema.org/offers
+     * @see https://schema.org/offers
      */
     public function offers($offers)
     {
         return $this->setProperty('offers', $offers);
+    }
+
+    /**
+     * A pattern that something has, for example 'polka dot', 'striped',
+     * 'Canadian flag'. Values are typically expressed as text, although links
+     * to controlled value schemes are also supported.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\DefinedTermContract|\Spatie\SchemaOrg\Contracts\DefinedTermContract[]|string|string[] $pattern
+     *
+     * @return static
+     *
+     * @see https://schema.org/pattern
+     */
+    public function pattern($pattern)
+    {
+        return $this->setProperty('pattern', $pattern);
+    }
+
+    /**
+     * The permitted weight of passengers and cargo, EXCLUDING the weight of the
+     * empty vehicle.
+     * 
+     * Typical unit code(s): KGM for kilogram, LBR for pound
+     * 
+     * * Note 1: Many databases specify the permitted TOTAL weight instead,
+     * which is the sum of [[weight]] and [[payload]]
+     * * Note 2: You can indicate additional information in the [[name]] of the
+     * [[QuantitativeValue]] node.
+     * * Note 3: You may also link to a [[QualitativeValue]] node that provides
+     * additional information using [[valueReference]].
+     * * Note 4: Note that you can use [[minValue]] and [[maxValue]] to indicate
+     * ranges.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\QuantitativeValueContract|\Spatie\SchemaOrg\Contracts\QuantitativeValueContract[] $payload
+     *
+     * @return static
+     *
+     * @see https://schema.org/payload
+     */
+    public function payload($payload)
+    {
+        return $this->setProperty('payload', $payload);
     }
 
     /**
@@ -773,7 +1036,7 @@ class Vehicle extends BaseType implements VehicleContract, ProductContract, Thin
      *
      * @return static
      *
-     * @see http://schema.org/potentialAction
+     * @see https://schema.org/potentialAction
      */
     public function potentialAction($potentialAction)
     {
@@ -788,7 +1051,7 @@ class Vehicle extends BaseType implements VehicleContract, ProductContract, Thin
      *
      * @return static
      *
-     * @see http://schema.org/productID
+     * @see https://schema.org/productID
      */
     public function productID($productID)
     {
@@ -802,7 +1065,7 @@ class Vehicle extends BaseType implements VehicleContract, ProductContract, Thin
      *
      * @return static
      *
-     * @see http://schema.org/productionDate
+     * @see https://schema.org/productionDate
      */
     public function productionDate($productionDate)
     {
@@ -816,7 +1079,7 @@ class Vehicle extends BaseType implements VehicleContract, ProductContract, Thin
      *
      * @return static
      *
-     * @see http://schema.org/purchaseDate
+     * @see https://schema.org/purchaseDate
      */
     public function purchaseDate($purchaseDate)
     {
@@ -831,7 +1094,7 @@ class Vehicle extends BaseType implements VehicleContract, ProductContract, Thin
      *
      * @return static
      *
-     * @see http://schema.org/releaseDate
+     * @see https://schema.org/releaseDate
      */
     public function releaseDate($releaseDate)
     {
@@ -845,7 +1108,7 @@ class Vehicle extends BaseType implements VehicleContract, ProductContract, Thin
      *
      * @return static
      *
-     * @see http://schema.org/review
+     * @see https://schema.org/review
      */
     public function review($review)
     {
@@ -859,7 +1122,7 @@ class Vehicle extends BaseType implements VehicleContract, ProductContract, Thin
      *
      * @return static
      *
-     * @see http://schema.org/reviews
+     * @see https://schema.org/reviews
      */
     public function reviews($reviews)
     {
@@ -875,11 +1138,48 @@ class Vehicle extends BaseType implements VehicleContract, ProductContract, Thin
      *
      * @return static
      *
-     * @see http://schema.org/sameAs
+     * @see https://schema.org/sameAs
      */
     public function sameAs($sameAs)
     {
         return $this->setProperty('sameAs', $sameAs);
+    }
+
+    /**
+     * The number of persons that can be seated (e.g. in a vehicle), both in
+     * terms of the physical space available, and in terms of limitations set by
+     * law.
+     * 
+     * Typical unit code(s): C62 for persons
+     *
+     * @param \Spatie\SchemaOrg\Contracts\QuantitativeValueContract|\Spatie\SchemaOrg\Contracts\QuantitativeValueContract[]|float|float[]|int|int[] $seatingCapacity
+     *
+     * @return static
+     *
+     * @see https://schema.org/seatingCapacity
+     */
+    public function seatingCapacity($seatingCapacity)
+    {
+        return $this->setProperty('seatingCapacity', $seatingCapacity);
+    }
+
+    /**
+     * A standardized size of a product or creative work, often simplifying
+     * richer information into a simple textual string, either through referring
+     * to named sizes or (in the case of product markup), by adopting
+     * conventional simplifications. Use of QuantitativeValue with a unitCode or
+     * unitText can add more structure; in other cases, the /width, /height,
+     * /depth and /weight properties may be more applicable.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\DefinedTermContract|\Spatie\SchemaOrg\Contracts\DefinedTermContract[]|\Spatie\SchemaOrg\Contracts\QuantitativeValueContract|\Spatie\SchemaOrg\Contracts\QuantitativeValueContract[]|string|string[] $size
+     *
+     * @return static
+     *
+     * @see https://schema.org/size
+     */
+    public function size($size)
+    {
+        return $this->setProperty('size', $size);
     }
 
     /**
@@ -890,7 +1190,7 @@ class Vehicle extends BaseType implements VehicleContract, ProductContract, Thin
      *
      * @return static
      *
-     * @see http://schema.org/sku
+     * @see https://schema.org/sku
      */
     public function sku($sku)
     {
@@ -904,11 +1204,36 @@ class Vehicle extends BaseType implements VehicleContract, ProductContract, Thin
      *
      * @return static
      *
-     * @see http://schema.org/slogan
+     * @see https://schema.org/slogan
      */
     public function slogan($slogan)
     {
         return $this->setProperty('slogan', $slogan);
+    }
+
+    /**
+     * The speed range of the vehicle. If the vehicle is powered by an engine,
+     * the upper limit of the speed range (indicated by [[maxValue]] should be
+     * the maximum speed achievable under regular conditions.
+     * 
+     * Typical unit code(s): KMH for km/h, HM for mile per hour (0.447 04 m/s),
+     * KNT for knot
+     * 
+     * *Note 1: Use [[minValue]] and [[maxValue]] to indicate the range.
+     * Typically, the minimal value is zero.
+     * * Note 2: There are many different ways of measuring the speed range. You
+     * can link to information about how the given value has been determined
+     * using the [[valueReference]] property.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\QuantitativeValueContract|\Spatie\SchemaOrg\Contracts\QuantitativeValueContract[] $speed
+     *
+     * @return static
+     *
+     * @see https://schema.org/speed
+     */
+    public function speed($speed)
+    {
+        return $this->setProperty('speed', $speed);
     }
 
     /**
@@ -918,7 +1243,7 @@ class Vehicle extends BaseType implements VehicleContract, ProductContract, Thin
      *
      * @return static
      *
-     * @see http://schema.org/steeringPosition
+     * @see https://schema.org/steeringPosition
      */
     public function steeringPosition($steeringPosition)
     {
@@ -932,11 +1257,58 @@ class Vehicle extends BaseType implements VehicleContract, ProductContract, Thin
      *
      * @return static
      *
-     * @see http://schema.org/subjectOf
+     * @see https://schema.org/subjectOf
      */
     public function subjectOf($subjectOf)
     {
         return $this->setProperty('subjectOf', $subjectOf);
+    }
+
+    /**
+     * The permitted vertical load (TWR) of a trailer attached to the vehicle.
+     * Also referred to as Tongue Load Rating (TLR) or Vertical Load Rating
+     * (VLR)
+     * 
+     * Typical unit code(s): KGM for kilogram, LBR for pound
+     * 
+     * * Note 1: You can indicate additional information in the [[name]] of the
+     * [[QuantitativeValue]] node.
+     * * Note 2: You may also link to a [[QualitativeValue]] node that provides
+     * additional information using [[valueReference]].
+     * * Note 3: Note that you can use [[minValue]] and [[maxValue]] to indicate
+     * ranges.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\QuantitativeValueContract|\Spatie\SchemaOrg\Contracts\QuantitativeValueContract[] $tongueWeight
+     *
+     * @return static
+     *
+     * @see https://schema.org/tongueWeight
+     */
+    public function tongueWeight($tongueWeight)
+    {
+        return $this->setProperty('tongueWeight', $tongueWeight);
+    }
+
+    /**
+     * The permitted weight of a trailer attached to the vehicle.
+     * 
+     * Typical unit code(s): KGM for kilogram, LBR for pound
+     * * Note 1: You can indicate additional information in the [[name]] of the
+     * [[QuantitativeValue]] node.
+     * * Note 2: You may also link to a [[QualitativeValue]] node that provides
+     * additional information using [[valueReference]].
+     * * Note 3: Note that you can use [[minValue]] and [[maxValue]] to indicate
+     * ranges.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\QuantitativeValueContract|\Spatie\SchemaOrg\Contracts\QuantitativeValueContract[] $trailerWeight
+     *
+     * @return static
+     *
+     * @see https://schema.org/trailerWeight
+     */
+    public function trailerWeight($trailerWeight)
+    {
+        return $this->setProperty('trailerWeight', $trailerWeight);
     }
 
     /**
@@ -946,7 +1318,7 @@ class Vehicle extends BaseType implements VehicleContract, ProductContract, Thin
      *
      * @return static
      *
-     * @see http://schema.org/url
+     * @see https://schema.org/url
      */
     public function url($url)
     {
@@ -961,7 +1333,7 @@ class Vehicle extends BaseType implements VehicleContract, ProductContract, Thin
      *
      * @return static
      *
-     * @see http://schema.org/vehicleConfiguration
+     * @see https://schema.org/vehicleConfiguration
      */
     public function vehicleConfiguration($vehicleConfiguration)
     {
@@ -975,7 +1347,7 @@ class Vehicle extends BaseType implements VehicleContract, ProductContract, Thin
      *
      * @return static
      *
-     * @see http://schema.org/vehicleEngine
+     * @see https://schema.org/vehicleEngine
      */
     public function vehicleEngine($vehicleEngine)
     {
@@ -990,7 +1362,7 @@ class Vehicle extends BaseType implements VehicleContract, ProductContract, Thin
      *
      * @return static
      *
-     * @see http://schema.org/vehicleIdentificationNumber
+     * @see https://schema.org/vehicleIdentificationNumber
      */
     public function vehicleIdentificationNumber($vehicleIdentificationNumber)
     {
@@ -1004,7 +1376,7 @@ class Vehicle extends BaseType implements VehicleContract, ProductContract, Thin
      *
      * @return static
      *
-     * @see http://schema.org/vehicleInteriorColor
+     * @see https://schema.org/vehicleInteriorColor
      */
     public function vehicleInteriorColor($vehicleInteriorColor)
     {
@@ -1021,7 +1393,7 @@ class Vehicle extends BaseType implements VehicleContract, ProductContract, Thin
      *
      * @return static
      *
-     * @see http://schema.org/vehicleInteriorType
+     * @see https://schema.org/vehicleInteriorType
      */
     public function vehicleInteriorType($vehicleInteriorType)
     {
@@ -1036,7 +1408,7 @@ class Vehicle extends BaseType implements VehicleContract, ProductContract, Thin
      *
      * @return static
      *
-     * @see http://schema.org/vehicleModelDate
+     * @see https://schema.org/vehicleModelDate
      */
     public function vehicleModelDate($vehicleModelDate)
     {
@@ -1053,11 +1425,28 @@ class Vehicle extends BaseType implements VehicleContract, ProductContract, Thin
      *
      * @return static
      *
-     * @see http://schema.org/vehicleSeatingCapacity
+     * @see https://schema.org/vehicleSeatingCapacity
      */
     public function vehicleSeatingCapacity($vehicleSeatingCapacity)
     {
         return $this->setProperty('vehicleSeatingCapacity', $vehicleSeatingCapacity);
+    }
+
+    /**
+     * Indicates whether the vehicle has been used for special purposes, like
+     * commercial rental, driving school, or as a taxi. The legislation in many
+     * countries requires this information to be revealed when offering a car
+     * for sale.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\CarUsageTypeContract|\Spatie\SchemaOrg\Contracts\CarUsageTypeContract[]|string|string[] $vehicleSpecialUsage
+     *
+     * @return static
+     *
+     * @see https://schema.org/vehicleSpecialUsage
+     */
+    public function vehicleSpecialUsage($vehicleSpecialUsage)
+    {
+        return $this->setProperty('vehicleSpecialUsage', $vehicleSpecialUsage);
     }
 
     /**
@@ -1069,7 +1458,7 @@ class Vehicle extends BaseType implements VehicleContract, ProductContract, Thin
      *
      * @return static
      *
-     * @see http://schema.org/vehicleTransmission
+     * @see https://schema.org/vehicleTransmission
      */
     public function vehicleTransmission($vehicleTransmission)
     {
@@ -1083,11 +1472,52 @@ class Vehicle extends BaseType implements VehicleContract, ProductContract, Thin
      *
      * @return static
      *
-     * @see http://schema.org/weight
+     * @see https://schema.org/weight
      */
     public function weight($weight)
     {
         return $this->setProperty('weight', $weight);
+    }
+
+    /**
+     * The permitted total weight of the loaded vehicle, including passengers
+     * and cargo and the weight of the empty vehicle.
+     * 
+     * Typical unit code(s): KGM for kilogram, LBR for pound
+     * 
+     * * Note 1: You can indicate additional information in the [[name]] of the
+     * [[QuantitativeValue]] node.
+     * * Note 2: You may also link to a [[QualitativeValue]] node that provides
+     * additional information using [[valueReference]].
+     * * Note 3: Note that you can use [[minValue]] and [[maxValue]] to indicate
+     * ranges.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\QuantitativeValueContract|\Spatie\SchemaOrg\Contracts\QuantitativeValueContract[] $weightTotal
+     *
+     * @return static
+     *
+     * @see https://schema.org/weightTotal
+     */
+    public function weightTotal($weightTotal)
+    {
+        return $this->setProperty('weightTotal', $weightTotal);
+    }
+
+    /**
+     * The distance between the centers of the front and rear wheels.
+     * 
+     * Typical unit code(s): CMT for centimeters, MTR for meters, INH for
+     * inches, FOT for foot/feet
+     *
+     * @param \Spatie\SchemaOrg\Contracts\QuantitativeValueContract|\Spatie\SchemaOrg\Contracts\QuantitativeValueContract[] $wheelbase
+     *
+     * @return static
+     *
+     * @see https://schema.org/wheelbase
+     */
+    public function wheelbase($wheelbase)
+    {
+        return $this->setProperty('wheelbase', $wheelbase);
     }
 
     /**
@@ -1097,7 +1527,7 @@ class Vehicle extends BaseType implements VehicleContract, ProductContract, Thin
      *
      * @return static
      *
-     * @see http://schema.org/width
+     * @see https://schema.org/width
      */
     public function width($width)
     {

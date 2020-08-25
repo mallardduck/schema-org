@@ -58,6 +58,8 @@ interface GovernmentBuildingContract
 
     public function globalLocationNumber($globalLocationNumber);
 
+    public function hasDriveThroughService($hasDriveThroughService);
+
     public function hasMap($hasMap);
 
     public function identifier($identifier);
@@ -111,6 +113,8 @@ interface GovernmentBuildingContract
     public function subjectOf($subjectOf);
 
     public function telephone($telephone);
+
+    public function tourBookingPage($tourBookingPage);
 
     public function url($url);
 

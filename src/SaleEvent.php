@@ -9,7 +9,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
 /**
  * Event type: Sales event.
  *
- * @see http://schema.org/SaleEvent
+ * @see https://schema.org/SaleEvent
  *
  */
 class SaleEvent extends BaseType implements SaleEventContract, EventContract, ThingContract
@@ -21,7 +21,7 @@ class SaleEvent extends BaseType implements SaleEventContract, EventContract, Th
      *
      * @return static
      *
-     * @see http://schema.org/about
+     * @see https://schema.org/about
      */
     public function about($about)
     {
@@ -37,7 +37,7 @@ class SaleEvent extends BaseType implements SaleEventContract, EventContract, Th
      *
      * @return static
      *
-     * @see http://schema.org/actor
+     * @see https://schema.org/actor
      */
     public function actor($actor)
     {
@@ -56,7 +56,7 @@ class SaleEvent extends BaseType implements SaleEventContract, EventContract, Th
      *
      * @return static
      *
-     * @see http://schema.org/additionalType
+     * @see https://schema.org/additionalType
      */
     public function additionalType($additionalType)
     {
@@ -71,7 +71,7 @@ class SaleEvent extends BaseType implements SaleEventContract, EventContract, Th
      *
      * @return static
      *
-     * @see http://schema.org/aggregateRating
+     * @see https://schema.org/aggregateRating
      */
     public function aggregateRating($aggregateRating)
     {
@@ -85,7 +85,7 @@ class SaleEvent extends BaseType implements SaleEventContract, EventContract, Th
      *
      * @return static
      *
-     * @see http://schema.org/alternateName
+     * @see https://schema.org/alternateName
      */
     public function alternateName($alternateName)
     {
@@ -99,7 +99,7 @@ class SaleEvent extends BaseType implements SaleEventContract, EventContract, Th
      *
      * @return static
      *
-     * @see http://schema.org/attendee
+     * @see https://schema.org/attendee
      */
     public function attendee($attendee)
     {
@@ -113,7 +113,7 @@ class SaleEvent extends BaseType implements SaleEventContract, EventContract, Th
      *
      * @return static
      *
-     * @see http://schema.org/attendees
+     * @see https://schema.org/attendees
      */
     public function attendees($attendees)
     {
@@ -127,7 +127,7 @@ class SaleEvent extends BaseType implements SaleEventContract, EventContract, Th
      *
      * @return static
      *
-     * @see http://schema.org/audience
+     * @see https://schema.org/audience
      */
     public function audience($audience)
     {
@@ -142,7 +142,7 @@ class SaleEvent extends BaseType implements SaleEventContract, EventContract, Th
      *
      * @return static
      *
-     * @see http://schema.org/composer
+     * @see https://schema.org/composer
      */
     public function composer($composer)
     {
@@ -156,7 +156,7 @@ class SaleEvent extends BaseType implements SaleEventContract, EventContract, Th
      *
      * @return static
      *
-     * @see http://schema.org/contributor
+     * @see https://schema.org/contributor
      */
     public function contributor($contributor)
     {
@@ -170,7 +170,7 @@ class SaleEvent extends BaseType implements SaleEventContract, EventContract, Th
      *
      * @return static
      *
-     * @see http://schema.org/description
+     * @see https://schema.org/description
      */
     public function description($description)
     {
@@ -186,7 +186,7 @@ class SaleEvent extends BaseType implements SaleEventContract, EventContract, Th
      *
      * @return static
      *
-     * @see http://schema.org/director
+     * @see https://schema.org/director
      */
     public function director($director)
     {
@@ -203,7 +203,7 @@ class SaleEvent extends BaseType implements SaleEventContract, EventContract, Th
      *
      * @return static
      *
-     * @see http://schema.org/disambiguatingDescription
+     * @see https://schema.org/disambiguatingDescription
      */
     public function disambiguatingDescription($disambiguatingDescription)
     {
@@ -217,7 +217,7 @@ class SaleEvent extends BaseType implements SaleEventContract, EventContract, Th
      *
      * @return static
      *
-     * @see http://schema.org/doorTime
+     * @see https://schema.org/doorTime
      */
     public function doorTime($doorTime)
     {
@@ -232,7 +232,7 @@ class SaleEvent extends BaseType implements SaleEventContract, EventContract, Th
      *
      * @return static
      *
-     * @see http://schema.org/duration
+     * @see https://schema.org/duration
      */
     public function duration($duration)
     {
@@ -247,11 +247,54 @@ class SaleEvent extends BaseType implements SaleEventContract, EventContract, Th
      *
      * @return static
      *
-     * @see http://schema.org/endDate
+     * @see https://schema.org/endDate
      */
     public function endDate($endDate)
     {
         return $this->setProperty('endDate', $endDate);
+    }
+
+    /**
+     * The eventAttendanceMode of an event indicates whether it occurs online,
+     * offline, or a mix.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\EventAttendanceModeEnumerationContract|\Spatie\SchemaOrg\Contracts\EventAttendanceModeEnumerationContract[] $eventAttendanceMode
+     *
+     * @return static
+     *
+     * @see https://schema.org/eventAttendanceMode
+     */
+    public function eventAttendanceMode($eventAttendanceMode)
+    {
+        return $this->setProperty('eventAttendanceMode', $eventAttendanceMode);
+    }
+
+    /**
+     * Associates an [[Event]] with a [[Schedule]]. There are circumstances
+     * where it is preferable to share a schedule for a series of
+     *       repeating events rather than data on the individual events
+     * themselves. For example, a website or application might prefer to publish
+     * a schedule for a weekly
+     *       gym class rather than provide data on every event. A schedule could
+     * be processed by applications to add forthcoming events to a calendar. An
+     * [[Event]] that
+     *       is associated with a [[Schedule]] using this property should not
+     * have [[startDate]] or [[endDate]] properties. These are instead defined
+     * within the associated
+     *       [[Schedule]], this avoids any ambiguity for clients using the data.
+     * The property might have repeated values to specify different schedules,
+     * e.g. for different months
+     *       or seasons.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\ScheduleContract|\Spatie\SchemaOrg\Contracts\ScheduleContract[] $eventSchedule
+     *
+     * @return static
+     *
+     * @see https://schema.org/eventSchedule
+     */
+    public function eventSchedule($eventSchedule)
+    {
+        return $this->setProperty('eventSchedule', $eventSchedule);
     }
 
     /**
@@ -262,7 +305,7 @@ class SaleEvent extends BaseType implements SaleEventContract, EventContract, Th
      *
      * @return static
      *
-     * @see http://schema.org/eventStatus
+     * @see https://schema.org/eventStatus
      */
     public function eventStatus($eventStatus)
     {
@@ -277,7 +320,7 @@ class SaleEvent extends BaseType implements SaleEventContract, EventContract, Th
      *
      * @return static
      *
-     * @see http://schema.org/funder
+     * @see https://schema.org/funder
      */
     public function funder($funder)
     {
@@ -295,7 +338,7 @@ class SaleEvent extends BaseType implements SaleEventContract, EventContract, Th
      *
      * @return static
      *
-     * @see http://schema.org/identifier
+     * @see https://schema.org/identifier
      */
     public function identifier($identifier)
     {
@@ -310,7 +353,7 @@ class SaleEvent extends BaseType implements SaleEventContract, EventContract, Th
      *
      * @return static
      *
-     * @see http://schema.org/image
+     * @see https://schema.org/image
      */
     public function image($image)
     {
@@ -327,7 +370,7 @@ class SaleEvent extends BaseType implements SaleEventContract, EventContract, Th
      *
      * @return static
      *
-     * @see http://schema.org/inLanguage
+     * @see https://schema.org/inLanguage
      */
     public function inLanguage($inLanguage)
     {
@@ -341,7 +384,7 @@ class SaleEvent extends BaseType implements SaleEventContract, EventContract, Th
      *
      * @return static
      *
-     * @see http://schema.org/isAccessibleForFree
+     * @see https://schema.org/isAccessibleForFree
      */
     public function isAccessibleForFree($isAccessibleForFree)
     {
@@ -352,11 +395,11 @@ class SaleEvent extends BaseType implements SaleEventContract, EventContract, Th
      * The location of for example where the event is happening, an organization
      * is located, or where an action takes place.
      *
-     * @param \Spatie\SchemaOrg\Contracts\PlaceContract|\Spatie\SchemaOrg\Contracts\PlaceContract[]|\Spatie\SchemaOrg\Contracts\PostalAddressContract|\Spatie\SchemaOrg\Contracts\PostalAddressContract[]|string|string[] $location
+     * @param \Spatie\SchemaOrg\Contracts\PlaceContract|\Spatie\SchemaOrg\Contracts\PlaceContract[]|\Spatie\SchemaOrg\Contracts\PostalAddressContract|\Spatie\SchemaOrg\Contracts\PostalAddressContract[]|\Spatie\SchemaOrg\Contracts\VirtualLocationContract|\Spatie\SchemaOrg\Contracts\VirtualLocationContract[]|string|string[] $location
      *
      * @return static
      *
-     * @see http://schema.org/location
+     * @see https://schema.org/location
      */
     public function location($location)
     {
@@ -372,7 +415,7 @@ class SaleEvent extends BaseType implements SaleEventContract, EventContract, Th
      *
      * @return static
      *
-     * @see http://schema.org/mainEntityOfPage
+     * @see https://schema.org/mainEntityOfPage
      */
     public function mainEntityOfPage($mainEntityOfPage)
     {
@@ -386,11 +429,43 @@ class SaleEvent extends BaseType implements SaleEventContract, EventContract, Th
      *
      * @return static
      *
-     * @see http://schema.org/maximumAttendeeCapacity
+     * @see https://schema.org/maximumAttendeeCapacity
      */
     public function maximumAttendeeCapacity($maximumAttendeeCapacity)
     {
         return $this->setProperty('maximumAttendeeCapacity', $maximumAttendeeCapacity);
+    }
+
+    /**
+     * The maximum physical attendee capacity of an [[Event]] whose
+     * [[eventAttendanceMode]] is [[OfflineEventAttendanceMode]] (or the offline
+     * aspects, in the case of a [[MixedEventAttendanceMode]]).
+     *
+     * @param int|int[] $maximumPhysicalAttendeeCapacity
+     *
+     * @return static
+     *
+     * @see https://schema.org/maximumPhysicalAttendeeCapacity
+     */
+    public function maximumPhysicalAttendeeCapacity($maximumPhysicalAttendeeCapacity)
+    {
+        return $this->setProperty('maximumPhysicalAttendeeCapacity', $maximumPhysicalAttendeeCapacity);
+    }
+
+    /**
+     * The maximum physical attendee capacity of an [[Event]] whose
+     * [[eventAttendanceMode]] is [[OnlineEventAttendanceMode]] (or the online
+     * aspects, in the case of a [[MixedEventAttendanceMode]]).
+     *
+     * @param int|int[] $maximumVirtualAttendeeCapacity
+     *
+     * @return static
+     *
+     * @see https://schema.org/maximumVirtualAttendeeCapacity
+     */
+    public function maximumVirtualAttendeeCapacity($maximumVirtualAttendeeCapacity)
+    {
+        return $this->setProperty('maximumVirtualAttendeeCapacity', $maximumVirtualAttendeeCapacity);
     }
 
     /**
@@ -400,7 +475,7 @@ class SaleEvent extends BaseType implements SaleEventContract, EventContract, Th
      *
      * @return static
      *
-     * @see http://schema.org/name
+     * @see https://schema.org/name
      */
     public function name($name)
     {
@@ -421,7 +496,7 @@ class SaleEvent extends BaseType implements SaleEventContract, EventContract, Th
      *
      * @return static
      *
-     * @see http://schema.org/offers
+     * @see https://schema.org/offers
      */
     public function offers($offers)
     {
@@ -435,7 +510,7 @@ class SaleEvent extends BaseType implements SaleEventContract, EventContract, Th
      *
      * @return static
      *
-     * @see http://schema.org/organizer
+     * @see https://schema.org/organizer
      */
     public function organizer($organizer)
     {
@@ -450,7 +525,7 @@ class SaleEvent extends BaseType implements SaleEventContract, EventContract, Th
      *
      * @return static
      *
-     * @see http://schema.org/performer
+     * @see https://schema.org/performer
      */
     public function performer($performer)
     {
@@ -465,7 +540,7 @@ class SaleEvent extends BaseType implements SaleEventContract, EventContract, Th
      *
      * @return static
      *
-     * @see http://schema.org/performers
+     * @see https://schema.org/performers
      */
     public function performers($performers)
     {
@@ -480,7 +555,7 @@ class SaleEvent extends BaseType implements SaleEventContract, EventContract, Th
      *
      * @return static
      *
-     * @see http://schema.org/potentialAction
+     * @see https://schema.org/potentialAction
      */
     public function potentialAction($potentialAction)
     {
@@ -498,7 +573,7 @@ class SaleEvent extends BaseType implements SaleEventContract, EventContract, Th
      *
      * @return static
      *
-     * @see http://schema.org/previousStartDate
+     * @see https://schema.org/previousStartDate
      */
     public function previousStartDate($previousStartDate)
     {
@@ -512,7 +587,7 @@ class SaleEvent extends BaseType implements SaleEventContract, EventContract, Th
      *
      * @return static
      *
-     * @see http://schema.org/recordedIn
+     * @see https://schema.org/recordedIn
      */
     public function recordedIn($recordedIn)
     {
@@ -526,7 +601,7 @@ class SaleEvent extends BaseType implements SaleEventContract, EventContract, Th
      *
      * @return static
      *
-     * @see http://schema.org/remainingAttendeeCapacity
+     * @see https://schema.org/remainingAttendeeCapacity
      */
     public function remainingAttendeeCapacity($remainingAttendeeCapacity)
     {
@@ -540,7 +615,7 @@ class SaleEvent extends BaseType implements SaleEventContract, EventContract, Th
      *
      * @return static
      *
-     * @see http://schema.org/review
+     * @see https://schema.org/review
      */
     public function review($review)
     {
@@ -556,7 +631,7 @@ class SaleEvent extends BaseType implements SaleEventContract, EventContract, Th
      *
      * @return static
      *
-     * @see http://schema.org/sameAs
+     * @see https://schema.org/sameAs
      */
     public function sameAs($sameAs)
     {
@@ -572,7 +647,7 @@ class SaleEvent extends BaseType implements SaleEventContract, EventContract, Th
      *
      * @return static
      *
-     * @see http://schema.org/sponsor
+     * @see https://schema.org/sponsor
      */
     public function sponsor($sponsor)
     {
@@ -587,7 +662,7 @@ class SaleEvent extends BaseType implements SaleEventContract, EventContract, Th
      *
      * @return static
      *
-     * @see http://schema.org/startDate
+     * @see https://schema.org/startDate
      */
     public function startDate($startDate)
     {
@@ -603,7 +678,7 @@ class SaleEvent extends BaseType implements SaleEventContract, EventContract, Th
      *
      * @return static
      *
-     * @see http://schema.org/subEvent
+     * @see https://schema.org/subEvent
      */
     public function subEvent($subEvent)
     {
@@ -618,7 +693,7 @@ class SaleEvent extends BaseType implements SaleEventContract, EventContract, Th
      *
      * @return static
      *
-     * @see http://schema.org/subEvents
+     * @see https://schema.org/subEvents
      */
     public function subEvents($subEvents)
     {
@@ -632,7 +707,7 @@ class SaleEvent extends BaseType implements SaleEventContract, EventContract, Th
      *
      * @return static
      *
-     * @see http://schema.org/subjectOf
+     * @see https://schema.org/subjectOf
      */
     public function subjectOf($subjectOf)
     {
@@ -648,7 +723,7 @@ class SaleEvent extends BaseType implements SaleEventContract, EventContract, Th
      *
      * @return static
      *
-     * @see http://schema.org/superEvent
+     * @see https://schema.org/superEvent
      */
     public function superEvent($superEvent)
     {
@@ -664,7 +739,7 @@ class SaleEvent extends BaseType implements SaleEventContract, EventContract, Th
      *
      * @return static
      *
-     * @see http://schema.org/translator
+     * @see https://schema.org/translator
      */
     public function translator($translator)
     {
@@ -678,7 +753,7 @@ class SaleEvent extends BaseType implements SaleEventContract, EventContract, Th
      *
      * @return static
      *
-     * @see http://schema.org/typicalAgeRange
+     * @see https://schema.org/typicalAgeRange
      */
     public function typicalAgeRange($typicalAgeRange)
     {
@@ -692,7 +767,7 @@ class SaleEvent extends BaseType implements SaleEventContract, EventContract, Th
      *
      * @return static
      *
-     * @see http://schema.org/url
+     * @see https://schema.org/url
      */
     public function url($url)
     {
@@ -708,7 +783,7 @@ class SaleEvent extends BaseType implements SaleEventContract, EventContract, Th
      *
      * @return static
      *
-     * @see http://schema.org/workFeatured
+     * @see https://schema.org/workFeatured
      */
     public function workFeatured($workFeatured)
     {
@@ -723,7 +798,7 @@ class SaleEvent extends BaseType implements SaleEventContract, EventContract, Th
      *
      * @return static
      *
-     * @see http://schema.org/workPerformed
+     * @see https://schema.org/workPerformed
      */
     public function workPerformed($workPerformed)
     {

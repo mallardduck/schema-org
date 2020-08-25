@@ -10,8 +10,11 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * A datasheet or vendor specification of a product (in the sense of a
  * prototypical description).
  *
- * @see http://schema.org/ProductModel
+ * @see https://schema.org/ProductModel
  *
+ *
+ * External Sources:
+ * @see http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsClass
  */
 class ProductModel extends BaseType implements ProductModelContract, ProductContract, ThingContract
 {
@@ -21,8 +24,8 @@ class ProductModel extends BaseType implements ProductModelContract, ProductCont
      * there is no matching property in schema.org.
      * 
      * Note: Publishers should be aware that applications designed to use
-     * specific schema.org properties (e.g. http://schema.org/width,
-     * http://schema.org/color, http://schema.org/gtin13, ...) will typically
+     * specific schema.org properties (e.g. https://schema.org/width,
+     * https://schema.org/color, https://schema.org/gtin13, ...) will typically
      * expect such data to be provided using those properties, rather than using
      * the generic property/value mechanism.
      *
@@ -30,7 +33,7 @@ class ProductModel extends BaseType implements ProductModelContract, ProductCont
      *
      * @return static
      *
-     * @see http://schema.org/additionalProperty
+     * @see https://schema.org/additionalProperty
      */
     public function additionalProperty($additionalProperty)
     {
@@ -49,7 +52,7 @@ class ProductModel extends BaseType implements ProductModelContract, ProductCont
      *
      * @return static
      *
-     * @see http://schema.org/additionalType
+     * @see https://schema.org/additionalType
      */
     public function additionalType($additionalType)
     {
@@ -64,7 +67,7 @@ class ProductModel extends BaseType implements ProductModelContract, ProductCont
      *
      * @return static
      *
-     * @see http://schema.org/aggregateRating
+     * @see https://schema.org/aggregateRating
      */
     public function aggregateRating($aggregateRating)
     {
@@ -78,7 +81,7 @@ class ProductModel extends BaseType implements ProductModelContract, ProductCont
      *
      * @return static
      *
-     * @see http://schema.org/alternateName
+     * @see https://schema.org/alternateName
      */
     public function alternateName($alternateName)
     {
@@ -92,7 +95,7 @@ class ProductModel extends BaseType implements ProductModelContract, ProductCont
      *
      * @return static
      *
-     * @see http://schema.org/audience
+     * @see https://schema.org/audience
      */
     public function audience($audience)
     {
@@ -106,7 +109,7 @@ class ProductModel extends BaseType implements ProductModelContract, ProductCont
      *
      * @return static
      *
-     * @see http://schema.org/award
+     * @see https://schema.org/award
      */
     public function award($award)
     {
@@ -120,7 +123,7 @@ class ProductModel extends BaseType implements ProductModelContract, ProductCont
      *
      * @return static
      *
-     * @see http://schema.org/awards
+     * @see https://schema.org/awards
      */
     public function awards($awards)
     {
@@ -135,7 +138,7 @@ class ProductModel extends BaseType implements ProductModelContract, ProductCont
      *
      * @return static
      *
-     * @see http://schema.org/brand
+     * @see https://schema.org/brand
      */
     public function brand($brand)
     {
@@ -146,11 +149,11 @@ class ProductModel extends BaseType implements ProductModelContract, ProductCont
      * A category for the item. Greater signs or slashes can be used to
      * informally indicate a category hierarchy.
      *
-     * @param \Spatie\SchemaOrg\Contracts\ThingContract|\Spatie\SchemaOrg\Contracts\ThingContract[]|string|string[] $category
+     * @param \Spatie\SchemaOrg\Contracts\PhysicalActivityCategoryContract|\Spatie\SchemaOrg\Contracts\PhysicalActivityCategoryContract[]|\Spatie\SchemaOrg\Contracts\ThingContract|\Spatie\SchemaOrg\Contracts\ThingContract[]|string|string[] $category
      *
      * @return static
      *
-     * @see http://schema.org/category
+     * @see https://schema.org/category
      */
     public function category($category)
     {
@@ -164,7 +167,7 @@ class ProductModel extends BaseType implements ProductModelContract, ProductCont
      *
      * @return static
      *
-     * @see http://schema.org/color
+     * @see https://schema.org/color
      */
     public function color($color)
     {
@@ -178,7 +181,7 @@ class ProductModel extends BaseType implements ProductModelContract, ProductCont
      *
      * @return static
      *
-     * @see http://schema.org/depth
+     * @see https://schema.org/depth
      */
     public function depth($depth)
     {
@@ -192,7 +195,7 @@ class ProductModel extends BaseType implements ProductModelContract, ProductCont
      *
      * @return static
      *
-     * @see http://schema.org/description
+     * @see https://schema.org/description
      */
     public function description($description)
     {
@@ -209,11 +212,45 @@ class ProductModel extends BaseType implements ProductModelContract, ProductCont
      *
      * @return static
      *
-     * @see http://schema.org/disambiguatingDescription
+     * @see https://schema.org/disambiguatingDescription
      */
     public function disambiguatingDescription($disambiguatingDescription)
     {
         return $this->setProperty('disambiguatingDescription', $disambiguatingDescription);
+    }
+
+    /**
+     * A Global Trade Item Number
+     * ([GTIN](https://www.gs1.org/standards/id-keys/gtin)). GTINs identify
+     * trade items, including products and services, using numeric
+     * identification codes. The [[gtin]] property generalizes the earlier <a
+     * class="localLink" href="https://schema.org/gtin8">gtin8</a>, <a
+     * class="localLink" href="https://schema.org/gtin12">gtin12</a>, <a
+     * class="localLink" href="https://schema.org/gtin13">gtin13</a>, and <a
+     * class="localLink" href="https://schema.org/gtin14">gtin14</a> properties.
+     * The GS1 [digital link
+     * specifications](https://www.gs1.org/standards/Digital-Link/) express
+     * GTINs as URLs. A correct [[gtin]] value should be a valid GTIN, which
+     * means that it should be an all-numeric string of either 8, 12, 13 or 14
+     * digits, or a "GS1 Digital Link" URL based on such a string. The numeric
+     * component should also have a [valid GS1 check
+     * digit](https://www.gs1.org/services/check-digit-calculator) and meet the
+     * other rules for valid GTINs. See also <a
+     * href="http://www.gs1.org/barcodes/technical/idkeys/gtin">GS1's GTIN
+     * Summary</a> and
+     * [Wikipedia](https://en.wikipedia.org/wiki/Global_Trade_Item_Number) for
+     * more details. Left-padding of the gtin values is not required or
+     * encouraged.
+     *
+     * @param string|string[] $gtin
+     *
+     * @return static
+     *
+     * @see https://schema.org/gtin
+     */
+    public function gtin($gtin)
+    {
+        return $this->setProperty('gtin', $gtin);
     }
 
     /**
@@ -228,7 +265,7 @@ class ProductModel extends BaseType implements ProductModelContract, ProductCont
      *
      * @return static
      *
-     * @see http://schema.org/gtin12
+     * @see https://schema.org/gtin12
      */
     public function gtin12($gtin12)
     {
@@ -247,7 +284,7 @@ class ProductModel extends BaseType implements ProductModelContract, ProductCont
      *
      * @return static
      *
-     * @see http://schema.org/gtin13
+     * @see https://schema.org/gtin13
      */
     public function gtin13($gtin13)
     {
@@ -264,7 +301,7 @@ class ProductModel extends BaseType implements ProductModelContract, ProductCont
      *
      * @return static
      *
-     * @see http://schema.org/gtin14
+     * @see https://schema.org/gtin14
      */
     public function gtin14($gtin14)
     {
@@ -282,11 +319,25 @@ class ProductModel extends BaseType implements ProductModelContract, ProductCont
      *
      * @return static
      *
-     * @see http://schema.org/gtin8
+     * @see https://schema.org/gtin8
      */
     public function gtin8($gtin8)
     {
         return $this->setProperty('gtin8', $gtin8);
+    }
+
+    /**
+     * Indicates a MerchantReturnPolicy that may be applicable.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\MerchantReturnPolicyContract|\Spatie\SchemaOrg\Contracts\MerchantReturnPolicyContract[] $hasMerchantReturnPolicy
+     *
+     * @return static
+     *
+     * @see https://schema.org/hasMerchantReturnPolicy
+     */
+    public function hasMerchantReturnPolicy($hasMerchantReturnPolicy)
+    {
+        return $this->setProperty('hasMerchantReturnPolicy', $hasMerchantReturnPolicy);
     }
 
     /**
@@ -296,7 +347,7 @@ class ProductModel extends BaseType implements ProductModelContract, ProductCont
      *
      * @return static
      *
-     * @see http://schema.org/height
+     * @see https://schema.org/height
      */
     public function height($height)
     {
@@ -314,7 +365,7 @@ class ProductModel extends BaseType implements ProductModelContract, ProductCont
      *
      * @return static
      *
-     * @see http://schema.org/identifier
+     * @see https://schema.org/identifier
      */
     public function identifier($identifier)
     {
@@ -329,11 +380,26 @@ class ProductModel extends BaseType implements ProductModelContract, ProductCont
      *
      * @return static
      *
-     * @see http://schema.org/image
+     * @see https://schema.org/image
      */
     public function image($image)
     {
         return $this->setProperty('image', $image);
+    }
+
+    /**
+     * Indicates the [[productGroupID]] for a [[ProductGroup]] that this product
+     * [[isVariantOf]].
+     *
+     * @param string|string[] $inProductGroupWithID
+     *
+     * @return static
+     *
+     * @see https://schema.org/inProductGroupWithID
+     */
+    public function inProductGroupWithID($inProductGroupWithID)
+    {
+        return $this->setProperty('inProductGroupWithID', $inProductGroupWithID);
     }
 
     /**
@@ -344,7 +410,7 @@ class ProductModel extends BaseType implements ProductModelContract, ProductCont
      *
      * @return static
      *
-     * @see http://schema.org/isAccessoryOrSparePartFor
+     * @see https://schema.org/isAccessoryOrSparePartFor
      */
     public function isAccessoryOrSparePartFor($isAccessoryOrSparePartFor)
     {
@@ -359,7 +425,7 @@ class ProductModel extends BaseType implements ProductModelContract, ProductCont
      *
      * @return static
      *
-     * @see http://schema.org/isConsumableFor
+     * @see https://schema.org/isConsumableFor
      */
     public function isConsumableFor($isConsumableFor)
     {
@@ -373,7 +439,7 @@ class ProductModel extends BaseType implements ProductModelContract, ProductCont
      *
      * @return static
      *
-     * @see http://schema.org/isRelatedTo
+     * @see https://schema.org/isRelatedTo
      */
     public function isRelatedTo($isRelatedTo)
     {
@@ -388,7 +454,7 @@ class ProductModel extends BaseType implements ProductModelContract, ProductCont
      *
      * @return static
      *
-     * @see http://schema.org/isSimilarTo
+     * @see https://schema.org/isSimilarTo
      */
     public function isSimilarTo($isSimilarTo)
     {
@@ -396,15 +462,23 @@ class ProductModel extends BaseType implements ProductModelContract, ProductCont
     }
 
     /**
-     * A pointer to a base product from which this product is a variant. It is
-     * safe to infer that the variant inherits all product features from the
-     * base model, unless defined locally. This is not transitive.
+     * Indicates the kind of product that this is a variant of. In the case of
+     * [[ProductModel]], this is a pointer (from a ProductModel) to a base
+     * product from which this product is a variant. It is safe to infer that
+     * the variant inherits all product features from the base model, unless
+     * defined locally. This is not transitive. In the case of a
+     * [[ProductGroup]], the group description also serves as a template,
+     * representing a set of Products that vary on explicitly defined, specific
+     * dimensions only (so it defines both a set of variants, as well as which
+     * values distinguish amongst those variants). When used with
+     * [[ProductGroup]], this property can apply to any [[Product]] included in
+     * the group.
      *
-     * @param \Spatie\SchemaOrg\Contracts\ProductModelContract|\Spatie\SchemaOrg\Contracts\ProductModelContract[] $isVariantOf
+     * @param \Spatie\SchemaOrg\Contracts\ProductGroupContract|\Spatie\SchemaOrg\Contracts\ProductGroupContract[]|\Spatie\SchemaOrg\Contracts\ProductModelContract|\Spatie\SchemaOrg\Contracts\ProductModelContract[] $isVariantOf
      *
      * @return static
      *
-     * @see http://schema.org/isVariantOf
+     * @see https://schema.org/isVariantOf
      */
     public function isVariantOf($isVariantOf)
     {
@@ -420,7 +494,7 @@ class ProductModel extends BaseType implements ProductModelContract, ProductCont
      *
      * @return static
      *
-     * @see http://schema.org/itemCondition
+     * @see https://schema.org/itemCondition
      */
     public function itemCondition($itemCondition)
     {
@@ -434,7 +508,7 @@ class ProductModel extends BaseType implements ProductModelContract, ProductCont
      *
      * @return static
      *
-     * @see http://schema.org/logo
+     * @see https://schema.org/logo
      */
     public function logo($logo)
     {
@@ -450,7 +524,7 @@ class ProductModel extends BaseType implements ProductModelContract, ProductCont
      *
      * @return static
      *
-     * @see http://schema.org/mainEntityOfPage
+     * @see https://schema.org/mainEntityOfPage
      */
     public function mainEntityOfPage($mainEntityOfPage)
     {
@@ -464,7 +538,7 @@ class ProductModel extends BaseType implements ProductModelContract, ProductCont
      *
      * @return static
      *
-     * @see http://schema.org/manufacturer
+     * @see https://schema.org/manufacturer
      */
     public function manufacturer($manufacturer)
     {
@@ -479,7 +553,7 @@ class ProductModel extends BaseType implements ProductModelContract, ProductCont
      *
      * @return static
      *
-     * @see http://schema.org/material
+     * @see https://schema.org/material
      */
     public function material($material)
     {
@@ -497,7 +571,7 @@ class ProductModel extends BaseType implements ProductModelContract, ProductCont
      *
      * @return static
      *
-     * @see http://schema.org/model
+     * @see https://schema.org/model
      */
     public function model($model)
     {
@@ -512,7 +586,7 @@ class ProductModel extends BaseType implements ProductModelContract, ProductCont
      *
      * @return static
      *
-     * @see http://schema.org/mpn
+     * @see https://schema.org/mpn
      */
     public function mpn($mpn)
     {
@@ -526,11 +600,27 @@ class ProductModel extends BaseType implements ProductModelContract, ProductCont
      *
      * @return static
      *
-     * @see http://schema.org/name
+     * @see https://schema.org/name
      */
     public function name($name)
     {
         return $this->setProperty('name', $name);
+    }
+
+    /**
+     * Indicates the [NATO stock
+     * number](https://en.wikipedia.org/wiki/NATO_Stock_Number) (nsn) of a
+     * [[Product]].
+     *
+     * @param string|string[] $nsn
+     *
+     * @return static
+     *
+     * @see https://schema.org/nsn
+     */
+    public function nsn($nsn)
+    {
+        return $this->setProperty('nsn', $nsn);
     }
 
     /**
@@ -547,11 +637,27 @@ class ProductModel extends BaseType implements ProductModelContract, ProductCont
      *
      * @return static
      *
-     * @see http://schema.org/offers
+     * @see https://schema.org/offers
      */
     public function offers($offers)
     {
         return $this->setProperty('offers', $offers);
+    }
+
+    /**
+     * A pattern that something has, for example 'polka dot', 'striped',
+     * 'Canadian flag'. Values are typically expressed as text, although links
+     * to controlled value schemes are also supported.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\DefinedTermContract|\Spatie\SchemaOrg\Contracts\DefinedTermContract[]|string|string[] $pattern
+     *
+     * @return static
+     *
+     * @see https://schema.org/pattern
+     */
+    public function pattern($pattern)
+    {
+        return $this->setProperty('pattern', $pattern);
     }
 
     /**
@@ -562,7 +668,7 @@ class ProductModel extends BaseType implements ProductModelContract, ProductCont
      *
      * @return static
      *
-     * @see http://schema.org/potentialAction
+     * @see https://schema.org/potentialAction
      */
     public function potentialAction($potentialAction)
     {
@@ -577,7 +683,7 @@ class ProductModel extends BaseType implements ProductModelContract, ProductCont
      *
      * @return static
      *
-     * @see http://schema.org/predecessorOf
+     * @see https://schema.org/predecessorOf
      */
     public function predecessorOf($predecessorOf)
     {
@@ -592,7 +698,7 @@ class ProductModel extends BaseType implements ProductModelContract, ProductCont
      *
      * @return static
      *
-     * @see http://schema.org/productID
+     * @see https://schema.org/productID
      */
     public function productID($productID)
     {
@@ -606,7 +712,7 @@ class ProductModel extends BaseType implements ProductModelContract, ProductCont
      *
      * @return static
      *
-     * @see http://schema.org/productionDate
+     * @see https://schema.org/productionDate
      */
     public function productionDate($productionDate)
     {
@@ -620,7 +726,7 @@ class ProductModel extends BaseType implements ProductModelContract, ProductCont
      *
      * @return static
      *
-     * @see http://schema.org/purchaseDate
+     * @see https://schema.org/purchaseDate
      */
     public function purchaseDate($purchaseDate)
     {
@@ -635,7 +741,7 @@ class ProductModel extends BaseType implements ProductModelContract, ProductCont
      *
      * @return static
      *
-     * @see http://schema.org/releaseDate
+     * @see https://schema.org/releaseDate
      */
     public function releaseDate($releaseDate)
     {
@@ -649,7 +755,7 @@ class ProductModel extends BaseType implements ProductModelContract, ProductCont
      *
      * @return static
      *
-     * @see http://schema.org/review
+     * @see https://schema.org/review
      */
     public function review($review)
     {
@@ -663,7 +769,7 @@ class ProductModel extends BaseType implements ProductModelContract, ProductCont
      *
      * @return static
      *
-     * @see http://schema.org/reviews
+     * @see https://schema.org/reviews
      */
     public function reviews($reviews)
     {
@@ -679,11 +785,30 @@ class ProductModel extends BaseType implements ProductModelContract, ProductCont
      *
      * @return static
      *
-     * @see http://schema.org/sameAs
+     * @see https://schema.org/sameAs
      */
     public function sameAs($sameAs)
     {
         return $this->setProperty('sameAs', $sameAs);
+    }
+
+    /**
+     * A standardized size of a product or creative work, often simplifying
+     * richer information into a simple textual string, either through referring
+     * to named sizes or (in the case of product markup), by adopting
+     * conventional simplifications. Use of QuantitativeValue with a unitCode or
+     * unitText can add more structure; in other cases, the /width, /height,
+     * /depth and /weight properties may be more applicable.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\DefinedTermContract|\Spatie\SchemaOrg\Contracts\DefinedTermContract[]|\Spatie\SchemaOrg\Contracts\QuantitativeValueContract|\Spatie\SchemaOrg\Contracts\QuantitativeValueContract[]|string|string[] $size
+     *
+     * @return static
+     *
+     * @see https://schema.org/size
+     */
+    public function size($size)
+    {
+        return $this->setProperty('size', $size);
     }
 
     /**
@@ -694,7 +819,7 @@ class ProductModel extends BaseType implements ProductModelContract, ProductCont
      *
      * @return static
      *
-     * @see http://schema.org/sku
+     * @see https://schema.org/sku
      */
     public function sku($sku)
     {
@@ -708,7 +833,7 @@ class ProductModel extends BaseType implements ProductModelContract, ProductCont
      *
      * @return static
      *
-     * @see http://schema.org/slogan
+     * @see https://schema.org/slogan
      */
     public function slogan($slogan)
     {
@@ -722,7 +847,7 @@ class ProductModel extends BaseType implements ProductModelContract, ProductCont
      *
      * @return static
      *
-     * @see http://schema.org/subjectOf
+     * @see https://schema.org/subjectOf
      */
     public function subjectOf($subjectOf)
     {
@@ -737,7 +862,7 @@ class ProductModel extends BaseType implements ProductModelContract, ProductCont
      *
      * @return static
      *
-     * @see http://schema.org/successorOf
+     * @see https://schema.org/successorOf
      */
     public function successorOf($successorOf)
     {
@@ -751,7 +876,7 @@ class ProductModel extends BaseType implements ProductModelContract, ProductCont
      *
      * @return static
      *
-     * @see http://schema.org/url
+     * @see https://schema.org/url
      */
     public function url($url)
     {
@@ -765,7 +890,7 @@ class ProductModel extends BaseType implements ProductModelContract, ProductCont
      *
      * @return static
      *
-     * @see http://schema.org/weight
+     * @see https://schema.org/weight
      */
     public function weight($weight)
     {
@@ -779,7 +904,7 @@ class ProductModel extends BaseType implements ProductModelContract, ProductCont
      *
      * @return static
      *
-     * @see http://schema.org/width
+     * @see https://schema.org/width
      */
     public function width($width)
     {

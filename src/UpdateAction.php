@@ -9,7 +9,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
 /**
  * The act of managing by changing/editing the state of the object.
  *
- * @see http://schema.org/UpdateAction
+ * @see https://schema.org/UpdateAction
  *
  */
 class UpdateAction extends BaseType implements UpdateActionContract, ActionContract, ThingContract
@@ -21,7 +21,7 @@ class UpdateAction extends BaseType implements UpdateActionContract, ActionContr
      *
      * @return static
      *
-     * @see http://schema.org/actionStatus
+     * @see https://schema.org/actionStatus
      */
     public function actionStatus($actionStatus)
     {
@@ -40,7 +40,7 @@ class UpdateAction extends BaseType implements UpdateActionContract, ActionContr
      *
      * @return static
      *
-     * @see http://schema.org/additionalType
+     * @see https://schema.org/additionalType
      */
     public function additionalType($additionalType)
     {
@@ -55,7 +55,7 @@ class UpdateAction extends BaseType implements UpdateActionContract, ActionContr
      *
      * @return static
      *
-     * @see http://schema.org/agent
+     * @see https://schema.org/agent
      */
     public function agent($agent)
     {
@@ -69,7 +69,7 @@ class UpdateAction extends BaseType implements UpdateActionContract, ActionContr
      *
      * @return static
      *
-     * @see http://schema.org/alternateName
+     * @see https://schema.org/alternateName
      */
     public function alternateName($alternateName)
     {
@@ -83,7 +83,7 @@ class UpdateAction extends BaseType implements UpdateActionContract, ActionContr
      *
      * @return static
      *
-     * @see http://schema.org/collection
+     * @see https://schema.org/collection
      */
     public function collection($collection)
     {
@@ -97,7 +97,7 @@ class UpdateAction extends BaseType implements UpdateActionContract, ActionContr
      *
      * @return static
      *
-     * @see http://schema.org/description
+     * @see https://schema.org/description
      */
     public function description($description)
     {
@@ -114,7 +114,7 @@ class UpdateAction extends BaseType implements UpdateActionContract, ActionContr
      *
      * @return static
      *
-     * @see http://schema.org/disambiguatingDescription
+     * @see https://schema.org/disambiguatingDescription
      */
     public function disambiguatingDescription($disambiguatingDescription)
     {
@@ -137,7 +137,7 @@ class UpdateAction extends BaseType implements UpdateActionContract, ActionContr
      *
      * @return static
      *
-     * @see http://schema.org/endTime
+     * @see https://schema.org/endTime
      */
     public function endTime($endTime)
     {
@@ -151,7 +151,7 @@ class UpdateAction extends BaseType implements UpdateActionContract, ActionContr
      *
      * @return static
      *
-     * @see http://schema.org/error
+     * @see https://schema.org/error
      */
     public function error($error)
     {
@@ -169,7 +169,7 @@ class UpdateAction extends BaseType implements UpdateActionContract, ActionContr
      *
      * @return static
      *
-     * @see http://schema.org/identifier
+     * @see https://schema.org/identifier
      */
     public function identifier($identifier)
     {
@@ -184,7 +184,7 @@ class UpdateAction extends BaseType implements UpdateActionContract, ActionContr
      *
      * @return static
      *
-     * @see http://schema.org/image
+     * @see https://schema.org/image
      */
     public function image($image)
     {
@@ -199,7 +199,7 @@ class UpdateAction extends BaseType implements UpdateActionContract, ActionContr
      *
      * @return static
      *
-     * @see http://schema.org/instrument
+     * @see https://schema.org/instrument
      */
     public function instrument($instrument)
     {
@@ -210,11 +210,11 @@ class UpdateAction extends BaseType implements UpdateActionContract, ActionContr
      * The location of for example where the event is happening, an organization
      * is located, or where an action takes place.
      *
-     * @param \Spatie\SchemaOrg\Contracts\PlaceContract|\Spatie\SchemaOrg\Contracts\PlaceContract[]|\Spatie\SchemaOrg\Contracts\PostalAddressContract|\Spatie\SchemaOrg\Contracts\PostalAddressContract[]|string|string[] $location
+     * @param \Spatie\SchemaOrg\Contracts\PlaceContract|\Spatie\SchemaOrg\Contracts\PlaceContract[]|\Spatie\SchemaOrg\Contracts\PostalAddressContract|\Spatie\SchemaOrg\Contracts\PostalAddressContract[]|\Spatie\SchemaOrg\Contracts\VirtualLocationContract|\Spatie\SchemaOrg\Contracts\VirtualLocationContract[]|string|string[] $location
      *
      * @return static
      *
-     * @see http://schema.org/location
+     * @see https://schema.org/location
      */
     public function location($location)
     {
@@ -230,7 +230,7 @@ class UpdateAction extends BaseType implements UpdateActionContract, ActionContr
      *
      * @return static
      *
-     * @see http://schema.org/mainEntityOfPage
+     * @see https://schema.org/mainEntityOfPage
      */
     public function mainEntityOfPage($mainEntityOfPage)
     {
@@ -244,7 +244,7 @@ class UpdateAction extends BaseType implements UpdateActionContract, ActionContr
      *
      * @return static
      *
-     * @see http://schema.org/name
+     * @see https://schema.org/name
      */
     public function name($name)
     {
@@ -261,7 +261,7 @@ class UpdateAction extends BaseType implements UpdateActionContract, ActionContr
      *
      * @return static
      *
-     * @see http://schema.org/object
+     * @see https://schema.org/object
      */
     public function object($object)
     {
@@ -276,7 +276,7 @@ class UpdateAction extends BaseType implements UpdateActionContract, ActionContr
      *
      * @return static
      *
-     * @see http://schema.org/participant
+     * @see https://schema.org/participant
      */
     public function participant($participant)
     {
@@ -291,7 +291,7 @@ class UpdateAction extends BaseType implements UpdateActionContract, ActionContr
      *
      * @return static
      *
-     * @see http://schema.org/potentialAction
+     * @see https://schema.org/potentialAction
      */
     public function potentialAction($potentialAction)
     {
@@ -305,7 +305,7 @@ class UpdateAction extends BaseType implements UpdateActionContract, ActionContr
      *
      * @return static
      *
-     * @see http://schema.org/result
+     * @see https://schema.org/result
      */
     public function result($result)
     {
@@ -321,7 +321,7 @@ class UpdateAction extends BaseType implements UpdateActionContract, ActionContr
      *
      * @return static
      *
-     * @see http://schema.org/sameAs
+     * @see https://schema.org/sameAs
      */
     public function sameAs($sameAs)
     {
@@ -344,7 +344,7 @@ class UpdateAction extends BaseType implements UpdateActionContract, ActionContr
      *
      * @return static
      *
-     * @see http://schema.org/startTime
+     * @see https://schema.org/startTime
      */
     public function startTime($startTime)
     {
@@ -358,7 +358,7 @@ class UpdateAction extends BaseType implements UpdateActionContract, ActionContr
      *
      * @return static
      *
-     * @see http://schema.org/subjectOf
+     * @see https://schema.org/subjectOf
      */
     public function subjectOf($subjectOf)
     {
@@ -372,7 +372,7 @@ class UpdateAction extends BaseType implements UpdateActionContract, ActionContr
      *
      * @return static
      *
-     * @see http://schema.org/target
+     * @see https://schema.org/target
      */
     public function target($target)
     {
@@ -386,7 +386,7 @@ class UpdateAction extends BaseType implements UpdateActionContract, ActionContr
      *
      * @return static
      *
-     * @see http://schema.org/targetCollection
+     * @see https://schema.org/targetCollection
      */
     public function targetCollection($targetCollection)
     {
@@ -400,7 +400,7 @@ class UpdateAction extends BaseType implements UpdateActionContract, ActionContr
      *
      * @return static
      *
-     * @see http://schema.org/url
+     * @see https://schema.org/url
      */
     public function url($url)
     {

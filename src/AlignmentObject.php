@@ -9,9 +9,16 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
 /**
  * An intangible item that describes an alignment between a learning resource
  * and a node in an educational framework.
+ * 
+ * Should not be used where the nature of the alignment can be described using a
+ * simple property, for example to express that a resource [[teaches]] or
+ * [[assesses]] a competency.
  *
- * @see http://schema.org/AlignmentObject
+ * @see https://schema.org/AlignmentObject
  *
+ *
+ * External Sources:
+ * @see http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_LRMIClass
  */
 class AlignmentObject extends BaseType implements AlignmentObjectContract, IntangibleContract, ThingContract
 {
@@ -27,7 +34,7 @@ class AlignmentObject extends BaseType implements AlignmentObjectContract, Intan
      *
      * @return static
      *
-     * @see http://schema.org/additionalType
+     * @see https://schema.org/additionalType
      */
     public function additionalType($additionalType)
     {
@@ -36,15 +43,14 @@ class AlignmentObject extends BaseType implements AlignmentObjectContract, Intan
 
     /**
      * A category of alignment between the learning resource and the framework
-     * node. Recommended values include: 'assesses', 'teaches', 'requires',
-     * 'textComplexity', 'readingLevel', 'educationalSubject', and
-     * 'educationalLevel'.
+     * node. Recommended values include: 'requires', 'textComplexity',
+     * 'readingLevel', and 'educationalSubject'.
      *
      * @param string|string[] $alignmentType
      *
      * @return static
      *
-     * @see http://schema.org/alignmentType
+     * @see https://schema.org/alignmentType
      */
     public function alignmentType($alignmentType)
     {
@@ -58,7 +64,7 @@ class AlignmentObject extends BaseType implements AlignmentObjectContract, Intan
      *
      * @return static
      *
-     * @see http://schema.org/alternateName
+     * @see https://schema.org/alternateName
      */
     public function alternateName($alternateName)
     {
@@ -72,7 +78,7 @@ class AlignmentObject extends BaseType implements AlignmentObjectContract, Intan
      *
      * @return static
      *
-     * @see http://schema.org/description
+     * @see https://schema.org/description
      */
     public function description($description)
     {
@@ -89,7 +95,7 @@ class AlignmentObject extends BaseType implements AlignmentObjectContract, Intan
      *
      * @return static
      *
-     * @see http://schema.org/disambiguatingDescription
+     * @see https://schema.org/disambiguatingDescription
      */
     public function disambiguatingDescription($disambiguatingDescription)
     {
@@ -103,7 +109,7 @@ class AlignmentObject extends BaseType implements AlignmentObjectContract, Intan
      *
      * @return static
      *
-     * @see http://schema.org/educationalFramework
+     * @see https://schema.org/educationalFramework
      */
     public function educationalFramework($educationalFramework)
     {
@@ -121,7 +127,7 @@ class AlignmentObject extends BaseType implements AlignmentObjectContract, Intan
      *
      * @return static
      *
-     * @see http://schema.org/identifier
+     * @see https://schema.org/identifier
      */
     public function identifier($identifier)
     {
@@ -136,7 +142,7 @@ class AlignmentObject extends BaseType implements AlignmentObjectContract, Intan
      *
      * @return static
      *
-     * @see http://schema.org/image
+     * @see https://schema.org/image
      */
     public function image($image)
     {
@@ -152,7 +158,7 @@ class AlignmentObject extends BaseType implements AlignmentObjectContract, Intan
      *
      * @return static
      *
-     * @see http://schema.org/mainEntityOfPage
+     * @see https://schema.org/mainEntityOfPage
      */
     public function mainEntityOfPage($mainEntityOfPage)
     {
@@ -166,7 +172,7 @@ class AlignmentObject extends BaseType implements AlignmentObjectContract, Intan
      *
      * @return static
      *
-     * @see http://schema.org/name
+     * @see https://schema.org/name
      */
     public function name($name)
     {
@@ -181,7 +187,7 @@ class AlignmentObject extends BaseType implements AlignmentObjectContract, Intan
      *
      * @return static
      *
-     * @see http://schema.org/potentialAction
+     * @see https://schema.org/potentialAction
      */
     public function potentialAction($potentialAction)
     {
@@ -197,7 +203,7 @@ class AlignmentObject extends BaseType implements AlignmentObjectContract, Intan
      *
      * @return static
      *
-     * @see http://schema.org/sameAs
+     * @see https://schema.org/sameAs
      */
     public function sameAs($sameAs)
     {
@@ -211,7 +217,7 @@ class AlignmentObject extends BaseType implements AlignmentObjectContract, Intan
      *
      * @return static
      *
-     * @see http://schema.org/subjectOf
+     * @see https://schema.org/subjectOf
      */
     public function subjectOf($subjectOf)
     {
@@ -225,7 +231,7 @@ class AlignmentObject extends BaseType implements AlignmentObjectContract, Intan
      *
      * @return static
      *
-     * @see http://schema.org/targetDescription
+     * @see https://schema.org/targetDescription
      */
     public function targetDescription($targetDescription)
     {
@@ -239,7 +245,7 @@ class AlignmentObject extends BaseType implements AlignmentObjectContract, Intan
      *
      * @return static
      *
-     * @see http://schema.org/targetName
+     * @see https://schema.org/targetName
      */
     public function targetName($targetName)
     {
@@ -253,7 +259,7 @@ class AlignmentObject extends BaseType implements AlignmentObjectContract, Intan
      *
      * @return static
      *
-     * @see http://schema.org/targetUrl
+     * @see https://schema.org/targetUrl
      */
     public function targetUrl($targetUrl)
     {
@@ -267,7 +273,7 @@ class AlignmentObject extends BaseType implements AlignmentObjectContract, Intan
      *
      * @return static
      *
-     * @see http://schema.org/url
+     * @see https://schema.org/url
      */
     public function url($url)
     {

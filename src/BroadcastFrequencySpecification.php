@@ -10,8 +10,11 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * The frequency in MHz and the modulation used for a particular
  * BroadcastService.
  *
- * @see http://schema.org/BroadcastFrequencySpecification
+ * @see https://schema.org/BroadcastFrequencySpecification
  *
+ *
+ * External Sources:
+ * @see https://github.com/schemaorg/schemaorg/issues/1004
  */
 class BroadcastFrequencySpecification extends BaseType implements BroadcastFrequencySpecificationContract, IntangibleContract, ThingContract
 {
@@ -27,7 +30,7 @@ class BroadcastFrequencySpecification extends BaseType implements BroadcastFrequ
      *
      * @return static
      *
-     * @see http://schema.org/additionalType
+     * @see https://schema.org/additionalType
      */
     public function additionalType($additionalType)
     {
@@ -41,7 +44,7 @@ class BroadcastFrequencySpecification extends BaseType implements BroadcastFrequ
      *
      * @return static
      *
-     * @see http://schema.org/alternateName
+     * @see https://schema.org/alternateName
      */
     public function alternateName($alternateName)
     {
@@ -55,11 +58,39 @@ class BroadcastFrequencySpecification extends BaseType implements BroadcastFrequ
      *
      * @return static
      *
-     * @see http://schema.org/broadcastFrequencyValue
+     * @see https://schema.org/broadcastFrequencyValue
      */
     public function broadcastFrequencyValue($broadcastFrequencyValue)
     {
         return $this->setProperty('broadcastFrequencyValue', $broadcastFrequencyValue);
+    }
+
+    /**
+     * The modulation (e.g. FM, AM, etc) used by a particular broadcast service
+     *
+     * @param \Spatie\SchemaOrg\Contracts\QualitativeValueContract|\Spatie\SchemaOrg\Contracts\QualitativeValueContract[]|string|string[] $broadcastSignalModulation
+     *
+     * @return static
+     *
+     * @see https://schema.org/broadcastSignalModulation
+     */
+    public function broadcastSignalModulation($broadcastSignalModulation)
+    {
+        return $this->setProperty('broadcastSignalModulation', $broadcastSignalModulation);
+    }
+
+    /**
+     * The subchannel used for the broadcast.
+     *
+     * @param string|string[] $broadcastSubChannel
+     *
+     * @return static
+     *
+     * @see https://schema.org/broadcastSubChannel
+     */
+    public function broadcastSubChannel($broadcastSubChannel)
+    {
+        return $this->setProperty('broadcastSubChannel', $broadcastSubChannel);
     }
 
     /**
@@ -69,7 +100,7 @@ class BroadcastFrequencySpecification extends BaseType implements BroadcastFrequ
      *
      * @return static
      *
-     * @see http://schema.org/description
+     * @see https://schema.org/description
      */
     public function description($description)
     {
@@ -86,7 +117,7 @@ class BroadcastFrequencySpecification extends BaseType implements BroadcastFrequ
      *
      * @return static
      *
-     * @see http://schema.org/disambiguatingDescription
+     * @see https://schema.org/disambiguatingDescription
      */
     public function disambiguatingDescription($disambiguatingDescription)
     {
@@ -104,7 +135,7 @@ class BroadcastFrequencySpecification extends BaseType implements BroadcastFrequ
      *
      * @return static
      *
-     * @see http://schema.org/identifier
+     * @see https://schema.org/identifier
      */
     public function identifier($identifier)
     {
@@ -119,7 +150,7 @@ class BroadcastFrequencySpecification extends BaseType implements BroadcastFrequ
      *
      * @return static
      *
-     * @see http://schema.org/image
+     * @see https://schema.org/image
      */
     public function image($image)
     {
@@ -135,7 +166,7 @@ class BroadcastFrequencySpecification extends BaseType implements BroadcastFrequ
      *
      * @return static
      *
-     * @see http://schema.org/mainEntityOfPage
+     * @see https://schema.org/mainEntityOfPage
      */
     public function mainEntityOfPage($mainEntityOfPage)
     {
@@ -149,7 +180,7 @@ class BroadcastFrequencySpecification extends BaseType implements BroadcastFrequ
      *
      * @return static
      *
-     * @see http://schema.org/name
+     * @see https://schema.org/name
      */
     public function name($name)
     {
@@ -164,7 +195,7 @@ class BroadcastFrequencySpecification extends BaseType implements BroadcastFrequ
      *
      * @return static
      *
-     * @see http://schema.org/potentialAction
+     * @see https://schema.org/potentialAction
      */
     public function potentialAction($potentialAction)
     {
@@ -180,7 +211,7 @@ class BroadcastFrequencySpecification extends BaseType implements BroadcastFrequ
      *
      * @return static
      *
-     * @see http://schema.org/sameAs
+     * @see https://schema.org/sameAs
      */
     public function sameAs($sameAs)
     {
@@ -194,7 +225,7 @@ class BroadcastFrequencySpecification extends BaseType implements BroadcastFrequ
      *
      * @return static
      *
-     * @see http://schema.org/subjectOf
+     * @see https://schema.org/subjectOf
      */
     public function subjectOf($subjectOf)
     {
@@ -208,7 +239,7 @@ class BroadcastFrequencySpecification extends BaseType implements BroadcastFrequ
      *
      * @return static
      *
-     * @see http://schema.org/url
+     * @see https://schema.org/url
      */
     public function url($url)
     {

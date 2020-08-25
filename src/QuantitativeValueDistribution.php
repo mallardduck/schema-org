@@ -10,8 +10,11 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
 /**
  * A statistical distribution of values.
  *
- * @see http://schema.org/QuantitativeValueDistribution
+ * @see https://schema.org/QuantitativeValueDistribution
  *
+ *
+ * External Sources:
+ * @see https://github.com/schemaorg/schemaorg/issues/1698
  */
 class QuantitativeValueDistribution extends BaseType implements QuantitativeValueDistributionContract, IntangibleContract, StructuredValueContract, ThingContract
 {
@@ -27,7 +30,7 @@ class QuantitativeValueDistribution extends BaseType implements QuantitativeValu
      *
      * @return static
      *
-     * @see http://schema.org/additionalType
+     * @see https://schema.org/additionalType
      */
     public function additionalType($additionalType)
     {
@@ -41,7 +44,7 @@ class QuantitativeValueDistribution extends BaseType implements QuantitativeValu
      *
      * @return static
      *
-     * @see http://schema.org/alternateName
+     * @see https://schema.org/alternateName
      */
     public function alternateName($alternateName)
     {
@@ -55,7 +58,7 @@ class QuantitativeValueDistribution extends BaseType implements QuantitativeValu
      *
      * @return static
      *
-     * @see http://schema.org/description
+     * @see https://schema.org/description
      */
     public function description($description)
     {
@@ -72,7 +75,7 @@ class QuantitativeValueDistribution extends BaseType implements QuantitativeValu
      *
      * @return static
      *
-     * @see http://schema.org/disambiguatingDescription
+     * @see https://schema.org/disambiguatingDescription
      */
     public function disambiguatingDescription($disambiguatingDescription)
     {
@@ -87,7 +90,7 @@ class QuantitativeValueDistribution extends BaseType implements QuantitativeValu
      *
      * @return static
      *
-     * @see http://schema.org/duration
+     * @see https://schema.org/duration
      */
     public function duration($duration)
     {
@@ -105,7 +108,7 @@ class QuantitativeValueDistribution extends BaseType implements QuantitativeValu
      *
      * @return static
      *
-     * @see http://schema.org/identifier
+     * @see https://schema.org/identifier
      */
     public function identifier($identifier)
     {
@@ -120,7 +123,7 @@ class QuantitativeValueDistribution extends BaseType implements QuantitativeValu
      *
      * @return static
      *
-     * @see http://schema.org/image
+     * @see https://schema.org/image
      */
     public function image($image)
     {
@@ -136,7 +139,7 @@ class QuantitativeValueDistribution extends BaseType implements QuantitativeValu
      *
      * @return static
      *
-     * @see http://schema.org/mainEntityOfPage
+     * @see https://schema.org/mainEntityOfPage
      */
     public function mainEntityOfPage($mainEntityOfPage)
     {
@@ -150,7 +153,7 @@ class QuantitativeValueDistribution extends BaseType implements QuantitativeValu
      *
      * @return static
      *
-     * @see http://schema.org/median
+     * @see https://schema.org/median
      */
     public function median($median)
     {
@@ -164,7 +167,7 @@ class QuantitativeValueDistribution extends BaseType implements QuantitativeValu
      *
      * @return static
      *
-     * @see http://schema.org/name
+     * @see https://schema.org/name
      */
     public function name($name)
     {
@@ -178,7 +181,7 @@ class QuantitativeValueDistribution extends BaseType implements QuantitativeValu
      *
      * @return static
      *
-     * @see http://schema.org/percentile10
+     * @see https://schema.org/percentile10
      */
     public function percentile10($percentile10)
     {
@@ -192,7 +195,7 @@ class QuantitativeValueDistribution extends BaseType implements QuantitativeValu
      *
      * @return static
      *
-     * @see http://schema.org/percentile25
+     * @see https://schema.org/percentile25
      */
     public function percentile25($percentile25)
     {
@@ -206,7 +209,7 @@ class QuantitativeValueDistribution extends BaseType implements QuantitativeValu
      *
      * @return static
      *
-     * @see http://schema.org/percentile75
+     * @see https://schema.org/percentile75
      */
     public function percentile75($percentile75)
     {
@@ -220,7 +223,7 @@ class QuantitativeValueDistribution extends BaseType implements QuantitativeValu
      *
      * @return static
      *
-     * @see http://schema.org/percentile90
+     * @see https://schema.org/percentile90
      */
     public function percentile90($percentile90)
     {
@@ -235,7 +238,7 @@ class QuantitativeValueDistribution extends BaseType implements QuantitativeValu
      *
      * @return static
      *
-     * @see http://schema.org/potentialAction
+     * @see https://schema.org/potentialAction
      */
     public function potentialAction($potentialAction)
     {
@@ -251,7 +254,7 @@ class QuantitativeValueDistribution extends BaseType implements QuantitativeValu
      *
      * @return static
      *
-     * @see http://schema.org/sameAs
+     * @see https://schema.org/sameAs
      */
     public function sameAs($sameAs)
     {
@@ -265,7 +268,7 @@ class QuantitativeValueDistribution extends BaseType implements QuantitativeValu
      *
      * @return static
      *
-     * @see http://schema.org/subjectOf
+     * @see https://schema.org/subjectOf
      */
     public function subjectOf($subjectOf)
     {
@@ -279,7 +282,7 @@ class QuantitativeValueDistribution extends BaseType implements QuantitativeValu
      *
      * @return static
      *
-     * @see http://schema.org/url
+     * @see https://schema.org/url
      */
     public function url($url)
     {

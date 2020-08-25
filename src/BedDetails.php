@@ -12,8 +12,11 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * bed of a certain type, you can use bed directly with a text. See also
  * [[BedType]] (under development).
  *
- * @see http://schema.org/BedDetails
+ * @see https://schema.org/BedDetails
  *
+ *
+ * External Sources:
+ * @see https://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#STI_Accommodation_Ontology
  */
 class BedDetails extends BaseType implements BedDetailsContract, IntangibleContract, ThingContract
 {
@@ -29,7 +32,7 @@ class BedDetails extends BaseType implements BedDetailsContract, IntangibleContr
      *
      * @return static
      *
-     * @see http://schema.org/additionalType
+     * @see https://schema.org/additionalType
      */
     public function additionalType($additionalType)
     {
@@ -43,7 +46,7 @@ class BedDetails extends BaseType implements BedDetailsContract, IntangibleContr
      *
      * @return static
      *
-     * @see http://schema.org/alternateName
+     * @see https://schema.org/alternateName
      */
     public function alternateName($alternateName)
     {
@@ -57,7 +60,7 @@ class BedDetails extends BaseType implements BedDetailsContract, IntangibleContr
      *
      * @return static
      *
-     * @see http://schema.org/description
+     * @see https://schema.org/description
      */
     public function description($description)
     {
@@ -74,7 +77,7 @@ class BedDetails extends BaseType implements BedDetailsContract, IntangibleContr
      *
      * @return static
      *
-     * @see http://schema.org/disambiguatingDescription
+     * @see https://schema.org/disambiguatingDescription
      */
     public function disambiguatingDescription($disambiguatingDescription)
     {
@@ -92,7 +95,7 @@ class BedDetails extends BaseType implements BedDetailsContract, IntangibleContr
      *
      * @return static
      *
-     * @see http://schema.org/identifier
+     * @see https://schema.org/identifier
      */
     public function identifier($identifier)
     {
@@ -107,7 +110,7 @@ class BedDetails extends BaseType implements BedDetailsContract, IntangibleContr
      *
      * @return static
      *
-     * @see http://schema.org/image
+     * @see https://schema.org/image
      */
     public function image($image)
     {
@@ -123,7 +126,7 @@ class BedDetails extends BaseType implements BedDetailsContract, IntangibleContr
      *
      * @return static
      *
-     * @see http://schema.org/mainEntityOfPage
+     * @see https://schema.org/mainEntityOfPage
      */
     public function mainEntityOfPage($mainEntityOfPage)
     {
@@ -137,7 +140,7 @@ class BedDetails extends BaseType implements BedDetailsContract, IntangibleContr
      *
      * @return static
      *
-     * @see http://schema.org/name
+     * @see https://schema.org/name
      */
     public function name($name)
     {
@@ -152,7 +155,7 @@ class BedDetails extends BaseType implements BedDetailsContract, IntangibleContr
      *
      * @return static
      *
-     * @see http://schema.org/numberOfBeds
+     * @see https://schema.org/numberOfBeds
      */
     public function numberOfBeds($numberOfBeds)
     {
@@ -167,7 +170,7 @@ class BedDetails extends BaseType implements BedDetailsContract, IntangibleContr
      *
      * @return static
      *
-     * @see http://schema.org/potentialAction
+     * @see https://schema.org/potentialAction
      */
     public function potentialAction($potentialAction)
     {
@@ -183,7 +186,7 @@ class BedDetails extends BaseType implements BedDetailsContract, IntangibleContr
      *
      * @return static
      *
-     * @see http://schema.org/sameAs
+     * @see https://schema.org/sameAs
      */
     public function sameAs($sameAs)
     {
@@ -197,7 +200,7 @@ class BedDetails extends BaseType implements BedDetailsContract, IntangibleContr
      *
      * @return static
      *
-     * @see http://schema.org/subjectOf
+     * @see https://schema.org/subjectOf
      */
     public function subjectOf($subjectOf)
     {
@@ -212,7 +215,7 @@ class BedDetails extends BaseType implements BedDetailsContract, IntangibleContr
      *
      * @return static
      *
-     * @see http://schema.org/typeOfBed
+     * @see https://schema.org/typeOfBed
      */
     public function typeOfBed($typeOfBed)
     {
@@ -226,7 +229,7 @@ class BedDetails extends BaseType implements BedDetailsContract, IntangibleContr
      *
      * @return static
      *
-     * @see http://schema.org/url
+     * @see https://schema.org/url
      */
     public function url($url)
     {

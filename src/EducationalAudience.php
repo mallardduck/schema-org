@@ -10,8 +10,11 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
 /**
  * An EducationalAudience.
  *
- * @see http://schema.org/EducationalAudience
+ * @see https://schema.org/EducationalAudience
  *
+ *
+ * External Sources:
+ * @see http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_LRMIClass
  */
 class EducationalAudience extends BaseType implements EducationalAudienceContract, AudienceContract, IntangibleContract, ThingContract
 {
@@ -27,7 +30,7 @@ class EducationalAudience extends BaseType implements EducationalAudienceContrac
      *
      * @return static
      *
-     * @see http://schema.org/additionalType
+     * @see https://schema.org/additionalType
      */
     public function additionalType($additionalType)
     {
@@ -41,7 +44,7 @@ class EducationalAudience extends BaseType implements EducationalAudienceContrac
      *
      * @return static
      *
-     * @see http://schema.org/alternateName
+     * @see https://schema.org/alternateName
      */
     public function alternateName($alternateName)
     {
@@ -56,7 +59,7 @@ class EducationalAudience extends BaseType implements EducationalAudienceContrac
      *
      * @return static
      *
-     * @see http://schema.org/audienceType
+     * @see https://schema.org/audienceType
      */
     public function audienceType($audienceType)
     {
@@ -70,7 +73,7 @@ class EducationalAudience extends BaseType implements EducationalAudienceContrac
      *
      * @return static
      *
-     * @see http://schema.org/description
+     * @see https://schema.org/description
      */
     public function description($description)
     {
@@ -87,7 +90,7 @@ class EducationalAudience extends BaseType implements EducationalAudienceContrac
      *
      * @return static
      *
-     * @see http://schema.org/disambiguatingDescription
+     * @see https://schema.org/disambiguatingDescription
      */
     public function disambiguatingDescription($disambiguatingDescription)
     {
@@ -101,7 +104,7 @@ class EducationalAudience extends BaseType implements EducationalAudienceContrac
      *
      * @return static
      *
-     * @see http://schema.org/educationalRole
+     * @see https://schema.org/educationalRole
      */
     public function educationalRole($educationalRole)
     {
@@ -115,7 +118,7 @@ class EducationalAudience extends BaseType implements EducationalAudienceContrac
      *
      * @return static
      *
-     * @see http://schema.org/geographicArea
+     * @see https://schema.org/geographicArea
      */
     public function geographicArea($geographicArea)
     {
@@ -133,7 +136,7 @@ class EducationalAudience extends BaseType implements EducationalAudienceContrac
      *
      * @return static
      *
-     * @see http://schema.org/identifier
+     * @see https://schema.org/identifier
      */
     public function identifier($identifier)
     {
@@ -148,7 +151,7 @@ class EducationalAudience extends BaseType implements EducationalAudienceContrac
      *
      * @return static
      *
-     * @see http://schema.org/image
+     * @see https://schema.org/image
      */
     public function image($image)
     {
@@ -164,7 +167,7 @@ class EducationalAudience extends BaseType implements EducationalAudienceContrac
      *
      * @return static
      *
-     * @see http://schema.org/mainEntityOfPage
+     * @see https://schema.org/mainEntityOfPage
      */
     public function mainEntityOfPage($mainEntityOfPage)
     {
@@ -178,7 +181,7 @@ class EducationalAudience extends BaseType implements EducationalAudienceContrac
      *
      * @return static
      *
-     * @see http://schema.org/name
+     * @see https://schema.org/name
      */
     public function name($name)
     {
@@ -193,7 +196,7 @@ class EducationalAudience extends BaseType implements EducationalAudienceContrac
      *
      * @return static
      *
-     * @see http://schema.org/potentialAction
+     * @see https://schema.org/potentialAction
      */
     public function potentialAction($potentialAction)
     {
@@ -209,7 +212,7 @@ class EducationalAudience extends BaseType implements EducationalAudienceContrac
      *
      * @return static
      *
-     * @see http://schema.org/sameAs
+     * @see https://schema.org/sameAs
      */
     public function sameAs($sameAs)
     {
@@ -223,7 +226,7 @@ class EducationalAudience extends BaseType implements EducationalAudienceContrac
      *
      * @return static
      *
-     * @see http://schema.org/subjectOf
+     * @see https://schema.org/subjectOf
      */
     public function subjectOf($subjectOf)
     {
@@ -237,7 +240,7 @@ class EducationalAudience extends BaseType implements EducationalAudienceContrac
      *
      * @return static
      *
-     * @see http://schema.org/url
+     * @see https://schema.org/url
      */
     public function url($url)
     {

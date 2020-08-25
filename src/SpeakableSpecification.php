@@ -12,10 +12,11 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * [[speakable]]. Instances of this type are expected to be used primarily as
  * values of the [[speakable]] property.
  *
- * @see http://schema.org/SpeakableSpecification
+ * @see https://schema.org/SpeakableSpecification
  *
- * @method static cssSelector($cssSelector) The value should be instance of pending types CssSelectorType|CssSelectorType[]
- * @method static xpath($xpath) The value should be instance of pending types XPathType|XPathType[]
+ *
+ * External Sources:
+ * @see https://github.com/schemaorg/schemaorg/issues/1389
  */
 class SpeakableSpecification extends BaseType implements SpeakableSpecificationContract, IntangibleContract, ThingContract
 {
@@ -31,7 +32,7 @@ class SpeakableSpecification extends BaseType implements SpeakableSpecificationC
      *
      * @return static
      *
-     * @see http://schema.org/additionalType
+     * @see https://schema.org/additionalType
      */
     public function additionalType($additionalType)
     {
@@ -45,11 +46,27 @@ class SpeakableSpecification extends BaseType implements SpeakableSpecificationC
      *
      * @return static
      *
-     * @see http://schema.org/alternateName
+     * @see https://schema.org/alternateName
      */
     public function alternateName($alternateName)
     {
         return $this->setProperty('alternateName', $alternateName);
+    }
+
+    /**
+     * A CSS selector, e.g. of a [[SpeakableSpecification]] or
+     * [[WebPageElement]]. In the latter case, multiple matches within a page
+     * can constitute a single conceptual "Web page element".
+     *
+     * @param \Spatie\SchemaOrg\Contracts\CssSelectorTypeContract|\Spatie\SchemaOrg\Contracts\CssSelectorTypeContract[] $cssSelector
+     *
+     * @return static
+     *
+     * @see https://schema.org/cssSelector
+     */
+    public function cssSelector($cssSelector)
+    {
+        return $this->setProperty('cssSelector', $cssSelector);
     }
 
     /**
@@ -59,7 +76,7 @@ class SpeakableSpecification extends BaseType implements SpeakableSpecificationC
      *
      * @return static
      *
-     * @see http://schema.org/description
+     * @see https://schema.org/description
      */
     public function description($description)
     {
@@ -76,7 +93,7 @@ class SpeakableSpecification extends BaseType implements SpeakableSpecificationC
      *
      * @return static
      *
-     * @see http://schema.org/disambiguatingDescription
+     * @see https://schema.org/disambiguatingDescription
      */
     public function disambiguatingDescription($disambiguatingDescription)
     {
@@ -94,7 +111,7 @@ class SpeakableSpecification extends BaseType implements SpeakableSpecificationC
      *
      * @return static
      *
-     * @see http://schema.org/identifier
+     * @see https://schema.org/identifier
      */
     public function identifier($identifier)
     {
@@ -109,7 +126,7 @@ class SpeakableSpecification extends BaseType implements SpeakableSpecificationC
      *
      * @return static
      *
-     * @see http://schema.org/image
+     * @see https://schema.org/image
      */
     public function image($image)
     {
@@ -125,7 +142,7 @@ class SpeakableSpecification extends BaseType implements SpeakableSpecificationC
      *
      * @return static
      *
-     * @see http://schema.org/mainEntityOfPage
+     * @see https://schema.org/mainEntityOfPage
      */
     public function mainEntityOfPage($mainEntityOfPage)
     {
@@ -139,7 +156,7 @@ class SpeakableSpecification extends BaseType implements SpeakableSpecificationC
      *
      * @return static
      *
-     * @see http://schema.org/name
+     * @see https://schema.org/name
      */
     public function name($name)
     {
@@ -154,7 +171,7 @@ class SpeakableSpecification extends BaseType implements SpeakableSpecificationC
      *
      * @return static
      *
-     * @see http://schema.org/potentialAction
+     * @see https://schema.org/potentialAction
      */
     public function potentialAction($potentialAction)
     {
@@ -170,7 +187,7 @@ class SpeakableSpecification extends BaseType implements SpeakableSpecificationC
      *
      * @return static
      *
-     * @see http://schema.org/sameAs
+     * @see https://schema.org/sameAs
      */
     public function sameAs($sameAs)
     {
@@ -184,7 +201,7 @@ class SpeakableSpecification extends BaseType implements SpeakableSpecificationC
      *
      * @return static
      *
-     * @see http://schema.org/subjectOf
+     * @see https://schema.org/subjectOf
      */
     public function subjectOf($subjectOf)
     {
@@ -198,11 +215,27 @@ class SpeakableSpecification extends BaseType implements SpeakableSpecificationC
      *
      * @return static
      *
-     * @see http://schema.org/url
+     * @see https://schema.org/url
      */
     public function url($url)
     {
         return $this->setProperty('url', $url);
+    }
+
+    /**
+     * An XPath, e.g. of a [[SpeakableSpecification]] or [[WebPageElement]]. In
+     * the latter case, multiple matches within a page can constitute a single
+     * conceptual "Web page element".
+     *
+     * @param \Spatie\SchemaOrg\Contracts\XPathTypeContract|\Spatie\SchemaOrg\Contracts\XPathTypeContract[] $xpath
+     *
+     * @return static
+     *
+     * @see https://schema.org/xpath
+     */
+    public function xpath($xpath)
+    {
+        return $this->setProperty('xpath', $xpath);
     }
 
 }

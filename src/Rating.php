@@ -9,7 +9,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
 /**
  * A rating is an evaluation on a numeric scale, such as 1 to 5 stars.
  *
- * @see http://schema.org/Rating
+ * @see https://schema.org/Rating
  *
  */
 class Rating extends BaseType implements RatingContract, IntangibleContract, ThingContract
@@ -26,7 +26,7 @@ class Rating extends BaseType implements RatingContract, IntangibleContract, Thi
      *
      * @return static
      *
-     * @see http://schema.org/additionalType
+     * @see https://schema.org/additionalType
      */
     public function additionalType($additionalType)
     {
@@ -40,7 +40,7 @@ class Rating extends BaseType implements RatingContract, IntangibleContract, Thi
      *
      * @return static
      *
-     * @see http://schema.org/alternateName
+     * @see https://schema.org/alternateName
      */
     public function alternateName($alternateName)
     {
@@ -56,7 +56,7 @@ class Rating extends BaseType implements RatingContract, IntangibleContract, Thi
      *
      * @return static
      *
-     * @see http://schema.org/author
+     * @see https://schema.org/author
      */
     public function author($author)
     {
@@ -71,7 +71,7 @@ class Rating extends BaseType implements RatingContract, IntangibleContract, Thi
      *
      * @return static
      *
-     * @see http://schema.org/bestRating
+     * @see https://schema.org/bestRating
      */
     public function bestRating($bestRating)
     {
@@ -85,7 +85,7 @@ class Rating extends BaseType implements RatingContract, IntangibleContract, Thi
      *
      * @return static
      *
-     * @see http://schema.org/description
+     * @see https://schema.org/description
      */
     public function description($description)
     {
@@ -102,7 +102,7 @@ class Rating extends BaseType implements RatingContract, IntangibleContract, Thi
      *
      * @return static
      *
-     * @see http://schema.org/disambiguatingDescription
+     * @see https://schema.org/disambiguatingDescription
      */
     public function disambiguatingDescription($disambiguatingDescription)
     {
@@ -120,7 +120,7 @@ class Rating extends BaseType implements RatingContract, IntangibleContract, Thi
      *
      * @return static
      *
-     * @see http://schema.org/identifier
+     * @see https://schema.org/identifier
      */
     public function identifier($identifier)
     {
@@ -135,7 +135,7 @@ class Rating extends BaseType implements RatingContract, IntangibleContract, Thi
      *
      * @return static
      *
-     * @see http://schema.org/image
+     * @see https://schema.org/image
      */
     public function image($image)
     {
@@ -151,7 +151,7 @@ class Rating extends BaseType implements RatingContract, IntangibleContract, Thi
      *
      * @return static
      *
-     * @see http://schema.org/mainEntityOfPage
+     * @see https://schema.org/mainEntityOfPage
      */
     public function mainEntityOfPage($mainEntityOfPage)
     {
@@ -165,7 +165,7 @@ class Rating extends BaseType implements RatingContract, IntangibleContract, Thi
      *
      * @return static
      *
-     * @see http://schema.org/name
+     * @see https://schema.org/name
      */
     public function name($name)
     {
@@ -180,11 +180,28 @@ class Rating extends BaseType implements RatingContract, IntangibleContract, Thi
      *
      * @return static
      *
-     * @see http://schema.org/potentialAction
+     * @see https://schema.org/potentialAction
      */
     public function potentialAction($potentialAction)
     {
         return $this->setProperty('potentialAction', $potentialAction);
+    }
+
+    /**
+     * A short explanation (e.g. one to two sentences) providing background
+     * context and other information that led to the conclusion expressed in the
+     * rating. This is particularly applicable to ratings associated with "fact
+     * check" markup using [[ClaimReview]].
+     *
+     * @param string|string[] $ratingExplanation
+     *
+     * @return static
+     *
+     * @see https://schema.org/ratingExplanation
+     */
+    public function ratingExplanation($ratingExplanation)
+    {
+        return $this->setProperty('ratingExplanation', $ratingExplanation);
     }
 
     /**
@@ -201,7 +218,7 @@ class Rating extends BaseType implements RatingContract, IntangibleContract, Thi
      *
      * @return static
      *
-     * @see http://schema.org/ratingValue
+     * @see https://schema.org/ratingValue
      */
     public function ratingValue($ratingValue)
     {
@@ -216,7 +233,7 @@ class Rating extends BaseType implements RatingContract, IntangibleContract, Thi
      *
      * @return static
      *
-     * @see http://schema.org/reviewAspect
+     * @see https://schema.org/reviewAspect
      */
     public function reviewAspect($reviewAspect)
     {
@@ -232,7 +249,7 @@ class Rating extends BaseType implements RatingContract, IntangibleContract, Thi
      *
      * @return static
      *
-     * @see http://schema.org/sameAs
+     * @see https://schema.org/sameAs
      */
     public function sameAs($sameAs)
     {
@@ -246,7 +263,7 @@ class Rating extends BaseType implements RatingContract, IntangibleContract, Thi
      *
      * @return static
      *
-     * @see http://schema.org/subjectOf
+     * @see https://schema.org/subjectOf
      */
     public function subjectOf($subjectOf)
     {
@@ -260,7 +277,7 @@ class Rating extends BaseType implements RatingContract, IntangibleContract, Thi
      *
      * @return static
      *
-     * @see http://schema.org/url
+     * @see https://schema.org/url
      */
     public function url($url)
     {
@@ -275,7 +292,7 @@ class Rating extends BaseType implements RatingContract, IntangibleContract, Thi
      *
      * @return static
      *
-     * @see http://schema.org/worstRating
+     * @see https://schema.org/worstRating
      */
     public function worstRating($worstRating)
     {

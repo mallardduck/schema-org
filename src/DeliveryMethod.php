@@ -25,18 +25,46 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * * http://purl.org/goodrelations/v1#FederalExpress
  * * http://purl.org/goodrelations/v1#UPS
  *
- * @see http://schema.org/DeliveryMethod
+ * @see https://schema.org/DeliveryMethod
  *
+ * @method static supersededBy($supersededBy) The value should be instance of pending types Class|Class[]|Enumeration|Enumeration[]|Property|Property[]
+ *
+ * External Sources:
+ * @see http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsClass
  */
 class DeliveryMethod extends BaseType implements DeliveryMethodContract, EnumerationContract, IntangibleContract, ThingContract
 {
     /**
+     * A DeliveryMethod in which an item is made available via locker.
+     *
+     * @see https://schema.org/LockerDelivery
+     */
+     const LockerDelivery = 'https://schema.org/LockerDelivery';
+
+    /**
      * A DeliveryMethod in which an item is collected on site, e.g. in a store
      * or at a box office.
      *
-     * @see http://schema.org/OnSitePickup
+     * @see https://schema.org/OnSitePickup
      */
-     const OnSitePickup = 'http://schema.org/OnSitePickup';
+     const OnSitePickup = 'https://schema.org/OnSitePickup';
+
+    /**
+     * A private parcel service as the delivery mode available for a certain
+     * offer.
+     * 
+     * Commonly used values:
+     * 
+     * * http://purl.org/goodrelations/v1#DHL
+     * * http://purl.org/goodrelations/v1#FederalExpress
+     * * http://purl.org/goodrelations/v1#UPS
+     *
+     * @see https://schema.org/ParcelService
+     *
+     * External Sources:
+     * @see http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsClass
+     */
+     const ParcelService = 'https://schema.org/ParcelService';
 
     /**
      * An additional type for the item, typically used for adding more specific
@@ -50,7 +78,7 @@ class DeliveryMethod extends BaseType implements DeliveryMethodContract, Enumera
      *
      * @return static
      *
-     * @see http://schema.org/additionalType
+     * @see https://schema.org/additionalType
      */
     public function additionalType($additionalType)
     {
@@ -64,7 +92,7 @@ class DeliveryMethod extends BaseType implements DeliveryMethodContract, Enumera
      *
      * @return static
      *
-     * @see http://schema.org/alternateName
+     * @see https://schema.org/alternateName
      */
     public function alternateName($alternateName)
     {
@@ -78,7 +106,7 @@ class DeliveryMethod extends BaseType implements DeliveryMethodContract, Enumera
      *
      * @return static
      *
-     * @see http://schema.org/description
+     * @see https://schema.org/description
      */
     public function description($description)
     {
@@ -95,7 +123,7 @@ class DeliveryMethod extends BaseType implements DeliveryMethodContract, Enumera
      *
      * @return static
      *
-     * @see http://schema.org/disambiguatingDescription
+     * @see https://schema.org/disambiguatingDescription
      */
     public function disambiguatingDescription($disambiguatingDescription)
     {
@@ -113,7 +141,7 @@ class DeliveryMethod extends BaseType implements DeliveryMethodContract, Enumera
      *
      * @return static
      *
-     * @see http://schema.org/identifier
+     * @see https://schema.org/identifier
      */
     public function identifier($identifier)
     {
@@ -128,7 +156,7 @@ class DeliveryMethod extends BaseType implements DeliveryMethodContract, Enumera
      *
      * @return static
      *
-     * @see http://schema.org/image
+     * @see https://schema.org/image
      */
     public function image($image)
     {
@@ -144,7 +172,7 @@ class DeliveryMethod extends BaseType implements DeliveryMethodContract, Enumera
      *
      * @return static
      *
-     * @see http://schema.org/mainEntityOfPage
+     * @see https://schema.org/mainEntityOfPage
      */
     public function mainEntityOfPage($mainEntityOfPage)
     {
@@ -158,7 +186,7 @@ class DeliveryMethod extends BaseType implements DeliveryMethodContract, Enumera
      *
      * @return static
      *
-     * @see http://schema.org/name
+     * @see https://schema.org/name
      */
     public function name($name)
     {
@@ -173,7 +201,7 @@ class DeliveryMethod extends BaseType implements DeliveryMethodContract, Enumera
      *
      * @return static
      *
-     * @see http://schema.org/potentialAction
+     * @see https://schema.org/potentialAction
      */
     public function potentialAction($potentialAction)
     {
@@ -189,7 +217,7 @@ class DeliveryMethod extends BaseType implements DeliveryMethodContract, Enumera
      *
      * @return static
      *
-     * @see http://schema.org/sameAs
+     * @see https://schema.org/sameAs
      */
     public function sameAs($sameAs)
     {
@@ -203,7 +231,7 @@ class DeliveryMethod extends BaseType implements DeliveryMethodContract, Enumera
      *
      * @return static
      *
-     * @see http://schema.org/subjectOf
+     * @see https://schema.org/subjectOf
      */
     public function subjectOf($subjectOf)
     {
@@ -217,7 +245,7 @@ class DeliveryMethod extends BaseType implements DeliveryMethodContract, Enumera
      *
      * @return static
      *
-     * @see http://schema.org/url
+     * @see https://schema.org/url
      */
     public function url($url)
     {

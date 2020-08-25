@@ -11,8 +11,11 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * Information about the engine of the vehicle. A vehicle can have multiple
  * engines represented by multiple engine specification entities.
  *
- * @see http://schema.org/EngineSpecification
+ * @see https://schema.org/EngineSpecification
  *
+ *
+ * External Sources:
+ * @see http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group
  */
 class EngineSpecification extends BaseType implements EngineSpecificationContract, IntangibleContract, StructuredValueContract, ThingContract
 {
@@ -28,7 +31,7 @@ class EngineSpecification extends BaseType implements EngineSpecificationContrac
      *
      * @return static
      *
-     * @see http://schema.org/additionalType
+     * @see https://schema.org/additionalType
      */
     public function additionalType($additionalType)
     {
@@ -42,7 +45,7 @@ class EngineSpecification extends BaseType implements EngineSpecificationContrac
      *
      * @return static
      *
-     * @see http://schema.org/alternateName
+     * @see https://schema.org/alternateName
      */
     public function alternateName($alternateName)
     {
@@ -56,7 +59,7 @@ class EngineSpecification extends BaseType implements EngineSpecificationContrac
      *
      * @return static
      *
-     * @see http://schema.org/description
+     * @see https://schema.org/description
      */
     public function description($description)
     {
@@ -73,11 +76,69 @@ class EngineSpecification extends BaseType implements EngineSpecificationContrac
      *
      * @return static
      *
-     * @see http://schema.org/disambiguatingDescription
+     * @see https://schema.org/disambiguatingDescription
      */
     public function disambiguatingDescription($disambiguatingDescription)
     {
         return $this->setProperty('disambiguatingDescription', $disambiguatingDescription);
+    }
+
+    /**
+     * The volume swept by all of the pistons inside the cylinders of an
+     * internal combustion engine in a single movement. 
+     * 
+     * Typical unit code(s): CMQ for cubic centimeter, LTR for liters, INQ for
+     * cubic inches
+     * * Note 1: You can link to information about how the given value has been
+     * determined using the [[valueReference]] property.
+     * * Note 2: You can use [[minValue]] and [[maxValue]] to indicate ranges.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\QuantitativeValueContract|\Spatie\SchemaOrg\Contracts\QuantitativeValueContract[] $engineDisplacement
+     *
+     * @return static
+     *
+     * @see https://schema.org/engineDisplacement
+     */
+    public function engineDisplacement($engineDisplacement)
+    {
+        return $this->setProperty('engineDisplacement', $engineDisplacement);
+    }
+
+    /**
+     * The power of the vehicle's engine.
+     *     Typical unit code(s): KWT for kilowatt, BHP for brake horsepower, N12
+     * for metric horsepower (PS, with 1 PS = 735,49875 W)
+     * 
+     * * Note 1: There are many different ways of measuring an engine's power.
+     * For an overview, see  <a
+     * href="http://en.wikipedia.org/wiki/Horsepower#Engine_power_test_codes">http://en.wikipedia.org/wiki/Horsepower#Engine*power*test_codes</a>.
+     * * Note 2: You can link to information about how the given value has been
+     * determined using the [[valueReference]] property.
+     * * Note 3: You can use [[minValue]] and [[maxValue]] to indicate ranges.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\QuantitativeValueContract|\Spatie\SchemaOrg\Contracts\QuantitativeValueContract[] $enginePower
+     *
+     * @return static
+     *
+     * @see https://schema.org/enginePower
+     */
+    public function enginePower($enginePower)
+    {
+        return $this->setProperty('enginePower', $enginePower);
+    }
+
+    /**
+     * The type of engine or engines powering the vehicle.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\QualitativeValueContract|\Spatie\SchemaOrg\Contracts\QualitativeValueContract[]|string|string[] $engineType
+     *
+     * @return static
+     *
+     * @see https://schema.org/engineType
+     */
+    public function engineType($engineType)
+    {
+        return $this->setProperty('engineType', $engineType);
     }
 
     /**
@@ -89,7 +150,7 @@ class EngineSpecification extends BaseType implements EngineSpecificationContrac
      *
      * @return static
      *
-     * @see http://schema.org/fuelType
+     * @see https://schema.org/fuelType
      */
     public function fuelType($fuelType)
     {
@@ -107,7 +168,7 @@ class EngineSpecification extends BaseType implements EngineSpecificationContrac
      *
      * @return static
      *
-     * @see http://schema.org/identifier
+     * @see https://schema.org/identifier
      */
     public function identifier($identifier)
     {
@@ -122,7 +183,7 @@ class EngineSpecification extends BaseType implements EngineSpecificationContrac
      *
      * @return static
      *
-     * @see http://schema.org/image
+     * @see https://schema.org/image
      */
     public function image($image)
     {
@@ -138,7 +199,7 @@ class EngineSpecification extends BaseType implements EngineSpecificationContrac
      *
      * @return static
      *
-     * @see http://schema.org/mainEntityOfPage
+     * @see https://schema.org/mainEntityOfPage
      */
     public function mainEntityOfPage($mainEntityOfPage)
     {
@@ -152,7 +213,7 @@ class EngineSpecification extends BaseType implements EngineSpecificationContrac
      *
      * @return static
      *
-     * @see http://schema.org/name
+     * @see https://schema.org/name
      */
     public function name($name)
     {
@@ -167,7 +228,7 @@ class EngineSpecification extends BaseType implements EngineSpecificationContrac
      *
      * @return static
      *
-     * @see http://schema.org/potentialAction
+     * @see https://schema.org/potentialAction
      */
     public function potentialAction($potentialAction)
     {
@@ -183,7 +244,7 @@ class EngineSpecification extends BaseType implements EngineSpecificationContrac
      *
      * @return static
      *
-     * @see http://schema.org/sameAs
+     * @see https://schema.org/sameAs
      */
     public function sameAs($sameAs)
     {
@@ -197,11 +258,32 @@ class EngineSpecification extends BaseType implements EngineSpecificationContrac
      *
      * @return static
      *
-     * @see http://schema.org/subjectOf
+     * @see https://schema.org/subjectOf
      */
     public function subjectOf($subjectOf)
     {
         return $this->setProperty('subjectOf', $subjectOf);
+    }
+
+    /**
+     * The torque (turning force) of the vehicle's engine.
+     * 
+     * Typical unit code(s): NU for newton metre (N m), F17 for pound-force per
+     * foot, or F48 for pound-force per inch
+     * 
+     * * Note 1: You can link to information about how the given value has been
+     * determined (e.g. reference RPM) using the [[valueReference]] property.
+     * * Note 2: You can use [[minValue]] and [[maxValue]] to indicate ranges.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\QuantitativeValueContract|\Spatie\SchemaOrg\Contracts\QuantitativeValueContract[] $torque
+     *
+     * @return static
+     *
+     * @see https://schema.org/torque
+     */
+    public function torque($torque)
+    {
+        return $this->setProperty('torque', $torque);
     }
 
     /**
@@ -211,7 +293,7 @@ class EngineSpecification extends BaseType implements EngineSpecificationContrac
      *
      * @return static
      *
-     * @see http://schema.org/url
+     * @see https://schema.org/url
      */
     public function url($url)
     {

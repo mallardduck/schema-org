@@ -11,7 +11,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * A delivery service through which content is provided via broadcast over the
  * air or online.
  *
- * @see http://schema.org/BroadcastService
+ * @see https://schema.org/BroadcastService
  *
  */
 class BroadcastService extends BaseType implements BroadcastServiceContract, IntangibleContract, ServiceContract, ThingContract
@@ -28,7 +28,7 @@ class BroadcastService extends BaseType implements BroadcastServiceContract, Int
      *
      * @return static
      *
-     * @see http://schema.org/additionalType
+     * @see https://schema.org/additionalType
      */
     public function additionalType($additionalType)
     {
@@ -43,7 +43,7 @@ class BroadcastService extends BaseType implements BroadcastServiceContract, Int
      *
      * @return static
      *
-     * @see http://schema.org/aggregateRating
+     * @see https://schema.org/aggregateRating
      */
     public function aggregateRating($aggregateRating)
     {
@@ -57,7 +57,7 @@ class BroadcastService extends BaseType implements BroadcastServiceContract, Int
      *
      * @return static
      *
-     * @see http://schema.org/alternateName
+     * @see https://schema.org/alternateName
      */
     public function alternateName($alternateName)
     {
@@ -71,7 +71,7 @@ class BroadcastService extends BaseType implements BroadcastServiceContract, Int
      *
      * @return static
      *
-     * @see http://schema.org/area
+     * @see https://schema.org/area
      */
     public function area($area)
     {
@@ -85,7 +85,7 @@ class BroadcastService extends BaseType implements BroadcastServiceContract, Int
      *
      * @return static
      *
-     * @see http://schema.org/areaServed
+     * @see https://schema.org/areaServed
      */
     public function areaServed($areaServed)
     {
@@ -99,7 +99,7 @@ class BroadcastService extends BaseType implements BroadcastServiceContract, Int
      *
      * @return static
      *
-     * @see http://schema.org/audience
+     * @see https://schema.org/audience
      */
     public function audience($audience)
     {
@@ -114,7 +114,7 @@ class BroadcastService extends BaseType implements BroadcastServiceContract, Int
      *
      * @return static
      *
-     * @see http://schema.org/availableChannel
+     * @see https://schema.org/availableChannel
      */
     public function availableChannel($availableChannel)
     {
@@ -128,7 +128,7 @@ class BroadcastService extends BaseType implements BroadcastServiceContract, Int
      *
      * @return static
      *
-     * @see http://schema.org/award
+     * @see https://schema.org/award
      */
     public function award($award)
     {
@@ -143,7 +143,7 @@ class BroadcastService extends BaseType implements BroadcastServiceContract, Int
      *
      * @return static
      *
-     * @see http://schema.org/brand
+     * @see https://schema.org/brand
      */
     public function brand($brand)
     {
@@ -157,7 +157,7 @@ class BroadcastService extends BaseType implements BroadcastServiceContract, Int
      *
      * @return static
      *
-     * @see http://schema.org/broadcastAffiliateOf
+     * @see https://schema.org/broadcastAffiliateOf
      */
     public function broadcastAffiliateOf($broadcastAffiliateOf)
     {
@@ -172,7 +172,7 @@ class BroadcastService extends BaseType implements BroadcastServiceContract, Int
      *
      * @return static
      *
-     * @see http://schema.org/broadcastDisplayName
+     * @see https://schema.org/broadcastDisplayName
      */
     public function broadcastDisplayName($broadcastDisplayName)
     {
@@ -188,7 +188,7 @@ class BroadcastService extends BaseType implements BroadcastServiceContract, Int
      *
      * @return static
      *
-     * @see http://schema.org/broadcastFrequency
+     * @see https://schema.org/broadcastFrequency
      */
     public function broadcastFrequency($broadcastFrequency)
     {
@@ -203,7 +203,7 @@ class BroadcastService extends BaseType implements BroadcastServiceContract, Int
      *
      * @return static
      *
-     * @see http://schema.org/broadcastTimezone
+     * @see https://schema.org/broadcastTimezone
      */
     public function broadcastTimezone($broadcastTimezone)
     {
@@ -217,7 +217,7 @@ class BroadcastService extends BaseType implements BroadcastServiceContract, Int
      *
      * @return static
      *
-     * @see http://schema.org/broadcaster
+     * @see https://schema.org/broadcaster
      */
     public function broadcaster($broadcaster)
     {
@@ -234,7 +234,7 @@ class BroadcastService extends BaseType implements BroadcastServiceContract, Int
      *
      * @return static
      *
-     * @see http://schema.org/broker
+     * @see https://schema.org/broker
      */
     public function broker($broker)
     {
@@ -242,14 +242,30 @@ class BroadcastService extends BaseType implements BroadcastServiceContract, Int
     }
 
     /**
-     * A category for the item. Greater signs or slashes can be used to
-     * informally indicate a category hierarchy.
+     * A [callsign](https://en.wikipedia.org/wiki/Call_sign), as used in
+     * broadcasting and radio communications to identify people, radio and TV
+     * stations, or vehicles.
      *
-     * @param \Spatie\SchemaOrg\Contracts\ThingContract|\Spatie\SchemaOrg\Contracts\ThingContract[]|string|string[] $category
+     * @param string|string[] $callSign
      *
      * @return static
      *
-     * @see http://schema.org/category
+     * @see https://schema.org/callSign
+     */
+    public function callSign($callSign)
+    {
+        return $this->setProperty('callSign', $callSign);
+    }
+
+    /**
+     * A category for the item. Greater signs or slashes can be used to
+     * informally indicate a category hierarchy.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\PhysicalActivityCategoryContract|\Spatie\SchemaOrg\Contracts\PhysicalActivityCategoryContract[]|\Spatie\SchemaOrg\Contracts\ThingContract|\Spatie\SchemaOrg\Contracts\ThingContract[]|string|string[] $category
+     *
+     * @return static
+     *
+     * @see https://schema.org/category
      */
     public function category($category)
     {
@@ -263,7 +279,7 @@ class BroadcastService extends BaseType implements BroadcastServiceContract, Int
      *
      * @return static
      *
-     * @see http://schema.org/description
+     * @see https://schema.org/description
      */
     public function description($description)
     {
@@ -280,7 +296,7 @@ class BroadcastService extends BaseType implements BroadcastServiceContract, Int
      *
      * @return static
      *
-     * @see http://schema.org/disambiguatingDescription
+     * @see https://schema.org/disambiguatingDescription
      */
     public function disambiguatingDescription($disambiguatingDescription)
     {
@@ -294,7 +310,7 @@ class BroadcastService extends BaseType implements BroadcastServiceContract, Int
      *
      * @return static
      *
-     * @see http://schema.org/hasBroadcastChannel
+     * @see https://schema.org/hasBroadcastChannel
      */
     public function hasBroadcastChannel($hasBroadcastChannel)
     {
@@ -309,7 +325,7 @@ class BroadcastService extends BaseType implements BroadcastServiceContract, Int
      *
      * @return static
      *
-     * @see http://schema.org/hasOfferCatalog
+     * @see https://schema.org/hasOfferCatalog
      */
     public function hasOfferCatalog($hasOfferCatalog)
     {
@@ -323,7 +339,7 @@ class BroadcastService extends BaseType implements BroadcastServiceContract, Int
      *
      * @return static
      *
-     * @see http://schema.org/hoursAvailable
+     * @see https://schema.org/hoursAvailable
      */
     public function hoursAvailable($hoursAvailable)
     {
@@ -341,7 +357,7 @@ class BroadcastService extends BaseType implements BroadcastServiceContract, Int
      *
      * @return static
      *
-     * @see http://schema.org/identifier
+     * @see https://schema.org/identifier
      */
     public function identifier($identifier)
     {
@@ -356,7 +372,7 @@ class BroadcastService extends BaseType implements BroadcastServiceContract, Int
      *
      * @return static
      *
-     * @see http://schema.org/image
+     * @see https://schema.org/image
      */
     public function image($image)
     {
@@ -373,7 +389,7 @@ class BroadcastService extends BaseType implements BroadcastServiceContract, Int
      *
      * @return static
      *
-     * @see http://schema.org/inLanguage
+     * @see https://schema.org/inLanguage
      */
     public function inLanguage($inLanguage)
     {
@@ -387,7 +403,7 @@ class BroadcastService extends BaseType implements BroadcastServiceContract, Int
      *
      * @return static
      *
-     * @see http://schema.org/isRelatedTo
+     * @see https://schema.org/isRelatedTo
      */
     public function isRelatedTo($isRelatedTo)
     {
@@ -402,7 +418,7 @@ class BroadcastService extends BaseType implements BroadcastServiceContract, Int
      *
      * @return static
      *
-     * @see http://schema.org/isSimilarTo
+     * @see https://schema.org/isSimilarTo
      */
     public function isSimilarTo($isSimilarTo)
     {
@@ -416,7 +432,7 @@ class BroadcastService extends BaseType implements BroadcastServiceContract, Int
      *
      * @return static
      *
-     * @see http://schema.org/logo
+     * @see https://schema.org/logo
      */
     public function logo($logo)
     {
@@ -432,7 +448,7 @@ class BroadcastService extends BaseType implements BroadcastServiceContract, Int
      *
      * @return static
      *
-     * @see http://schema.org/mainEntityOfPage
+     * @see https://schema.org/mainEntityOfPage
      */
     public function mainEntityOfPage($mainEntityOfPage)
     {
@@ -446,7 +462,7 @@ class BroadcastService extends BaseType implements BroadcastServiceContract, Int
      *
      * @return static
      *
-     * @see http://schema.org/name
+     * @see https://schema.org/name
      */
     public function name($name)
     {
@@ -467,7 +483,7 @@ class BroadcastService extends BaseType implements BroadcastServiceContract, Int
      *
      * @return static
      *
-     * @see http://schema.org/offers
+     * @see https://schema.org/offers
      */
     public function offers($offers)
     {
@@ -482,7 +498,7 @@ class BroadcastService extends BaseType implements BroadcastServiceContract, Int
      *
      * @return static
      *
-     * @see http://schema.org/parentService
+     * @see https://schema.org/parentService
      */
     public function parentService($parentService)
     {
@@ -497,7 +513,7 @@ class BroadcastService extends BaseType implements BroadcastServiceContract, Int
      *
      * @return static
      *
-     * @see http://schema.org/potentialAction
+     * @see https://schema.org/potentialAction
      */
     public function potentialAction($potentialAction)
     {
@@ -512,7 +528,7 @@ class BroadcastService extends BaseType implements BroadcastServiceContract, Int
      *
      * @return static
      *
-     * @see http://schema.org/produces
+     * @see https://schema.org/produces
      */
     public function produces($produces)
     {
@@ -528,7 +544,7 @@ class BroadcastService extends BaseType implements BroadcastServiceContract, Int
      *
      * @return static
      *
-     * @see http://schema.org/provider
+     * @see https://schema.org/provider
      */
     public function provider($provider)
     {
@@ -542,7 +558,7 @@ class BroadcastService extends BaseType implements BroadcastServiceContract, Int
      *
      * @return static
      *
-     * @see http://schema.org/providerMobility
+     * @see https://schema.org/providerMobility
      */
     public function providerMobility($providerMobility)
     {
@@ -556,7 +572,7 @@ class BroadcastService extends BaseType implements BroadcastServiceContract, Int
      *
      * @return static
      *
-     * @see http://schema.org/review
+     * @see https://schema.org/review
      */
     public function review($review)
     {
@@ -572,7 +588,7 @@ class BroadcastService extends BaseType implements BroadcastServiceContract, Int
      *
      * @return static
      *
-     * @see http://schema.org/sameAs
+     * @see https://schema.org/sameAs
      */
     public function sameAs($sameAs)
     {
@@ -586,7 +602,7 @@ class BroadcastService extends BaseType implements BroadcastServiceContract, Int
      *
      * @return static
      *
-     * @see http://schema.org/serviceArea
+     * @see https://schema.org/serviceArea
      */
     public function serviceArea($serviceArea)
     {
@@ -600,7 +616,7 @@ class BroadcastService extends BaseType implements BroadcastServiceContract, Int
      *
      * @return static
      *
-     * @see http://schema.org/serviceAudience
+     * @see https://schema.org/serviceAudience
      */
     public function serviceAudience($serviceAudience)
     {
@@ -615,7 +631,7 @@ class BroadcastService extends BaseType implements BroadcastServiceContract, Int
      *
      * @return static
      *
-     * @see http://schema.org/serviceOutput
+     * @see https://schema.org/serviceOutput
      */
     public function serviceOutput($serviceOutput)
     {
@@ -626,11 +642,11 @@ class BroadcastService extends BaseType implements BroadcastServiceContract, Int
      * The type of service being offered, e.g. veterans' benefits, emergency
      * relief, etc.
      *
-     * @param string|string[] $serviceType
+     * @param \Spatie\SchemaOrg\Contracts\GovernmentBenefitsTypeContract|\Spatie\SchemaOrg\Contracts\GovernmentBenefitsTypeContract[]|string|string[] $serviceType
      *
      * @return static
      *
-     * @see http://schema.org/serviceType
+     * @see https://schema.org/serviceType
      */
     public function serviceType($serviceType)
     {
@@ -644,7 +660,7 @@ class BroadcastService extends BaseType implements BroadcastServiceContract, Int
      *
      * @return static
      *
-     * @see http://schema.org/slogan
+     * @see https://schema.org/slogan
      */
     public function slogan($slogan)
     {
@@ -658,11 +674,25 @@ class BroadcastService extends BaseType implements BroadcastServiceContract, Int
      *
      * @return static
      *
-     * @see http://schema.org/subjectOf
+     * @see https://schema.org/subjectOf
      */
     public function subjectOf($subjectOf)
     {
         return $this->setProperty('subjectOf', $subjectOf);
+    }
+
+    /**
+     * Human-readable terms of service documentation.
+     *
+     * @param string|string[] $termsOfService
+     *
+     * @return static
+     *
+     * @see https://schema.org/termsOfService
+     */
+    public function termsOfService($termsOfService)
+    {
+        return $this->setProperty('termsOfService', $termsOfService);
     }
 
     /**
@@ -672,7 +702,7 @@ class BroadcastService extends BaseType implements BroadcastServiceContract, Int
      *
      * @return static
      *
-     * @see http://schema.org/url
+     * @see https://schema.org/url
      */
     public function url($url)
     {
@@ -687,7 +717,7 @@ class BroadcastService extends BaseType implements BroadcastServiceContract, Int
      *
      * @return static
      *
-     * @see http://schema.org/videoFormat
+     * @see https://schema.org/videoFormat
      */
     public function videoFormat($videoFormat)
     {

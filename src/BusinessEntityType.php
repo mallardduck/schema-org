@@ -19,8 +19,12 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * * http://purl.org/goodrelations/v1#PublicInstitution
  * * http://purl.org/goodrelations/v1#Reseller
  *
- * @see http://schema.org/BusinessEntityType
+ * @see https://schema.org/BusinessEntityType
  *
+ * @method static supersededBy($supersededBy) The value should be instance of pending types Class|Class[]|Enumeration|Enumeration[]|Property|Property[]
+ *
+ * External Sources:
+ * @see http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsClass
  */
 class BusinessEntityType extends BaseType implements BusinessEntityTypeContract, EnumerationContract, IntangibleContract, ThingContract
 {
@@ -36,7 +40,7 @@ class BusinessEntityType extends BaseType implements BusinessEntityTypeContract,
      *
      * @return static
      *
-     * @see http://schema.org/additionalType
+     * @see https://schema.org/additionalType
      */
     public function additionalType($additionalType)
     {
@@ -50,7 +54,7 @@ class BusinessEntityType extends BaseType implements BusinessEntityTypeContract,
      *
      * @return static
      *
-     * @see http://schema.org/alternateName
+     * @see https://schema.org/alternateName
      */
     public function alternateName($alternateName)
     {
@@ -64,7 +68,7 @@ class BusinessEntityType extends BaseType implements BusinessEntityTypeContract,
      *
      * @return static
      *
-     * @see http://schema.org/description
+     * @see https://schema.org/description
      */
     public function description($description)
     {
@@ -81,7 +85,7 @@ class BusinessEntityType extends BaseType implements BusinessEntityTypeContract,
      *
      * @return static
      *
-     * @see http://schema.org/disambiguatingDescription
+     * @see https://schema.org/disambiguatingDescription
      */
     public function disambiguatingDescription($disambiguatingDescription)
     {
@@ -99,7 +103,7 @@ class BusinessEntityType extends BaseType implements BusinessEntityTypeContract,
      *
      * @return static
      *
-     * @see http://schema.org/identifier
+     * @see https://schema.org/identifier
      */
     public function identifier($identifier)
     {
@@ -114,7 +118,7 @@ class BusinessEntityType extends BaseType implements BusinessEntityTypeContract,
      *
      * @return static
      *
-     * @see http://schema.org/image
+     * @see https://schema.org/image
      */
     public function image($image)
     {
@@ -130,7 +134,7 @@ class BusinessEntityType extends BaseType implements BusinessEntityTypeContract,
      *
      * @return static
      *
-     * @see http://schema.org/mainEntityOfPage
+     * @see https://schema.org/mainEntityOfPage
      */
     public function mainEntityOfPage($mainEntityOfPage)
     {
@@ -144,7 +148,7 @@ class BusinessEntityType extends BaseType implements BusinessEntityTypeContract,
      *
      * @return static
      *
-     * @see http://schema.org/name
+     * @see https://schema.org/name
      */
     public function name($name)
     {
@@ -159,7 +163,7 @@ class BusinessEntityType extends BaseType implements BusinessEntityTypeContract,
      *
      * @return static
      *
-     * @see http://schema.org/potentialAction
+     * @see https://schema.org/potentialAction
      */
     public function potentialAction($potentialAction)
     {
@@ -175,7 +179,7 @@ class BusinessEntityType extends BaseType implements BusinessEntityTypeContract,
      *
      * @return static
      *
-     * @see http://schema.org/sameAs
+     * @see https://schema.org/sameAs
      */
     public function sameAs($sameAs)
     {
@@ -189,7 +193,7 @@ class BusinessEntityType extends BaseType implements BusinessEntityTypeContract,
      *
      * @return static
      *
-     * @see http://schema.org/subjectOf
+     * @see https://schema.org/subjectOf
      */
     public function subjectOf($subjectOf)
     {
@@ -203,7 +207,7 @@ class BusinessEntityType extends BaseType implements BusinessEntityTypeContract,
      *
      * @return static
      *
-     * @see http://schema.org/url
+     * @see https://schema.org/url
      */
     public function url($url)
     {

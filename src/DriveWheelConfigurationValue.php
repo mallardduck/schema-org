@@ -11,8 +11,12 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
 /**
  * A value indicating which roadwheels will receive torque.
  *
- * @see http://schema.org/DriveWheelConfigurationValue
+ * @see https://schema.org/DriveWheelConfigurationValue
  *
+ * @method static supersededBy($supersededBy) The value should be instance of pending types Class|Class[]|Enumeration|Enumeration[]|Property|Property[]
+ *
+ * External Sources:
+ * @see http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group
  */
 class DriveWheelConfigurationValue extends BaseType implements DriveWheelConfigurationValueContract, EnumerationContract, IntangibleContract, QualitativeValueContract, ThingContract
 {
@@ -20,33 +24,45 @@ class DriveWheelConfigurationValue extends BaseType implements DriveWheelConfigu
      * All-wheel Drive is a transmission layout where the engine drives all four
      * wheels.
      *
-     * @see http://schema.org/AllWheelDriveConfiguration
+     * @see https://schema.org/AllWheelDriveConfiguration
+     *
+     * External Sources:
+     * @see http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group
      */
-     const AllWheelDriveConfiguration = 'http://schema.org/AllWheelDriveConfiguration';
+     const AllWheelDriveConfiguration = 'https://schema.org/AllWheelDriveConfiguration';
 
     /**
      * Four-wheel drive is a transmission layout where the engine primarily
      * drives two wheels with a part-time four-wheel drive capability.
      *
-     * @see http://schema.org/FourWheelDriveConfiguration
+     * @see https://schema.org/FourWheelDriveConfiguration
+     *
+     * External Sources:
+     * @see http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group
      */
-     const FourWheelDriveConfiguration = 'http://schema.org/FourWheelDriveConfiguration';
+     const FourWheelDriveConfiguration = 'https://schema.org/FourWheelDriveConfiguration';
 
     /**
      * Front-wheel drive is a transmission layout where the engine drives the
      * front wheels.
      *
-     * @see http://schema.org/FrontWheelDriveConfiguration
+     * @see https://schema.org/FrontWheelDriveConfiguration
+     *
+     * External Sources:
+     * @see http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group
      */
-     const FrontWheelDriveConfiguration = 'http://schema.org/FrontWheelDriveConfiguration';
+     const FrontWheelDriveConfiguration = 'https://schema.org/FrontWheelDriveConfiguration';
 
     /**
      * Real-wheel drive is a transmission layout where the engine drives the
      * rear wheels.
      *
-     * @see http://schema.org/RearWheelDriveConfiguration
+     * @see https://schema.org/RearWheelDriveConfiguration
+     *
+     * External Sources:
+     * @see http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group
      */
-     const RearWheelDriveConfiguration = 'http://schema.org/RearWheelDriveConfiguration';
+     const RearWheelDriveConfiguration = 'https://schema.org/RearWheelDriveConfiguration';
 
     /**
      * A property-value pair representing an additional characteristics of the
@@ -54,8 +70,8 @@ class DriveWheelConfigurationValue extends BaseType implements DriveWheelConfigu
      * there is no matching property in schema.org.
      * 
      * Note: Publishers should be aware that applications designed to use
-     * specific schema.org properties (e.g. http://schema.org/width,
-     * http://schema.org/color, http://schema.org/gtin13, ...) will typically
+     * specific schema.org properties (e.g. https://schema.org/width,
+     * https://schema.org/color, https://schema.org/gtin13, ...) will typically
      * expect such data to be provided using those properties, rather than using
      * the generic property/value mechanism.
      *
@@ -63,7 +79,7 @@ class DriveWheelConfigurationValue extends BaseType implements DriveWheelConfigu
      *
      * @return static
      *
-     * @see http://schema.org/additionalProperty
+     * @see https://schema.org/additionalProperty
      */
     public function additionalProperty($additionalProperty)
     {
@@ -82,7 +98,7 @@ class DriveWheelConfigurationValue extends BaseType implements DriveWheelConfigu
      *
      * @return static
      *
-     * @see http://schema.org/additionalType
+     * @see https://schema.org/additionalType
      */
     public function additionalType($additionalType)
     {
@@ -96,7 +112,7 @@ class DriveWheelConfigurationValue extends BaseType implements DriveWheelConfigu
      *
      * @return static
      *
-     * @see http://schema.org/alternateName
+     * @see https://schema.org/alternateName
      */
     public function alternateName($alternateName)
     {
@@ -110,7 +126,7 @@ class DriveWheelConfigurationValue extends BaseType implements DriveWheelConfigu
      *
      * @return static
      *
-     * @see http://schema.org/description
+     * @see https://schema.org/description
      */
     public function description($description)
     {
@@ -127,7 +143,7 @@ class DriveWheelConfigurationValue extends BaseType implements DriveWheelConfigu
      *
      * @return static
      *
-     * @see http://schema.org/disambiguatingDescription
+     * @see https://schema.org/disambiguatingDescription
      */
     public function disambiguatingDescription($disambiguatingDescription)
     {
@@ -142,7 +158,7 @@ class DriveWheelConfigurationValue extends BaseType implements DriveWheelConfigu
      *
      * @return static
      *
-     * @see http://schema.org/equal
+     * @see https://schema.org/equal
      */
     public function equal($equal)
     {
@@ -157,7 +173,7 @@ class DriveWheelConfigurationValue extends BaseType implements DriveWheelConfigu
      *
      * @return static
      *
-     * @see http://schema.org/greater
+     * @see https://schema.org/greater
      */
     public function greater($greater)
     {
@@ -172,7 +188,7 @@ class DriveWheelConfigurationValue extends BaseType implements DriveWheelConfigu
      *
      * @return static
      *
-     * @see http://schema.org/greaterOrEqual
+     * @see https://schema.org/greaterOrEqual
      */
     public function greaterOrEqual($greaterOrEqual)
     {
@@ -190,7 +206,7 @@ class DriveWheelConfigurationValue extends BaseType implements DriveWheelConfigu
      *
      * @return static
      *
-     * @see http://schema.org/identifier
+     * @see https://schema.org/identifier
      */
     public function identifier($identifier)
     {
@@ -205,7 +221,7 @@ class DriveWheelConfigurationValue extends BaseType implements DriveWheelConfigu
      *
      * @return static
      *
-     * @see http://schema.org/image
+     * @see https://schema.org/image
      */
     public function image($image)
     {
@@ -220,7 +236,7 @@ class DriveWheelConfigurationValue extends BaseType implements DriveWheelConfigu
      *
      * @return static
      *
-     * @see http://schema.org/lesser
+     * @see https://schema.org/lesser
      */
     public function lesser($lesser)
     {
@@ -235,7 +251,7 @@ class DriveWheelConfigurationValue extends BaseType implements DriveWheelConfigu
      *
      * @return static
      *
-     * @see http://schema.org/lesserOrEqual
+     * @see https://schema.org/lesserOrEqual
      */
     public function lesserOrEqual($lesserOrEqual)
     {
@@ -251,7 +267,7 @@ class DriveWheelConfigurationValue extends BaseType implements DriveWheelConfigu
      *
      * @return static
      *
-     * @see http://schema.org/mainEntityOfPage
+     * @see https://schema.org/mainEntityOfPage
      */
     public function mainEntityOfPage($mainEntityOfPage)
     {
@@ -265,7 +281,7 @@ class DriveWheelConfigurationValue extends BaseType implements DriveWheelConfigu
      *
      * @return static
      *
-     * @see http://schema.org/name
+     * @see https://schema.org/name
      */
     public function name($name)
     {
@@ -280,7 +296,7 @@ class DriveWheelConfigurationValue extends BaseType implements DriveWheelConfigu
      *
      * @return static
      *
-     * @see http://schema.org/nonEqual
+     * @see https://schema.org/nonEqual
      */
     public function nonEqual($nonEqual)
     {
@@ -295,7 +311,7 @@ class DriveWheelConfigurationValue extends BaseType implements DriveWheelConfigu
      *
      * @return static
      *
-     * @see http://schema.org/potentialAction
+     * @see https://schema.org/potentialAction
      */
     public function potentialAction($potentialAction)
     {
@@ -311,7 +327,7 @@ class DriveWheelConfigurationValue extends BaseType implements DriveWheelConfigu
      *
      * @return static
      *
-     * @see http://schema.org/sameAs
+     * @see https://schema.org/sameAs
      */
     public function sameAs($sameAs)
     {
@@ -325,7 +341,7 @@ class DriveWheelConfigurationValue extends BaseType implements DriveWheelConfigu
      *
      * @return static
      *
-     * @see http://schema.org/subjectOf
+     * @see https://schema.org/subjectOf
      */
     public function subjectOf($subjectOf)
     {
@@ -339,7 +355,7 @@ class DriveWheelConfigurationValue extends BaseType implements DriveWheelConfigu
      *
      * @return static
      *
-     * @see http://schema.org/url
+     * @see https://schema.org/url
      */
     public function url($url)
     {
@@ -354,7 +370,7 @@ class DriveWheelConfigurationValue extends BaseType implements DriveWheelConfigu
      *
      * @return static
      *
-     * @see http://schema.org/valueReference
+     * @see https://schema.org/valueReference
      */
     public function valueReference($valueReference)
     {

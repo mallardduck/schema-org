@@ -4,6 +4,8 @@ namespace Spatie\SchemaOrg\Contracts;
 
 interface GatedResidenceCommunityContract
 {
+    public function accommodationFloorPlan($accommodationFloorPlan);
+
     public function additionalProperty($additionalProperty);
 
     public function additionalType($additionalType);
@@ -58,6 +60,8 @@ interface GatedResidenceCommunityContract
 
     public function globalLocationNumber($globalLocationNumber);
 
+    public function hasDriveThroughService($hasDriveThroughService);
+
     public function hasMap($hasMap);
 
     public function identifier($identifier);
@@ -109,6 +113,8 @@ interface GatedResidenceCommunityContract
     public function subjectOf($subjectOf);
 
     public function telephone($telephone);
+
+    public function tourBookingPage($tourBookingPage);
 
     public function url($url);
 

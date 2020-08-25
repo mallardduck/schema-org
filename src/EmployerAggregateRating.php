@@ -11,8 +11,11 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
 /**
  * An aggregate rating of an Organization related to its role as an employer.
  *
- * @see http://schema.org/EmployerAggregateRating
+ * @see https://schema.org/EmployerAggregateRating
  *
+ *
+ * External Sources:
+ * @see https://github.com/schemaorg/schemaorg/issues/1689
  */
 class EmployerAggregateRating extends BaseType implements EmployerAggregateRatingContract, AggregateRatingContract, IntangibleContract, RatingContract, ThingContract
 {
@@ -28,7 +31,7 @@ class EmployerAggregateRating extends BaseType implements EmployerAggregateRatin
      *
      * @return static
      *
-     * @see http://schema.org/additionalType
+     * @see https://schema.org/additionalType
      */
     public function additionalType($additionalType)
     {
@@ -42,7 +45,7 @@ class EmployerAggregateRating extends BaseType implements EmployerAggregateRatin
      *
      * @return static
      *
-     * @see http://schema.org/alternateName
+     * @see https://schema.org/alternateName
      */
     public function alternateName($alternateName)
     {
@@ -58,7 +61,7 @@ class EmployerAggregateRating extends BaseType implements EmployerAggregateRatin
      *
      * @return static
      *
-     * @see http://schema.org/author
+     * @see https://schema.org/author
      */
     public function author($author)
     {
@@ -73,7 +76,7 @@ class EmployerAggregateRating extends BaseType implements EmployerAggregateRatin
      *
      * @return static
      *
-     * @see http://schema.org/bestRating
+     * @see https://schema.org/bestRating
      */
     public function bestRating($bestRating)
     {
@@ -87,7 +90,7 @@ class EmployerAggregateRating extends BaseType implements EmployerAggregateRatin
      *
      * @return static
      *
-     * @see http://schema.org/description
+     * @see https://schema.org/description
      */
     public function description($description)
     {
@@ -104,7 +107,7 @@ class EmployerAggregateRating extends BaseType implements EmployerAggregateRatin
      *
      * @return static
      *
-     * @see http://schema.org/disambiguatingDescription
+     * @see https://schema.org/disambiguatingDescription
      */
     public function disambiguatingDescription($disambiguatingDescription)
     {
@@ -122,7 +125,7 @@ class EmployerAggregateRating extends BaseType implements EmployerAggregateRatin
      *
      * @return static
      *
-     * @see http://schema.org/identifier
+     * @see https://schema.org/identifier
      */
     public function identifier($identifier)
     {
@@ -137,7 +140,7 @@ class EmployerAggregateRating extends BaseType implements EmployerAggregateRatin
      *
      * @return static
      *
-     * @see http://schema.org/image
+     * @see https://schema.org/image
      */
     public function image($image)
     {
@@ -151,7 +154,7 @@ class EmployerAggregateRating extends BaseType implements EmployerAggregateRatin
      *
      * @return static
      *
-     * @see http://schema.org/itemReviewed
+     * @see https://schema.org/itemReviewed
      */
     public function itemReviewed($itemReviewed)
     {
@@ -167,7 +170,7 @@ class EmployerAggregateRating extends BaseType implements EmployerAggregateRatin
      *
      * @return static
      *
-     * @see http://schema.org/mainEntityOfPage
+     * @see https://schema.org/mainEntityOfPage
      */
     public function mainEntityOfPage($mainEntityOfPage)
     {
@@ -181,7 +184,7 @@ class EmployerAggregateRating extends BaseType implements EmployerAggregateRatin
      *
      * @return static
      *
-     * @see http://schema.org/name
+     * @see https://schema.org/name
      */
     public function name($name)
     {
@@ -196,7 +199,7 @@ class EmployerAggregateRating extends BaseType implements EmployerAggregateRatin
      *
      * @return static
      *
-     * @see http://schema.org/potentialAction
+     * @see https://schema.org/potentialAction
      */
     public function potentialAction($potentialAction)
     {
@@ -210,11 +213,28 @@ class EmployerAggregateRating extends BaseType implements EmployerAggregateRatin
      *
      * @return static
      *
-     * @see http://schema.org/ratingCount
+     * @see https://schema.org/ratingCount
      */
     public function ratingCount($ratingCount)
     {
         return $this->setProperty('ratingCount', $ratingCount);
+    }
+
+    /**
+     * A short explanation (e.g. one to two sentences) providing background
+     * context and other information that led to the conclusion expressed in the
+     * rating. This is particularly applicable to ratings associated with "fact
+     * check" markup using [[ClaimReview]].
+     *
+     * @param string|string[] $ratingExplanation
+     *
+     * @return static
+     *
+     * @see https://schema.org/ratingExplanation
+     */
+    public function ratingExplanation($ratingExplanation)
+    {
+        return $this->setProperty('ratingExplanation', $ratingExplanation);
     }
 
     /**
@@ -231,7 +251,7 @@ class EmployerAggregateRating extends BaseType implements EmployerAggregateRatin
      *
      * @return static
      *
-     * @see http://schema.org/ratingValue
+     * @see https://schema.org/ratingValue
      */
     public function ratingValue($ratingValue)
     {
@@ -246,7 +266,7 @@ class EmployerAggregateRating extends BaseType implements EmployerAggregateRatin
      *
      * @return static
      *
-     * @see http://schema.org/reviewAspect
+     * @see https://schema.org/reviewAspect
      */
     public function reviewAspect($reviewAspect)
     {
@@ -260,7 +280,7 @@ class EmployerAggregateRating extends BaseType implements EmployerAggregateRatin
      *
      * @return static
      *
-     * @see http://schema.org/reviewCount
+     * @see https://schema.org/reviewCount
      */
     public function reviewCount($reviewCount)
     {
@@ -276,7 +296,7 @@ class EmployerAggregateRating extends BaseType implements EmployerAggregateRatin
      *
      * @return static
      *
-     * @see http://schema.org/sameAs
+     * @see https://schema.org/sameAs
      */
     public function sameAs($sameAs)
     {
@@ -290,7 +310,7 @@ class EmployerAggregateRating extends BaseType implements EmployerAggregateRatin
      *
      * @return static
      *
-     * @see http://schema.org/subjectOf
+     * @see https://schema.org/subjectOf
      */
     public function subjectOf($subjectOf)
     {
@@ -304,7 +324,7 @@ class EmployerAggregateRating extends BaseType implements EmployerAggregateRatin
      *
      * @return static
      *
-     * @see http://schema.org/url
+     * @see https://schema.org/url
      */
     public function url($url)
     {
@@ -319,7 +339,7 @@ class EmployerAggregateRating extends BaseType implements EmployerAggregateRatin
      *
      * @return static
      *
-     * @see http://schema.org/worstRating
+     * @see https://schema.org/worstRating
      */
     public function worstRating($worstRating)
     {

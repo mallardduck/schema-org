@@ -36,6 +36,8 @@ interface LoanOrCreditContract
 
     public function feesAndCommissionsSpecification($feesAndCommissionsSpecification);
 
+    public function gracePeriod($gracePeriod);
+
     public function hasOfferCatalog($hasOfferCatalog);
 
     public function hoursAvailable($hoursAvailable);
@@ -50,7 +52,11 @@ interface LoanOrCreditContract
 
     public function isSimilarTo($isSimilarTo);
 
+    public function loanRepaymentForm($loanRepaymentForm);
+
     public function loanTerm($loanTerm);
+
+    public function loanType($loanType);
 
     public function logo($logo);
 
@@ -67,6 +73,10 @@ interface LoanOrCreditContract
     public function provider($provider);
 
     public function providerMobility($providerMobility);
+
+    public function recourseLoan($recourseLoan);
+
+    public function renegotiableLoan($renegotiableLoan);
 
     public function requiredCollateral($requiredCollateral);
 
@@ -85,6 +95,8 @@ interface LoanOrCreditContract
     public function slogan($slogan);
 
     public function subjectOf($subjectOf);
+
+    public function termsOfService($termsOfService);
 
     public function url($url);
 

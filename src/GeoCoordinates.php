@@ -10,7 +10,7 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
 /**
  * The geographic coordinates of a place or event.
  *
- * @see http://schema.org/GeoCoordinates
+ * @see https://schema.org/GeoCoordinates
  *
  */
 class GeoCoordinates extends BaseType implements GeoCoordinatesContract, IntangibleContract, StructuredValueContract, ThingContract
@@ -27,7 +27,7 @@ class GeoCoordinates extends BaseType implements GeoCoordinatesContract, Intangi
      *
      * @return static
      *
-     * @see http://schema.org/additionalType
+     * @see https://schema.org/additionalType
      */
     public function additionalType($additionalType)
     {
@@ -41,7 +41,7 @@ class GeoCoordinates extends BaseType implements GeoCoordinatesContract, Intangi
      *
      * @return static
      *
-     * @see http://schema.org/address
+     * @see https://schema.org/address
      */
     public function address($address)
     {
@@ -56,7 +56,7 @@ class GeoCoordinates extends BaseType implements GeoCoordinatesContract, Intangi
      *
      * @return static
      *
-     * @see http://schema.org/addressCountry
+     * @see https://schema.org/addressCountry
      */
     public function addressCountry($addressCountry)
     {
@@ -70,7 +70,7 @@ class GeoCoordinates extends BaseType implements GeoCoordinatesContract, Intangi
      *
      * @return static
      *
-     * @see http://schema.org/alternateName
+     * @see https://schema.org/alternateName
      */
     public function alternateName($alternateName)
     {
@@ -84,7 +84,7 @@ class GeoCoordinates extends BaseType implements GeoCoordinatesContract, Intangi
      *
      * @return static
      *
-     * @see http://schema.org/description
+     * @see https://schema.org/description
      */
     public function description($description)
     {
@@ -101,7 +101,7 @@ class GeoCoordinates extends BaseType implements GeoCoordinatesContract, Intangi
      *
      * @return static
      *
-     * @see http://schema.org/disambiguatingDescription
+     * @see https://schema.org/disambiguatingDescription
      */
     public function disambiguatingDescription($disambiguatingDescription)
     {
@@ -118,7 +118,7 @@ class GeoCoordinates extends BaseType implements GeoCoordinatesContract, Intangi
      *
      * @return static
      *
-     * @see http://schema.org/elevation
+     * @see https://schema.org/elevation
      */
     public function elevation($elevation)
     {
@@ -136,7 +136,7 @@ class GeoCoordinates extends BaseType implements GeoCoordinatesContract, Intangi
      *
      * @return static
      *
-     * @see http://schema.org/identifier
+     * @see https://schema.org/identifier
      */
     public function identifier($identifier)
     {
@@ -151,7 +151,7 @@ class GeoCoordinates extends BaseType implements GeoCoordinatesContract, Intangi
      *
      * @return static
      *
-     * @see http://schema.org/image
+     * @see https://schema.org/image
      */
     public function image($image)
     {
@@ -166,7 +166,7 @@ class GeoCoordinates extends BaseType implements GeoCoordinatesContract, Intangi
      *
      * @return static
      *
-     * @see http://schema.org/latitude
+     * @see https://schema.org/latitude
      */
     public function latitude($latitude)
     {
@@ -181,7 +181,7 @@ class GeoCoordinates extends BaseType implements GeoCoordinatesContract, Intangi
      *
      * @return static
      *
-     * @see http://schema.org/longitude
+     * @see https://schema.org/longitude
      */
     public function longitude($longitude)
     {
@@ -197,7 +197,7 @@ class GeoCoordinates extends BaseType implements GeoCoordinatesContract, Intangi
      *
      * @return static
      *
-     * @see http://schema.org/mainEntityOfPage
+     * @see https://schema.org/mainEntityOfPage
      */
     public function mainEntityOfPage($mainEntityOfPage)
     {
@@ -211,7 +211,7 @@ class GeoCoordinates extends BaseType implements GeoCoordinatesContract, Intangi
      *
      * @return static
      *
-     * @see http://schema.org/name
+     * @see https://schema.org/name
      */
     public function name($name)
     {
@@ -225,7 +225,7 @@ class GeoCoordinates extends BaseType implements GeoCoordinatesContract, Intangi
      *
      * @return static
      *
-     * @see http://schema.org/postalCode
+     * @see https://schema.org/postalCode
      */
     public function postalCode($postalCode)
     {
@@ -240,7 +240,7 @@ class GeoCoordinates extends BaseType implements GeoCoordinatesContract, Intangi
      *
      * @return static
      *
-     * @see http://schema.org/potentialAction
+     * @see https://schema.org/potentialAction
      */
     public function potentialAction($potentialAction)
     {
@@ -256,7 +256,7 @@ class GeoCoordinates extends BaseType implements GeoCoordinatesContract, Intangi
      *
      * @return static
      *
-     * @see http://schema.org/sameAs
+     * @see https://schema.org/sameAs
      */
     public function sameAs($sameAs)
     {
@@ -270,7 +270,7 @@ class GeoCoordinates extends BaseType implements GeoCoordinatesContract, Intangi
      *
      * @return static
      *
-     * @see http://schema.org/subjectOf
+     * @see https://schema.org/subjectOf
      */
     public function subjectOf($subjectOf)
     {
@@ -284,7 +284,7 @@ class GeoCoordinates extends BaseType implements GeoCoordinatesContract, Intangi
      *
      * @return static
      *
-     * @see http://schema.org/url
+     * @see https://schema.org/url
      */
     public function url($url)
     {

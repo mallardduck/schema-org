@@ -9,8 +9,11 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
 /**
  * A musical composition.
  *
- * @see http://schema.org/MusicComposition
+ * @see https://schema.org/MusicComposition
  *
+ *
+ * External Sources:
+ * @see http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#MBZ
  */
 class MusicComposition extends BaseType implements MusicCompositionContract, CreativeWorkContract, ThingContract
 {
@@ -21,11 +24,25 @@ class MusicComposition extends BaseType implements MusicCompositionContract, Cre
      *
      * @return static
      *
-     * @see http://schema.org/about
+     * @see https://schema.org/about
      */
     public function about($about)
     {
         return $this->setProperty('about', $about);
+    }
+
+    /**
+     * An abstract is a short description that summarizes a [[CreativeWork]].
+     *
+     * @param string|string[] $abstract
+     *
+     * @return static
+     *
+     * @see https://schema.org/abstract
+     */
+    public function abstract($abstract)
+    {
+        return $this->setProperty('abstract', $abstract);
     }
 
     /**
@@ -38,7 +55,7 @@ class MusicComposition extends BaseType implements MusicCompositionContract, Cre
      *
      * @return static
      *
-     * @see http://schema.org/accessMode
+     * @see https://schema.org/accessMode
      */
     public function accessMode($accessMode)
     {
@@ -54,7 +71,7 @@ class MusicComposition extends BaseType implements MusicCompositionContract, Cre
      *
      * @return static
      *
-     * @see http://schema.org/accessModeSufficient
+     * @see https://schema.org/accessModeSufficient
      */
     public function accessModeSufficient($accessModeSufficient)
     {
@@ -70,7 +87,7 @@ class MusicComposition extends BaseType implements MusicCompositionContract, Cre
      *
      * @return static
      *
-     * @see http://schema.org/accessibilityAPI
+     * @see https://schema.org/accessibilityAPI
      */
     public function accessibilityAPI($accessibilityAPI)
     {
@@ -86,7 +103,7 @@ class MusicComposition extends BaseType implements MusicCompositionContract, Cre
      *
      * @return static
      *
-     * @see http://schema.org/accessibilityControl
+     * @see https://schema.org/accessibilityControl
      */
     public function accessibilityControl($accessibilityControl)
     {
@@ -102,7 +119,7 @@ class MusicComposition extends BaseType implements MusicCompositionContract, Cre
      *
      * @return static
      *
-     * @see http://schema.org/accessibilityFeature
+     * @see https://schema.org/accessibilityFeature
      */
     public function accessibilityFeature($accessibilityFeature)
     {
@@ -119,7 +136,7 @@ class MusicComposition extends BaseType implements MusicCompositionContract, Cre
      *
      * @return static
      *
-     * @see http://schema.org/accessibilityHazard
+     * @see https://schema.org/accessibilityHazard
      */
     public function accessibilityHazard($accessibilityHazard)
     {
@@ -137,7 +154,7 @@ class MusicComposition extends BaseType implements MusicCompositionContract, Cre
      *
      * @return static
      *
-     * @see http://schema.org/accessibilitySummary
+     * @see https://schema.org/accessibilitySummary
      */
     public function accessibilitySummary($accessibilitySummary)
     {
@@ -151,11 +168,26 @@ class MusicComposition extends BaseType implements MusicCompositionContract, Cre
      *
      * @return static
      *
-     * @see http://schema.org/accountablePerson
+     * @see https://schema.org/accountablePerson
      */
     public function accountablePerson($accountablePerson)
     {
         return $this->setProperty('accountablePerson', $accountablePerson);
+    }
+
+    /**
+     * Indicates a page documenting how licenses can be purchased or otherwise
+     * acquired, for the current item.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\CreativeWorkContract|\Spatie\SchemaOrg\Contracts\CreativeWorkContract[]|string|string[] $acquireLicensePage
+     *
+     * @return static
+     *
+     * @see https://schema.org/acquireLicensePage
+     */
+    public function acquireLicensePage($acquireLicensePage)
+    {
+        return $this->setProperty('acquireLicensePage', $acquireLicensePage);
     }
 
     /**
@@ -170,7 +202,7 @@ class MusicComposition extends BaseType implements MusicCompositionContract, Cre
      *
      * @return static
      *
-     * @see http://schema.org/additionalType
+     * @see https://schema.org/additionalType
      */
     public function additionalType($additionalType)
     {
@@ -185,7 +217,7 @@ class MusicComposition extends BaseType implements MusicCompositionContract, Cre
      *
      * @return static
      *
-     * @see http://schema.org/aggregateRating
+     * @see https://schema.org/aggregateRating
      */
     public function aggregateRating($aggregateRating)
     {
@@ -199,7 +231,7 @@ class MusicComposition extends BaseType implements MusicCompositionContract, Cre
      *
      * @return static
      *
-     * @see http://schema.org/alternateName
+     * @see https://schema.org/alternateName
      */
     public function alternateName($alternateName)
     {
@@ -213,11 +245,26 @@ class MusicComposition extends BaseType implements MusicCompositionContract, Cre
      *
      * @return static
      *
-     * @see http://schema.org/alternativeHeadline
+     * @see https://schema.org/alternativeHeadline
      */
     public function alternativeHeadline($alternativeHeadline)
     {
         return $this->setProperty('alternativeHeadline', $alternativeHeadline);
+    }
+
+    /**
+     * The item being described is intended to assess the competency or learning
+     * outcome defined by the referenced term.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\DefinedTermContract|\Spatie\SchemaOrg\Contracts\DefinedTermContract[]|string|string[] $assesses
+     *
+     * @return static
+     *
+     * @see https://schema.org/assesses
+     */
+    public function assesses($assesses)
+    {
+        return $this->setProperty('assesses', $assesses);
     }
 
     /**
@@ -228,7 +275,7 @@ class MusicComposition extends BaseType implements MusicCompositionContract, Cre
      *
      * @return static
      *
-     * @see http://schema.org/associatedMedia
+     * @see https://schema.org/associatedMedia
      */
     public function associatedMedia($associatedMedia)
     {
@@ -242,7 +289,7 @@ class MusicComposition extends BaseType implements MusicCompositionContract, Cre
      *
      * @return static
      *
-     * @see http://schema.org/audience
+     * @see https://schema.org/audience
      */
     public function audience($audience)
     {
@@ -256,7 +303,7 @@ class MusicComposition extends BaseType implements MusicCompositionContract, Cre
      *
      * @return static
      *
-     * @see http://schema.org/audio
+     * @see https://schema.org/audio
      */
     public function audio($audio)
     {
@@ -272,7 +319,7 @@ class MusicComposition extends BaseType implements MusicCompositionContract, Cre
      *
      * @return static
      *
-     * @see http://schema.org/author
+     * @see https://schema.org/author
      */
     public function author($author)
     {
@@ -286,7 +333,7 @@ class MusicComposition extends BaseType implements MusicCompositionContract, Cre
      *
      * @return static
      *
-     * @see http://schema.org/award
+     * @see https://schema.org/award
      */
     public function award($award)
     {
@@ -300,7 +347,7 @@ class MusicComposition extends BaseType implements MusicCompositionContract, Cre
      *
      * @return static
      *
-     * @see http://schema.org/awards
+     * @see https://schema.org/awards
      */
     public function awards($awards)
     {
@@ -314,7 +361,7 @@ class MusicComposition extends BaseType implements MusicCompositionContract, Cre
      *
      * @return static
      *
-     * @see http://schema.org/character
+     * @see https://schema.org/character
      */
     public function character($character)
     {
@@ -329,7 +376,7 @@ class MusicComposition extends BaseType implements MusicCompositionContract, Cre
      *
      * @return static
      *
-     * @see http://schema.org/citation
+     * @see https://schema.org/citation
      */
     public function citation($citation)
     {
@@ -343,7 +390,7 @@ class MusicComposition extends BaseType implements MusicCompositionContract, Cre
      *
      * @return static
      *
-     * @see http://schema.org/comment
+     * @see https://schema.org/comment
      */
     public function comment($comment)
     {
@@ -359,7 +406,7 @@ class MusicComposition extends BaseType implements MusicCompositionContract, Cre
      *
      * @return static
      *
-     * @see http://schema.org/commentCount
+     * @see https://schema.org/commentCount
      */
     public function commentCount($commentCount)
     {
@@ -374,11 +421,32 @@ class MusicComposition extends BaseType implements MusicCompositionContract, Cre
      *
      * @return static
      *
-     * @see http://schema.org/composer
+     * @see https://schema.org/composer
      */
     public function composer($composer)
     {
         return $this->setProperty('composer', $composer);
+    }
+
+    /**
+     * Conditions that affect the availability of, or method(s) of access to, an
+     * item. Typically used for real world items such as an [[ArchiveComponent]]
+     * held by an [[ArchiveOrganization]]. This property is not suitable for use
+     * as a general Web access control mechanism. It is expressed only in
+     * natural language.
+     * 
+     * For example "Available by appointment from the Reading Room" or
+     * "Accessible only from logged-in accounts ".
+     *
+     * @param string|string[] $conditionsOfAccess
+     *
+     * @return static
+     *
+     * @see https://schema.org/conditionsOfAccess
+     */
+    public function conditionsOfAccess($conditionsOfAccess)
+    {
+        return $this->setProperty('conditionsOfAccess', $conditionsOfAccess);
     }
 
     /**
@@ -389,7 +457,7 @@ class MusicComposition extends BaseType implements MusicCompositionContract, Cre
      *
      * @return static
      *
-     * @see http://schema.org/contentLocation
+     * @see https://schema.org/contentLocation
      */
     public function contentLocation($contentLocation)
     {
@@ -403,11 +471,26 @@ class MusicComposition extends BaseType implements MusicCompositionContract, Cre
      *
      * @return static
      *
-     * @see http://schema.org/contentRating
+     * @see https://schema.org/contentRating
      */
     public function contentRating($contentRating)
     {
         return $this->setProperty('contentRating', $contentRating);
+    }
+
+    /**
+     * The specific time described by a creative work, for works (e.g. articles,
+     * video objects etc.) that emphasise a particular moment within an Event.
+     *
+     * @param \DateTimeInterface|\DateTimeInterface[] $contentReferenceTime
+     *
+     * @return static
+     *
+     * @see https://schema.org/contentReferenceTime
+     */
+    public function contentReferenceTime($contentReferenceTime)
+    {
+        return $this->setProperty('contentReferenceTime', $contentReferenceTime);
     }
 
     /**
@@ -417,7 +500,7 @@ class MusicComposition extends BaseType implements MusicCompositionContract, Cre
      *
      * @return static
      *
-     * @see http://schema.org/contributor
+     * @see https://schema.org/contributor
      */
     public function contributor($contributor)
     {
@@ -431,7 +514,7 @@ class MusicComposition extends BaseType implements MusicCompositionContract, Cre
      *
      * @return static
      *
-     * @see http://schema.org/copyrightHolder
+     * @see https://schema.org/copyrightHolder
      */
     public function copyrightHolder($copyrightHolder)
     {
@@ -446,11 +529,43 @@ class MusicComposition extends BaseType implements MusicCompositionContract, Cre
      *
      * @return static
      *
-     * @see http://schema.org/copyrightYear
+     * @see https://schema.org/copyrightYear
      */
     public function copyrightYear($copyrightYear)
     {
         return $this->setProperty('copyrightYear', $copyrightYear);
+    }
+
+    /**
+     * Indicates a correction to a [[CreativeWork]], either via a
+     * [[CorrectionComment]], textually or in another document.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\CorrectionCommentContract|\Spatie\SchemaOrg\Contracts\CorrectionCommentContract[]|string|string[] $correction
+     *
+     * @return static
+     *
+     * @see https://schema.org/correction
+     */
+    public function correction($correction)
+    {
+        return $this->setProperty('correction', $correction);
+    }
+
+    /**
+     * The status of a creative work in terms of its stage in a lifecycle.
+     * Example terms include Incomplete, Draft, Published, Obsolete. Some
+     * organizations define a set of terms for the stages of their publication
+     * lifecycle.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\DefinedTermContract|\Spatie\SchemaOrg\Contracts\DefinedTermContract[]|string|string[] $creativeWorkStatus
+     *
+     * @return static
+     *
+     * @see https://schema.org/creativeWorkStatus
+     */
+    public function creativeWorkStatus($creativeWorkStatus)
+    {
+        return $this->setProperty('creativeWorkStatus', $creativeWorkStatus);
     }
 
     /**
@@ -461,7 +576,7 @@ class MusicComposition extends BaseType implements MusicCompositionContract, Cre
      *
      * @return static
      *
-     * @see http://schema.org/creator
+     * @see https://schema.org/creator
      */
     public function creator($creator)
     {
@@ -476,7 +591,7 @@ class MusicComposition extends BaseType implements MusicCompositionContract, Cre
      *
      * @return static
      *
-     * @see http://schema.org/dateCreated
+     * @see https://schema.org/dateCreated
      */
     public function dateCreated($dateCreated)
     {
@@ -491,7 +606,7 @@ class MusicComposition extends BaseType implements MusicCompositionContract, Cre
      *
      * @return static
      *
-     * @see http://schema.org/dateModified
+     * @see https://schema.org/dateModified
      */
     public function dateModified($dateModified)
     {
@@ -505,7 +620,7 @@ class MusicComposition extends BaseType implements MusicCompositionContract, Cre
      *
      * @return static
      *
-     * @see http://schema.org/datePublished
+     * @see https://schema.org/datePublished
      */
     public function datePublished($datePublished)
     {
@@ -519,7 +634,7 @@ class MusicComposition extends BaseType implements MusicCompositionContract, Cre
      *
      * @return static
      *
-     * @see http://schema.org/description
+     * @see https://schema.org/description
      */
     public function description($description)
     {
@@ -536,7 +651,7 @@ class MusicComposition extends BaseType implements MusicCompositionContract, Cre
      *
      * @return static
      *
-     * @see http://schema.org/disambiguatingDescription
+     * @see https://schema.org/disambiguatingDescription
      */
     public function disambiguatingDescription($disambiguatingDescription)
     {
@@ -550,11 +665,37 @@ class MusicComposition extends BaseType implements MusicCompositionContract, Cre
      *
      * @return static
      *
-     * @see http://schema.org/discussionUrl
+     * @see https://schema.org/discussionUrl
      */
     public function discussionUrl($discussionUrl)
     {
         return $this->setProperty('discussionUrl', $discussionUrl);
+    }
+
+    /**
+     * An [EIDR](https://eidr.org/) (Entertainment Identifier Registry)
+     * [[identifier]] representing a specific edit / edition for a work of film
+     * or television.
+     * 
+     * For example, the motion picture known as "Ghostbusters" whose
+     * [[titleEIDR]] is "10.5240/7EC7-228A-510A-053E-CBB8-J", has several edits
+     * e.g. "10.5240/1F2A-E1C5-680A-14C6-E76B-I" and
+     * "10.5240/8A35-3BEE-6497-5D12-9E4F-3".
+     * 
+     * Since schema.org types like [[Movie]] and [[TVEpisode]] can be used for
+     * both works and their multiple expressions, it is possible to use
+     * [[titleEIDR]] alone (for a general description), or alongside
+     * [[editEIDR]] for a more edit-specific description.
+     *
+     * @param string|string[] $editEIDR
+     *
+     * @return static
+     *
+     * @see https://schema.org/editEIDR
+     */
+    public function editEIDR($editEIDR)
+    {
+        return $this->setProperty('editEIDR', $editEIDR);
     }
 
     /**
@@ -564,7 +705,7 @@ class MusicComposition extends BaseType implements MusicCompositionContract, Cre
      *
      * @return static
      *
-     * @see http://schema.org/editor
+     * @see https://schema.org/editor
      */
     public function editor($editor)
     {
@@ -573,16 +714,36 @@ class MusicComposition extends BaseType implements MusicCompositionContract, Cre
 
     /**
      * An alignment to an established educational framework.
+     * 
+     * This property should not be used where the nature of the alignment can be
+     * described using a simple property, for example to express that a resource
+     * [[teaches]] or [[assesses]] a competency.
      *
      * @param \Spatie\SchemaOrg\Contracts\AlignmentObjectContract|\Spatie\SchemaOrg\Contracts\AlignmentObjectContract[] $educationalAlignment
      *
      * @return static
      *
-     * @see http://schema.org/educationalAlignment
+     * @see https://schema.org/educationalAlignment
      */
     public function educationalAlignment($educationalAlignment)
     {
         return $this->setProperty('educationalAlignment', $educationalAlignment);
+    }
+
+    /**
+     * The level in terms of progression through an educational or training
+     * context. Examples of educational levels include 'beginner',
+     * 'intermediate' or 'advanced', and formal sets of level indicators.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\DefinedTermContract|\Spatie\SchemaOrg\Contracts\DefinedTermContract[]|string|string[] $educationalLevel
+     *
+     * @return static
+     *
+     * @see https://schema.org/educationalLevel
+     */
+    public function educationalLevel($educationalLevel)
+    {
+        return $this->setProperty('educationalLevel', $educationalLevel);
     }
 
     /**
@@ -593,7 +754,7 @@ class MusicComposition extends BaseType implements MusicCompositionContract, Cre
      *
      * @return static
      *
-     * @see http://schema.org/educationalUse
+     * @see https://schema.org/educationalUse
      */
     public function educationalUse($educationalUse)
     {
@@ -608,7 +769,7 @@ class MusicComposition extends BaseType implements MusicCompositionContract, Cre
      *
      * @return static
      *
-     * @see http://schema.org/encoding
+     * @see https://schema.org/encoding
      */
     public function encoding($encoding)
     {
@@ -635,7 +796,7 @@ class MusicComposition extends BaseType implements MusicCompositionContract, Cre
      *
      * @return static
      *
-     * @see http://schema.org/encodingFormat
+     * @see https://schema.org/encodingFormat
      */
     public function encodingFormat($encodingFormat)
     {
@@ -649,7 +810,7 @@ class MusicComposition extends BaseType implements MusicCompositionContract, Cre
      *
      * @return static
      *
-     * @see http://schema.org/encodings
+     * @see https://schema.org/encodings
      */
     public function encodings($encodings)
     {
@@ -664,7 +825,7 @@ class MusicComposition extends BaseType implements MusicCompositionContract, Cre
      *
      * @return static
      *
-     * @see http://schema.org/exampleOfWork
+     * @see https://schema.org/exampleOfWork
      */
     public function exampleOfWork($exampleOfWork)
     {
@@ -682,7 +843,7 @@ class MusicComposition extends BaseType implements MusicCompositionContract, Cre
      *
      * @return static
      *
-     * @see http://schema.org/expires
+     * @see https://schema.org/expires
      */
     public function expires($expires)
     {
@@ -703,7 +864,7 @@ class MusicComposition extends BaseType implements MusicCompositionContract, Cre
      *
      * @return static
      *
-     * @see http://schema.org/fileFormat
+     * @see https://schema.org/fileFormat
      */
     public function fileFormat($fileFormat)
     {
@@ -717,7 +878,7 @@ class MusicComposition extends BaseType implements MusicCompositionContract, Cre
      *
      * @return static
      *
-     * @see http://schema.org/firstPerformance
+     * @see https://schema.org/firstPerformance
      */
     public function firstPerformance($firstPerformance)
     {
@@ -732,7 +893,7 @@ class MusicComposition extends BaseType implements MusicCompositionContract, Cre
      *
      * @return static
      *
-     * @see http://schema.org/funder
+     * @see https://schema.org/funder
      */
     public function funder($funder)
     {
@@ -746,7 +907,7 @@ class MusicComposition extends BaseType implements MusicCompositionContract, Cre
      *
      * @return static
      *
-     * @see http://schema.org/genre
+     * @see https://schema.org/genre
      */
     public function genre($genre)
     {
@@ -761,7 +922,7 @@ class MusicComposition extends BaseType implements MusicCompositionContract, Cre
      *
      * @return static
      *
-     * @see http://schema.org/hasPart
+     * @see https://schema.org/hasPart
      */
     public function hasPart($hasPart)
     {
@@ -775,7 +936,7 @@ class MusicComposition extends BaseType implements MusicCompositionContract, Cre
      *
      * @return static
      *
-     * @see http://schema.org/headline
+     * @see https://schema.org/headline
      */
     public function headline($headline)
     {
@@ -793,7 +954,7 @@ class MusicComposition extends BaseType implements MusicCompositionContract, Cre
      *
      * @return static
      *
-     * @see http://schema.org/identifier
+     * @see https://schema.org/identifier
      */
     public function identifier($identifier)
     {
@@ -808,7 +969,7 @@ class MusicComposition extends BaseType implements MusicCompositionContract, Cre
      *
      * @return static
      *
-     * @see http://schema.org/image
+     * @see https://schema.org/image
      */
     public function image($image)
     {
@@ -825,7 +986,7 @@ class MusicComposition extends BaseType implements MusicCompositionContract, Cre
      *
      * @return static
      *
-     * @see http://schema.org/inLanguage
+     * @see https://schema.org/inLanguage
      */
     public function inLanguage($inLanguage)
     {
@@ -840,7 +1001,7 @@ class MusicComposition extends BaseType implements MusicCompositionContract, Cre
      *
      * @return static
      *
-     * @see http://schema.org/includedComposition
+     * @see https://schema.org/includedComposition
      */
     public function includedComposition($includedComposition)
     {
@@ -856,7 +1017,7 @@ class MusicComposition extends BaseType implements MusicCompositionContract, Cre
      *
      * @return static
      *
-     * @see http://schema.org/interactionStatistic
+     * @see https://schema.org/interactionStatistic
      */
     public function interactionStatistic($interactionStatistic)
     {
@@ -871,7 +1032,7 @@ class MusicComposition extends BaseType implements MusicCompositionContract, Cre
      *
      * @return static
      *
-     * @see http://schema.org/interactivityType
+     * @see https://schema.org/interactivityType
      */
     public function interactivityType($interactivityType)
     {
@@ -885,7 +1046,7 @@ class MusicComposition extends BaseType implements MusicCompositionContract, Cre
      *
      * @return static
      *
-     * @see http://schema.org/isAccessibleForFree
+     * @see https://schema.org/isAccessibleForFree
      */
     public function isAccessibleForFree($isAccessibleForFree)
     {
@@ -900,7 +1061,7 @@ class MusicComposition extends BaseType implements MusicCompositionContract, Cre
      *
      * @return static
      *
-     * @see http://schema.org/isBasedOn
+     * @see https://schema.org/isBasedOn
      */
     public function isBasedOn($isBasedOn)
     {
@@ -916,7 +1077,7 @@ class MusicComposition extends BaseType implements MusicCompositionContract, Cre
      *
      * @return static
      *
-     * @see http://schema.org/isBasedOnUrl
+     * @see https://schema.org/isBasedOnUrl
      */
     public function isBasedOnUrl($isBasedOnUrl)
     {
@@ -930,7 +1091,7 @@ class MusicComposition extends BaseType implements MusicCompositionContract, Cre
      *
      * @return static
      *
-     * @see http://schema.org/isFamilyFriendly
+     * @see https://schema.org/isFamilyFriendly
      */
     public function isFamilyFriendly($isFamilyFriendly)
     {
@@ -945,7 +1106,7 @@ class MusicComposition extends BaseType implements MusicCompositionContract, Cre
      *
      * @return static
      *
-     * @see http://schema.org/isPartOf
+     * @see https://schema.org/isPartOf
      */
     public function isPartOf($isPartOf)
     {
@@ -959,7 +1120,7 @@ class MusicComposition extends BaseType implements MusicCompositionContract, Cre
      *
      * @return static
      *
-     * @see http://schema.org/iswcCode
+     * @see https://schema.org/iswcCode
      */
     public function iswcCode($iswcCode)
     {
@@ -974,7 +1135,7 @@ class MusicComposition extends BaseType implements MusicCompositionContract, Cre
      *
      * @return static
      *
-     * @see http://schema.org/keywords
+     * @see https://schema.org/keywords
      */
     public function keywords($keywords)
     {
@@ -989,7 +1150,7 @@ class MusicComposition extends BaseType implements MusicCompositionContract, Cre
      *
      * @return static
      *
-     * @see http://schema.org/learningResourceType
+     * @see https://schema.org/learningResourceType
      */
     public function learningResourceType($learningResourceType)
     {
@@ -1004,7 +1165,7 @@ class MusicComposition extends BaseType implements MusicCompositionContract, Cre
      *
      * @return static
      *
-     * @see http://schema.org/license
+     * @see https://schema.org/license
      */
     public function license($license)
     {
@@ -1019,7 +1180,7 @@ class MusicComposition extends BaseType implements MusicCompositionContract, Cre
      *
      * @return static
      *
-     * @see http://schema.org/locationCreated
+     * @see https://schema.org/locationCreated
      */
     public function locationCreated($locationCreated)
     {
@@ -1033,7 +1194,7 @@ class MusicComposition extends BaseType implements MusicCompositionContract, Cre
      *
      * @return static
      *
-     * @see http://schema.org/lyricist
+     * @see https://schema.org/lyricist
      */
     public function lyricist($lyricist)
     {
@@ -1047,7 +1208,7 @@ class MusicComposition extends BaseType implements MusicCompositionContract, Cre
      *
      * @return static
      *
-     * @see http://schema.org/lyrics
+     * @see https://schema.org/lyrics
      */
     public function lyrics($lyrics)
     {
@@ -1062,7 +1223,7 @@ class MusicComposition extends BaseType implements MusicCompositionContract, Cre
      *
      * @return static
      *
-     * @see http://schema.org/mainEntity
+     * @see https://schema.org/mainEntity
      */
     public function mainEntity($mainEntity)
     {
@@ -1078,11 +1239,37 @@ class MusicComposition extends BaseType implements MusicCompositionContract, Cre
      *
      * @return static
      *
-     * @see http://schema.org/mainEntityOfPage
+     * @see https://schema.org/mainEntityOfPage
      */
     public function mainEntityOfPage($mainEntityOfPage)
     {
         return $this->setProperty('mainEntityOfPage', $mainEntityOfPage);
+    }
+
+    /**
+     * A maintainer of a [[Dataset]], software package
+     * ([[SoftwareApplication]]), or other [[Project]]. A maintainer is a
+     * [[Person]] or [[Organization]] that manages contributions to, and/or
+     * publication of, some (typically complex) artifact. It is common for
+     * distributions of software and data to be based on "upstream" sources.
+     * When [[maintainer]] is applied to a specific version of something e.g. a
+     * particular version or packaging of a [[Dataset]], it is always  possible
+     * that the upstream source has a different maintainer. The [[isBasedOn]]
+     * property can be used to indicate such relationships between datasets to
+     * make the different maintenance roles clear. Similarly in the case of
+     * software, a package may have dedicated maintainers working on integration
+     * into software distributions such as Ubuntu, as well as upstream
+     * maintainers of the underlying work.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\OrganizationContract|\Spatie\SchemaOrg\Contracts\OrganizationContract[]|\Spatie\SchemaOrg\Contracts\PersonContract|\Spatie\SchemaOrg\Contracts\PersonContract[] $maintainer
+     *
+     * @return static
+     *
+     * @see https://schema.org/maintainer
+     */
+    public function maintainer($maintainer)
+    {
+        return $this->setProperty('maintainer', $maintainer);
     }
 
     /**
@@ -1093,11 +1280,26 @@ class MusicComposition extends BaseType implements MusicCompositionContract, Cre
      *
      * @return static
      *
-     * @see http://schema.org/material
+     * @see https://schema.org/material
      */
     public function material($material)
     {
         return $this->setProperty('material', $material);
+    }
+
+    /**
+     * The quantity of the materials being described or an expression of the
+     * physical space they occupy.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\QuantitativeValueContract|\Spatie\SchemaOrg\Contracts\QuantitativeValueContract[]|string|string[] $materialExtent
+     *
+     * @return static
+     *
+     * @see https://schema.org/materialExtent
+     */
+    public function materialExtent($materialExtent)
+    {
+        return $this->setProperty('materialExtent', $materialExtent);
     }
 
     /**
@@ -1108,7 +1310,7 @@ class MusicComposition extends BaseType implements MusicCompositionContract, Cre
      *
      * @return static
      *
-     * @see http://schema.org/mentions
+     * @see https://schema.org/mentions
      */
     public function mentions($mentions)
     {
@@ -1122,7 +1324,7 @@ class MusicComposition extends BaseType implements MusicCompositionContract, Cre
      *
      * @return static
      *
-     * @see http://schema.org/musicArrangement
+     * @see https://schema.org/musicArrangement
      */
     public function musicArrangement($musicArrangement)
     {
@@ -1136,7 +1338,7 @@ class MusicComposition extends BaseType implements MusicCompositionContract, Cre
      *
      * @return static
      *
-     * @see http://schema.org/musicCompositionForm
+     * @see https://schema.org/musicCompositionForm
      */
     public function musicCompositionForm($musicCompositionForm)
     {
@@ -1150,7 +1352,7 @@ class MusicComposition extends BaseType implements MusicCompositionContract, Cre
      *
      * @return static
      *
-     * @see http://schema.org/musicalKey
+     * @see https://schema.org/musicalKey
      */
     public function musicalKey($musicalKey)
     {
@@ -1164,7 +1366,7 @@ class MusicComposition extends BaseType implements MusicCompositionContract, Cre
      *
      * @return static
      *
-     * @see http://schema.org/name
+     * @see https://schema.org/name
      */
     public function name($name)
     {
@@ -1185,11 +1387,27 @@ class MusicComposition extends BaseType implements MusicCompositionContract, Cre
      *
      * @return static
      *
-     * @see http://schema.org/offers
+     * @see https://schema.org/offers
      */
     public function offers($offers)
     {
         return $this->setProperty('offers', $offers);
+    }
+
+    /**
+     * A pattern that something has, for example 'polka dot', 'striped',
+     * 'Canadian flag'. Values are typically expressed as text, although links
+     * to controlled value schemes are also supported.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\DefinedTermContract|\Spatie\SchemaOrg\Contracts\DefinedTermContract[]|string|string[] $pattern
+     *
+     * @return static
+     *
+     * @see https://schema.org/pattern
+     */
+    public function pattern($pattern)
+    {
+        return $this->setProperty('pattern', $pattern);
     }
 
     /**
@@ -1199,7 +1417,7 @@ class MusicComposition extends BaseType implements MusicCompositionContract, Cre
      *
      * @return static
      *
-     * @see http://schema.org/position
+     * @see https://schema.org/position
      */
     public function position($position)
     {
@@ -1214,7 +1432,7 @@ class MusicComposition extends BaseType implements MusicCompositionContract, Cre
      *
      * @return static
      *
-     * @see http://schema.org/potentialAction
+     * @see https://schema.org/potentialAction
      */
     public function potentialAction($potentialAction)
     {
@@ -1229,7 +1447,7 @@ class MusicComposition extends BaseType implements MusicCompositionContract, Cre
      *
      * @return static
      *
-     * @see http://schema.org/producer
+     * @see https://schema.org/producer
      */
     public function producer($producer)
     {
@@ -1245,7 +1463,7 @@ class MusicComposition extends BaseType implements MusicCompositionContract, Cre
      *
      * @return static
      *
-     * @see http://schema.org/provider
+     * @see https://schema.org/provider
      */
     public function provider($provider)
     {
@@ -1259,7 +1477,7 @@ class MusicComposition extends BaseType implements MusicCompositionContract, Cre
      *
      * @return static
      *
-     * @see http://schema.org/publication
+     * @see https://schema.org/publication
      */
     public function publication($publication)
     {
@@ -1273,11 +1491,25 @@ class MusicComposition extends BaseType implements MusicCompositionContract, Cre
      *
      * @return static
      *
-     * @see http://schema.org/publisher
+     * @see https://schema.org/publisher
      */
     public function publisher($publisher)
     {
         return $this->setProperty('publisher', $publisher);
+    }
+
+    /**
+     * The publishing division which published the comic.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\OrganizationContract|\Spatie\SchemaOrg\Contracts\OrganizationContract[] $publisherImprint
+     *
+     * @return static
+     *
+     * @see https://schema.org/publisherImprint
+     */
+    public function publisherImprint($publisherImprint)
+    {
+        return $this->setProperty('publisherImprint', $publisherImprint);
     }
 
     /**
@@ -1297,7 +1529,7 @@ class MusicComposition extends BaseType implements MusicCompositionContract, Cre
      *
      * @return static
      *
-     * @see http://schema.org/publishingPrinciples
+     * @see https://schema.org/publishingPrinciples
      */
     public function publishingPrinciples($publishingPrinciples)
     {
@@ -1311,7 +1543,7 @@ class MusicComposition extends BaseType implements MusicCompositionContract, Cre
      *
      * @return static
      *
-     * @see http://schema.org/recordedAs
+     * @see https://schema.org/recordedAs
      */
     public function recordedAs($recordedAs)
     {
@@ -1326,7 +1558,7 @@ class MusicComposition extends BaseType implements MusicCompositionContract, Cre
      *
      * @return static
      *
-     * @see http://schema.org/recordedAt
+     * @see https://schema.org/recordedAt
      */
     public function recordedAt($recordedAt)
     {
@@ -1341,7 +1573,7 @@ class MusicComposition extends BaseType implements MusicCompositionContract, Cre
      *
      * @return static
      *
-     * @see http://schema.org/releasedEvent
+     * @see https://schema.org/releasedEvent
      */
     public function releasedEvent($releasedEvent)
     {
@@ -1355,7 +1587,7 @@ class MusicComposition extends BaseType implements MusicCompositionContract, Cre
      *
      * @return static
      *
-     * @see http://schema.org/review
+     * @see https://schema.org/review
      */
     public function review($review)
     {
@@ -1369,7 +1601,7 @@ class MusicComposition extends BaseType implements MusicCompositionContract, Cre
      *
      * @return static
      *
-     * @see http://schema.org/reviews
+     * @see https://schema.org/reviews
      */
     public function reviews($reviews)
     {
@@ -1385,7 +1617,7 @@ class MusicComposition extends BaseType implements MusicCompositionContract, Cre
      *
      * @return static
      *
-     * @see http://schema.org/sameAs
+     * @see https://schema.org/sameAs
      */
     public function sameAs($sameAs)
     {
@@ -1395,18 +1627,87 @@ class MusicComposition extends BaseType implements MusicCompositionContract, Cre
     /**
      * Indicates (by URL or string) a particular version of a schema used in
      * some CreativeWork. For example, a document could declare a schemaVersion
-     * using an URL such as http://schema.org/version/2.0/ if precise indication
-     * of schema version was required by some application.
+     * using an URL such as https://schema.org/version/2.0/ if precise
+     * indication of schema version was required by some application.
      *
      * @param string|string[] $schemaVersion
      *
      * @return static
      *
-     * @see http://schema.org/schemaVersion
+     * @see https://schema.org/schemaVersion
      */
     public function schemaVersion($schemaVersion)
     {
         return $this->setProperty('schemaVersion', $schemaVersion);
+    }
+
+    /**
+     * Indicates the date on which the current structured data was generated /
+     * published. Typically used alongside [[sdPublisher]]
+     *
+     * @param \DateTimeInterface|\DateTimeInterface[] $sdDatePublished
+     *
+     * @return static
+     *
+     * @see https://schema.org/sdDatePublished
+     */
+    public function sdDatePublished($sdDatePublished)
+    {
+        return $this->setProperty('sdDatePublished', $sdDatePublished);
+    }
+
+    /**
+     * A license document that applies to this structured data, typically
+     * indicated by URL.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\CreativeWorkContract|\Spatie\SchemaOrg\Contracts\CreativeWorkContract[]|string|string[] $sdLicense
+     *
+     * @return static
+     *
+     * @see https://schema.org/sdLicense
+     */
+    public function sdLicense($sdLicense)
+    {
+        return $this->setProperty('sdLicense', $sdLicense);
+    }
+
+    /**
+     * Indicates the party responsible for generating and publishing the current
+     * structured data markup, typically in cases where the structured data is
+     * derived automatically from existing published content but published on a
+     * different site. For example, student projects and open data initiatives
+     * often re-publish existing content with more explicitly structured
+     * metadata. The
+     * [[sdPublisher]] property helps make such practices more explicit.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\OrganizationContract|\Spatie\SchemaOrg\Contracts\OrganizationContract[]|\Spatie\SchemaOrg\Contracts\PersonContract|\Spatie\SchemaOrg\Contracts\PersonContract[] $sdPublisher
+     *
+     * @return static
+     *
+     * @see https://schema.org/sdPublisher
+     */
+    public function sdPublisher($sdPublisher)
+    {
+        return $this->setProperty('sdPublisher', $sdPublisher);
+    }
+
+    /**
+     * A standardized size of a product or creative work, often simplifying
+     * richer information into a simple textual string, either through referring
+     * to named sizes or (in the case of product markup), by adopting
+     * conventional simplifications. Use of QuantitativeValue with a unitCode or
+     * unitText can add more structure; in other cases, the /width, /height,
+     * /depth and /weight properties may be more applicable.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\DefinedTermContract|\Spatie\SchemaOrg\Contracts\DefinedTermContract[]|\Spatie\SchemaOrg\Contracts\QuantitativeValueContract|\Spatie\SchemaOrg\Contracts\QuantitativeValueContract[]|string|string[] $size
+     *
+     * @return static
+     *
+     * @see https://schema.org/size
+     */
+    public function size($size)
+    {
+        return $this->setProperty('size', $size);
     }
 
     /**
@@ -1416,7 +1717,7 @@ class MusicComposition extends BaseType implements MusicCompositionContract, Cre
      *
      * @return static
      *
-     * @see http://schema.org/sourceOrganization
+     * @see https://schema.org/sourceOrganization
      */
     public function sourceOrganization($sourceOrganization)
     {
@@ -1432,7 +1733,7 @@ class MusicComposition extends BaseType implements MusicCompositionContract, Cre
      *
      * @return static
      *
-     * @see http://schema.org/spatial
+     * @see https://schema.org/spatial
      */
     public function spatial($spatial)
     {
@@ -1451,7 +1752,7 @@ class MusicComposition extends BaseType implements MusicCompositionContract, Cre
      *
      * @return static
      *
-     * @see http://schema.org/spatialCoverage
+     * @see https://schema.org/spatialCoverage
      */
     public function spatialCoverage($spatialCoverage)
     {
@@ -1467,7 +1768,7 @@ class MusicComposition extends BaseType implements MusicCompositionContract, Cre
      *
      * @return static
      *
-     * @see http://schema.org/sponsor
+     * @see https://schema.org/sponsor
      */
     public function sponsor($sponsor)
     {
@@ -1481,11 +1782,26 @@ class MusicComposition extends BaseType implements MusicCompositionContract, Cre
      *
      * @return static
      *
-     * @see http://schema.org/subjectOf
+     * @see https://schema.org/subjectOf
      */
     public function subjectOf($subjectOf)
     {
         return $this->setProperty('subjectOf', $subjectOf);
+    }
+
+    /**
+     * The item being described is intended to help a person learn the
+     * competency or learning outcome defined by the referenced term.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\DefinedTermContract|\Spatie\SchemaOrg\Contracts\DefinedTermContract[]|string|string[] $teaches
+     *
+     * @return static
+     *
+     * @see https://schema.org/teaches
+     */
+    public function teaches($teaches)
+    {
+        return $this->setProperty('teaches', $teaches);
     }
 
     /**
@@ -1498,7 +1814,7 @@ class MusicComposition extends BaseType implements MusicCompositionContract, Cre
      *
      * @return static
      *
-     * @see http://schema.org/temporal
+     * @see https://schema.org/temporal
      */
     public function temporal($temporal)
     {
@@ -1528,7 +1844,7 @@ class MusicComposition extends BaseType implements MusicCompositionContract, Cre
      *
      * @return static
      *
-     * @see http://schema.org/temporalCoverage
+     * @see https://schema.org/temporalCoverage
      */
     public function temporalCoverage($temporalCoverage)
     {
@@ -1542,7 +1858,7 @@ class MusicComposition extends BaseType implements MusicCompositionContract, Cre
      *
      * @return static
      *
-     * @see http://schema.org/text
+     * @see https://schema.org/text
      */
     public function text($text)
     {
@@ -1556,7 +1872,7 @@ class MusicComposition extends BaseType implements MusicCompositionContract, Cre
      *
      * @return static
      *
-     * @see http://schema.org/thumbnailUrl
+     * @see https://schema.org/thumbnailUrl
      */
     public function thumbnailUrl($thumbnailUrl)
     {
@@ -1572,11 +1888,26 @@ class MusicComposition extends BaseType implements MusicCompositionContract, Cre
      *
      * @return static
      *
-     * @see http://schema.org/timeRequired
+     * @see https://schema.org/timeRequired
      */
     public function timeRequired($timeRequired)
     {
         return $this->setProperty('timeRequired', $timeRequired);
+    }
+
+    /**
+     * The work that this work has been translated from. e.g. 物种起源 is a
+     * translationOf “On the Origin of Species”
+     *
+     * @param \Spatie\SchemaOrg\Contracts\CreativeWorkContract|\Spatie\SchemaOrg\Contracts\CreativeWorkContract[] $translationOfWork
+     *
+     * @return static
+     *
+     * @see https://schema.org/translationOfWork
+     */
+    public function translationOfWork($translationOfWork)
+    {
+        return $this->setProperty('translationOfWork', $translationOfWork);
     }
 
     /**
@@ -1588,7 +1919,7 @@ class MusicComposition extends BaseType implements MusicCompositionContract, Cre
      *
      * @return static
      *
-     * @see http://schema.org/translator
+     * @see https://schema.org/translator
      */
     public function translator($translator)
     {
@@ -1602,7 +1933,7 @@ class MusicComposition extends BaseType implements MusicCompositionContract, Cre
      *
      * @return static
      *
-     * @see http://schema.org/typicalAgeRange
+     * @see https://schema.org/typicalAgeRange
      */
     public function typicalAgeRange($typicalAgeRange)
     {
@@ -1616,11 +1947,37 @@ class MusicComposition extends BaseType implements MusicCompositionContract, Cre
      *
      * @return static
      *
-     * @see http://schema.org/url
+     * @see https://schema.org/url
      */
     public function url($url)
     {
         return $this->setProperty('url', $url);
+    }
+
+    /**
+     * The schema.org [[usageInfo]] property indicates further information about
+     * a [[CreativeWork]]. This property is applicable both to works that are
+     * freely available and to those that require payment or other transactions.
+     * It can reference additional information e.g. community expectations on
+     * preferred linking and citation conventions, as well as purchasing
+     * details. For something that can be commercially licensed, usageInfo can
+     * provide detailed, resource-specific information about licensing options.
+     * 
+     * This property can be used alongside the license property which indicates
+     * license(s) applicable to some piece of content. The usageInfo property
+     * can provide information about other licensing options, e.g. acquiring
+     * commercial usage rights for an image that is also available under
+     * non-commercial creative commons licenses.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\CreativeWorkContract|\Spatie\SchemaOrg\Contracts\CreativeWorkContract[]|string|string[] $usageInfo
+     *
+     * @return static
+     *
+     * @see https://schema.org/usageInfo
+     */
+    public function usageInfo($usageInfo)
+    {
+        return $this->setProperty('usageInfo', $usageInfo);
     }
 
     /**
@@ -1630,7 +1987,7 @@ class MusicComposition extends BaseType implements MusicCompositionContract, Cre
      *
      * @return static
      *
-     * @see http://schema.org/version
+     * @see https://schema.org/version
      */
     public function version($version)
     {
@@ -1644,7 +2001,7 @@ class MusicComposition extends BaseType implements MusicCompositionContract, Cre
      *
      * @return static
      *
-     * @see http://schema.org/video
+     * @see https://schema.org/video
      */
     public function video($video)
     {
@@ -1659,11 +2016,28 @@ class MusicComposition extends BaseType implements MusicCompositionContract, Cre
      *
      * @return static
      *
-     * @see http://schema.org/workExample
+     * @see https://schema.org/workExample
      */
     public function workExample($workExample)
     {
         return $this->setProperty('workExample', $workExample);
+    }
+
+    /**
+     * A work that is a translation of the content of this work. e.g. 西遊記
+     * has an English workTranslation “Journey to the West”,a German
+     * workTranslation “Monkeys Pilgerfahrt” and a Vietnamese  translation
+     * Tây du ký bình khảo.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\CreativeWorkContract|\Spatie\SchemaOrg\Contracts\CreativeWorkContract[] $workTranslation
+     *
+     * @return static
+     *
+     * @see https://schema.org/workTranslation
+     */
+    public function workTranslation($workTranslation)
+    {
+        return $this->setProperty('workTranslation', $workTranslation);
     }
 
 }

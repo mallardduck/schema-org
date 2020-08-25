@@ -6,6 +6,8 @@ interface IceCreamShopContract
 {
     public function acceptsReservations($acceptsReservations);
 
+    public function actionableFeedbackPolicy($actionableFeedbackPolicy);
+
     public function additionalProperty($additionalProperty);
 
     public function additionalType($additionalType);
@@ -42,6 +44,8 @@ interface IceCreamShopContract
 
     public function containsPlace($containsPlace);
 
+    public function correctionsPolicy($correctionsPolicy);
+
     public function currenciesAccepted($currenciesAccepted);
 
     public function department($department);
@@ -52,6 +56,10 @@ interface IceCreamShopContract
 
     public function dissolutionDate($dissolutionDate);
 
+    public function diversityPolicy($diversityPolicy);
+
+    public function diversityStaffingReport($diversityStaffingReport);
+
     public function duns($duns);
 
     public function email($email);
@@ -59,6 +67,8 @@ interface IceCreamShopContract
     public function employee($employee);
 
     public function employees($employees);
+
+    public function ethicsPolicy($ethicsPolicy);
 
     public function event($event);
 
@@ -100,9 +110,15 @@ interface IceCreamShopContract
 
     public function globalLocationNumber($globalLocationNumber);
 
+    public function hasCredential($hasCredential);
+
+    public function hasDriveThroughService($hasDriveThroughService);
+
     public function hasMap($hasMap);
 
     public function hasMenu($hasMenu);
+
+    public function hasMerchantReturnPolicy($hasMerchantReturnPolicy);
 
     public function hasOfferCatalog($hasOfferCatalog);
 
@@ -117,6 +133,10 @@ interface IceCreamShopContract
     public function isAccessibleForFree($isAccessibleForFree);
 
     public function isicV4($isicV4);
+
+    public function knowsAbout($knowsAbout);
+
+    public function knowsLanguage($knowsLanguage);
 
     public function latitude($latitude);
 
@@ -152,11 +172,15 @@ interface IceCreamShopContract
 
     public function name($name);
 
+    public function nonprofitStatus($nonprofitStatus);
+
     public function numberOfEmployees($numberOfEmployees);
 
     public function openingHours($openingHours);
 
     public function openingHoursSpecification($openingHoursSpecification);
+
+    public function ownershipFundingInfo($ownershipFundingInfo);
 
     public function owns($owns);
 
@@ -205,6 +229,10 @@ interface IceCreamShopContract
     public function taxID($taxID);
 
     public function telephone($telephone);
+
+    public function tourBookingPage($tourBookingPage);
+
+    public function unnamedSourcesPolicy($unnamedSourcesPolicy);
 
     public function url($url);
 

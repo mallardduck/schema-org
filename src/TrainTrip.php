@@ -10,7 +10,7 @@ use \Spatie\SchemaOrg\Contracts\TripContract;
 /**
  * A trip on a commercial train line.
  *
- * @see http://schema.org/TrainTrip
+ * @see https://schema.org/TrainTrip
  *
  */
 class TrainTrip extends BaseType implements TrainTripContract, IntangibleContract, ThingContract, TripContract
@@ -27,7 +27,7 @@ class TrainTrip extends BaseType implements TrainTripContract, IntangibleContrac
      *
      * @return static
      *
-     * @see http://schema.org/additionalType
+     * @see https://schema.org/additionalType
      */
     public function additionalType($additionalType)
     {
@@ -41,7 +41,7 @@ class TrainTrip extends BaseType implements TrainTripContract, IntangibleContrac
      *
      * @return static
      *
-     * @see http://schema.org/alternateName
+     * @see https://schema.org/alternateName
      */
     public function alternateName($alternateName)
     {
@@ -55,7 +55,7 @@ class TrainTrip extends BaseType implements TrainTripContract, IntangibleContrac
      *
      * @return static
      *
-     * @see http://schema.org/arrivalPlatform
+     * @see https://schema.org/arrivalPlatform
      */
     public function arrivalPlatform($arrivalPlatform)
     {
@@ -69,7 +69,7 @@ class TrainTrip extends BaseType implements TrainTripContract, IntangibleContrac
      *
      * @return static
      *
-     * @see http://schema.org/arrivalStation
+     * @see https://schema.org/arrivalStation
      */
     public function arrivalStation($arrivalStation)
     {
@@ -83,7 +83,7 @@ class TrainTrip extends BaseType implements TrainTripContract, IntangibleContrac
      *
      * @return static
      *
-     * @see http://schema.org/arrivalTime
+     * @see https://schema.org/arrivalTime
      */
     public function arrivalTime($arrivalTime)
     {
@@ -97,7 +97,7 @@ class TrainTrip extends BaseType implements TrainTripContract, IntangibleContrac
      *
      * @return static
      *
-     * @see http://schema.org/departurePlatform
+     * @see https://schema.org/departurePlatform
      */
     public function departurePlatform($departurePlatform)
     {
@@ -111,7 +111,7 @@ class TrainTrip extends BaseType implements TrainTripContract, IntangibleContrac
      *
      * @return static
      *
-     * @see http://schema.org/departureStation
+     * @see https://schema.org/departureStation
      */
     public function departureStation($departureStation)
     {
@@ -125,7 +125,7 @@ class TrainTrip extends BaseType implements TrainTripContract, IntangibleContrac
      *
      * @return static
      *
-     * @see http://schema.org/departureTime
+     * @see https://schema.org/departureTime
      */
     public function departureTime($departureTime)
     {
@@ -139,7 +139,7 @@ class TrainTrip extends BaseType implements TrainTripContract, IntangibleContrac
      *
      * @return static
      *
-     * @see http://schema.org/description
+     * @see https://schema.org/description
      */
     public function description($description)
     {
@@ -156,7 +156,7 @@ class TrainTrip extends BaseType implements TrainTripContract, IntangibleContrac
      *
      * @return static
      *
-     * @see http://schema.org/disambiguatingDescription
+     * @see https://schema.org/disambiguatingDescription
      */
     public function disambiguatingDescription($disambiguatingDescription)
     {
@@ -174,7 +174,7 @@ class TrainTrip extends BaseType implements TrainTripContract, IntangibleContrac
      *
      * @return static
      *
-     * @see http://schema.org/identifier
+     * @see https://schema.org/identifier
      */
     public function identifier($identifier)
     {
@@ -189,11 +189,27 @@ class TrainTrip extends BaseType implements TrainTripContract, IntangibleContrac
      *
      * @return static
      *
-     * @see http://schema.org/image
+     * @see https://schema.org/image
      */
     public function image($image)
     {
         return $this->setProperty('image', $image);
+    }
+
+    /**
+     * Destination(s) ( [[Place]] ) that make up a trip. For a trip where
+     * destination order is important use [[ItemList]] to specify that order
+     * (see examples).
+     *
+     * @param \Spatie\SchemaOrg\Contracts\ItemListContract|\Spatie\SchemaOrg\Contracts\ItemListContract[]|\Spatie\SchemaOrg\Contracts\PlaceContract|\Spatie\SchemaOrg\Contracts\PlaceContract[] $itinerary
+     *
+     * @return static
+     *
+     * @see https://schema.org/itinerary
+     */
+    public function itinerary($itinerary)
+    {
+        return $this->setProperty('itinerary', $itinerary);
     }
 
     /**
@@ -205,7 +221,7 @@ class TrainTrip extends BaseType implements TrainTripContract, IntangibleContrac
      *
      * @return static
      *
-     * @see http://schema.org/mainEntityOfPage
+     * @see https://schema.org/mainEntityOfPage
      */
     public function mainEntityOfPage($mainEntityOfPage)
     {
@@ -219,7 +235,7 @@ class TrainTrip extends BaseType implements TrainTripContract, IntangibleContrac
      *
      * @return static
      *
-     * @see http://schema.org/name
+     * @see https://schema.org/name
      */
     public function name($name)
     {
@@ -240,11 +256,26 @@ class TrainTrip extends BaseType implements TrainTripContract, IntangibleContrac
      *
      * @return static
      *
-     * @see http://schema.org/offers
+     * @see https://schema.org/offers
      */
     public function offers($offers)
     {
         return $this->setProperty('offers', $offers);
+    }
+
+    /**
+     * Identifies that this [[Trip]] is a subTrip of another Trip.  For example
+     * Day 1, Day 2, etc. of a multi-day trip.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\TripContract|\Spatie\SchemaOrg\Contracts\TripContract[] $partOfTrip
+     *
+     * @return static
+     *
+     * @see https://schema.org/partOfTrip
+     */
+    public function partOfTrip($partOfTrip)
+    {
+        return $this->setProperty('partOfTrip', $partOfTrip);
     }
 
     /**
@@ -255,7 +286,7 @@ class TrainTrip extends BaseType implements TrainTripContract, IntangibleContrac
      *
      * @return static
      *
-     * @see http://schema.org/potentialAction
+     * @see https://schema.org/potentialAction
      */
     public function potentialAction($potentialAction)
     {
@@ -271,7 +302,7 @@ class TrainTrip extends BaseType implements TrainTripContract, IntangibleContrac
      *
      * @return static
      *
-     * @see http://schema.org/provider
+     * @see https://schema.org/provider
      */
     public function provider($provider)
     {
@@ -287,11 +318,26 @@ class TrainTrip extends BaseType implements TrainTripContract, IntangibleContrac
      *
      * @return static
      *
-     * @see http://schema.org/sameAs
+     * @see https://schema.org/sameAs
      */
     public function sameAs($sameAs)
     {
         return $this->setProperty('sameAs', $sameAs);
+    }
+
+    /**
+     * Identifies a [[Trip]] that is a subTrip of this Trip.  For example Day 1,
+     * Day 2, etc. of a multi-day trip.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\TripContract|\Spatie\SchemaOrg\Contracts\TripContract[] $subTrip
+     *
+     * @return static
+     *
+     * @see https://schema.org/subTrip
+     */
+    public function subTrip($subTrip)
+    {
+        return $this->setProperty('subTrip', $subTrip);
     }
 
     /**
@@ -301,7 +347,7 @@ class TrainTrip extends BaseType implements TrainTripContract, IntangibleContrac
      *
      * @return static
      *
-     * @see http://schema.org/subjectOf
+     * @see https://schema.org/subjectOf
      */
     public function subjectOf($subjectOf)
     {
@@ -315,7 +361,7 @@ class TrainTrip extends BaseType implements TrainTripContract, IntangibleContrac
      *
      * @return static
      *
-     * @see http://schema.org/trainName
+     * @see https://schema.org/trainName
      */
     public function trainName($trainName)
     {
@@ -329,7 +375,7 @@ class TrainTrip extends BaseType implements TrainTripContract, IntangibleContrac
      *
      * @return static
      *
-     * @see http://schema.org/trainNumber
+     * @see https://schema.org/trainNumber
      */
     public function trainNumber($trainNumber)
     {
@@ -343,7 +389,7 @@ class TrainTrip extends BaseType implements TrainTripContract, IntangibleContrac
      *
      * @return static
      *
-     * @see http://schema.org/url
+     * @see https://schema.org/url
      */
     public function url($url)
     {

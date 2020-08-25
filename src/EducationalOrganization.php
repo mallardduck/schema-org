@@ -11,19 +11,36 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
 /**
  * An educational organization.
  *
- * @see http://schema.org/EducationalOrganization
+ * @see https://schema.org/EducationalOrganization
  *
  */
 class EducationalOrganization extends BaseType implements EducationalOrganizationContract, CivicStructureContract, OrganizationContract, PlaceContract, ThingContract
 {
+    /**
+     * For a [[NewsMediaOrganization]] or other news-related [[Organization]], a
+     * statement about public engagement activities (for news media, the
+     * newsroom’s), including involving the public - digitally or otherwise --
+     * in coverage decisions, reporting and activities after publication.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\CreativeWorkContract|\Spatie\SchemaOrg\Contracts\CreativeWorkContract[]|string|string[] $actionableFeedbackPolicy
+     *
+     * @return static
+     *
+     * @see https://schema.org/actionableFeedbackPolicy
+     */
+    public function actionableFeedbackPolicy($actionableFeedbackPolicy)
+    {
+        return $this->setProperty('actionableFeedbackPolicy', $actionableFeedbackPolicy);
+    }
+
     /**
      * A property-value pair representing an additional characteristics of the
      * entitity, e.g. a product feature or another characteristic for which
      * there is no matching property in schema.org.
      * 
      * Note: Publishers should be aware that applications designed to use
-     * specific schema.org properties (e.g. http://schema.org/width,
-     * http://schema.org/color, http://schema.org/gtin13, ...) will typically
+     * specific schema.org properties (e.g. https://schema.org/width,
+     * https://schema.org/color, https://schema.org/gtin13, ...) will typically
      * expect such data to be provided using those properties, rather than using
      * the generic property/value mechanism.
      *
@@ -31,7 +48,7 @@ class EducationalOrganization extends BaseType implements EducationalOrganizatio
      *
      * @return static
      *
-     * @see http://schema.org/additionalProperty
+     * @see https://schema.org/additionalProperty
      */
     public function additionalProperty($additionalProperty)
     {
@@ -50,7 +67,7 @@ class EducationalOrganization extends BaseType implements EducationalOrganizatio
      *
      * @return static
      *
-     * @see http://schema.org/additionalType
+     * @see https://schema.org/additionalType
      */
     public function additionalType($additionalType)
     {
@@ -64,7 +81,7 @@ class EducationalOrganization extends BaseType implements EducationalOrganizatio
      *
      * @return static
      *
-     * @see http://schema.org/address
+     * @see https://schema.org/address
      */
     public function address($address)
     {
@@ -79,7 +96,7 @@ class EducationalOrganization extends BaseType implements EducationalOrganizatio
      *
      * @return static
      *
-     * @see http://schema.org/aggregateRating
+     * @see https://schema.org/aggregateRating
      */
     public function aggregateRating($aggregateRating)
     {
@@ -93,7 +110,7 @@ class EducationalOrganization extends BaseType implements EducationalOrganizatio
      *
      * @return static
      *
-     * @see http://schema.org/alternateName
+     * @see https://schema.org/alternateName
      */
     public function alternateName($alternateName)
     {
@@ -107,7 +124,7 @@ class EducationalOrganization extends BaseType implements EducationalOrganizatio
      *
      * @return static
      *
-     * @see http://schema.org/alumni
+     * @see https://schema.org/alumni
      */
     public function alumni($alumni)
     {
@@ -124,7 +141,7 @@ class EducationalOrganization extends BaseType implements EducationalOrganizatio
      *
      * @return static
      *
-     * @see http://schema.org/amenityFeature
+     * @see https://schema.org/amenityFeature
      */
     public function amenityFeature($amenityFeature)
     {
@@ -138,7 +155,7 @@ class EducationalOrganization extends BaseType implements EducationalOrganizatio
      *
      * @return static
      *
-     * @see http://schema.org/areaServed
+     * @see https://schema.org/areaServed
      */
     public function areaServed($areaServed)
     {
@@ -152,7 +169,7 @@ class EducationalOrganization extends BaseType implements EducationalOrganizatio
      *
      * @return static
      *
-     * @see http://schema.org/award
+     * @see https://schema.org/award
      */
     public function award($award)
     {
@@ -166,7 +183,7 @@ class EducationalOrganization extends BaseType implements EducationalOrganizatio
      *
      * @return static
      *
-     * @see http://schema.org/awards
+     * @see https://schema.org/awards
      */
     public function awards($awards)
     {
@@ -186,7 +203,7 @@ class EducationalOrganization extends BaseType implements EducationalOrganizatio
      *
      * @return static
      *
-     * @see http://schema.org/branchCode
+     * @see https://schema.org/branchCode
      */
     public function branchCode($branchCode)
     {
@@ -201,7 +218,7 @@ class EducationalOrganization extends BaseType implements EducationalOrganizatio
      *
      * @return static
      *
-     * @see http://schema.org/brand
+     * @see https://schema.org/brand
      */
     public function brand($brand)
     {
@@ -215,7 +232,7 @@ class EducationalOrganization extends BaseType implements EducationalOrganizatio
      *
      * @return static
      *
-     * @see http://schema.org/contactPoint
+     * @see https://schema.org/contactPoint
      */
     public function contactPoint($contactPoint)
     {
@@ -229,7 +246,7 @@ class EducationalOrganization extends BaseType implements EducationalOrganizatio
      *
      * @return static
      *
-     * @see http://schema.org/contactPoints
+     * @see https://schema.org/contactPoints
      */
     public function contactPoints($contactPoints)
     {
@@ -243,7 +260,7 @@ class EducationalOrganization extends BaseType implements EducationalOrganizatio
      *
      * @return static
      *
-     * @see http://schema.org/containedIn
+     * @see https://schema.org/containedIn
      */
     public function containedIn($containedIn)
     {
@@ -257,7 +274,7 @@ class EducationalOrganization extends BaseType implements EducationalOrganizatio
      *
      * @return static
      *
-     * @see http://schema.org/containedInPlace
+     * @see https://schema.org/containedInPlace
      */
     public function containedInPlace($containedInPlace)
     {
@@ -272,11 +289,27 @@ class EducationalOrganization extends BaseType implements EducationalOrganizatio
      *
      * @return static
      *
-     * @see http://schema.org/containsPlace
+     * @see https://schema.org/containsPlace
      */
     public function containsPlace($containsPlace)
     {
         return $this->setProperty('containsPlace', $containsPlace);
+    }
+
+    /**
+     * For an [[Organization]] (e.g. [[NewsMediaOrganization]]), a statement
+     * describing (in news media, the newsroom’s) disclosure and correction
+     * policy for errors.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\CreativeWorkContract|\Spatie\SchemaOrg\Contracts\CreativeWorkContract[]|string|string[] $correctionsPolicy
+     *
+     * @return static
+     *
+     * @see https://schema.org/correctionsPolicy
+     */
+    public function correctionsPolicy($correctionsPolicy)
+    {
+        return $this->setProperty('correctionsPolicy', $correctionsPolicy);
     }
 
     /**
@@ -289,7 +322,7 @@ class EducationalOrganization extends BaseType implements EducationalOrganizatio
      *
      * @return static
      *
-     * @see http://schema.org/department
+     * @see https://schema.org/department
      */
     public function department($department)
     {
@@ -303,7 +336,7 @@ class EducationalOrganization extends BaseType implements EducationalOrganizatio
      *
      * @return static
      *
-     * @see http://schema.org/description
+     * @see https://schema.org/description
      */
     public function description($description)
     {
@@ -320,7 +353,7 @@ class EducationalOrganization extends BaseType implements EducationalOrganizatio
      *
      * @return static
      *
-     * @see http://schema.org/disambiguatingDescription
+     * @see https://schema.org/disambiguatingDescription
      */
     public function disambiguatingDescription($disambiguatingDescription)
     {
@@ -334,11 +367,45 @@ class EducationalOrganization extends BaseType implements EducationalOrganizatio
      *
      * @return static
      *
-     * @see http://schema.org/dissolutionDate
+     * @see https://schema.org/dissolutionDate
      */
     public function dissolutionDate($dissolutionDate)
     {
         return $this->setProperty('dissolutionDate', $dissolutionDate);
+    }
+
+    /**
+     * Statement on diversity policy by an [[Organization]] e.g. a
+     * [[NewsMediaOrganization]]. For a [[NewsMediaOrganization]], a statement
+     * describing the newsroom’s diversity policy on both staffing and
+     * sources, typically providing staffing data.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\CreativeWorkContract|\Spatie\SchemaOrg\Contracts\CreativeWorkContract[]|string|string[] $diversityPolicy
+     *
+     * @return static
+     *
+     * @see https://schema.org/diversityPolicy
+     */
+    public function diversityPolicy($diversityPolicy)
+    {
+        return $this->setProperty('diversityPolicy', $diversityPolicy);
+    }
+
+    /**
+     * For an [[Organization]] (often but not necessarily a
+     * [[NewsMediaOrganization]]), a report on staffing diversity issues. In a
+     * news context this might be for example ASNE or RTDNA (US) reports, or
+     * self-reported.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\ArticleContract|\Spatie\SchemaOrg\Contracts\ArticleContract[]|string|string[] $diversityStaffingReport
+     *
+     * @return static
+     *
+     * @see https://schema.org/diversityStaffingReport
+     */
+    public function diversityStaffingReport($diversityStaffingReport)
+    {
+        return $this->setProperty('diversityStaffingReport', $diversityStaffingReport);
     }
 
     /**
@@ -349,7 +416,7 @@ class EducationalOrganization extends BaseType implements EducationalOrganizatio
      *
      * @return static
      *
-     * @see http://schema.org/duns
+     * @see https://schema.org/duns
      */
     public function duns($duns)
     {
@@ -363,7 +430,7 @@ class EducationalOrganization extends BaseType implements EducationalOrganizatio
      *
      * @return static
      *
-     * @see http://schema.org/email
+     * @see https://schema.org/email
      */
     public function email($email)
     {
@@ -377,7 +444,7 @@ class EducationalOrganization extends BaseType implements EducationalOrganizatio
      *
      * @return static
      *
-     * @see http://schema.org/employee
+     * @see https://schema.org/employee
      */
     public function employee($employee)
     {
@@ -391,11 +458,30 @@ class EducationalOrganization extends BaseType implements EducationalOrganizatio
      *
      * @return static
      *
-     * @see http://schema.org/employees
+     * @see https://schema.org/employees
      */
     public function employees($employees)
     {
         return $this->setProperty('employees', $employees);
+    }
+
+    /**
+     * Statement about ethics policy, e.g. of a [[NewsMediaOrganization]]
+     * regarding journalistic and publishing practices, or of a [[Restaurant]],
+     * a page describing food source policies. In the case of a
+     * [[NewsMediaOrganization]], an ethicsPolicy is typically a statement
+     * describing the personal, organizational, and corporate standards of
+     * behavior expected by the organization.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\CreativeWorkContract|\Spatie\SchemaOrg\Contracts\CreativeWorkContract[]|string|string[] $ethicsPolicy
+     *
+     * @return static
+     *
+     * @see https://schema.org/ethicsPolicy
+     */
+    public function ethicsPolicy($ethicsPolicy)
+    {
+        return $this->setProperty('ethicsPolicy', $ethicsPolicy);
     }
 
     /**
@@ -406,7 +492,7 @@ class EducationalOrganization extends BaseType implements EducationalOrganizatio
      *
      * @return static
      *
-     * @see http://schema.org/event
+     * @see https://schema.org/event
      */
     public function event($event)
     {
@@ -420,7 +506,7 @@ class EducationalOrganization extends BaseType implements EducationalOrganizatio
      *
      * @return static
      *
-     * @see http://schema.org/events
+     * @see https://schema.org/events
      */
     public function events($events)
     {
@@ -434,7 +520,7 @@ class EducationalOrganization extends BaseType implements EducationalOrganizatio
      *
      * @return static
      *
-     * @see http://schema.org/faxNumber
+     * @see https://schema.org/faxNumber
      */
     public function faxNumber($faxNumber)
     {
@@ -448,7 +534,7 @@ class EducationalOrganization extends BaseType implements EducationalOrganizatio
      *
      * @return static
      *
-     * @see http://schema.org/founder
+     * @see https://schema.org/founder
      */
     public function founder($founder)
     {
@@ -462,7 +548,7 @@ class EducationalOrganization extends BaseType implements EducationalOrganizatio
      *
      * @return static
      *
-     * @see http://schema.org/founders
+     * @see https://schema.org/founders
      */
     public function founders($founders)
     {
@@ -476,7 +562,7 @@ class EducationalOrganization extends BaseType implements EducationalOrganizatio
      *
      * @return static
      *
-     * @see http://schema.org/foundingDate
+     * @see https://schema.org/foundingDate
      */
     public function foundingDate($foundingDate)
     {
@@ -490,7 +576,7 @@ class EducationalOrganization extends BaseType implements EducationalOrganizatio
      *
      * @return static
      *
-     * @see http://schema.org/foundingLocation
+     * @see https://schema.org/foundingLocation
      */
     public function foundingLocation($foundingLocation)
     {
@@ -505,7 +591,7 @@ class EducationalOrganization extends BaseType implements EducationalOrganizatio
      *
      * @return static
      *
-     * @see http://schema.org/funder
+     * @see https://schema.org/funder
      */
     public function funder($funder)
     {
@@ -519,7 +605,7 @@ class EducationalOrganization extends BaseType implements EducationalOrganizatio
      *
      * @return static
      *
-     * @see http://schema.org/geo
+     * @see https://schema.org/geo
      */
     public function geo($geo)
     {
@@ -533,11 +619,11 @@ class EducationalOrganization extends BaseType implements EducationalOrganizatio
      * point of the interior of b lies in the interior of a". As defined in
      * [DE-9IM](https://en.wikipedia.org/wiki/DE-9IM).
      *
-     * @param \Spatie\SchemaOrg\Contracts\PlaceContract|\Spatie\SchemaOrg\Contracts\PlaceContract[] $geoContains
+     * @param \Spatie\SchemaOrg\Contracts\GeospatialGeometryContract|\Spatie\SchemaOrg\Contracts\GeospatialGeometryContract[]|\Spatie\SchemaOrg\Contracts\PlaceContract|\Spatie\SchemaOrg\Contracts\PlaceContract[] $geoContains
      *
      * @return static
      *
-     * @see http://schema.org/geoContains
+     * @see https://schema.org/geoContains
      */
     public function geoContains($geoContains)
     {
@@ -549,11 +635,11 @@ class EducationalOrganization extends BaseType implements EducationalOrganizatio
      * represent), relating a geometry to another that covers it. As defined in
      * [DE-9IM](https://en.wikipedia.org/wiki/DE-9IM).
      *
-     * @param \Spatie\SchemaOrg\Contracts\PlaceContract|\Spatie\SchemaOrg\Contracts\PlaceContract[] $geoCoveredBy
+     * @param \Spatie\SchemaOrg\Contracts\GeospatialGeometryContract|\Spatie\SchemaOrg\Contracts\GeospatialGeometryContract[]|\Spatie\SchemaOrg\Contracts\PlaceContract|\Spatie\SchemaOrg\Contracts\PlaceContract[] $geoCoveredBy
      *
      * @return static
      *
-     * @see http://schema.org/geoCoveredBy
+     * @see https://schema.org/geoCoveredBy
      */
     public function geoCoveredBy($geoCoveredBy)
     {
@@ -566,11 +652,11 @@ class EducationalOrganization extends BaseType implements EducationalOrganizatio
      * point of b is a point of (the interior or boundary of) a". As defined in
      * [DE-9IM](https://en.wikipedia.org/wiki/DE-9IM).
      *
-     * @param \Spatie\SchemaOrg\Contracts\PlaceContract|\Spatie\SchemaOrg\Contracts\PlaceContract[] $geoCovers
+     * @param \Spatie\SchemaOrg\Contracts\GeospatialGeometryContract|\Spatie\SchemaOrg\Contracts\GeospatialGeometryContract[]|\Spatie\SchemaOrg\Contracts\PlaceContract|\Spatie\SchemaOrg\Contracts\PlaceContract[] $geoCovers
      *
      * @return static
      *
-     * @see http://schema.org/geoCovers
+     * @see https://schema.org/geoCovers
      */
     public function geoCovers($geoCovers)
     {
@@ -584,11 +670,11 @@ class EducationalOrganization extends BaseType implements EducationalOrganizatio
      * of the intersection is less than that of at least one of them". As
      * defined in [DE-9IM](https://en.wikipedia.org/wiki/DE-9IM).
      *
-     * @param \Spatie\SchemaOrg\Contracts\PlaceContract|\Spatie\SchemaOrg\Contracts\PlaceContract[] $geoCrosses
+     * @param \Spatie\SchemaOrg\Contracts\GeospatialGeometryContract|\Spatie\SchemaOrg\Contracts\GeospatialGeometryContract[]|\Spatie\SchemaOrg\Contracts\PlaceContract|\Spatie\SchemaOrg\Contracts\PlaceContract[] $geoCrosses
      *
      * @return static
      *
-     * @see http://schema.org/geoCrosses
+     * @see https://schema.org/geoCrosses
      */
     public function geoCrosses($geoCrosses)
     {
@@ -601,11 +687,11 @@ class EducationalOrganization extends BaseType implements EducationalOrganizatio
      * form a set of disconnected geometries." (a symmetric relationship, as
      * defined in [DE-9IM](https://en.wikipedia.org/wiki/DE-9IM))
      *
-     * @param \Spatie\SchemaOrg\Contracts\PlaceContract|\Spatie\SchemaOrg\Contracts\PlaceContract[] $geoDisjoint
+     * @param \Spatie\SchemaOrg\Contracts\GeospatialGeometryContract|\Spatie\SchemaOrg\Contracts\GeospatialGeometryContract[]|\Spatie\SchemaOrg\Contracts\PlaceContract|\Spatie\SchemaOrg\Contracts\PlaceContract[] $geoDisjoint
      *
      * @return static
      *
-     * @see http://schema.org/geoDisjoint
+     * @see https://schema.org/geoDisjoint
      */
     public function geoDisjoint($geoDisjoint)
     {
@@ -620,11 +706,11 @@ class EducationalOrganization extends BaseType implements EducationalOrganizatio
      * interior or boundary of one geometry intersects the exterior of the
      * other" (a symmetric relationship)
      *
-     * @param \Spatie\SchemaOrg\Contracts\PlaceContract|\Spatie\SchemaOrg\Contracts\PlaceContract[] $geoEquals
+     * @param \Spatie\SchemaOrg\Contracts\GeospatialGeometryContract|\Spatie\SchemaOrg\Contracts\GeospatialGeometryContract[]|\Spatie\SchemaOrg\Contracts\PlaceContract|\Spatie\SchemaOrg\Contracts\PlaceContract[] $geoEquals
      *
      * @return static
      *
-     * @see http://schema.org/geoEquals
+     * @see https://schema.org/geoEquals
      */
     public function geoEquals($geoEquals)
     {
@@ -636,11 +722,11 @@ class EducationalOrganization extends BaseType implements EducationalOrganizatio
      * represent) have at least one point in common. As defined in
      * [DE-9IM](https://en.wikipedia.org/wiki/DE-9IM).
      *
-     * @param \Spatie\SchemaOrg\Contracts\PlaceContract|\Spatie\SchemaOrg\Contracts\PlaceContract[] $geoIntersects
+     * @param \Spatie\SchemaOrg\Contracts\GeospatialGeometryContract|\Spatie\SchemaOrg\Contracts\GeospatialGeometryContract[]|\Spatie\SchemaOrg\Contracts\PlaceContract|\Spatie\SchemaOrg\Contracts\PlaceContract[] $geoIntersects
      *
      * @return static
      *
-     * @see http://schema.org/geoIntersects
+     * @see https://schema.org/geoIntersects
      */
     public function geoIntersects($geoIntersects)
     {
@@ -653,11 +739,11 @@ class EducationalOrganization extends BaseType implements EducationalOrganizatio
      * i.e. they have some but not all points in common. As defined in
      * [DE-9IM](https://en.wikipedia.org/wiki/DE-9IM).
      *
-     * @param \Spatie\SchemaOrg\Contracts\PlaceContract|\Spatie\SchemaOrg\Contracts\PlaceContract[] $geoOverlaps
+     * @param \Spatie\SchemaOrg\Contracts\GeospatialGeometryContract|\Spatie\SchemaOrg\Contracts\GeospatialGeometryContract[]|\Spatie\SchemaOrg\Contracts\PlaceContract|\Spatie\SchemaOrg\Contracts\PlaceContract[] $geoOverlaps
      *
      * @return static
      *
-     * @see http://schema.org/geoOverlaps
+     * @see https://schema.org/geoOverlaps
      */
     public function geoOverlaps($geoOverlaps)
     {
@@ -670,11 +756,11 @@ class EducationalOrganization extends BaseType implements EducationalOrganizatio
      * interior points." (a symmetric relationship, as defined in
      * [DE-9IM](https://en.wikipedia.org/wiki/DE-9IM) )
      *
-     * @param \Spatie\SchemaOrg\Contracts\PlaceContract|\Spatie\SchemaOrg\Contracts\PlaceContract[] $geoTouches
+     * @param \Spatie\SchemaOrg\Contracts\GeospatialGeometryContract|\Spatie\SchemaOrg\Contracts\GeospatialGeometryContract[]|\Spatie\SchemaOrg\Contracts\PlaceContract|\Spatie\SchemaOrg\Contracts\PlaceContract[] $geoTouches
      *
      * @return static
      *
-     * @see http://schema.org/geoTouches
+     * @see https://schema.org/geoTouches
      */
     public function geoTouches($geoTouches)
     {
@@ -687,11 +773,11 @@ class EducationalOrganization extends BaseType implements EducationalOrganizatio
      * inside (i.e. within) its interior. As defined in
      * [DE-9IM](https://en.wikipedia.org/wiki/DE-9IM).
      *
-     * @param \Spatie\SchemaOrg\Contracts\PlaceContract|\Spatie\SchemaOrg\Contracts\PlaceContract[] $geoWithin
+     * @param \Spatie\SchemaOrg\Contracts\GeospatialGeometryContract|\Spatie\SchemaOrg\Contracts\GeospatialGeometryContract[]|\Spatie\SchemaOrg\Contracts\PlaceContract|\Spatie\SchemaOrg\Contracts\PlaceContract[] $geoWithin
      *
      * @return static
      *
-     * @see http://schema.org/geoWithin
+     * @see https://schema.org/geoWithin
      */
     public function geoWithin($geoWithin)
     {
@@ -708,11 +794,43 @@ class EducationalOrganization extends BaseType implements EducationalOrganizatio
      *
      * @return static
      *
-     * @see http://schema.org/globalLocationNumber
+     * @see https://schema.org/globalLocationNumber
      */
     public function globalLocationNumber($globalLocationNumber)
     {
         return $this->setProperty('globalLocationNumber', $globalLocationNumber);
+    }
+
+    /**
+     * A credential awarded to the Person or Organization.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\EducationalOccupationalCredentialContract|\Spatie\SchemaOrg\Contracts\EducationalOccupationalCredentialContract[] $hasCredential
+     *
+     * @return static
+     *
+     * @see https://schema.org/hasCredential
+     */
+    public function hasCredential($hasCredential)
+    {
+        return $this->setProperty('hasCredential', $hasCredential);
+    }
+
+    /**
+     * Indicates whether some facility (e.g. [[FoodEstablishment]],
+     * [[CovidTestingFacility]]) offers a service that can be used by driving
+     * through in a car. In the case of [[CovidTestingFacility]] such facilities
+     * could potentially help with social distancing from other
+     * potentially-infected users.
+     *
+     * @param bool|bool[] $hasDriveThroughService
+     *
+     * @return static
+     *
+     * @see https://schema.org/hasDriveThroughService
+     */
+    public function hasDriveThroughService($hasDriveThroughService)
+    {
+        return $this->setProperty('hasDriveThroughService', $hasDriveThroughService);
     }
 
     /**
@@ -722,11 +840,25 @@ class EducationalOrganization extends BaseType implements EducationalOrganizatio
      *
      * @return static
      *
-     * @see http://schema.org/hasMap
+     * @see https://schema.org/hasMap
      */
     public function hasMap($hasMap)
     {
         return $this->setProperty('hasMap', $hasMap);
+    }
+
+    /**
+     * Indicates a MerchantReturnPolicy that may be applicable.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\MerchantReturnPolicyContract|\Spatie\SchemaOrg\Contracts\MerchantReturnPolicyContract[] $hasMerchantReturnPolicy
+     *
+     * @return static
+     *
+     * @see https://schema.org/hasMerchantReturnPolicy
+     */
+    public function hasMerchantReturnPolicy($hasMerchantReturnPolicy)
+    {
+        return $this->setProperty('hasMerchantReturnPolicy', $hasMerchantReturnPolicy);
     }
 
     /**
@@ -737,7 +869,7 @@ class EducationalOrganization extends BaseType implements EducationalOrganizatio
      *
      * @return static
      *
-     * @see http://schema.org/hasOfferCatalog
+     * @see https://schema.org/hasOfferCatalog
      */
     public function hasOfferCatalog($hasOfferCatalog)
     {
@@ -751,7 +883,7 @@ class EducationalOrganization extends BaseType implements EducationalOrganizatio
      *
      * @return static
      *
-     * @see http://schema.org/hasPOS
+     * @see https://schema.org/hasPOS
      */
     public function hasPOS($hasPOS)
     {
@@ -769,7 +901,7 @@ class EducationalOrganization extends BaseType implements EducationalOrganizatio
      *
      * @return static
      *
-     * @see http://schema.org/identifier
+     * @see https://schema.org/identifier
      */
     public function identifier($identifier)
     {
@@ -784,7 +916,7 @@ class EducationalOrganization extends BaseType implements EducationalOrganizatio
      *
      * @return static
      *
-     * @see http://schema.org/image
+     * @see https://schema.org/image
      */
     public function image($image)
     {
@@ -800,7 +932,7 @@ class EducationalOrganization extends BaseType implements EducationalOrganizatio
      *
      * @return static
      *
-     * @see http://schema.org/interactionStatistic
+     * @see https://schema.org/interactionStatistic
      */
     public function interactionStatistic($interactionStatistic)
     {
@@ -814,7 +946,7 @@ class EducationalOrganization extends BaseType implements EducationalOrganizatio
      *
      * @return static
      *
-     * @see http://schema.org/isAccessibleForFree
+     * @see https://schema.org/isAccessibleForFree
      */
     public function isAccessibleForFree($isAccessibleForFree)
     {
@@ -830,11 +962,45 @@ class EducationalOrganization extends BaseType implements EducationalOrganizatio
      *
      * @return static
      *
-     * @see http://schema.org/isicV4
+     * @see https://schema.org/isicV4
      */
     public function isicV4($isicV4)
     {
         return $this->setProperty('isicV4', $isicV4);
+    }
+
+    /**
+     * Of a [[Person]], and less typically of an [[Organization]], to indicate a
+     * topic that is known about - suggesting possible expertise but not
+     * implying it. We do not distinguish skill levels here, or relate this to
+     * educational content, events, objectives or [[JobPosting]] descriptions.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\ThingContract|\Spatie\SchemaOrg\Contracts\ThingContract[]|string|string[] $knowsAbout
+     *
+     * @return static
+     *
+     * @see https://schema.org/knowsAbout
+     */
+    public function knowsAbout($knowsAbout)
+    {
+        return $this->setProperty('knowsAbout', $knowsAbout);
+    }
+
+    /**
+     * Of a [[Person]], and less typically of an [[Organization]], to indicate a
+     * known language. We do not distinguish skill levels or
+     * reading/writing/speaking/signing here. Use language codes from the [IETF
+     * BCP 47 standard](http://tools.ietf.org/html/bcp47).
+     *
+     * @param \Spatie\SchemaOrg\Contracts\LanguageContract|\Spatie\SchemaOrg\Contracts\LanguageContract[]|string|string[] $knowsLanguage
+     *
+     * @return static
+     *
+     * @see https://schema.org/knowsLanguage
+     */
+    public function knowsLanguage($knowsLanguage)
+    {
+        return $this->setProperty('knowsLanguage', $knowsLanguage);
     }
 
     /**
@@ -845,7 +1011,7 @@ class EducationalOrganization extends BaseType implements EducationalOrganizatio
      *
      * @return static
      *
-     * @see http://schema.org/latitude
+     * @see https://schema.org/latitude
      */
     public function latitude($latitude)
     {
@@ -859,7 +1025,7 @@ class EducationalOrganization extends BaseType implements EducationalOrganizatio
      *
      * @return static
      *
-     * @see http://schema.org/legalName
+     * @see https://schema.org/legalName
      */
     public function legalName($legalName)
     {
@@ -874,7 +1040,7 @@ class EducationalOrganization extends BaseType implements EducationalOrganizatio
      *
      * @return static
      *
-     * @see http://schema.org/leiCode
+     * @see https://schema.org/leiCode
      */
     public function leiCode($leiCode)
     {
@@ -885,11 +1051,11 @@ class EducationalOrganization extends BaseType implements EducationalOrganizatio
      * The location of for example where the event is happening, an organization
      * is located, or where an action takes place.
      *
-     * @param \Spatie\SchemaOrg\Contracts\PlaceContract|\Spatie\SchemaOrg\Contracts\PlaceContract[]|\Spatie\SchemaOrg\Contracts\PostalAddressContract|\Spatie\SchemaOrg\Contracts\PostalAddressContract[]|string|string[] $location
+     * @param \Spatie\SchemaOrg\Contracts\PlaceContract|\Spatie\SchemaOrg\Contracts\PlaceContract[]|\Spatie\SchemaOrg\Contracts\PostalAddressContract|\Spatie\SchemaOrg\Contracts\PostalAddressContract[]|\Spatie\SchemaOrg\Contracts\VirtualLocationContract|\Spatie\SchemaOrg\Contracts\VirtualLocationContract[]|string|string[] $location
      *
      * @return static
      *
-     * @see http://schema.org/location
+     * @see https://schema.org/location
      */
     public function location($location)
     {
@@ -903,7 +1069,7 @@ class EducationalOrganization extends BaseType implements EducationalOrganizatio
      *
      * @return static
      *
-     * @see http://schema.org/logo
+     * @see https://schema.org/logo
      */
     public function logo($logo)
     {
@@ -918,7 +1084,7 @@ class EducationalOrganization extends BaseType implements EducationalOrganizatio
      *
      * @return static
      *
-     * @see http://schema.org/longitude
+     * @see https://schema.org/longitude
      */
     public function longitude($longitude)
     {
@@ -934,7 +1100,7 @@ class EducationalOrganization extends BaseType implements EducationalOrganizatio
      *
      * @return static
      *
-     * @see http://schema.org/mainEntityOfPage
+     * @see https://schema.org/mainEntityOfPage
      */
     public function mainEntityOfPage($mainEntityOfPage)
     {
@@ -948,7 +1114,7 @@ class EducationalOrganization extends BaseType implements EducationalOrganizatio
      *
      * @return static
      *
-     * @see http://schema.org/makesOffer
+     * @see https://schema.org/makesOffer
      */
     public function makesOffer($makesOffer)
     {
@@ -962,7 +1128,7 @@ class EducationalOrganization extends BaseType implements EducationalOrganizatio
      *
      * @return static
      *
-     * @see http://schema.org/map
+     * @see https://schema.org/map
      */
     public function map($map)
     {
@@ -976,7 +1142,7 @@ class EducationalOrganization extends BaseType implements EducationalOrganizatio
      *
      * @return static
      *
-     * @see http://schema.org/maps
+     * @see https://schema.org/maps
      */
     public function maps($maps)
     {
@@ -990,7 +1156,7 @@ class EducationalOrganization extends BaseType implements EducationalOrganizatio
      *
      * @return static
      *
-     * @see http://schema.org/maximumAttendeeCapacity
+     * @see https://schema.org/maximumAttendeeCapacity
      */
     public function maximumAttendeeCapacity($maximumAttendeeCapacity)
     {
@@ -1005,7 +1171,7 @@ class EducationalOrganization extends BaseType implements EducationalOrganizatio
      *
      * @return static
      *
-     * @see http://schema.org/member
+     * @see https://schema.org/member
      */
     public function member($member)
     {
@@ -1020,7 +1186,7 @@ class EducationalOrganization extends BaseType implements EducationalOrganizatio
      *
      * @return static
      *
-     * @see http://schema.org/memberOf
+     * @see https://schema.org/memberOf
      */
     public function memberOf($memberOf)
     {
@@ -1034,7 +1200,7 @@ class EducationalOrganization extends BaseType implements EducationalOrganizatio
      *
      * @return static
      *
-     * @see http://schema.org/members
+     * @see https://schema.org/members
      */
     public function members($members)
     {
@@ -1049,7 +1215,7 @@ class EducationalOrganization extends BaseType implements EducationalOrganizatio
      *
      * @return static
      *
-     * @see http://schema.org/naics
+     * @see https://schema.org/naics
      */
     public function naics($naics)
     {
@@ -1063,11 +1229,26 @@ class EducationalOrganization extends BaseType implements EducationalOrganizatio
      *
      * @return static
      *
-     * @see http://schema.org/name
+     * @see https://schema.org/name
      */
     public function name($name)
     {
         return $this->setProperty('name', $name);
+    }
+
+    /**
+     * nonprofit Status indicates the legal status of a non-profit organization
+     * in its primary place of business.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\NonprofitTypeContract|\Spatie\SchemaOrg\Contracts\NonprofitTypeContract[] $nonprofitStatus
+     *
+     * @return static
+     *
+     * @see https://schema.org/nonprofitStatus
+     */
+    public function nonprofitStatus($nonprofitStatus)
+    {
+        return $this->setProperty('nonprofitStatus', $nonprofitStatus);
     }
 
     /**
@@ -1077,7 +1258,7 @@ class EducationalOrganization extends BaseType implements EducationalOrganizatio
      *
      * @return static
      *
-     * @see http://schema.org/numberOfEmployees
+     * @see https://schema.org/numberOfEmployees
      */
     public function numberOfEmployees($numberOfEmployees)
     {
@@ -1106,7 +1287,7 @@ class EducationalOrganization extends BaseType implements EducationalOrganizatio
      *
      * @return static
      *
-     * @see http://schema.org/openingHours
+     * @see https://schema.org/openingHours
      */
     public function openingHours($openingHours)
     {
@@ -1120,11 +1301,30 @@ class EducationalOrganization extends BaseType implements EducationalOrganizatio
      *
      * @return static
      *
-     * @see http://schema.org/openingHoursSpecification
+     * @see https://schema.org/openingHoursSpecification
      */
     public function openingHoursSpecification($openingHoursSpecification)
     {
         return $this->setProperty('openingHoursSpecification', $openingHoursSpecification);
+    }
+
+    /**
+     * For an [[Organization]] (often but not necessarily a
+     * [[NewsMediaOrganization]]), a description of organizational ownership
+     * structure; funding and grants. In a news/media setting, this is with
+     * particular reference to editorial independence.   Note that the
+     * [[funder]] is also available and can be used to make basic funder
+     * information machine-readable.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\AboutPageContract|\Spatie\SchemaOrg\Contracts\AboutPageContract[]|\Spatie\SchemaOrg\Contracts\CreativeWorkContract|\Spatie\SchemaOrg\Contracts\CreativeWorkContract[]|string|string[] $ownershipFundingInfo
+     *
+     * @return static
+     *
+     * @see https://schema.org/ownershipFundingInfo
+     */
+    public function ownershipFundingInfo($ownershipFundingInfo)
+    {
+        return $this->setProperty('ownershipFundingInfo', $ownershipFundingInfo);
     }
 
     /**
@@ -1134,7 +1334,7 @@ class EducationalOrganization extends BaseType implements EducationalOrganizatio
      *
      * @return static
      *
-     * @see http://schema.org/owns
+     * @see https://schema.org/owns
      */
     public function owns($owns)
     {
@@ -1149,7 +1349,7 @@ class EducationalOrganization extends BaseType implements EducationalOrganizatio
      *
      * @return static
      *
-     * @see http://schema.org/parentOrganization
+     * @see https://schema.org/parentOrganization
      */
     public function parentOrganization($parentOrganization)
     {
@@ -1163,7 +1363,7 @@ class EducationalOrganization extends BaseType implements EducationalOrganizatio
      *
      * @return static
      *
-     * @see http://schema.org/photo
+     * @see https://schema.org/photo
      */
     public function photo($photo)
     {
@@ -1177,7 +1377,7 @@ class EducationalOrganization extends BaseType implements EducationalOrganizatio
      *
      * @return static
      *
-     * @see http://schema.org/photos
+     * @see https://schema.org/photos
      */
     public function photos($photos)
     {
@@ -1192,7 +1392,7 @@ class EducationalOrganization extends BaseType implements EducationalOrganizatio
      *
      * @return static
      *
-     * @see http://schema.org/potentialAction
+     * @see https://schema.org/potentialAction
      */
     public function potentialAction($potentialAction)
     {
@@ -1207,7 +1407,7 @@ class EducationalOrganization extends BaseType implements EducationalOrganizatio
      *
      * @return static
      *
-     * @see http://schema.org/publicAccess
+     * @see https://schema.org/publicAccess
      */
     public function publicAccess($publicAccess)
     {
@@ -1231,7 +1431,7 @@ class EducationalOrganization extends BaseType implements EducationalOrganizatio
      *
      * @return static
      *
-     * @see http://schema.org/publishingPrinciples
+     * @see https://schema.org/publishingPrinciples
      */
     public function publishingPrinciples($publishingPrinciples)
     {
@@ -1245,7 +1445,7 @@ class EducationalOrganization extends BaseType implements EducationalOrganizatio
      *
      * @return static
      *
-     * @see http://schema.org/review
+     * @see https://schema.org/review
      */
     public function review($review)
     {
@@ -1259,7 +1459,7 @@ class EducationalOrganization extends BaseType implements EducationalOrganizatio
      *
      * @return static
      *
-     * @see http://schema.org/reviews
+     * @see https://schema.org/reviews
      */
     public function reviews($reviews)
     {
@@ -1275,7 +1475,7 @@ class EducationalOrganization extends BaseType implements EducationalOrganizatio
      *
      * @return static
      *
-     * @see http://schema.org/sameAs
+     * @see https://schema.org/sameAs
      */
     public function sameAs($sameAs)
     {
@@ -1290,7 +1490,7 @@ class EducationalOrganization extends BaseType implements EducationalOrganizatio
      *
      * @return static
      *
-     * @see http://schema.org/seeks
+     * @see https://schema.org/seeks
      */
     public function seeks($seeks)
     {
@@ -1304,7 +1504,7 @@ class EducationalOrganization extends BaseType implements EducationalOrganizatio
      *
      * @return static
      *
-     * @see http://schema.org/serviceArea
+     * @see https://schema.org/serviceArea
      */
     public function serviceArea($serviceArea)
     {
@@ -1318,7 +1518,7 @@ class EducationalOrganization extends BaseType implements EducationalOrganizatio
      *
      * @return static
      *
-     * @see http://schema.org/slogan
+     * @see https://schema.org/slogan
      */
     public function slogan($slogan)
     {
@@ -1333,7 +1533,7 @@ class EducationalOrganization extends BaseType implements EducationalOrganizatio
      *
      * @return static
      *
-     * @see http://schema.org/smokingAllowed
+     * @see https://schema.org/smokingAllowed
      */
     public function smokingAllowed($smokingAllowed)
     {
@@ -1350,7 +1550,7 @@ class EducationalOrganization extends BaseType implements EducationalOrganizatio
      *
      * @return static
      *
-     * @see http://schema.org/specialOpeningHoursSpecification
+     * @see https://schema.org/specialOpeningHoursSpecification
      */
     public function specialOpeningHoursSpecification($specialOpeningHoursSpecification)
     {
@@ -1366,7 +1566,7 @@ class EducationalOrganization extends BaseType implements EducationalOrganizatio
      *
      * @return static
      *
-     * @see http://schema.org/sponsor
+     * @see https://schema.org/sponsor
      */
     public function sponsor($sponsor)
     {
@@ -1382,7 +1582,7 @@ class EducationalOrganization extends BaseType implements EducationalOrganizatio
      *
      * @return static
      *
-     * @see http://schema.org/subOrganization
+     * @see https://schema.org/subOrganization
      */
     public function subOrganization($subOrganization)
     {
@@ -1396,7 +1596,7 @@ class EducationalOrganization extends BaseType implements EducationalOrganizatio
      *
      * @return static
      *
-     * @see http://schema.org/subjectOf
+     * @see https://schema.org/subjectOf
      */
     public function subjectOf($subjectOf)
     {
@@ -1411,7 +1611,7 @@ class EducationalOrganization extends BaseType implements EducationalOrganizatio
      *
      * @return static
      *
-     * @see http://schema.org/taxID
+     * @see https://schema.org/taxID
      */
     public function taxID($taxID)
     {
@@ -1425,11 +1625,43 @@ class EducationalOrganization extends BaseType implements EducationalOrganizatio
      *
      * @return static
      *
-     * @see http://schema.org/telephone
+     * @see https://schema.org/telephone
      */
     public function telephone($telephone)
     {
         return $this->setProperty('telephone', $telephone);
+    }
+
+    /**
+     * A page providing information on how to book a tour of some [[Place]],
+     * such as an [[Accommodation]] or [[ApartmentComplex]] in a real estate
+     * setting, as well as other kinds of tours as appropriate.
+     *
+     * @param string|string[] $tourBookingPage
+     *
+     * @return static
+     *
+     * @see https://schema.org/tourBookingPage
+     */
+    public function tourBookingPage($tourBookingPage)
+    {
+        return $this->setProperty('tourBookingPage', $tourBookingPage);
+    }
+
+    /**
+     * For an [[Organization]] (typically a [[NewsMediaOrganization]]), a
+     * statement about policy on use of unnamed sources and the decision process
+     * required.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\CreativeWorkContract|\Spatie\SchemaOrg\Contracts\CreativeWorkContract[]|string|string[] $unnamedSourcesPolicy
+     *
+     * @return static
+     *
+     * @see https://schema.org/unnamedSourcesPolicy
+     */
+    public function unnamedSourcesPolicy($unnamedSourcesPolicy)
+    {
+        return $this->setProperty('unnamedSourcesPolicy', $unnamedSourcesPolicy);
     }
 
     /**
@@ -1439,7 +1671,7 @@ class EducationalOrganization extends BaseType implements EducationalOrganizatio
      *
      * @return static
      *
-     * @see http://schema.org/url
+     * @see https://schema.org/url
      */
     public function url($url)
     {
@@ -1453,7 +1685,7 @@ class EducationalOrganization extends BaseType implements EducationalOrganizatio
      *
      * @return static
      *
-     * @see http://schema.org/vatID
+     * @see https://schema.org/vatID
      */
     public function vatID($vatID)
     {

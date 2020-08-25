@@ -9,8 +9,11 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
 /**
  * A Property value specification.
  *
- * @see http://schema.org/PropertyValueSpecification
+ * @see https://schema.org/PropertyValueSpecification
  *
+ *
+ * External Sources:
+ * @see http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_ActionCollabClass
  */
 class PropertyValueSpecification extends BaseType implements PropertyValueSpecificationContract, IntangibleContract, ThingContract
 {
@@ -26,7 +29,7 @@ class PropertyValueSpecification extends BaseType implements PropertyValueSpecif
      *
      * @return static
      *
-     * @see http://schema.org/additionalType
+     * @see https://schema.org/additionalType
      */
     public function additionalType($additionalType)
     {
@@ -40,7 +43,7 @@ class PropertyValueSpecification extends BaseType implements PropertyValueSpecif
      *
      * @return static
      *
-     * @see http://schema.org/alternateName
+     * @see https://schema.org/alternateName
      */
     public function alternateName($alternateName)
     {
@@ -56,7 +59,7 @@ class PropertyValueSpecification extends BaseType implements PropertyValueSpecif
      *
      * @return static
      *
-     * @see http://schema.org/defaultValue
+     * @see https://schema.org/defaultValue
      */
     public function defaultValue($defaultValue)
     {
@@ -70,7 +73,7 @@ class PropertyValueSpecification extends BaseType implements PropertyValueSpecif
      *
      * @return static
      *
-     * @see http://schema.org/description
+     * @see https://schema.org/description
      */
     public function description($description)
     {
@@ -87,7 +90,7 @@ class PropertyValueSpecification extends BaseType implements PropertyValueSpecif
      *
      * @return static
      *
-     * @see http://schema.org/disambiguatingDescription
+     * @see https://schema.org/disambiguatingDescription
      */
     public function disambiguatingDescription($disambiguatingDescription)
     {
@@ -105,7 +108,7 @@ class PropertyValueSpecification extends BaseType implements PropertyValueSpecif
      *
      * @return static
      *
-     * @see http://schema.org/identifier
+     * @see https://schema.org/identifier
      */
     public function identifier($identifier)
     {
@@ -120,7 +123,7 @@ class PropertyValueSpecification extends BaseType implements PropertyValueSpecif
      *
      * @return static
      *
-     * @see http://schema.org/image
+     * @see https://schema.org/image
      */
     public function image($image)
     {
@@ -136,7 +139,7 @@ class PropertyValueSpecification extends BaseType implements PropertyValueSpecif
      *
      * @return static
      *
-     * @see http://schema.org/mainEntityOfPage
+     * @see https://schema.org/mainEntityOfPage
      */
     public function mainEntityOfPage($mainEntityOfPage)
     {
@@ -150,7 +153,7 @@ class PropertyValueSpecification extends BaseType implements PropertyValueSpecif
      *
      * @return static
      *
-     * @see http://schema.org/maxValue
+     * @see https://schema.org/maxValue
      */
     public function maxValue($maxValue)
     {
@@ -164,7 +167,7 @@ class PropertyValueSpecification extends BaseType implements PropertyValueSpecif
      *
      * @return static
      *
-     * @see http://schema.org/minValue
+     * @see https://schema.org/minValue
      */
     public function minValue($minValue)
     {
@@ -178,7 +181,7 @@ class PropertyValueSpecification extends BaseType implements PropertyValueSpecif
      *
      * @return static
      *
-     * @see http://schema.org/multipleValues
+     * @see https://schema.org/multipleValues
      */
     public function multipleValues($multipleValues)
     {
@@ -192,7 +195,7 @@ class PropertyValueSpecification extends BaseType implements PropertyValueSpecif
      *
      * @return static
      *
-     * @see http://schema.org/name
+     * @see https://schema.org/name
      */
     public function name($name)
     {
@@ -207,7 +210,7 @@ class PropertyValueSpecification extends BaseType implements PropertyValueSpecif
      *
      * @return static
      *
-     * @see http://schema.org/potentialAction
+     * @see https://schema.org/potentialAction
      */
     public function potentialAction($potentialAction)
     {
@@ -223,7 +226,7 @@ class PropertyValueSpecification extends BaseType implements PropertyValueSpecif
      *
      * @return static
      *
-     * @see http://schema.org/readonlyValue
+     * @see https://schema.org/readonlyValue
      */
     public function readonlyValue($readonlyValue)
     {
@@ -239,7 +242,7 @@ class PropertyValueSpecification extends BaseType implements PropertyValueSpecif
      *
      * @return static
      *
-     * @see http://schema.org/sameAs
+     * @see https://schema.org/sameAs
      */
     public function sameAs($sameAs)
     {
@@ -254,7 +257,7 @@ class PropertyValueSpecification extends BaseType implements PropertyValueSpecif
      *
      * @return static
      *
-     * @see http://schema.org/stepValue
+     * @see https://schema.org/stepValue
      */
     public function stepValue($stepValue)
     {
@@ -268,7 +271,7 @@ class PropertyValueSpecification extends BaseType implements PropertyValueSpecif
      *
      * @return static
      *
-     * @see http://schema.org/subjectOf
+     * @see https://schema.org/subjectOf
      */
     public function subjectOf($subjectOf)
     {
@@ -282,7 +285,7 @@ class PropertyValueSpecification extends BaseType implements PropertyValueSpecif
      *
      * @return static
      *
-     * @see http://schema.org/url
+     * @see https://schema.org/url
      */
     public function url($url)
     {
@@ -296,7 +299,7 @@ class PropertyValueSpecification extends BaseType implements PropertyValueSpecif
      *
      * @return static
      *
-     * @see http://schema.org/valueMaxLength
+     * @see https://schema.org/valueMaxLength
      */
     public function valueMaxLength($valueMaxLength)
     {
@@ -311,7 +314,7 @@ class PropertyValueSpecification extends BaseType implements PropertyValueSpecif
      *
      * @return static
      *
-     * @see http://schema.org/valueMinLength
+     * @see https://schema.org/valueMinLength
      */
     public function valueMinLength($valueMinLength)
     {
@@ -326,7 +329,7 @@ class PropertyValueSpecification extends BaseType implements PropertyValueSpecif
      *
      * @return static
      *
-     * @see http://schema.org/valueName
+     * @see https://schema.org/valueName
      */
     public function valueName($valueName)
     {
@@ -341,7 +344,7 @@ class PropertyValueSpecification extends BaseType implements PropertyValueSpecif
      *
      * @return static
      *
-     * @see http://schema.org/valuePattern
+     * @see https://schema.org/valuePattern
      */
     public function valuePattern($valuePattern)
     {
@@ -356,7 +359,7 @@ class PropertyValueSpecification extends BaseType implements PropertyValueSpecif
      *
      * @return static
      *
-     * @see http://schema.org/valueRequired
+     * @see https://schema.org/valueRequired
      */
     public function valueRequired($valueRequired)
     {

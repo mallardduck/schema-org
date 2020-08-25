@@ -60,6 +60,8 @@ interface TouristAttractionContract
 
     public function globalLocationNumber($globalLocationNumber);
 
+    public function hasDriveThroughService($hasDriveThroughService);
+
     public function hasMap($hasMap);
 
     public function identifier($identifier);
@@ -111,6 +113,8 @@ interface TouristAttractionContract
     public function subjectOf($subjectOf);
 
     public function telephone($telephone);
+
+    public function tourBookingPage($tourBookingPage);
 
     public function touristType($touristType);
 

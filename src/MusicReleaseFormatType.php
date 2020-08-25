@@ -11,59 +11,84 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * Format of this release (the type of recording media used, ie. compact disc,
  * digital media, LP, etc.).
  *
- * @see http://schema.org/MusicReleaseFormatType
+ * @see https://schema.org/MusicReleaseFormatType
  *
+ * @method static supersededBy($supersededBy) The value should be instance of pending types Class|Class[]|Enumeration|Enumeration[]|Property|Property[]
+ *
+ * External Sources:
+ * @see http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#MBZ
  */
 class MusicReleaseFormatType extends BaseType implements MusicReleaseFormatTypeContract, EnumerationContract, IntangibleContract, ThingContract
 {
     /**
      * CDFormat.
      *
-     * @see http://schema.org/CDFormat
+     * @see https://schema.org/CDFormat
+     *
+     * External Sources:
+     * @see http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#MBZ
      */
-     const CDFormat = 'http://schema.org/CDFormat';
+     const CDFormat = 'https://schema.org/CDFormat';
 
     /**
      * CassetteFormat.
      *
-     * @see http://schema.org/CassetteFormat
+     * @see https://schema.org/CassetteFormat
+     *
+     * External Sources:
+     * @see http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#MBZ
      */
-     const CassetteFormat = 'http://schema.org/CassetteFormat';
+     const CassetteFormat = 'https://schema.org/CassetteFormat';
 
     /**
      * DVDFormat.
      *
-     * @see http://schema.org/DVDFormat
+     * @see https://schema.org/DVDFormat
+     *
+     * External Sources:
+     * @see http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#MBZ
      */
-     const DVDFormat = 'http://schema.org/DVDFormat';
+     const DVDFormat = 'https://schema.org/DVDFormat';
 
     /**
      * DigitalAudioTapeFormat.
      *
-     * @see http://schema.org/DigitalAudioTapeFormat
+     * @see https://schema.org/DigitalAudioTapeFormat
+     *
+     * External Sources:
+     * @see http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#MBZ
      */
-     const DigitalAudioTapeFormat = 'http://schema.org/DigitalAudioTapeFormat';
+     const DigitalAudioTapeFormat = 'https://schema.org/DigitalAudioTapeFormat';
 
     /**
      * DigitalFormat.
      *
-     * @see http://schema.org/DigitalFormat
+     * @see https://schema.org/DigitalFormat
+     *
+     * External Sources:
+     * @see http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#MBZ
      */
-     const DigitalFormat = 'http://schema.org/DigitalFormat';
+     const DigitalFormat = 'https://schema.org/DigitalFormat';
 
     /**
      * LaserDiscFormat.
      *
-     * @see http://schema.org/LaserDiscFormat
+     * @see https://schema.org/LaserDiscFormat
+     *
+     * External Sources:
+     * @see http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#MBZ
      */
-     const LaserDiscFormat = 'http://schema.org/LaserDiscFormat';
+     const LaserDiscFormat = 'https://schema.org/LaserDiscFormat';
 
     /**
      * VinylFormat.
      *
-     * @see http://schema.org/VinylFormat
+     * @see https://schema.org/VinylFormat
+     *
+     * External Sources:
+     * @see http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#MBZ
      */
-     const VinylFormat = 'http://schema.org/VinylFormat';
+     const VinylFormat = 'https://schema.org/VinylFormat';
 
     /**
      * An additional type for the item, typically used for adding more specific
@@ -77,7 +102,7 @@ class MusicReleaseFormatType extends BaseType implements MusicReleaseFormatTypeC
      *
      * @return static
      *
-     * @see http://schema.org/additionalType
+     * @see https://schema.org/additionalType
      */
     public function additionalType($additionalType)
     {
@@ -91,7 +116,7 @@ class MusicReleaseFormatType extends BaseType implements MusicReleaseFormatTypeC
      *
      * @return static
      *
-     * @see http://schema.org/alternateName
+     * @see https://schema.org/alternateName
      */
     public function alternateName($alternateName)
     {
@@ -105,7 +130,7 @@ class MusicReleaseFormatType extends BaseType implements MusicReleaseFormatTypeC
      *
      * @return static
      *
-     * @see http://schema.org/description
+     * @see https://schema.org/description
      */
     public function description($description)
     {
@@ -122,7 +147,7 @@ class MusicReleaseFormatType extends BaseType implements MusicReleaseFormatTypeC
      *
      * @return static
      *
-     * @see http://schema.org/disambiguatingDescription
+     * @see https://schema.org/disambiguatingDescription
      */
     public function disambiguatingDescription($disambiguatingDescription)
     {
@@ -140,7 +165,7 @@ class MusicReleaseFormatType extends BaseType implements MusicReleaseFormatTypeC
      *
      * @return static
      *
-     * @see http://schema.org/identifier
+     * @see https://schema.org/identifier
      */
     public function identifier($identifier)
     {
@@ -155,7 +180,7 @@ class MusicReleaseFormatType extends BaseType implements MusicReleaseFormatTypeC
      *
      * @return static
      *
-     * @see http://schema.org/image
+     * @see https://schema.org/image
      */
     public function image($image)
     {
@@ -171,7 +196,7 @@ class MusicReleaseFormatType extends BaseType implements MusicReleaseFormatTypeC
      *
      * @return static
      *
-     * @see http://schema.org/mainEntityOfPage
+     * @see https://schema.org/mainEntityOfPage
      */
     public function mainEntityOfPage($mainEntityOfPage)
     {
@@ -185,7 +210,7 @@ class MusicReleaseFormatType extends BaseType implements MusicReleaseFormatTypeC
      *
      * @return static
      *
-     * @see http://schema.org/name
+     * @see https://schema.org/name
      */
     public function name($name)
     {
@@ -200,7 +225,7 @@ class MusicReleaseFormatType extends BaseType implements MusicReleaseFormatTypeC
      *
      * @return static
      *
-     * @see http://schema.org/potentialAction
+     * @see https://schema.org/potentialAction
      */
     public function potentialAction($potentialAction)
     {
@@ -216,7 +241,7 @@ class MusicReleaseFormatType extends BaseType implements MusicReleaseFormatTypeC
      *
      * @return static
      *
-     * @see http://schema.org/sameAs
+     * @see https://schema.org/sameAs
      */
     public function sameAs($sameAs)
     {
@@ -230,7 +255,7 @@ class MusicReleaseFormatType extends BaseType implements MusicReleaseFormatTypeC
      *
      * @return static
      *
-     * @see http://schema.org/subjectOf
+     * @see https://schema.org/subjectOf
      */
     public function subjectOf($subjectOf)
     {
@@ -244,7 +269,7 @@ class MusicReleaseFormatType extends BaseType implements MusicReleaseFormatTypeC
      *
      * @return static
      *
-     * @see http://schema.org/url
+     * @see https://schema.org/url
      */
     public function url($url)
     {

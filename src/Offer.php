@@ -24,8 +24,11 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
  * guide](http://www.gs1us.org/resources/standards/gtin-validation-guide) from
  * [GS1](http://www.gs1.org/).
  *
- * @see http://schema.org/Offer
+ * @see https://schema.org/Offer
  *
+ *
+ * External Sources:
+ * @see http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms
  */
 class Offer extends BaseType implements OfferContract, IntangibleContract, ThingContract
 {
@@ -36,7 +39,7 @@ class Offer extends BaseType implements OfferContract, IntangibleContract, Thing
      *
      * @return static
      *
-     * @see http://schema.org/acceptedPaymentMethod
+     * @see https://schema.org/acceptedPaymentMethod
      */
     public function acceptedPaymentMethod($acceptedPaymentMethod)
     {
@@ -52,7 +55,7 @@ class Offer extends BaseType implements OfferContract, IntangibleContract, Thing
      *
      * @return static
      *
-     * @see http://schema.org/addOn
+     * @see https://schema.org/addOn
      */
     public function addOn($addOn)
     {
@@ -71,7 +74,7 @@ class Offer extends BaseType implements OfferContract, IntangibleContract, Thing
      *
      * @return static
      *
-     * @see http://schema.org/additionalType
+     * @see https://schema.org/additionalType
      */
     public function additionalType($additionalType)
     {
@@ -86,7 +89,7 @@ class Offer extends BaseType implements OfferContract, IntangibleContract, Thing
      *
      * @return static
      *
-     * @see http://schema.org/advanceBookingRequirement
+     * @see https://schema.org/advanceBookingRequirement
      */
     public function advanceBookingRequirement($advanceBookingRequirement)
     {
@@ -101,7 +104,7 @@ class Offer extends BaseType implements OfferContract, IntangibleContract, Thing
      *
      * @return static
      *
-     * @see http://schema.org/aggregateRating
+     * @see https://schema.org/aggregateRating
      */
     public function aggregateRating($aggregateRating)
     {
@@ -115,7 +118,7 @@ class Offer extends BaseType implements OfferContract, IntangibleContract, Thing
      *
      * @return static
      *
-     * @see http://schema.org/alternateName
+     * @see https://schema.org/alternateName
      */
     public function alternateName($alternateName)
     {
@@ -129,7 +132,7 @@ class Offer extends BaseType implements OfferContract, IntangibleContract, Thing
      *
      * @return static
      *
-     * @see http://schema.org/areaServed
+     * @see https://schema.org/areaServed
      */
     public function areaServed($areaServed)
     {
@@ -144,7 +147,7 @@ class Offer extends BaseType implements OfferContract, IntangibleContract, Thing
      *
      * @return static
      *
-     * @see http://schema.org/availability
+     * @see https://schema.org/availability
      */
     public function availability($availability)
     {
@@ -159,7 +162,7 @@ class Offer extends BaseType implements OfferContract, IntangibleContract, Thing
      *
      * @return static
      *
-     * @see http://schema.org/availabilityEnds
+     * @see https://schema.org/availabilityEnds
      */
     public function availabilityEnds($availabilityEnds)
     {
@@ -174,7 +177,7 @@ class Offer extends BaseType implements OfferContract, IntangibleContract, Thing
      *
      * @return static
      *
-     * @see http://schema.org/availabilityStarts
+     * @see https://schema.org/availabilityStarts
      */
     public function availabilityStarts($availabilityStarts)
     {
@@ -188,7 +191,7 @@ class Offer extends BaseType implements OfferContract, IntangibleContract, Thing
      *
      * @return static
      *
-     * @see http://schema.org/availableAtOrFrom
+     * @see https://schema.org/availableAtOrFrom
      */
     public function availableAtOrFrom($availableAtOrFrom)
     {
@@ -202,7 +205,7 @@ class Offer extends BaseType implements OfferContract, IntangibleContract, Thing
      *
      * @return static
      *
-     * @see http://schema.org/availableDeliveryMethod
+     * @see https://schema.org/availableDeliveryMethod
      */
     public function availableDeliveryMethod($availableDeliveryMethod)
     {
@@ -218,7 +221,7 @@ class Offer extends BaseType implements OfferContract, IntangibleContract, Thing
      *
      * @return static
      *
-     * @see http://schema.org/businessFunction
+     * @see https://schema.org/businessFunction
      */
     public function businessFunction($businessFunction)
     {
@@ -229,11 +232,11 @@ class Offer extends BaseType implements OfferContract, IntangibleContract, Thing
      * A category for the item. Greater signs or slashes can be used to
      * informally indicate a category hierarchy.
      *
-     * @param \Spatie\SchemaOrg\Contracts\ThingContract|\Spatie\SchemaOrg\Contracts\ThingContract[]|string|string[] $category
+     * @param \Spatie\SchemaOrg\Contracts\PhysicalActivityCategoryContract|\Spatie\SchemaOrg\Contracts\PhysicalActivityCategoryContract[]|\Spatie\SchemaOrg\Contracts\ThingContract|\Spatie\SchemaOrg\Contracts\ThingContract[]|string|string[] $category
      *
      * @return static
      *
-     * @see http://schema.org/category
+     * @see https://schema.org/category
      */
     public function category($category)
     {
@@ -249,7 +252,7 @@ class Offer extends BaseType implements OfferContract, IntangibleContract, Thing
      *
      * @return static
      *
-     * @see http://schema.org/deliveryLeadTime
+     * @see https://schema.org/deliveryLeadTime
      */
     public function deliveryLeadTime($deliveryLeadTime)
     {
@@ -263,7 +266,7 @@ class Offer extends BaseType implements OfferContract, IntangibleContract, Thing
      *
      * @return static
      *
-     * @see http://schema.org/description
+     * @see https://schema.org/description
      */
     public function description($description)
     {
@@ -280,7 +283,7 @@ class Offer extends BaseType implements OfferContract, IntangibleContract, Thing
      *
      * @return static
      *
-     * @see http://schema.org/disambiguatingDescription
+     * @see https://schema.org/disambiguatingDescription
      */
     public function disambiguatingDescription($disambiguatingDescription)
     {
@@ -294,7 +297,7 @@ class Offer extends BaseType implements OfferContract, IntangibleContract, Thing
      *
      * @return static
      *
-     * @see http://schema.org/eligibleCustomerType
+     * @see https://schema.org/eligibleCustomerType
      */
     public function eligibleCustomerType($eligibleCustomerType)
     {
@@ -308,7 +311,7 @@ class Offer extends BaseType implements OfferContract, IntangibleContract, Thing
      *
      * @return static
      *
-     * @see http://schema.org/eligibleDuration
+     * @see https://schema.org/eligibleDuration
      */
     public function eligibleDuration($eligibleDuration)
     {
@@ -324,7 +327,7 @@ class Offer extends BaseType implements OfferContract, IntangibleContract, Thing
      *
      * @return static
      *
-     * @see http://schema.org/eligibleQuantity
+     * @see https://schema.org/eligibleQuantity
      */
     public function eligibleQuantity($eligibleQuantity)
     {
@@ -342,7 +345,7 @@ class Offer extends BaseType implements OfferContract, IntangibleContract, Thing
      *
      * @return static
      *
-     * @see http://schema.org/eligibleRegion
+     * @see https://schema.org/eligibleRegion
      */
     public function eligibleRegion($eligibleRegion)
     {
@@ -359,11 +362,45 @@ class Offer extends BaseType implements OfferContract, IntangibleContract, Thing
      *
      * @return static
      *
-     * @see http://schema.org/eligibleTransactionVolume
+     * @see https://schema.org/eligibleTransactionVolume
      */
     public function eligibleTransactionVolume($eligibleTransactionVolume)
     {
         return $this->setProperty('eligibleTransactionVolume', $eligibleTransactionVolume);
+    }
+
+    /**
+     * A Global Trade Item Number
+     * ([GTIN](https://www.gs1.org/standards/id-keys/gtin)). GTINs identify
+     * trade items, including products and services, using numeric
+     * identification codes. The [[gtin]] property generalizes the earlier <a
+     * class="localLink" href="https://schema.org/gtin8">gtin8</a>, <a
+     * class="localLink" href="https://schema.org/gtin12">gtin12</a>, <a
+     * class="localLink" href="https://schema.org/gtin13">gtin13</a>, and <a
+     * class="localLink" href="https://schema.org/gtin14">gtin14</a> properties.
+     * The GS1 [digital link
+     * specifications](https://www.gs1.org/standards/Digital-Link/) express
+     * GTINs as URLs. A correct [[gtin]] value should be a valid GTIN, which
+     * means that it should be an all-numeric string of either 8, 12, 13 or 14
+     * digits, or a "GS1 Digital Link" URL based on such a string. The numeric
+     * component should also have a [valid GS1 check
+     * digit](https://www.gs1.org/services/check-digit-calculator) and meet the
+     * other rules for valid GTINs. See also <a
+     * href="http://www.gs1.org/barcodes/technical/idkeys/gtin">GS1's GTIN
+     * Summary</a> and
+     * [Wikipedia](https://en.wikipedia.org/wiki/Global_Trade_Item_Number) for
+     * more details. Left-padding of the gtin values is not required or
+     * encouraged.
+     *
+     * @param string|string[] $gtin
+     *
+     * @return static
+     *
+     * @see https://schema.org/gtin
+     */
+    public function gtin($gtin)
+    {
+        return $this->setProperty('gtin', $gtin);
     }
 
     /**
@@ -378,7 +415,7 @@ class Offer extends BaseType implements OfferContract, IntangibleContract, Thing
      *
      * @return static
      *
-     * @see http://schema.org/gtin12
+     * @see https://schema.org/gtin12
      */
     public function gtin12($gtin12)
     {
@@ -397,7 +434,7 @@ class Offer extends BaseType implements OfferContract, IntangibleContract, Thing
      *
      * @return static
      *
-     * @see http://schema.org/gtin13
+     * @see https://schema.org/gtin13
      */
     public function gtin13($gtin13)
     {
@@ -414,7 +451,7 @@ class Offer extends BaseType implements OfferContract, IntangibleContract, Thing
      *
      * @return static
      *
-     * @see http://schema.org/gtin14
+     * @see https://schema.org/gtin14
      */
     public function gtin14($gtin14)
     {
@@ -432,7 +469,7 @@ class Offer extends BaseType implements OfferContract, IntangibleContract, Thing
      *
      * @return static
      *
-     * @see http://schema.org/gtin8
+     * @see https://schema.org/gtin8
      */
     public function gtin8($gtin8)
     {
@@ -450,7 +487,7 @@ class Offer extends BaseType implements OfferContract, IntangibleContract, Thing
      *
      * @return static
      *
-     * @see http://schema.org/identifier
+     * @see https://schema.org/identifier
      */
     public function identifier($identifier)
     {
@@ -465,7 +502,7 @@ class Offer extends BaseType implements OfferContract, IntangibleContract, Thing
      *
      * @return static
      *
-     * @see http://schema.org/image
+     * @see https://schema.org/image
      */
     public function image($image)
     {
@@ -474,17 +511,36 @@ class Offer extends BaseType implements OfferContract, IntangibleContract, Thing
 
     /**
      * This links to a node or nodes indicating the exact quantity of the
-     * products included in the offer.
+     * products included in  an [[Offer]] or [[ProductCollection]].
      *
      * @param \Spatie\SchemaOrg\Contracts\TypeAndQuantityNodeContract|\Spatie\SchemaOrg\Contracts\TypeAndQuantityNodeContract[] $includesObject
      *
      * @return static
      *
-     * @see http://schema.org/includesObject
+     * @see https://schema.org/includesObject
      */
     public function includesObject($includesObject)
     {
         return $this->setProperty('includesObject', $includesObject);
+    }
+
+    /**
+     * The ISO 3166-1 (ISO 3166-1 alpha-2) or ISO 3166-2 code, the place, or the
+     * GeoShape for the geo-political region(s) for which the offer or delivery
+     * charge specification is not valid, e.g. a region where the transaction is
+     * not allowed.
+     * 
+     * See also [[eligibleRegion]].
+     *
+     * @param \Spatie\SchemaOrg\Contracts\GeoShapeContract|\Spatie\SchemaOrg\Contracts\GeoShapeContract[]|\Spatie\SchemaOrg\Contracts\PlaceContract|\Spatie\SchemaOrg\Contracts\PlaceContract[]|string|string[] $ineligibleRegion
+     *
+     * @return static
+     *
+     * @see https://schema.org/ineligibleRegion
+     */
+    public function ineligibleRegion($ineligibleRegion)
+    {
+        return $this->setProperty('ineligibleRegion', $ineligibleRegion);
     }
 
     /**
@@ -494,7 +550,7 @@ class Offer extends BaseType implements OfferContract, IntangibleContract, Thing
      *
      * @return static
      *
-     * @see http://schema.org/inventoryLevel
+     * @see https://schema.org/inventoryLevel
      */
     public function inventoryLevel($inventoryLevel)
     {
@@ -510,7 +566,7 @@ class Offer extends BaseType implements OfferContract, IntangibleContract, Thing
      *
      * @return static
      *
-     * @see http://schema.org/itemCondition
+     * @see https://schema.org/itemCondition
      */
     public function itemCondition($itemCondition)
     {
@@ -528,11 +584,26 @@ class Offer extends BaseType implements OfferContract, IntangibleContract, Thing
      *
      * @return static
      *
-     * @see http://schema.org/itemOffered
+     * @see https://schema.org/itemOffered
      */
     public function itemOffered($itemOffered)
     {
         return $this->setProperty('itemOffered', $itemOffered);
+    }
+
+    /**
+     * Length of the lease for some [[Accommodation]], either particular to some
+     * [[Offer]] or in some cases intrinsic to the property.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\DurationContract|\Spatie\SchemaOrg\Contracts\DurationContract[]|\Spatie\SchemaOrg\Contracts\QuantitativeValueContract|\Spatie\SchemaOrg\Contracts\QuantitativeValueContract[] $leaseLength
+     *
+     * @return static
+     *
+     * @see https://schema.org/leaseLength
+     */
+    public function leaseLength($leaseLength)
+    {
+        return $this->setProperty('leaseLength', $leaseLength);
     }
 
     /**
@@ -544,7 +615,7 @@ class Offer extends BaseType implements OfferContract, IntangibleContract, Thing
      *
      * @return static
      *
-     * @see http://schema.org/mainEntityOfPage
+     * @see https://schema.org/mainEntityOfPage
      */
     public function mainEntityOfPage($mainEntityOfPage)
     {
@@ -559,7 +630,7 @@ class Offer extends BaseType implements OfferContract, IntangibleContract, Thing
      *
      * @return static
      *
-     * @see http://schema.org/mpn
+     * @see https://schema.org/mpn
      */
     public function mpn($mpn)
     {
@@ -573,7 +644,7 @@ class Offer extends BaseType implements OfferContract, IntangibleContract, Thing
      *
      * @return static
      *
-     * @see http://schema.org/name
+     * @see https://schema.org/name
      */
     public function name($name)
     {
@@ -587,7 +658,7 @@ class Offer extends BaseType implements OfferContract, IntangibleContract, Thing
      *
      * @return static
      *
-     * @see http://schema.org/offeredBy
+     * @see https://schema.org/offeredBy
      */
     public function offeredBy($offeredBy)
     {
@@ -602,7 +673,7 @@ class Offer extends BaseType implements OfferContract, IntangibleContract, Thing
      *
      * @return static
      *
-     * @see http://schema.org/potentialAction
+     * @see https://schema.org/potentialAction
      */
     public function potentialAction($potentialAction)
     {
@@ -639,7 +710,7 @@ class Offer extends BaseType implements OfferContract, IntangibleContract, Thing
      *
      * @return static
      *
-     * @see http://schema.org/price
+     * @see https://schema.org/price
      */
     public function price($price)
     {
@@ -662,7 +733,7 @@ class Offer extends BaseType implements OfferContract, IntangibleContract, Thing
      *
      * @return static
      *
-     * @see http://schema.org/priceCurrency
+     * @see https://schema.org/priceCurrency
      */
     public function priceCurrency($priceCurrency)
     {
@@ -677,7 +748,7 @@ class Offer extends BaseType implements OfferContract, IntangibleContract, Thing
      *
      * @return static
      *
-     * @see http://schema.org/priceSpecification
+     * @see https://schema.org/priceSpecification
      */
     public function priceSpecification($priceSpecification)
     {
@@ -691,7 +762,7 @@ class Offer extends BaseType implements OfferContract, IntangibleContract, Thing
      *
      * @return static
      *
-     * @see http://schema.org/priceValidUntil
+     * @see https://schema.org/priceValidUntil
      */
     public function priceValidUntil($priceValidUntil)
     {
@@ -705,7 +776,7 @@ class Offer extends BaseType implements OfferContract, IntangibleContract, Thing
      *
      * @return static
      *
-     * @see http://schema.org/review
+     * @see https://schema.org/review
      */
     public function review($review)
     {
@@ -719,7 +790,7 @@ class Offer extends BaseType implements OfferContract, IntangibleContract, Thing
      *
      * @return static
      *
-     * @see http://schema.org/reviews
+     * @see https://schema.org/reviews
      */
     public function reviews($reviews)
     {
@@ -735,7 +806,7 @@ class Offer extends BaseType implements OfferContract, IntangibleContract, Thing
      *
      * @return static
      *
-     * @see http://schema.org/sameAs
+     * @see https://schema.org/sameAs
      */
     public function sameAs($sameAs)
     {
@@ -750,7 +821,7 @@ class Offer extends BaseType implements OfferContract, IntangibleContract, Thing
      *
      * @return static
      *
-     * @see http://schema.org/seller
+     * @see https://schema.org/seller
      */
     public function seller($seller)
     {
@@ -766,11 +837,26 @@ class Offer extends BaseType implements OfferContract, IntangibleContract, Thing
      *
      * @return static
      *
-     * @see http://schema.org/serialNumber
+     * @see https://schema.org/serialNumber
      */
     public function serialNumber($serialNumber)
     {
         return $this->setProperty('serialNumber', $serialNumber);
+    }
+
+    /**
+     * Indicates information about the shipping policies and options associated
+     * with an [[Offer]].
+     *
+     * @param \Spatie\SchemaOrg\Contracts\OfferShippingDetailsContract|\Spatie\SchemaOrg\Contracts\OfferShippingDetailsContract[] $shippingDetails
+     *
+     * @return static
+     *
+     * @see https://schema.org/shippingDetails
+     */
+    public function shippingDetails($shippingDetails)
+    {
+        return $this->setProperty('shippingDetails', $shippingDetails);
     }
 
     /**
@@ -781,7 +867,7 @@ class Offer extends BaseType implements OfferContract, IntangibleContract, Thing
      *
      * @return static
      *
-     * @see http://schema.org/sku
+     * @see https://schema.org/sku
      */
     public function sku($sku)
     {
@@ -795,7 +881,7 @@ class Offer extends BaseType implements OfferContract, IntangibleContract, Thing
      *
      * @return static
      *
-     * @see http://schema.org/subjectOf
+     * @see https://schema.org/subjectOf
      */
     public function subjectOf($subjectOf)
     {
@@ -809,7 +895,7 @@ class Offer extends BaseType implements OfferContract, IntangibleContract, Thing
      *
      * @return static
      *
-     * @see http://schema.org/url
+     * @see https://schema.org/url
      */
     public function url($url)
     {
@@ -823,7 +909,7 @@ class Offer extends BaseType implements OfferContract, IntangibleContract, Thing
      *
      * @return static
      *
-     * @see http://schema.org/validFrom
+     * @see https://schema.org/validFrom
      */
     public function validFrom($validFrom)
     {
@@ -838,7 +924,7 @@ class Offer extends BaseType implements OfferContract, IntangibleContract, Thing
      *
      * @return static
      *
-     * @see http://schema.org/validThrough
+     * @see https://schema.org/validThrough
      */
     public function validThrough($validThrough)
     {
@@ -852,7 +938,7 @@ class Offer extends BaseType implements OfferContract, IntangibleContract, Thing
      *
      * @return static
      *
-     * @see http://schema.org/warranty
+     * @see https://schema.org/warranty
      */
     public function warranty($warranty)
     {

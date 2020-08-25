@@ -11,19 +11,52 @@ use \Spatie\SchemaOrg\Contracts\ThingContract;
 /**
  * Residence type: Single-family home.
  *
- * @see http://schema.org/SingleFamilyResidence
+ * @see https://schema.org/SingleFamilyResidence
  *
  */
 class SingleFamilyResidence extends BaseType implements SingleFamilyResidenceContract, AccommodationContract, HouseContract, PlaceContract, ThingContract
 {
+    /**
+     * Category of an [[Accommodation]], following real estate conventions e.g.
+     * RESO (see
+     * [PropertySubType](https://ddwiki.reso.org/display/DDW17/PropertySubType+Field),
+     * and
+     * [PropertyType](https://ddwiki.reso.org/display/DDW17/PropertyType+Field)
+     * fields  for suggested values).
+     *
+     * @param string|string[] $accommodationCategory
+     *
+     * @return static
+     *
+     * @see https://schema.org/accommodationCategory
+     */
+    public function accommodationCategory($accommodationCategory)
+    {
+        return $this->setProperty('accommodationCategory', $accommodationCategory);
+    }
+
+    /**
+     * A floorplan of some [[Accommodation]].
+     *
+     * @param \Spatie\SchemaOrg\Contracts\FloorPlanContract|\Spatie\SchemaOrg\Contracts\FloorPlanContract[] $accommodationFloorPlan
+     *
+     * @return static
+     *
+     * @see https://schema.org/accommodationFloorPlan
+     */
+    public function accommodationFloorPlan($accommodationFloorPlan)
+    {
+        return $this->setProperty('accommodationFloorPlan', $accommodationFloorPlan);
+    }
+
     /**
      * A property-value pair representing an additional characteristics of the
      * entitity, e.g. a product feature or another characteristic for which
      * there is no matching property in schema.org.
      * 
      * Note: Publishers should be aware that applications designed to use
-     * specific schema.org properties (e.g. http://schema.org/width,
-     * http://schema.org/color, http://schema.org/gtin13, ...) will typically
+     * specific schema.org properties (e.g. https://schema.org/width,
+     * https://schema.org/color, https://schema.org/gtin13, ...) will typically
      * expect such data to be provided using those properties, rather than using
      * the generic property/value mechanism.
      *
@@ -31,7 +64,7 @@ class SingleFamilyResidence extends BaseType implements SingleFamilyResidenceCon
      *
      * @return static
      *
-     * @see http://schema.org/additionalProperty
+     * @see https://schema.org/additionalProperty
      */
     public function additionalProperty($additionalProperty)
     {
@@ -50,7 +83,7 @@ class SingleFamilyResidence extends BaseType implements SingleFamilyResidenceCon
      *
      * @return static
      *
-     * @see http://schema.org/additionalType
+     * @see https://schema.org/additionalType
      */
     public function additionalType($additionalType)
     {
@@ -64,7 +97,7 @@ class SingleFamilyResidence extends BaseType implements SingleFamilyResidenceCon
      *
      * @return static
      *
-     * @see http://schema.org/address
+     * @see https://schema.org/address
      */
     public function address($address)
     {
@@ -79,7 +112,7 @@ class SingleFamilyResidence extends BaseType implements SingleFamilyResidenceCon
      *
      * @return static
      *
-     * @see http://schema.org/aggregateRating
+     * @see https://schema.org/aggregateRating
      */
     public function aggregateRating($aggregateRating)
     {
@@ -93,7 +126,7 @@ class SingleFamilyResidence extends BaseType implements SingleFamilyResidenceCon
      *
      * @return static
      *
-     * @see http://schema.org/alternateName
+     * @see https://schema.org/alternateName
      */
     public function alternateName($alternateName)
     {
@@ -110,7 +143,7 @@ class SingleFamilyResidence extends BaseType implements SingleFamilyResidenceCon
      *
      * @return static
      *
-     * @see http://schema.org/amenityFeature
+     * @see https://schema.org/amenityFeature
      */
     public function amenityFeature($amenityFeature)
     {
@@ -130,7 +163,7 @@ class SingleFamilyResidence extends BaseType implements SingleFamilyResidenceCon
      *
      * @return static
      *
-     * @see http://schema.org/branchCode
+     * @see https://schema.org/branchCode
      */
     public function branchCode($branchCode)
     {
@@ -144,7 +177,7 @@ class SingleFamilyResidence extends BaseType implements SingleFamilyResidenceCon
      *
      * @return static
      *
-     * @see http://schema.org/containedIn
+     * @see https://schema.org/containedIn
      */
     public function containedIn($containedIn)
     {
@@ -158,7 +191,7 @@ class SingleFamilyResidence extends BaseType implements SingleFamilyResidenceCon
      *
      * @return static
      *
-     * @see http://schema.org/containedInPlace
+     * @see https://schema.org/containedInPlace
      */
     public function containedInPlace($containedInPlace)
     {
@@ -173,7 +206,7 @@ class SingleFamilyResidence extends BaseType implements SingleFamilyResidenceCon
      *
      * @return static
      *
-     * @see http://schema.org/containsPlace
+     * @see https://schema.org/containsPlace
      */
     public function containsPlace($containsPlace)
     {
@@ -187,7 +220,7 @@ class SingleFamilyResidence extends BaseType implements SingleFamilyResidenceCon
      *
      * @return static
      *
-     * @see http://schema.org/description
+     * @see https://schema.org/description
      */
     public function description($description)
     {
@@ -204,7 +237,7 @@ class SingleFamilyResidence extends BaseType implements SingleFamilyResidenceCon
      *
      * @return static
      *
-     * @see http://schema.org/disambiguatingDescription
+     * @see https://schema.org/disambiguatingDescription
      */
     public function disambiguatingDescription($disambiguatingDescription)
     {
@@ -219,7 +252,7 @@ class SingleFamilyResidence extends BaseType implements SingleFamilyResidenceCon
      *
      * @return static
      *
-     * @see http://schema.org/event
+     * @see https://schema.org/event
      */
     public function event($event)
     {
@@ -233,7 +266,7 @@ class SingleFamilyResidence extends BaseType implements SingleFamilyResidenceCon
      *
      * @return static
      *
-     * @see http://schema.org/events
+     * @see https://schema.org/events
      */
     public function events($events)
     {
@@ -247,11 +280,29 @@ class SingleFamilyResidence extends BaseType implements SingleFamilyResidenceCon
      *
      * @return static
      *
-     * @see http://schema.org/faxNumber
+     * @see https://schema.org/faxNumber
      */
     public function faxNumber($faxNumber)
     {
         return $this->setProperty('faxNumber', $faxNumber);
+    }
+
+    /**
+     * The floor level for an [[Accommodation]] in a multi-storey building.
+     * Since counting
+     *   systems [vary
+     * internationally](https://en.wikipedia.org/wiki/Storey#Consecutive_number_floor_designations),
+     * the local system should be used where possible.
+     *
+     * @param string|string[] $floorLevel
+     *
+     * @return static
+     *
+     * @see https://schema.org/floorLevel
+     */
+    public function floorLevel($floorLevel)
+    {
+        return $this->setProperty('floorLevel', $floorLevel);
     }
 
     /**
@@ -263,7 +314,7 @@ class SingleFamilyResidence extends BaseType implements SingleFamilyResidenceCon
      *
      * @return static
      *
-     * @see http://schema.org/floorSize
+     * @see https://schema.org/floorSize
      */
     public function floorSize($floorSize)
     {
@@ -277,7 +328,7 @@ class SingleFamilyResidence extends BaseType implements SingleFamilyResidenceCon
      *
      * @return static
      *
-     * @see http://schema.org/geo
+     * @see https://schema.org/geo
      */
     public function geo($geo)
     {
@@ -291,11 +342,11 @@ class SingleFamilyResidence extends BaseType implements SingleFamilyResidenceCon
      * point of the interior of b lies in the interior of a". As defined in
      * [DE-9IM](https://en.wikipedia.org/wiki/DE-9IM).
      *
-     * @param \Spatie\SchemaOrg\Contracts\PlaceContract|\Spatie\SchemaOrg\Contracts\PlaceContract[] $geoContains
+     * @param \Spatie\SchemaOrg\Contracts\GeospatialGeometryContract|\Spatie\SchemaOrg\Contracts\GeospatialGeometryContract[]|\Spatie\SchemaOrg\Contracts\PlaceContract|\Spatie\SchemaOrg\Contracts\PlaceContract[] $geoContains
      *
      * @return static
      *
-     * @see http://schema.org/geoContains
+     * @see https://schema.org/geoContains
      */
     public function geoContains($geoContains)
     {
@@ -307,11 +358,11 @@ class SingleFamilyResidence extends BaseType implements SingleFamilyResidenceCon
      * represent), relating a geometry to another that covers it. As defined in
      * [DE-9IM](https://en.wikipedia.org/wiki/DE-9IM).
      *
-     * @param \Spatie\SchemaOrg\Contracts\PlaceContract|\Spatie\SchemaOrg\Contracts\PlaceContract[] $geoCoveredBy
+     * @param \Spatie\SchemaOrg\Contracts\GeospatialGeometryContract|\Spatie\SchemaOrg\Contracts\GeospatialGeometryContract[]|\Spatie\SchemaOrg\Contracts\PlaceContract|\Spatie\SchemaOrg\Contracts\PlaceContract[] $geoCoveredBy
      *
      * @return static
      *
-     * @see http://schema.org/geoCoveredBy
+     * @see https://schema.org/geoCoveredBy
      */
     public function geoCoveredBy($geoCoveredBy)
     {
@@ -324,11 +375,11 @@ class SingleFamilyResidence extends BaseType implements SingleFamilyResidenceCon
      * point of b is a point of (the interior or boundary of) a". As defined in
      * [DE-9IM](https://en.wikipedia.org/wiki/DE-9IM).
      *
-     * @param \Spatie\SchemaOrg\Contracts\PlaceContract|\Spatie\SchemaOrg\Contracts\PlaceContract[] $geoCovers
+     * @param \Spatie\SchemaOrg\Contracts\GeospatialGeometryContract|\Spatie\SchemaOrg\Contracts\GeospatialGeometryContract[]|\Spatie\SchemaOrg\Contracts\PlaceContract|\Spatie\SchemaOrg\Contracts\PlaceContract[] $geoCovers
      *
      * @return static
      *
-     * @see http://schema.org/geoCovers
+     * @see https://schema.org/geoCovers
      */
     public function geoCovers($geoCovers)
     {
@@ -342,11 +393,11 @@ class SingleFamilyResidence extends BaseType implements SingleFamilyResidenceCon
      * of the intersection is less than that of at least one of them". As
      * defined in [DE-9IM](https://en.wikipedia.org/wiki/DE-9IM).
      *
-     * @param \Spatie\SchemaOrg\Contracts\PlaceContract|\Spatie\SchemaOrg\Contracts\PlaceContract[] $geoCrosses
+     * @param \Spatie\SchemaOrg\Contracts\GeospatialGeometryContract|\Spatie\SchemaOrg\Contracts\GeospatialGeometryContract[]|\Spatie\SchemaOrg\Contracts\PlaceContract|\Spatie\SchemaOrg\Contracts\PlaceContract[] $geoCrosses
      *
      * @return static
      *
-     * @see http://schema.org/geoCrosses
+     * @see https://schema.org/geoCrosses
      */
     public function geoCrosses($geoCrosses)
     {
@@ -359,11 +410,11 @@ class SingleFamilyResidence extends BaseType implements SingleFamilyResidenceCon
      * form a set of disconnected geometries." (a symmetric relationship, as
      * defined in [DE-9IM](https://en.wikipedia.org/wiki/DE-9IM))
      *
-     * @param \Spatie\SchemaOrg\Contracts\PlaceContract|\Spatie\SchemaOrg\Contracts\PlaceContract[] $geoDisjoint
+     * @param \Spatie\SchemaOrg\Contracts\GeospatialGeometryContract|\Spatie\SchemaOrg\Contracts\GeospatialGeometryContract[]|\Spatie\SchemaOrg\Contracts\PlaceContract|\Spatie\SchemaOrg\Contracts\PlaceContract[] $geoDisjoint
      *
      * @return static
      *
-     * @see http://schema.org/geoDisjoint
+     * @see https://schema.org/geoDisjoint
      */
     public function geoDisjoint($geoDisjoint)
     {
@@ -378,11 +429,11 @@ class SingleFamilyResidence extends BaseType implements SingleFamilyResidenceCon
      * interior or boundary of one geometry intersects the exterior of the
      * other" (a symmetric relationship)
      *
-     * @param \Spatie\SchemaOrg\Contracts\PlaceContract|\Spatie\SchemaOrg\Contracts\PlaceContract[] $geoEquals
+     * @param \Spatie\SchemaOrg\Contracts\GeospatialGeometryContract|\Spatie\SchemaOrg\Contracts\GeospatialGeometryContract[]|\Spatie\SchemaOrg\Contracts\PlaceContract|\Spatie\SchemaOrg\Contracts\PlaceContract[] $geoEquals
      *
      * @return static
      *
-     * @see http://schema.org/geoEquals
+     * @see https://schema.org/geoEquals
      */
     public function geoEquals($geoEquals)
     {
@@ -394,11 +445,11 @@ class SingleFamilyResidence extends BaseType implements SingleFamilyResidenceCon
      * represent) have at least one point in common. As defined in
      * [DE-9IM](https://en.wikipedia.org/wiki/DE-9IM).
      *
-     * @param \Spatie\SchemaOrg\Contracts\PlaceContract|\Spatie\SchemaOrg\Contracts\PlaceContract[] $geoIntersects
+     * @param \Spatie\SchemaOrg\Contracts\GeospatialGeometryContract|\Spatie\SchemaOrg\Contracts\GeospatialGeometryContract[]|\Spatie\SchemaOrg\Contracts\PlaceContract|\Spatie\SchemaOrg\Contracts\PlaceContract[] $geoIntersects
      *
      * @return static
      *
-     * @see http://schema.org/geoIntersects
+     * @see https://schema.org/geoIntersects
      */
     public function geoIntersects($geoIntersects)
     {
@@ -411,11 +462,11 @@ class SingleFamilyResidence extends BaseType implements SingleFamilyResidenceCon
      * i.e. they have some but not all points in common. As defined in
      * [DE-9IM](https://en.wikipedia.org/wiki/DE-9IM).
      *
-     * @param \Spatie\SchemaOrg\Contracts\PlaceContract|\Spatie\SchemaOrg\Contracts\PlaceContract[] $geoOverlaps
+     * @param \Spatie\SchemaOrg\Contracts\GeospatialGeometryContract|\Spatie\SchemaOrg\Contracts\GeospatialGeometryContract[]|\Spatie\SchemaOrg\Contracts\PlaceContract|\Spatie\SchemaOrg\Contracts\PlaceContract[] $geoOverlaps
      *
      * @return static
      *
-     * @see http://schema.org/geoOverlaps
+     * @see https://schema.org/geoOverlaps
      */
     public function geoOverlaps($geoOverlaps)
     {
@@ -428,11 +479,11 @@ class SingleFamilyResidence extends BaseType implements SingleFamilyResidenceCon
      * interior points." (a symmetric relationship, as defined in
      * [DE-9IM](https://en.wikipedia.org/wiki/DE-9IM) )
      *
-     * @param \Spatie\SchemaOrg\Contracts\PlaceContract|\Spatie\SchemaOrg\Contracts\PlaceContract[] $geoTouches
+     * @param \Spatie\SchemaOrg\Contracts\GeospatialGeometryContract|\Spatie\SchemaOrg\Contracts\GeospatialGeometryContract[]|\Spatie\SchemaOrg\Contracts\PlaceContract|\Spatie\SchemaOrg\Contracts\PlaceContract[] $geoTouches
      *
      * @return static
      *
-     * @see http://schema.org/geoTouches
+     * @see https://schema.org/geoTouches
      */
     public function geoTouches($geoTouches)
     {
@@ -445,11 +496,11 @@ class SingleFamilyResidence extends BaseType implements SingleFamilyResidenceCon
      * inside (i.e. within) its interior. As defined in
      * [DE-9IM](https://en.wikipedia.org/wiki/DE-9IM).
      *
-     * @param \Spatie\SchemaOrg\Contracts\PlaceContract|\Spatie\SchemaOrg\Contracts\PlaceContract[] $geoWithin
+     * @param \Spatie\SchemaOrg\Contracts\GeospatialGeometryContract|\Spatie\SchemaOrg\Contracts\GeospatialGeometryContract[]|\Spatie\SchemaOrg\Contracts\PlaceContract|\Spatie\SchemaOrg\Contracts\PlaceContract[] $geoWithin
      *
      * @return static
      *
-     * @see http://schema.org/geoWithin
+     * @see https://schema.org/geoWithin
      */
     public function geoWithin($geoWithin)
     {
@@ -466,11 +517,29 @@ class SingleFamilyResidence extends BaseType implements SingleFamilyResidenceCon
      *
      * @return static
      *
-     * @see http://schema.org/globalLocationNumber
+     * @see https://schema.org/globalLocationNumber
      */
     public function globalLocationNumber($globalLocationNumber)
     {
         return $this->setProperty('globalLocationNumber', $globalLocationNumber);
+    }
+
+    /**
+     * Indicates whether some facility (e.g. [[FoodEstablishment]],
+     * [[CovidTestingFacility]]) offers a service that can be used by driving
+     * through in a car. In the case of [[CovidTestingFacility]] such facilities
+     * could potentially help with social distancing from other
+     * potentially-infected users.
+     *
+     * @param bool|bool[] $hasDriveThroughService
+     *
+     * @return static
+     *
+     * @see https://schema.org/hasDriveThroughService
+     */
+    public function hasDriveThroughService($hasDriveThroughService)
+    {
+        return $this->setProperty('hasDriveThroughService', $hasDriveThroughService);
     }
 
     /**
@@ -480,7 +549,7 @@ class SingleFamilyResidence extends BaseType implements SingleFamilyResidenceCon
      *
      * @return static
      *
-     * @see http://schema.org/hasMap
+     * @see https://schema.org/hasMap
      */
     public function hasMap($hasMap)
     {
@@ -498,7 +567,7 @@ class SingleFamilyResidence extends BaseType implements SingleFamilyResidenceCon
      *
      * @return static
      *
-     * @see http://schema.org/identifier
+     * @see https://schema.org/identifier
      */
     public function identifier($identifier)
     {
@@ -513,7 +582,7 @@ class SingleFamilyResidence extends BaseType implements SingleFamilyResidenceCon
      *
      * @return static
      *
-     * @see http://schema.org/image
+     * @see https://schema.org/image
      */
     public function image($image)
     {
@@ -527,7 +596,7 @@ class SingleFamilyResidence extends BaseType implements SingleFamilyResidenceCon
      *
      * @return static
      *
-     * @see http://schema.org/isAccessibleForFree
+     * @see https://schema.org/isAccessibleForFree
      */
     public function isAccessibleForFree($isAccessibleForFree)
     {
@@ -543,7 +612,7 @@ class SingleFamilyResidence extends BaseType implements SingleFamilyResidenceCon
      *
      * @return static
      *
-     * @see http://schema.org/isicV4
+     * @see https://schema.org/isicV4
      */
     public function isicV4($isicV4)
     {
@@ -558,11 +627,26 @@ class SingleFamilyResidence extends BaseType implements SingleFamilyResidenceCon
      *
      * @return static
      *
-     * @see http://schema.org/latitude
+     * @see https://schema.org/latitude
      */
     public function latitude($latitude)
     {
         return $this->setProperty('latitude', $latitude);
+    }
+
+    /**
+     * Length of the lease for some [[Accommodation]], either particular to some
+     * [[Offer]] or in some cases intrinsic to the property.
+     *
+     * @param \Spatie\SchemaOrg\Contracts\DurationContract|\Spatie\SchemaOrg\Contracts\DurationContract[]|\Spatie\SchemaOrg\Contracts\QuantitativeValueContract|\Spatie\SchemaOrg\Contracts\QuantitativeValueContract[] $leaseLength
+     *
+     * @return static
+     *
+     * @see https://schema.org/leaseLength
+     */
+    public function leaseLength($leaseLength)
+    {
+        return $this->setProperty('leaseLength', $leaseLength);
     }
 
     /**
@@ -572,7 +656,7 @@ class SingleFamilyResidence extends BaseType implements SingleFamilyResidenceCon
      *
      * @return static
      *
-     * @see http://schema.org/logo
+     * @see https://schema.org/logo
      */
     public function logo($logo)
     {
@@ -587,7 +671,7 @@ class SingleFamilyResidence extends BaseType implements SingleFamilyResidenceCon
      *
      * @return static
      *
-     * @see http://schema.org/longitude
+     * @see https://schema.org/longitude
      */
     public function longitude($longitude)
     {
@@ -603,7 +687,7 @@ class SingleFamilyResidence extends BaseType implements SingleFamilyResidenceCon
      *
      * @return static
      *
-     * @see http://schema.org/mainEntityOfPage
+     * @see https://schema.org/mainEntityOfPage
      */
     public function mainEntityOfPage($mainEntityOfPage)
     {
@@ -617,7 +701,7 @@ class SingleFamilyResidence extends BaseType implements SingleFamilyResidenceCon
      *
      * @return static
      *
-     * @see http://schema.org/map
+     * @see https://schema.org/map
      */
     public function map($map)
     {
@@ -631,7 +715,7 @@ class SingleFamilyResidence extends BaseType implements SingleFamilyResidenceCon
      *
      * @return static
      *
-     * @see http://schema.org/maps
+     * @see https://schema.org/maps
      */
     public function maps($maps)
     {
@@ -645,7 +729,7 @@ class SingleFamilyResidence extends BaseType implements SingleFamilyResidenceCon
      *
      * @return static
      *
-     * @see http://schema.org/maximumAttendeeCapacity
+     * @see https://schema.org/maximumAttendeeCapacity
      */
     public function maximumAttendeeCapacity($maximumAttendeeCapacity)
     {
@@ -659,11 +743,77 @@ class SingleFamilyResidence extends BaseType implements SingleFamilyResidenceCon
      *
      * @return static
      *
-     * @see http://schema.org/name
+     * @see https://schema.org/name
      */
     public function name($name)
     {
         return $this->setProperty('name', $name);
+    }
+
+    /**
+     * The total integer number of bathrooms in a some [[Accommodation]],
+     * following real estate conventions as [documented in
+     * RESO](https://ddwiki.reso.org/display/DDW17/BathroomsTotalInteger+Field):
+     * "The simple sum of the number of bathrooms. For example for a property
+     * with two Full Bathrooms and one Half Bathroom, the Bathrooms Total
+     * Integer will be 3.". See also [[numberOfRooms]].
+     *
+     * @param int|int[] $numberOfBathroomsTotal
+     *
+     * @return static
+     *
+     * @see https://schema.org/numberOfBathroomsTotal
+     */
+    public function numberOfBathroomsTotal($numberOfBathroomsTotal)
+    {
+        return $this->setProperty('numberOfBathroomsTotal', $numberOfBathroomsTotal);
+    }
+
+    /**
+     * The total integer number of bedrooms in a some [[Accommodation]],
+     * [[ApartmentComplex]] or [[FloorPlan]].
+     *
+     * @param \Spatie\SchemaOrg\Contracts\QuantitativeValueContract|\Spatie\SchemaOrg\Contracts\QuantitativeValueContract[]|float|float[]|int|int[] $numberOfBedrooms
+     *
+     * @return static
+     *
+     * @see https://schema.org/numberOfBedrooms
+     */
+    public function numberOfBedrooms($numberOfBedrooms)
+    {
+        return $this->setProperty('numberOfBedrooms', $numberOfBedrooms);
+    }
+
+    /**
+     * Number of full bathrooms - The total number of full and ¾ bathrooms in
+     * an [[Accommodation]]. This corresponds to the [BathroomsFull field in
+     * RESO](https://ddwiki.reso.org/display/DDW17/BathroomsFull+Field).
+     *
+     * @param float|float[]|int|int[] $numberOfFullBathrooms
+     *
+     * @return static
+     *
+     * @see https://schema.org/numberOfFullBathrooms
+     */
+    public function numberOfFullBathrooms($numberOfFullBathrooms)
+    {
+        return $this->setProperty('numberOfFullBathrooms', $numberOfFullBathrooms);
+    }
+
+    /**
+     * Number of partial bathrooms - The total number of half and ¼ bathrooms
+     * in an [[Accommodation]]. This corresponds to the [BathroomsPartial field
+     * in RESO](https://ddwiki.reso.org/display/DDW17/BathroomsPartial+Field).
+     *
+     * @param float|float[]|int|int[] $numberOfPartialBathrooms
+     *
+     * @return static
+     *
+     * @see https://schema.org/numberOfPartialBathrooms
+     */
+    public function numberOfPartialBathrooms($numberOfPartialBathrooms)
+    {
+        return $this->setProperty('numberOfPartialBathrooms', $numberOfPartialBathrooms);
     }
 
     /**
@@ -676,7 +826,7 @@ class SingleFamilyResidence extends BaseType implements SingleFamilyResidenceCon
      *
      * @return static
      *
-     * @see http://schema.org/numberOfRooms
+     * @see https://schema.org/numberOfRooms
      */
     public function numberOfRooms($numberOfRooms)
     {
@@ -694,7 +844,7 @@ class SingleFamilyResidence extends BaseType implements SingleFamilyResidenceCon
      *
      * @return static
      *
-     * @see http://schema.org/occupancy
+     * @see https://schema.org/occupancy
      */
     public function occupancy($occupancy)
     {
@@ -708,7 +858,7 @@ class SingleFamilyResidence extends BaseType implements SingleFamilyResidenceCon
      *
      * @return static
      *
-     * @see http://schema.org/openingHoursSpecification
+     * @see https://schema.org/openingHoursSpecification
      */
     public function openingHoursSpecification($openingHoursSpecification)
     {
@@ -722,7 +872,7 @@ class SingleFamilyResidence extends BaseType implements SingleFamilyResidenceCon
      *
      * @return static
      *
-     * @see http://schema.org/permittedUsage
+     * @see https://schema.org/permittedUsage
      */
     public function permittedUsage($permittedUsage)
     {
@@ -737,7 +887,7 @@ class SingleFamilyResidence extends BaseType implements SingleFamilyResidenceCon
      *
      * @return static
      *
-     * @see http://schema.org/petsAllowed
+     * @see https://schema.org/petsAllowed
      */
     public function petsAllowed($petsAllowed)
     {
@@ -751,7 +901,7 @@ class SingleFamilyResidence extends BaseType implements SingleFamilyResidenceCon
      *
      * @return static
      *
-     * @see http://schema.org/photo
+     * @see https://schema.org/photo
      */
     public function photo($photo)
     {
@@ -765,7 +915,7 @@ class SingleFamilyResidence extends BaseType implements SingleFamilyResidenceCon
      *
      * @return static
      *
-     * @see http://schema.org/photos
+     * @see https://schema.org/photos
      */
     public function photos($photos)
     {
@@ -780,7 +930,7 @@ class SingleFamilyResidence extends BaseType implements SingleFamilyResidenceCon
      *
      * @return static
      *
-     * @see http://schema.org/potentialAction
+     * @see https://schema.org/potentialAction
      */
     public function potentialAction($potentialAction)
     {
@@ -795,7 +945,7 @@ class SingleFamilyResidence extends BaseType implements SingleFamilyResidenceCon
      *
      * @return static
      *
-     * @see http://schema.org/publicAccess
+     * @see https://schema.org/publicAccess
      */
     public function publicAccess($publicAccess)
     {
@@ -809,7 +959,7 @@ class SingleFamilyResidence extends BaseType implements SingleFamilyResidenceCon
      *
      * @return static
      *
-     * @see http://schema.org/review
+     * @see https://schema.org/review
      */
     public function review($review)
     {
@@ -823,7 +973,7 @@ class SingleFamilyResidence extends BaseType implements SingleFamilyResidenceCon
      *
      * @return static
      *
-     * @see http://schema.org/reviews
+     * @see https://schema.org/reviews
      */
     public function reviews($reviews)
     {
@@ -839,7 +989,7 @@ class SingleFamilyResidence extends BaseType implements SingleFamilyResidenceCon
      *
      * @return static
      *
-     * @see http://schema.org/sameAs
+     * @see https://schema.org/sameAs
      */
     public function sameAs($sameAs)
     {
@@ -853,7 +1003,7 @@ class SingleFamilyResidence extends BaseType implements SingleFamilyResidenceCon
      *
      * @return static
      *
-     * @see http://schema.org/slogan
+     * @see https://schema.org/slogan
      */
     public function slogan($slogan)
     {
@@ -868,7 +1018,7 @@ class SingleFamilyResidence extends BaseType implements SingleFamilyResidenceCon
      *
      * @return static
      *
-     * @see http://schema.org/smokingAllowed
+     * @see https://schema.org/smokingAllowed
      */
     public function smokingAllowed($smokingAllowed)
     {
@@ -885,7 +1035,7 @@ class SingleFamilyResidence extends BaseType implements SingleFamilyResidenceCon
      *
      * @return static
      *
-     * @see http://schema.org/specialOpeningHoursSpecification
+     * @see https://schema.org/specialOpeningHoursSpecification
      */
     public function specialOpeningHoursSpecification($specialOpeningHoursSpecification)
     {
@@ -899,7 +1049,7 @@ class SingleFamilyResidence extends BaseType implements SingleFamilyResidenceCon
      *
      * @return static
      *
-     * @see http://schema.org/subjectOf
+     * @see https://schema.org/subjectOf
      */
     public function subjectOf($subjectOf)
     {
@@ -913,11 +1063,27 @@ class SingleFamilyResidence extends BaseType implements SingleFamilyResidenceCon
      *
      * @return static
      *
-     * @see http://schema.org/telephone
+     * @see https://schema.org/telephone
      */
     public function telephone($telephone)
     {
         return $this->setProperty('telephone', $telephone);
+    }
+
+    /**
+     * A page providing information on how to book a tour of some [[Place]],
+     * such as an [[Accommodation]] or [[ApartmentComplex]] in a real estate
+     * setting, as well as other kinds of tours as appropriate.
+     *
+     * @param string|string[] $tourBookingPage
+     *
+     * @return static
+     *
+     * @see https://schema.org/tourBookingPage
+     */
+    public function tourBookingPage($tourBookingPage)
+    {
+        return $this->setProperty('tourBookingPage', $tourBookingPage);
     }
 
     /**
@@ -927,11 +1093,27 @@ class SingleFamilyResidence extends BaseType implements SingleFamilyResidenceCon
      *
      * @return static
      *
-     * @see http://schema.org/url
+     * @see https://schema.org/url
      */
     public function url($url)
     {
         return $this->setProperty('url', $url);
+    }
+
+    /**
+     * The year an [[Accommodation]] was constructed. This corresponds to the
+     * [YearBuilt field in
+     * RESO](https://ddwiki.reso.org/display/DDW17/YearBuilt+Field).
+     *
+     * @param float|float[]|int|int[] $yearBuilt
+     *
+     * @return static
+     *
+     * @see https://schema.org/yearBuilt
+     */
+    public function yearBuilt($yearBuilt)
+    {
+        return $this->setProperty('yearBuilt', $yearBuilt);
     }
 
 }
